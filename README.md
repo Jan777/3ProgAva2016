@@ -1,4 +1,4 @@
-# [Nombre del juego]
+# Another World
 
 ## Sobre las personas
 
@@ -9,10 +9,12 @@
 
 ### Integrantes del equipo
 
-* XXXX
-* XXXX
-* XXXX
-* XXXX
+* Andres, Martín
+* Bernardo, Matías
+* Cairo, Matías
+* Espínola, Agustín
+* García, Elías
+* Nicoloso, Lucas
 
 ## Sobre la tecnología
 
