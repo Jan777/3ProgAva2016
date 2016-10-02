@@ -1,7 +1,7 @@
 package prograavanzada2016.anotherworld.entities;
 
 import prograavanzada2016.anotherworld.enumvalues.Orientacion;
-import prograavanzada2016.anotherworld.model.Habilidad;
+import prograavanzada2016.anotherworld.habilidades.Habilidad;
 
 public abstract class Ente {
 	

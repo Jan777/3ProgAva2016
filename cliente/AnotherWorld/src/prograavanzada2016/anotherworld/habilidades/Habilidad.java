@@ -1,4 +1,4 @@
-package prograavanzada2016.anotherworld.model;
+package prograavanzada2016.anotherworld.habilidades;
 
 public class Habilidad {
 

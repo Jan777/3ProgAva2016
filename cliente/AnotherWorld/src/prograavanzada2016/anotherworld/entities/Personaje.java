@@ -1,15 +1,18 @@
 package prograavanzada2016.anotherworld.entities;
 
-import prograavanzada2016.anotherworld.model.Casta;
-import prograavanzada2016.anotherworld.model.Habilidad;
-import prograavanzada2016.anotherworld.model.Raza;
+import prograavanzada2016.anotherworld.castas.Casta;
+import prograavanzada2016.anotherworld.habilidades.Habilidad;
+import prograavanzada2016.anotherworld.razas.Raza;
 
 public class Personaje extends Ente{
 	
 	protected Casta casta;
 	protected Raza raza;
 	
-	public Personaje(String nombre, Raza raza, Casta casta) {
+	protected int ataque;
+	protected int defensa;
+	
+	public Personaje(String nombre, Raza raza, Casta casta) throws Exception {
 		super(nombre);
 		this.raza=raza;
 		this.casta=casta;

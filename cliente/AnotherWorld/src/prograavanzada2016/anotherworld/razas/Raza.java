@@ -1,4 +1,4 @@
-package prograavanzada2016.anotherworld.model;
+package prograavanzada2016.anotherworld.razas;
 
 import prograavanzada2016.anotherworld.enumvalues.TipoRaza;
 
