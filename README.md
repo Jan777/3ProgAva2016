@@ -9,12 +9,12 @@
 
 ### Integrantes del equipo
 
-* Andres, Martín
-* Bernardo, Matías
-* Cairo, Matías
-* Espínola, Agustín
-* García, Elías
-* Nicoloso, Lucas
+* Andres, Martín ([MartinFernandoAndres](https://github.com/MartinFernandoAndres))
+* Bernardo, Matías ([matias27](https://github.com/matias27))
+* Cairo, Matías ([maticairo](https://github.com/maticairo))
+* Espínola, Agustín ([hymuura](https://github.com/hymuura))
+* García, Elías ([Elias71](https://github.com/Elias71))
+* Nicoloso, Lucas ([Lukki20](https://github.com/Lukki20))
 
 ## Sobre la tecnología
 
