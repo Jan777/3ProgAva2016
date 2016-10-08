@@ -8,10 +8,6 @@ public abstract class Ente {
 	//atributos principales de un Ente
 	protected String nombre;
 	protected int nivel;
-	//experiencia que tiene el jugador en el momento
-	protected int experienciaActual;
-	//experiencia que necesita el jugador para subir de nivel
-	protected int experienciaLimite;
 	
 	//atributos de stats de un Ente
 	protected int fuerza;
@@ -41,32 +37,21 @@ public abstract class Ente {
 		this.nivel=1;
 	}
 	
+	protected Ente (String nombre, int nivel, int salud, int energia, int mana, int fuerza, int destreza, int inteligencia)
+	{
+		this.nombre = nombre;
+		this.nivel = nivel;
+		this.salud = salud;
+		this.energia = energia;
+		this.mana = mana;
+		this.fuerza = fuerza;
+		this.destreza = destreza;
+		this.inteligencia = inteligencia;
+	}
+	
 	
 	public int getNivel() {
 		return nivel;
-	}
-
-	public void subirNivel() {
-		this.nivel = this.nivel+1;
-	}
-
-	public int getExperienciaActual() {
-		return experienciaActual;
-	}
-
-	public void sumarExperiencia(int experiencia) {
-		this.experienciaActual += experiencia;
-		if(this.experienciaActual>=this.experienciaLimite){
-			this.subirNivel();
-		}
-	}
-
-	public int getExperienciaLimite() {
-		return experienciaLimite;
-	}
-
-	public void setExperienciaLimite(int experienciaLimite) {
-		this.experienciaLimite = experienciaLimite;
 	}
 
 	public int getFuerza() {

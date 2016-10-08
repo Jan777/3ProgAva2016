@@ -12,6 +12,11 @@ public class Personaje extends Ente{
 	protected int ataque;
 	protected int defensa;
 	
+	//experiencia que tiene el jugador en el momento
+	protected int experienciaActual;
+	//experiencia que necesita el jugador para subir de nivel
+	protected int experienciaLimite;
+	
 	public Personaje(String nombre, Raza raza, Casta casta) throws Exception {
 		super(nombre);
 		this.raza=raza;
@@ -42,6 +47,29 @@ public class Personaje extends Ente{
 	public void serHechizado(Habilidad habilidad) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	public int getExperienciaActual() {
+		return experienciaActual;
+	}
+	
+	public void subirNivel() {
+		this.nivel = this.nivel+1;
+	}
+
+	public void sumarExperiencia(int experiencia) {
+		this.experienciaActual += experiencia;
+		if(this.experienciaActual>=this.experienciaLimite){
+			this.subirNivel();
+		}
+	}
+
+	public int getExperienciaLimite() {
+		return experienciaLimite;
+	}
+
+	public void setExperienciaLimite(int experienciaLimite) {
+		this.experienciaLimite = experienciaLimite;
 	}
 
 }
