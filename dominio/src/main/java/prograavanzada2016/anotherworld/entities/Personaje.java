@@ -3,6 +3,8 @@ package prograavanzada2016.anotherworld.entities;
 import prograavanzada2016.anotherworld.castas.Casta;
 import prograavanzada2016.anotherworld.habilidades.Habilidad;
 import prograavanzada2016.anotherworld.objetos.*;
+import prograavanzada2016.anotherworld.objetos.armaduras.ObjetoArmadura;
+import prograavanzada2016.anotherworld.objetos.armas.ObjetoArma;
 import prograavanzada2016.anotherworld.razas.Raza;
 
 public class Personaje extends Ente{
@@ -63,6 +65,21 @@ public class Personaje extends Ente{
 			this.subirNivel();
 		}
 	}
+	
+	public void equiparArma(ObjetoArma objetoArma){
+		if(objetoArma.getCasta().equals(this.getCasta())){
+			this.objetoArma=objetoArma;
+			this.setAtaque(objetoArma.getBonusAtaque());
+			this.setPuntosDeEnergiaPorAtaque(objetoArma.getPuntosDeEnergiaPorAtaque());
+		}else{
+			System.out.println("No se puede equipar el arma, reload reload");
+		}
+	}
+	
+	public void equiparArmadura(ObjetoArmadura objetoArmadura){
+		this.objetoArmadura=objetoArmadura;
+		this.setDefensa(objetoArmadura.getBonusDefensa());
+	}
 
 	public int getExperienciaLimite() {
 		return experienciaLimite;
@@ -95,5 +112,6 @@ public class Personaje extends Ente{
 		System.out.println("Salud: "+this.getSalud());
 		System.out.println("Mana: "+this.getMana());
 		System.out.println("Energia: "+this.getEnergia());
+		System.out.println("Energia en uso:"+this.energiaEnUso);
 	}
 }

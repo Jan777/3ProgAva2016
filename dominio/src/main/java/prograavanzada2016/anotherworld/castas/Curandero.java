@@ -6,6 +6,7 @@ import prograavanzada2016.anotherworld.razas.*;
 public class Curandero extends Casta {
 
 	public Curandero(){
+		this.setNombre("Curandero");
 	}
 
 	@Override

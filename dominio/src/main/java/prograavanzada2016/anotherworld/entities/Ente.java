@@ -16,6 +16,7 @@ public abstract class Ente {
 	protected int salud;
 	protected int mana;
 	protected int energia;
+	protected int energiaEnUso;
 	
 	//atributos de ataque y defensa
 	protected int ataque;
@@ -34,14 +35,15 @@ public abstract class Ente {
 	
 	public Ente(String nombre){
 		this.nombre = nombre;
+		this.setEstaVivo(true);
 		//inicializo los stats, a la hora de la creacion todos tienen el mismo stat base
 		//luego con la seleccion de la casta estos stats son alterados
 		//lo mismo pasara con la creacion de enemigos
 		this.fuerza=this.destreza=this.inteligencia=5;
 		this.salud=this.mana=this.energia=100;
-		this.ataque=10;
+		this.ataque=5;
 		this.defensa=0;
-		this.puntosDeEnergiaPorAtaque=100;
+		this.puntosDeEnergiaPorAtaque=10;
 		this.nivel=1;
 	}
 	
@@ -118,10 +120,31 @@ public abstract class Ente {
 
 	public void aumentarEnergia(int energia) {
 		this.energia += energia;
+		this.energiaEnUso=this.energia;
 	}
 	
-	public void restarEnergia(int energia){
-		this.energia -= energia;
+	
+	public int getEnergiaEnUso() {
+		return energiaEnUso;
+	}
+
+	public void setEnergiaEnUso(int energiaEnUso) {
+		this.energiaEnUso = energiaEnUso;
+	}
+
+	public boolean restarEnergia(int energia){
+		if(this.energiaEnUso>=energia){
+			this.energiaEnUso -= energia;
+			return true;
+		}
+		return false;
+	}
+	
+	public void descansar(){
+		this.energiaEnUso += this.getEnergia()*10/100;
+		if(this.energia<this.energiaEnUso){
+			this.energiaEnUso=this.energia;
+		}
 	}
 
 	public int getPosicionX() {
@@ -154,6 +177,14 @@ public abstract class Ente {
 	
 	
 
+	public boolean isEstaVivo() {
+		return estaVivo;
+	}
+
+	public void setEstaVivo(boolean estaVivo) {
+		this.estaVivo = estaVivo;
+	}
+
 	public int getAtaque() {
 		return ataque;
 	}
@@ -169,6 +200,15 @@ public abstract class Ente {
 	public void setDefensa(int defensa) {
 		this.defensa = defensa;
 	}
+	
+	
+	public int getPuntosDeEnergiaPorAtaque() {
+		return puntosDeEnergiaPorAtaque;
+	}
+
+	public void setPuntosDeEnergiaPorAtaque(int puntosDeEnergiaPorAtaque) {
+		this.puntosDeEnergiaPorAtaque = puntosDeEnergiaPorAtaque;
+	}
 
 	//una primera idea del metodo, seguramente hay que modificarlo cuando
 	//tengamos mas idea de como es el movimiento
@@ -181,17 +221,20 @@ public abstract class Ente {
 	
 	//una primera idea del metodo
 	public void atacar(Ente ente){
-		if(this.puedeAtacar()){
-			ente.serAtacado(this.calcularPuntosDeAtaque());
-			ente.despuesDeAtacar();
+		if(ente.isEstaVivo()){
+			if(this.puedeAtacar()){
+				ente.serAtacado(this.calcularPuntosDeAtaque());
+				ente.despuesDeAtacar();
+			}else{
+				System.out.println("Intento atacar pero fallo");
+			}
 		}else{
-			System.out.println("Intento atacar pero fallo");
+			System.out.println("Aguanta He-Man, ya estoy muerto");
 		}
 	}
 	
 	public boolean puedeAtacar(){
-		this.restarEnergia(this.puntosDeEnergiaPorAtaque);
-		if(this.getEnergia()>0){
+		if(this.restarEnergia(this.puntosDeEnergiaPorAtaque)){
 			return true;
 		}
 		return false;
