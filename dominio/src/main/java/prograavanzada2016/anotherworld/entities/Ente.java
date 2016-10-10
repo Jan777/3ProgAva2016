@@ -17,6 +17,12 @@ public abstract class Ente {
 	protected int mana;
 	protected int energia;
 	
+	//atributos de ataque y defensa
+	protected int ataque;
+	protected int defensa;
+	protected int puntosDeEnergiaPorAtaque;
+	
+	
 	//atributos de ubicacion en el mapa de un Ente
 	protected int posicionX;
 	protected int posicionY;
@@ -24,7 +30,6 @@ public abstract class Ente {
 	protected Orientacion orientacion;
 	
 	//atributos de batalla de un ente
-	protected boolean puedeAtacar;
 	protected boolean estaVivo;
 	
 	public Ente(String nombre){
@@ -34,6 +39,9 @@ public abstract class Ente {
 		//lo mismo pasara con la creacion de enemigos
 		this.fuerza=this.destreza=this.inteligencia=5;
 		this.salud=this.mana=this.energia=100;
+		this.ataque=10;
+		this.defensa=0;
+		this.puntosDeEnergiaPorAtaque=100;
 		this.nivel=1;
 	}
 	
@@ -48,8 +56,7 @@ public abstract class Ente {
 		this.destreza = destreza;
 		this.inteligencia = inteligencia;
 	}
-	
-	
+		
 	public int getNivel() {
 		return nivel;
 	}
@@ -86,12 +93,23 @@ public abstract class Ente {
 		this.salud += salud;
 	}
 
+	public void restarSalud(int salud){
+		this.salud -= salud;
+		if(this.salud<=0){
+			this.estaVivo=false;
+		}
+	}
+	
 	public int getMana() {
 		return mana;
 	}
 
 	public void aumentarMana(int mana) {
 		this.mana += mana;
+	}
+	
+	public void restarMana(int mana){
+		this.mana -= mana;
 	}
 
 	public int getEnergia() {
@@ -100,6 +118,10 @@ public abstract class Ente {
 
 	public void aumentarEnergia(int energia) {
 		this.energia += energia;
+	}
+	
+	public void restarEnergia(int energia){
+		this.energia -= energia;
 	}
 
 	public int getPosicionX() {
@@ -128,7 +150,25 @@ public abstract class Ente {
 	public void setOrientacion(Orientacion orientacion) {
 		this.orientacion = orientacion;
 	}
+	
+	
+	
 
+	public int getAtaque() {
+		return ataque;
+	}
+
+	public void setAtaque(int ataque) {
+		this.ataque = ataque;
+	}
+
+	public int getDefensa() {
+		return defensa;
+	}
+
+	public void setDefensa(int defensa) {
+		this.defensa = defensa;
+	}
 
 	//una primera idea del metodo, seguramente hay que modificarlo cuando
 	//tengamos mas idea de como es el movimiento
@@ -141,10 +181,20 @@ public abstract class Ente {
 	
 	//una primera idea del metodo
 	public void atacar(Ente ente){
-		if(this.puedeAtacar){
+		if(this.puedeAtacar()){
 			ente.serAtacado(this.calcularPuntosDeAtaque());
 			ente.despuesDeAtacar();
+		}else{
+			System.out.println("Intento atacar pero fallo");
 		}
+	}
+	
+	public boolean puedeAtacar(){
+		this.restarEnergia(this.puntosDeEnergiaPorAtaque);
+		if(this.getEnergia()>0){
+			return true;
+		}
+		return false;
 	}
 	
 	public abstract void serAtacado(int daño);
