@@ -28,7 +28,7 @@ Como jugador, quiero eliminar enemigos para aumentar mi experiencia y poder subi
 
 ### Criterios de aceptación:
 
-Eliminar un enemigo en combate y comprobar que al experiencia aumenta y con la acumulacion de la experiencia correspondiente comprobar que el personaje aumenta de nivel.
+La experiencia debe aumentar conforme a la diferencia de nivel entre el personaje y el enemigo eliminado.Si la misma supera el tope por nivel, el nivel debe aumentar en una unidad.
 
 ## Historia de usuario n°4
 
@@ -38,7 +38,7 @@ Como jugador, quiero subir de nivel para poder asignar puntos adicionales a mis 
 
 ### Criterios de aceptación:
 
-Comprobar que cada vez que se sube un nivel se le darán 5 puntos para que el usuario incremente los stats del personaje, comprobar que al asignar un punto este será modificado para siempre.
+Al subir de nivel, debo tener cinco puntos de habilidad nuevos. Al asignar uno de los mismos a un stat, éste deberá aumentar en un punto de forma permanente.
 
 ## Historia de usuario n°5
 
@@ -58,7 +58,9 @@ Como jugador, quiero encontrarme con otros jugadores en el mismo mundo para alia
  
 ### Criterios de aceptación:
  
-Comprobar que al conectarse dos o más jugadores pueden encontrarse en el mundo y puedan combatir entre ellos o aliarse para derrotar otros enemigos. 
+Al estar cerca de otro jugador en el mismo mapa, debo poder formar una alianza, agregarlo a una alianza existente, o desafiarlo en un combate.
+No debo poder desafiarlo en caso de que formemos parte de una misma alianza.
+
 ## Historia de usuario n°7
  
 ### Alianza de Personajes:
