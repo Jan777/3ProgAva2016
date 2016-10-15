@@ -5,19 +5,23 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Servidor {
+public class Servidor
+{
 	public static ArrayList<Socket> connectionArray = new ArrayList<>();
 	public static ArrayList<String> users = new ArrayList<>();
 	
-	public static void main(String[] args) throws Exception{
-		try{
-			final int PORT = 444;
-			ServerSocket SERVER = new ServerSocket(PORT);
+	public static void main(String[] args) throws Exception
+	{
+		try
+		{
+			Propiedades props = new Propiedades();
+			final int puerto = props.getPuerto();
+			ServerSocket serverSocket = new ServerSocket(puerto);
 			
-			
-			while(true){
-				System.out.println("Esperando un cliente");
-				Socket socket = SERVER.accept();
+			while(true)
+			{
+				System.out.println("Esperando un cliente...");
+				Socket socket = serverSocket.accept();
 				connectionArray.add(socket);
 				
 				System.out.println("Cliente conectado desde: "+ socket.getLocalAddress().getHostName());
@@ -27,12 +31,15 @@ public class Servidor {
 				Thread instancia = new Thread(chat);
 				instancia.start();
 			}
-		}catch(Exception e){
+		}
+		catch(Exception e)
+		{
 			
 		}
 	}
 	
-	public static void addUserName(Socket x) throws Exception{
+	public static void addUserName(Socket x) throws Exception
+	{
 		Scanner input = new Scanner(x.getInputStream());
 		String userName = input.nextLine();
 		
