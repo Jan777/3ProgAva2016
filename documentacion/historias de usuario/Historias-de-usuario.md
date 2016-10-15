@@ -4,11 +4,11 @@
 
 ### Creación del personaje:
 
--Como jugador, quiero crear mi personaje, editando sus características principales (como raza y casta) para verme reflejado en mi avatar.
+Como jugador, quiero crear mi personaje, editando sus características principales (como raza y casta) para verme reflejado en mi avatar.
 
 ### Criterios de aceptación:
 
--Ingresar al juego y en la opción de crear personaje elegir nombre, raza, casta y sexo, comprobar que la creación fue exitosa y se le asigna una imagen de personaje según el sexo elegido.
+Ingresar al juego y en la opción de crear personaje elegir nombre, raza, casta y sexo, comprobar que la creación fue exitosa y se le asigna una imagen de personaje según el sexo elegido.
 
 ## Historia de usuario n°2
 
@@ -18,7 +18,7 @@ Como jugador, quiero ingresar a un mundo para adquirir experiencia y ganar habil
 
 ### Criterios de aceptación:
 
--Comprobar que al ganar experiencia se sube un nivel y por cada 5 niveles comprobar que se aprende una nueva habilidad según su casta y raza.
+Comprobar que al ganar experiencia se sube un nivel y por cada 5 niveles comprobar que se aprende una nueva habilidad según su casta y raza.
 
 ## Historia de usuario n°3
 
@@ -28,7 +28,7 @@ Como jugador, quiero eliminar enemigos para aumentar mi experiencia y poder subi
 
 ### Criterios de aceptación:
 
--Eliminar un enemigo en combate y comprobar que al experiencia aumenta y con la acumulacion de la experiencia correspondiente comprobar que el personaje aumenta de nivel.
+Eliminar un enemigo en combate y comprobar que al experiencia aumenta y con la acumulacion de la experiencia correspondiente comprobar que el personaje aumenta de nivel.
 
 ## Historia de usuario n°4
 
@@ -38,7 +38,7 @@ Como jugador, quiero subir de nivel para poder asignar puntos adicionales a mis 
 
 ### Criterios de aceptación:
 
--Comprobar que cada vez que se sube un nivel se le darán 5 puntos para que el usuario incremente los stats del personaje, comprobar que al asignar un punto este será modificado para siempre.
+Comprobar que cada vez que se sube un nivel se le darán 5 puntos para que el usuario incremente los stats del personaje, comprobar que al asignar un punto este será modificado para siempre.
 
 ## Historia de usuario n°5
 
@@ -48,7 +48,7 @@ Como jugador, quiero aumentar mis niveles de personaje para poder equiparme mejo
 
 ### Criterios de aceptación:
 
--Comprobar que cada ítem para ser equiparo requiere un nivel mínimo.
+Comprobar que cada ítem para ser equiparo requiere un nivel mínimo.
 
 ## Historia de usuario n°6
  
