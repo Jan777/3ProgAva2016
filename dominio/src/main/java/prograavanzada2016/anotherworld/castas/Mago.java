@@ -1,11 +1,17 @@
 package prograavanzada2016.anotherworld.castas;
 
+import java.util.ArrayList;
+
 import prograavanzada2016.anotherworld.entities.Personaje;
+import prograavanzada2016.anotherworld.habilidades.BolaDeFuego;
+import prograavanzada2016.anotherworld.habilidades.NovaDeEscarcha;
 import prograavanzada2016.anotherworld.razas.*;
 
 public class Mago extends Casta{
 
 	public Mago() {
+		this.setNombre("Mago");
+		//this.guardarHabilidades();
 	}
 
 	@Override	
@@ -21,6 +27,13 @@ public class Mago extends Casta{
 	public void saludar() {
 		System.out.println("Las turbulencias de magia estan alterandose");
 		
+	}
+
+	@Override
+	public void guardarHabilidades() {
+		this.habilidades=new ArrayList<>();
+		this.habilidades.add(new BolaDeFuego());
+		this.habilidades.add(new NovaDeEscarcha());
 	}
 
 }

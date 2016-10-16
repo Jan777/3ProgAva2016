@@ -16,6 +16,13 @@ public class App {
 		Personaje p3 = new Personaje("pedro", new Orco(), new Guerrero());
 		p1.mostrarStats();
 		p2.mostrarStats();
+		
+		p2.subirNivel();
+		p2.subirNivel();
+		p2.subirNivel();
+		p2.subirNivel();
+		p2.subirNivel();
+		p2.lanzarHabilidad(1, p1);
 		System.out.println("**********************");
 		p1.equiparArma(new LibroMagicoParaNovatos());
 		p1.atacar(p2);
@@ -23,6 +30,8 @@ public class App {
 		p1.atacar(p2);
 		p1.atacar(p2);
 		p2.mostrarStats();
+		System.out.println("**********************");
+		p1.mostrarStats();
 		//p2.mostrarStats();
 		//System.out.println("**********************");
 		/*p1.equiparArma(new EspadaDeMadera());

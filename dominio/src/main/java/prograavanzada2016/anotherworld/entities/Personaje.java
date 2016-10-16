@@ -25,13 +25,25 @@ public class Personaje extends Ente{
 		this.raza=raza;
 		this.casta=casta;
 		this.casta.calcularStats(this);
+		this.casta.guardarHabilidades();
 		//cuando se crea un personaje se le debe modificar sus stats segun la raza
 		//this.casta.calcularStats(this, raza);
 	}
 
 	@Override
 	public void serAtacado(int daño) {
-		this.restarSalud(daño-this.defensa);
+		int dañoNeto = daño-this.defensa;
+		if(dañoNeto>0){
+			this.restarSaludEnUso(dañoNeto);
+		}
+	}
+	
+	@Override
+	public void serAtacadoConMagia(int daño) {
+		int dañoNeto = daño;
+		if(dañoNeto>0){
+			this.restarSaludEnUso(dañoNeto);
+		}
 	}
 
 	@Override
@@ -80,7 +92,16 @@ public class Personaje extends Ente{
 		this.objetoArmadura=objetoArmadura;
 		this.setDefensa(objetoArmadura.getBonusDefensa());
 	}
-
+	
+	public void lanzarHabilidad(int id,Ente enteObjetivo){
+		Habilidad habilidad = this.getCasta().getHabilidad(id);
+		if(habilidad.getNivelRequerido()<=this.getNivel()){
+			habilidad.LanzarHechizo(this, enteObjetivo);
+		}else{
+			System.out.println("Siento que aun me falta energias para esta tecnica.");
+		}
+	}
+	
 	public int getExperienciaLimite() {
 		return experienciaLimite;
 	}
@@ -105,12 +126,18 @@ public class Personaje extends Ente{
 		this.raza = raza;
 	}
 	
+	
+	
 	public void mostrarStats(){
+		System.out.println("Nombre: "+super.getNombre());
+		System.out.println("Nivel: "+super.getNivel());
 		System.out.println("Fuerza: "+this.getFuerza());
 		System.out.println("Destreza: "+this.getDestreza());
 		System.out.println("Inteligecia: "+this.getInteligencia());
 		System.out.println("Salud: "+this.getSalud());
+		System.out.println("Salud en uso: "+this.getSaludEnUso());
 		System.out.println("Mana: "+this.getMana());
+		System.out.println("Mana en uso: "+this.getManaEnUso());
 		System.out.println("Energia: "+this.getEnergia());
 		System.out.println("Energia en uso:"+this.energiaEnUso);
 	}

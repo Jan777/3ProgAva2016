@@ -14,7 +14,9 @@ public abstract class Ente {
 	protected int destreza;
 	protected int inteligencia;
 	protected int salud;
+	protected int saludEnUso;
 	protected int mana;
+	protected int manaEnUso;
 	protected int energia;
 	protected int energiaEnUso;
 	
@@ -92,26 +94,51 @@ public abstract class Ente {
 	}
 
 	public void aumentarSalud(int salud) {
-		this.salud += salud;
+		this.salud = salud;
+		this.saludEnUso = salud;
+	}
+		
+	public int getSaludEnUso() {
+		return saludEnUso;
+	}
+	
+	public void aumentarSaludEnUso(int saludEnUso) {
+		this.saludEnUso += saludEnUso;
+		if(this.saludEnUso>this.salud){
+			this.saludEnUso=salud;
+		}
 	}
 
-	public void restarSalud(int salud){
-		this.salud -= salud;
-		if(this.salud<=0){
+	public void restarSaludEnUso(int saludEnUso) {
+		this.saludEnUso -= saludEnUso;
+		if(this.saludEnUso<=0){
 			this.estaVivo=false;
 		}
 	}
-	
+
 	public int getMana() {
 		return mana;
 	}
 
 	public void aumentarMana(int mana) {
 		this.mana += mana;
+		this.manaEnUso=this.mana;
 	}
 	
-	public void restarMana(int mana){
-		this.mana -= mana;
+	public int getManaEnUso() {
+		return manaEnUso;
+	}
+	
+	public void setManaEnUso(int manaEnUso) {
+		this.manaEnUso = manaEnUso;
+	}
+	
+	public boolean restarManaEnUso(int manaEnUso) {
+		if(this.manaEnUso>=manaEnUso){
+			this.manaEnUso -= manaEnUso;
+			return true;
+		}
+		return false;
 	}
 
 	public int getEnergia() {
@@ -132,7 +159,7 @@ public abstract class Ente {
 		this.energiaEnUso = energiaEnUso;
 	}
 
-	public boolean restarEnergia(int energia){
+	public boolean restarEnergiaEnUso(int energia){
 		if(this.energiaEnUso>=energia){
 			this.energiaEnUso -= energia;
 			return true;
@@ -234,13 +261,14 @@ public abstract class Ente {
 	}
 	
 	public boolean puedeAtacar(){
-		if(this.restarEnergia(this.puntosDeEnergiaPorAtaque)){
+		if(this.restarEnergiaEnUso(this.puntosDeEnergiaPorAtaque)){
 			return true;
 		}
 		return false;
 	}
 	
 	public abstract void serAtacado(int daño);
+	public abstract void serAtacadoConMagia(int daño);
 	
 	public abstract int calcularPuntosDeAtaque();
 	//pienso manejar este evento creando una Entidad Evento
@@ -250,4 +278,9 @@ public abstract class Ente {
 	public abstract void despuesDeAtacar();
 	
 	public abstract void serHechizado(Habilidad habilidad);
+
+	public String getNombre() {
+		// TODO Auto-generated method stub
+		return this.nombre;
+	}
 }
