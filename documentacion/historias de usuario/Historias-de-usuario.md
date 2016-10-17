@@ -8,7 +8,9 @@ Como jugador, quiero crear mi personaje, editando sus características principal
 
 ### Criterios de aceptación:
 
-Ingresar al juego y en la opción de crear personaje elegir nombre, raza, casta y sexo, comprobar que la creación fue exitosa y se le asigna una imagen de personaje según el sexo elegido.
+Dado un nuevo personaje
+Cuando se lo este creando
+Entonces se podra modificar sus caracteristicas y atributos
 
 ## Historia de usuario n°2
 
@@ -28,17 +30,21 @@ Como jugador, quiero eliminar enemigos para aumentar mi experiencia y poder subi
 
 ### Criterios de aceptación:
 
-La experiencia debe aumentar conforme a la diferencia de nivel entre el personaje y el enemigo eliminado.Si la misma supera el tope por nivel, el nivel debe aumentar en una unidad.
+Dado un jugador
+Cuando se elimine un enemigo
+Entonces el personaje sumara experiencia hasta subir un nivel
 
 ## Historia de usuario n°4
 
 ### Habilidades del personaje:
 
-Como jugador, quiero subir de nivel para poder asignar puntos adicionales a mis habilidades
+Como jugador, quiero subir de nivel para poder asignar puntos adicionales a mis atributos
 
 ### Criterios de aceptación:
 
-Al subir de nivel, debo tener cinco puntos de habilidad nuevos. Al asignar uno de los mismos a un stat, éste deberá aumentar en un punto de forma permanente.
+Dado un jugador
+Cuando se suba un nivel
+Entonces el personaje podra asignar puntos adicionales a sus atributos
 
 ## Historia de usuario n°5
 
@@ -48,7 +54,9 @@ Como jugador, quiero aumentar mis niveles de personaje para poder equiparme mejo
 
 ### Criterios de aceptación:
 
-Comprobar que cada ítem para ser equiparo requiere un nivel mínimo.
+Dado un jugador con cierto nivel y un item con un nivel minimo mayor que el nivel del jugador
+Cuando el jugador suba un nivel y este sea igual o mayor al nivel del item
+Entonces el personaje podra usar el item
 
 ## Historia de usuario n°6
  
