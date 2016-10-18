@@ -1,4 +1,4 @@
-# Historias de usuario
+﻿# Historias de usuario
 
 ## Historia de usuario n°1
 
@@ -94,7 +94,7 @@ Como jugador, quiero combatir contra otros jugadores y tener un historial de vic
  
 Dado un jugador con su personaje
 Cuando consulte su historial
-Entonces podrá observar un historial de victorias para demostrar su superioridad.
+Entonces se podrá observar el historial de victorias de dicho personaje.
  
 ## Historia de usuario n°9
  
