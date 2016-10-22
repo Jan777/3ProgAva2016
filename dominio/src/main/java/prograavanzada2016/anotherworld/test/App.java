@@ -11,12 +11,13 @@ import prograavanzada2016.anotherworld.razas.*;
 public class App {
 
 	public static void main(String[] args) throws Exception {
-		Personaje p1 = new Personaje("pedro", new Orco(), new Curandero());
-		Personaje p2 = new Personaje("pedro", new Orco(), new Mago());
-		Personaje p3 = new Personaje("pedro", new Orco(), new Guerrero());
+		Personaje p1 = new Personaje("pedro", new Humano(), new Curandero());
+		Personaje p2 = new Personaje("pedro", new Humano(), new Mago());
+		Personaje p3 = new Personaje("pedro", new Humano(), new Guerrero());
 		p1.mostrarStats();
 		p2.mostrarStats();
-		
+		p3.mostrarStats();
+		System.out.println("--------------------------");
 		p2.subirNivel();
 		p2.subirNivel();
 		p2.subirNivel();

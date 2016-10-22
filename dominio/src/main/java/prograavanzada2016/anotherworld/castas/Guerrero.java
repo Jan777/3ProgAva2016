@@ -10,16 +10,6 @@ public class Guerrero extends Casta{
 
 	public Guerrero() {
 		this.setNombre("Guerrero");
-		//this.guardarHabilidades();
-	}
-
-	@Override
-	public void calcularStats(Personaje personaje) {
-		if(personaje.getRaza() instanceof Orco){
-			this.aumentarStatsSegunCasta(personaje, 5, 10, 0, 100, 0, 100);
-		}else{
-			this.aumentarStatsSegunCasta(personaje, 10, 5, 0, 200, 0, 50);
-		}
 	}
 
 	@Override
@@ -32,6 +22,11 @@ public class Guerrero extends Casta{
 	public void guardarHabilidades() {
 		this.habilidades=new ArrayList<>();
 		this.habilidades.add(new Rodillazo());
+	}
+
+	@Override
+	public void calcularStats(Personaje personaje) {
+		personaje.getRaza().calcularStats(personaje, this);
 	}
 
 }

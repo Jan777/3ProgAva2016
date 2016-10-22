@@ -11,21 +11,11 @@ public class Mago extends Casta{
 
 	public Mago() {
 		this.setNombre("Mago");
-		//this.guardarHabilidades();
-	}
-
-	@Override	
-	public void calcularStats(Personaje personaje) {
-		if(personaje.getRaza() instanceof Orco){
-			this.aumentarStatsSegunCasta(personaje, 0, 5, 3, 150, 100, 50);
-		}else{
-			this.aumentarStatsSegunCasta(personaje, 0, 10, 3, 50, 200, 50);
-		}
 	}
 
 	@Override
 	public void saludar() {
-		System.out.println("Las turbulencias de magia estan alterandose");
+		System.out.println("El conocimiento es poder");
 		
 	}
 
@@ -34,6 +24,11 @@ public class Mago extends Casta{
 		this.habilidades=new ArrayList<>();
 		this.habilidades.add(new BolaDeFuego());
 		this.habilidades.add(new NovaDeEscarcha());
+	}
+
+	@Override
+	public void calcularStats(Personaje personaje) {
+		personaje.getRaza().calcularStats(personaje, this);
 	}
 
 }
