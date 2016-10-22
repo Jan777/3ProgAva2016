@@ -3,7 +3,7 @@ package prograavanzada2016.anotherworld.habilidades;
 import prograavanzada2016.anotherworld.castas.Curandero;
 import prograavanzada2016.anotherworld.entities.Ente;
 
-public class Curar extends Habilidad{
+public class Curar extends HabilidadPersonaje{
 	
 	public Curar(){
 		this.id=3;

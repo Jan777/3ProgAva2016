@@ -3,7 +3,7 @@ package prograavanzada2016.anotherworld.habilidades;
 import prograavanzada2016.anotherworld.castas.Mago;
 import prograavanzada2016.anotherworld.entities.Ente;
 
-public class BolaDeFuego extends Habilidad{
+public class BolaDeFuego extends HabilidadPersonaje{
 	
 	public BolaDeFuego(){
 		this.id=1;

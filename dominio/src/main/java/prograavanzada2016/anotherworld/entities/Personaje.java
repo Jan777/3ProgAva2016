@@ -1,7 +1,7 @@
 package prograavanzada2016.anotherworld.entities;
 
 import prograavanzada2016.anotherworld.castas.Casta;
-import prograavanzada2016.anotherworld.habilidades.Habilidad;
+import prograavanzada2016.anotherworld.habilidades.HabilidadPersonaje;
 import prograavanzada2016.anotherworld.objetos.*;
 import prograavanzada2016.anotherworld.objetos.armaduras.ObjetoArmadura;
 import prograavanzada2016.anotherworld.objetos.armas.ObjetoArma;
@@ -58,7 +58,7 @@ public class Personaje extends Ente{
 	}
 
 	@Override
-	public void serHechizado(Habilidad habilidad) {
+	public void serHechizado(HabilidadPersonaje habilidad) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -94,7 +94,7 @@ public class Personaje extends Ente{
 	}
 	
 	public void lanzarHabilidad(int id,Ente enteObjetivo){
-		Habilidad habilidad = this.getCasta().getHabilidad(id);
+		HabilidadPersonaje habilidad = this.getCasta().getHabilidad(id);
 		if(habilidad.getNivelRequerido()<=this.getNivel()){
 			habilidad.LanzarHechizo(this, enteObjetivo);
 		}else{

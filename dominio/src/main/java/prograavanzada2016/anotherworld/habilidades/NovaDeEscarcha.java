@@ -4,7 +4,7 @@ package prograavanzada2016.anotherworld.habilidades;
 import prograavanzada2016.anotherworld.castas.Mago;
 import prograavanzada2016.anotherworld.entities.Ente;
 
-public class NovaDeEscarcha extends Habilidad{
+public class NovaDeEscarcha extends HabilidadPersonaje{
 	
 	public NovaDeEscarcha() {
 		this.id=2;

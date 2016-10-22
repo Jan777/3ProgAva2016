@@ -1,6 +1,8 @@
 package prograavanzada2016.anotherworld.NPCs;
 
+import java.util.List;
 import prograavanzada2016.anotherworld.entities.Ente;
+import prograavanzada2016.anotherworld.habilidades.Habilidad;
 
 public abstract class NPC extends Ente
 {
@@ -11,7 +13,8 @@ public abstract class NPC extends Ente
 	protected int expBaseQueOtorga;
 	protected int bonusExpDifNivel = 100;
 	// Hay que agregar los items que va a dropear!
-	// Habilidades?
+	
+	protected List<Habilidad> habilidades;
 	
 	// ** Constructores ** \\
 	protected NPC (String nombre, int nivel, int salud, int energia, int mana, int fuerza,

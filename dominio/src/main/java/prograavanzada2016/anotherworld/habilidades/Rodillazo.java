@@ -3,7 +3,7 @@ package prograavanzada2016.anotherworld.habilidades;
 import prograavanzada2016.anotherworld.castas.Guerrero;
 import prograavanzada2016.anotherworld.entities.Ente;
 
-public class Rodillazo extends Habilidad{
+public class Rodillazo extends HabilidadPersonaje{
 	public Rodillazo(){
 		this.costeMana=10;
 		this.casta= new Guerrero();

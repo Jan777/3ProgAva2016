@@ -1,7 +1,7 @@
 package prograavanzada2016.anotherworld.entities;
 
 import prograavanzada2016.anotherworld.enumvalues.Orientacion;
-import prograavanzada2016.anotherworld.habilidades.Habilidad;
+import prograavanzada2016.anotherworld.habilidades.HabilidadPersonaje;
 
 public abstract class Ente {
 	
@@ -277,7 +277,7 @@ public abstract class Ente {
 	//hay que debatir este metodo
 	public abstract void despuesDeAtacar();
 	
-	public abstract void serHechizado(Habilidad habilidad);
+	public abstract void serHechizado(HabilidadPersonaje habilidad);
 
 	public String getNombre() {
 		// TODO Auto-generated method stub

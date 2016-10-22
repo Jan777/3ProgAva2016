@@ -3,12 +3,12 @@ package prograavanzada2016.anotherworld.castas;
 import java.util.ArrayList;
 
 import prograavanzada2016.anotherworld.entities.Personaje;
-import prograavanzada2016.anotherworld.habilidades.Habilidad;
+import prograavanzada2016.anotherworld.habilidades.HabilidadPersonaje;
 
 public abstract class Casta {
 	
 	protected String nombre;
-	protected ArrayList<Habilidad> habilidades;
+	protected ArrayList<HabilidadPersonaje> habilidades;
 	
 	protected void setNombre(String nombre){
 		this.nombre=nombre;
@@ -18,16 +18,16 @@ public abstract class Casta {
 		return this.nombre;
 	}
 	
-	public ArrayList<Habilidad> getHabilidades() {
+	public ArrayList<HabilidadPersonaje> getHabilidades() {
 		return habilidades;
 	}
 
-	public void setHabilidades(ArrayList<Habilidad> habilidades) {
+	public void setHabilidades(ArrayList<HabilidadPersonaje> habilidades) {
 		this.habilidades = habilidades;
 	}
 	
-	public Habilidad getHabilidad(int id){
-		for(Habilidad habilidad : this.habilidades){
+	public HabilidadPersonaje getHabilidad(int id){
+		for(HabilidadPersonaje habilidad : this.habilidades){
 			if(habilidad.getId()==id){
 				return habilidad;
 			}
