@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import prograavanzada2016.anotherworld.habilidades.*;
+import prograavanzada2016.anotherworld.mapas.Mapa;
 
 public class Dragon extends NPC
 {
@@ -16,6 +17,22 @@ public class Dragon extends NPC
 		habilidades = new ArrayList<Habilidad>(Arrays.asList(new AlientoDeFuegoNegro(), new RafagaAlada()));
 	}
 	
+	public Dragon(String nombre, int nivel, int salud, int energia, int mana, int fuerza, int destreza,int inteligencia, boolean esPasivo, int expBaseQueOtorga,Mapa mapa){
+		super(nombre, nivel, salud, energia, mana, fuerza, destreza, inteligencia, esPasivo, expBaseQueOtorga);
+		this.esPasivo = false;
+		habilidades = new ArrayList<Habilidad>(Arrays.asList(new AlientoDeFuegoNegro(), new RafagaAlada()));
+		this.mapa=mapa;
+	}
+	
+	public Dragon(String nombre, int nivel, int salud, int energia, int mana, int fuerza, int destreza,int inteligencia, boolean esPasivo, int expBaseQueOtorga,Mapa mapa,int posicionX, int posicionY){
+		super(nombre, nivel, salud, energia, mana, fuerza, destreza, inteligencia, esPasivo, expBaseQueOtorga);
+		this.esPasivo = false;
+		habilidades = new ArrayList<Habilidad>(Arrays.asList(new AlientoDeFuegoNegro(), new RafagaAlada()));
+		this.mapa=mapa;
+		this.posicionX=posicionX;
+		this.posicionY=posicionY;
+	}
+
 	@Override
 	public int calcularPuntosDeAtaque()
 	{

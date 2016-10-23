@@ -3,6 +3,7 @@ package prograavanzada2016.anotherworld.entities;
 import prograavanzada2016.anotherworld.enumvalues.Orientacion;
 import prograavanzada2016.anotherworld.habilidades.HabilidadPersonaje;
 import prograavanzada2016.anotherworld.mapas.Mapa;
+import prograavanzada2016.anotherworld.mapas.Zona;
 
 public abstract class Ente {
 	//nos va a ayudar a indentifcar al momento de las Arenas para saber si ataco o no
@@ -33,7 +34,7 @@ public abstract class Ente {
 	protected int posicionX;
 	protected int posicionY;
 	protected Mapa mapa;
-	//este atributo indica hacia donde esta mirando el personaje
+	protected Zona zona;
 	protected Orientacion orientacion;
 	
 	//atributos de batalla de un ente
@@ -266,12 +267,20 @@ public abstract class Ente {
 	public void setMapa(Mapa mapa) {
 		this.mapa = mapa;
 	}
+		
+	public Zona getZona() {
+		return this.getMapa().getZonaByEnte(this);
+	}
+
+	public void setZona(Zona zona) {
+		this.zona = zona;
+	}
 
 	//una primera idea del metodo, seguramente hay que modificarlo cuando
 	//tengamos mas idea de como es el movimiento
 	public void moverse(int posicionX, int posicionY){
-		this.posicionX+=posicionX;
-		this.posicionY+=posicionY;
+		this.posicionX=posicionX;
+		this.posicionY=posicionY;
 		//calculo de la orientacion aun no tengo idea de como se hace
 		this.setOrientacion(Orientacion.ESTE);
 	}
@@ -310,6 +319,8 @@ public abstract class Ente {
 	public abstract void serHechizado(HabilidadPersonaje habilidad);
 	
 	public boolean puedeEntrarEnCombate(Ente ente){
-		return ente.getMapa().getZonaByEnte(ente).isNeutral() && this.getMapa().getZonaByEnte(ente).isNeutral();
+		//si la zona no es neutral y al menos estan en la misma zona puede atacar
+		return ente.getZona().equals(this.getZona())&&
+				this.getMapa().getZonaByEnte(this).isNeutral();
 	}
 }
