@@ -2,6 +2,7 @@ package prograavanzada2016.anotherworld.entities;
 
 import prograavanzada2016.anotherworld.enumvalues.Orientacion;
 import prograavanzada2016.anotherworld.habilidades.HabilidadPersonaje;
+import prograavanzada2016.anotherworld.mapas.Mapa;
 
 public abstract class Ente {
 	//nos va a ayudar a indentifcar al momento de las Arenas para saber si ataco o no
@@ -31,6 +32,7 @@ public abstract class Ente {
 	//atributos de ubicacion en el mapa de un Ente
 	protected int posicionX;
 	protected int posicionY;
+	protected Mapa mapa;
 	//este atributo indica hacia donde esta mirando el personaje
 	protected Orientacion orientacion;
 	
@@ -49,6 +51,7 @@ public abstract class Ente {
 		this.defensa=0;
 		this.puntosDeEnergiaPorAtaque=10;
 		this.nivel=1;
+		this.posicionX=this.posicionY=0;
 	}
 	
 	protected Ente (String nombre, int nivel, int salud, int energia, int mana, int fuerza, int destreza, int inteligencia)
@@ -72,7 +75,12 @@ public abstract class Ente {
 	public void setIdEnte(float idEnte) {
 		this.idEnte = idEnte;
 	}
-
+	
+	
+	public String getNombre() {
+		// TODO Auto-generated method stub
+		return this.nombre;
+	}
 	public int getNivel() {
 		return nivel;
 	}
@@ -248,6 +256,16 @@ public abstract class Ente {
 	public void setPuntosDeEnergiaPorAtaque(int puntosDeEnergiaPorAtaque) {
 		this.puntosDeEnergiaPorAtaque = puntosDeEnergiaPorAtaque;
 	}
+	
+	
+	
+	public Mapa getMapa() {
+		return mapa;
+	}
+
+	public void setMapa(Mapa mapa) {
+		this.mapa = mapa;
+	}
 
 	//una primera idea del metodo, seguramente hay que modificarlo cuando
 	//tengamos mas idea de como es el movimiento
@@ -290,9 +308,8 @@ public abstract class Ente {
 	public abstract void despuesDeAtacar();
 	
 	public abstract void serHechizado(HabilidadPersonaje habilidad);
-
-	public String getNombre() {
-		// TODO Auto-generated method stub
-		return this.nombre;
+	
+	public boolean puedeEntrarEnCombate(Ente ente){
+		return ente.getMapa().getZonaByEnte(ente).isNeutral() && this.getMapa().getZonaByEnte(ente).isNeutral();
 	}
 }
