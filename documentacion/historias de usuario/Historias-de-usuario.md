@@ -52,7 +52,7 @@ Entonces podra asignar puntos adicionales a sus atributos
 
 ### Habilidades e items del personaje:
 
-Como jugador, quiero aumentar los niveles de mi personaje para poder equiparme mejores items.
+Como jugador, quiero aumentar mis niveles de personaje para poder equiparme mejores items.
 
 ### Criterios de aceptación:
 
@@ -82,7 +82,7 @@ Como jugador, quiero aliarme con otro jugador para combatir junto a él y aument
  
 Dado un Jugador con su personaje
 Cuando se alíe con otro jugador
-Entonces podrá combatir junto a él y aumentar ambas experiencia que recolecten durante ese tiempo.
+Entonces podrá combatir junto a él y aumentar la experiencia que recolecten en ese tiempo.
  
 ## Historia de usuario n°8
  
