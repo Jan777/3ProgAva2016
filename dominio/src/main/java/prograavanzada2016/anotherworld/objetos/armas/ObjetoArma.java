@@ -1,12 +1,12 @@
 package prograavanzada2016.anotherworld.objetos.armas;
 
 import prograavanzada2016.anotherworld.castas.Casta;
-
 public abstract class ObjetoArma {
 	protected String nombre;
 	protected int bonusAtaque;
 	protected int puntosDeEnergiaPorAtaque;
 	protected Casta casta;
+	protected int nivelMinimo;
 	
 	
 	public String getNombre() {
@@ -32,5 +32,12 @@ public abstract class ObjetoArma {
 	}
 	public void setCasta(Casta casta) {
 		this.casta = casta;
-	}	
+	}
+	public int getNivelMinimo() {
+		return nivelMinimo;
+	}
+	public void setNivelMinimo(int nivelMinimo) {
+		this.nivelMinimo = nivelMinimo;
+	}
+	
 }

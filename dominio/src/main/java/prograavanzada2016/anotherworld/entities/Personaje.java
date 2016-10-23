@@ -79,9 +79,9 @@ public class Personaje extends Ente{
 	}
 	
 	public void equiparArma(ObjetoArma objetoArma){
-		if(objetoArma.getCasta().equals(this.getCasta())){
+		if(objetoArma.getCasta().equals(this.getCasta()) && objetoArma.getNivelMinimo()<=this.getNivel()){
 			this.objetoArma=objetoArma;
-			this.setAtaque(objetoArma.getBonusAtaque());
+			this.setAtaque(objetoArma.getBonusAtaque()+this.getAtaque());
 			this.setPuntosDeEnergiaPorAtaque(objetoArma.getPuntosDeEnergiaPorAtaque());
 		}else{
 			System.out.println("No se puede equipar el arma, reload reload");
@@ -89,8 +89,12 @@ public class Personaje extends Ente{
 	}
 	
 	public void equiparArmadura(ObjetoArmadura objetoArmadura){
-		this.objetoArmadura=objetoArmadura;
-		this.setDefensa(objetoArmadura.getBonusDefensa());
+		if(objetoArmadura.getCasta().equals(this.getCasta()) && objetoArmadura.getNivelMinimo()<=this.getNivel()){
+			this.objetoArmadura=objetoArmadura;
+			this.setDefensa(objetoArmadura.getBonusDefensa()+this.getDefensa());
+		}else{
+			System.out.println("Una fuerza extraña me impide usar esta armadura");
+		}
 	}
 	
 	public void lanzarHabilidad(int id,Ente enteObjetivo){

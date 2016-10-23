@@ -8,5 +8,6 @@ public class LibroMagicoParaNovatos extends ObjetoArma{
 		this.setBonusAtaque(10);
 		this.setPuntosDeEnergiaPorAtaque(5);
 		this.setCasta(new Curandero());
+		this.setNivelMinimo(2);
 	}
 }

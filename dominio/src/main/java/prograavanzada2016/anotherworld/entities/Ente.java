@@ -4,6 +4,8 @@ import prograavanzada2016.anotherworld.enumvalues.Orientacion;
 import prograavanzada2016.anotherworld.habilidades.HabilidadPersonaje;
 
 public abstract class Ente {
+	//nos va a ayudar a indentifcar al momento de las Arenas para saber si ataco o no
+	protected float idEnte;
 	
 	//atributos principales de un Ente
 	protected String nombre;
@@ -60,7 +62,17 @@ public abstract class Ente {
 		this.destreza = destreza;
 		this.inteligencia = inteligencia;
 	}
-		
+	
+	
+	
+	public float getIdEnte() {
+		return idEnte;
+	}
+
+	public void setIdEnte(float idEnte) {
+		this.idEnte = idEnte;
+	}
+
 	public int getNivel() {
 		return nivel;
 	}
