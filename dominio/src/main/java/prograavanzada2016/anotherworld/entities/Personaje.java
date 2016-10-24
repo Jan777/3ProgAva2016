@@ -1,10 +1,9 @@
 package prograavanzada2016.anotherworld.entities;
 
 import prograavanzada2016.anotherworld.castas.Casta;
+import prograavanzada2016.anotherworld.combates.Loot;
 import prograavanzada2016.anotherworld.habilidades.HabilidadPersonaje;
 import prograavanzada2016.anotherworld.objetos.*;
-import prograavanzada2016.anotherworld.objetos.armaduras.ObjetoArmadura;
-import prograavanzada2016.anotherworld.objetos.armas.ObjetoArma;
 import prograavanzada2016.anotherworld.razas.Raza;
 
 public class Personaje extends Ente{
@@ -144,5 +143,11 @@ public class Personaje extends Ente{
 		System.out.println("Mana en uso: "+this.getManaEnUso());
 		System.out.println("Energia: "+this.getEnergia());
 		System.out.println("Energia en uso:"+this.energiaEnUso);
+	}
+
+	@Override
+	public void dropearObjetos(Loot loot)
+	{
+		// Al morir, ¿dropea el mejor item?
 	}
 }

@@ -1,4 +1,4 @@
-package prograavanzada2016.anotherworld.objetos.armaduras;
+package prograavanzada2016.anotherworld.objetos;
 
 import prograavanzada2016.anotherworld.castas.Guerrero;
 

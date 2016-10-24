@@ -3,7 +3,6 @@ package dominio;
 import prograavanzada2016.anotherworld.castas.*;
 import prograavanzada2016.anotherworld.entities.*;
 import prograavanzada2016.anotherworld.objetos.*;
-import prograavanzada2016.anotherworld.objetos.armas.*;
 import prograavanzada2016.anotherworld.razas.*;
 import org.junit.*;
 
