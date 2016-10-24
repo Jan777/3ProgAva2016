@@ -1,5 +1,6 @@
 package prograavanzada2016.anotherworld.entities;
 
+import prograavanzada2016.anotherworld.combates.Loot;
 import prograavanzada2016.anotherworld.enumvalues.Orientacion;
 import prograavanzada2016.anotherworld.habilidades.HabilidadPersonaje;
 import prograavanzada2016.anotherworld.mapas.Mapa;
@@ -323,4 +324,6 @@ public abstract class Ente {
 		return ente.getZona().equals(this.getZona())&&
 				this.getMapa().getZonaByEnte(this).isNeutral();
 	}
+	
+	public abstract void dropearObjetos(Loot loot);
 }

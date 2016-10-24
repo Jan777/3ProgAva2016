@@ -9,7 +9,7 @@ import prograavanzada2016.anotherworld.castas.Guerrero;
 import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.mapas.MapaNivelUno;
 import prograavanzada2016.anotherworld.mapas.Zona;
-import prograavanzada2016.anotherworld.objetos.armas.LibroMagicoParaNovatos;
+import prograavanzada2016.anotherworld.objetos.LibroMagicoParaNovatos;
 import prograavanzada2016.anotherworld.razas.Humano;
 
 public class AnotherWorldTest {
