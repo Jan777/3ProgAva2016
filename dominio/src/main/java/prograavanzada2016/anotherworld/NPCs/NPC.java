@@ -1,8 +1,11 @@
 package prograavanzada2016.anotherworld.NPCs;
 
-import java.util.List;
+import java.util.*;
+import java.util.Map.Entry;
+import prograavanzada2016.anotherworld.combates.Loot;
 import prograavanzada2016.anotherworld.entities.Ente;
 import prograavanzada2016.anotherworld.habilidades.Habilidad;
+import prograavanzada2016.anotherworld.objetos.*;
 
 public abstract class NPC extends Ente
 {
@@ -12,9 +15,9 @@ public abstract class NPC extends Ente
 	// Indica la experiencia base que obtiene un jugador al matarlo, se agrega o no un bonus en base a la diferencia de nivel.
 	protected int expBaseQueOtorga;
 	protected int bonusExpDifNivel = 100;
-	// Hay que agregar los items que va a dropear!
-	
 	protected List<Habilidad> habilidades;
+	// Por cada objeto, tengo una probabilidad de que sea o no dropeado.
+	protected Map<Objeto, Integer> objetosDropeables = new HashMap<Objeto, Integer>();
 	
 	// ** Constructores ** \\
 	protected NPC (String nombre, int nivel, int salud, int energia, int mana, int fuerza,
@@ -34,6 +37,25 @@ public abstract class NPC extends Ente
 			bonusExp = (this.nivel - nivelPersonaje) * this.bonusExpDifNivel;
 		
 		return this.expBaseQueOtorga + bonusExp; 
+	}
+	
+	@Override
+	public void dropearObjetos(Loot loot)
+	{
+		if (!this.estaVivo)
+		{
+			for (Entry entry : this.objetosDropeables.entrySet()) 
+			{
+				int probDropeo = (int) entry.getValue();
+				boolean loDropea = new Random().nextInt(100) <= probDropeo;
+				
+				if(loDropea)
+				{
+					Objeto objeto = (Objeto) entry.getKey();
+					loot.agregarObjeto(objeto);
+				}
+			}
+		}
 	}
 	
 }

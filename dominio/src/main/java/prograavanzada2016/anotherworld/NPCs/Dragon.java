@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 import prograavanzada2016.anotherworld.habilidades.*;
 import prograavanzada2016.anotherworld.mapas.Mapa;
+import prograavanzada2016.anotherworld.objetos.*;
 
 public class Dragon extends NPC
 {
@@ -31,6 +32,9 @@ public class Dragon extends NPC
 		this.mapa=mapa;
 		this.posicionX=posicionX;
 		this.posicionY=posicionY;
+		this.objetosDropeables.put(new Einlanzer(), 10);
+		this.objetosDropeables.put(new EspadaDeMadera(), 100);
+		this.objetosDropeables.put(new LibroMagicoParaNovatos(), 90);
 	}
 
 	@Override
