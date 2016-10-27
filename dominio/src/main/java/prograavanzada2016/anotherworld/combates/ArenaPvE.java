@@ -12,10 +12,12 @@ public class ArenaPvE {
 	private int cantidadDeExperiencia;
 	private ArrayList<Float> listoPersonajes;
 	private ArrayList<Float> listoEnemigos;
+	private Loot loot;
 	
 	public ArenaPvE(Grupo grupoEnemigos, Grupo grupoPersonajes) {
 		this.grupoEnemigos = grupoEnemigos;
 		this.grupoPersonajes = grupoPersonajes;
+		this.loot = new Loot();
 	}
 
 

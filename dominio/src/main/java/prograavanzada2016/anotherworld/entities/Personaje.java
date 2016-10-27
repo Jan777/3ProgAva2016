@@ -1,6 +1,7 @@
 package prograavanzada2016.anotherworld.entities;
 
 import prograavanzada2016.anotherworld.castas.Casta;
+import prograavanzada2016.anotherworld.combates.Alianza;
 import prograavanzada2016.anotherworld.combates.Loot;
 import prograavanzada2016.anotherworld.habilidades.HabilidadPersonaje;
 import prograavanzada2016.anotherworld.objetos.*;
@@ -18,6 +19,8 @@ public class Personaje extends Ente{
 	protected int experienciaActual;
 	//experiencia que necesita el jugador para subir de nivel
 	protected int experienciaLimite;
+	
+	protected Alianza alianza = null;
 	
 	public Personaje(String nombre, Raza raza, Casta casta) throws Exception {
 		super(nombre);
@@ -149,5 +152,34 @@ public class Personaje extends Ente{
 	public void dropearObjetos(Loot loot)
 	{
 		// Al morir, ¿dropea el mejor item?
+	}
+	
+	public void crearAlianza(String nombreAlianza)
+	{
+		abandonarAlianzaActual();
+		this.alianza = new Alianza(nombreAlianza, this);
+	}
+	
+	public void añadirPersonajeAlianza(Personaje p)
+	{
+		// Checkear que el personaje a añadir no esté en la alianza.
+		this.alianza.agregarMiembro(p);
+		p.serAñadidoAlianza(this.alianza);
+	}
+	
+	public void serAñadidoAlianza(Alianza a)
+	{
+		// Consultar si quiere aceptar.
+		this.abandonarAlianzaActual();
+		this.alianza = a;
+	}
+	
+	public void abandonarAlianzaActual()
+	{
+		if (this.alianza != null)
+		{
+			this.alianza.quitarMiembro(this);
+			this.alianza = null;
+		}
 	}
 }
