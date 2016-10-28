@@ -25,6 +25,9 @@ public abstract class Ente {
 	protected int energia;
 	protected int energiaEnUso;
 	
+	//puntos que le podrá añadir a los stats cuando sube de nivel
+	protected int puntosAdicionalesALosStats;
+	
 	//atributos de ataque y defensa
 	protected int ataque;
 	protected int defensa;
@@ -92,7 +95,14 @@ public abstract class Ente {
 	}
 
 	public void aumentarFuerza(int fuerza) {
-		this.fuerza += fuerza;
+		if(fuerza <= puntosAdicionalesALosStats)
+		{
+			this.fuerza += fuerza;
+			puntosAdicionalesALosStats-=fuerza;
+		}else if(nivel == 1)
+		{
+			this.fuerza += fuerza;
+		}
 	}
 
 	public int getDestreza() {
@@ -100,7 +110,14 @@ public abstract class Ente {
 	}
 
 	public void aumentarDestreza(int destreza) {
-		this.destreza += destreza;
+		if(destreza <= puntosAdicionalesALosStats)
+		{
+			this.destreza += destreza;
+			puntosAdicionalesALosStats-=destreza;
+		}else if(nivel == 1)
+		{
+			this.destreza += destreza;
+		}
 	}
 
 	public int getInteligencia() {
@@ -108,7 +125,14 @@ public abstract class Ente {
 	}
 
 	public void aumentarInteligencia(int inteligencia) {
-		this.inteligencia += inteligencia;
+		if(inteligencia <= puntosAdicionalesALosStats)
+		{
+			this.inteligencia += inteligencia;
+			puntosAdicionalesALosStats-=inteligencia;
+		}else if(nivel == 1)
+		{
+			this.inteligencia += inteligencia;
+		}
 	}
 
 	public int getSalud() {
@@ -211,8 +235,6 @@ public abstract class Ente {
 	public void setPosicionY(int posicionY) {
 		this.posicionY = posicionY;
 	}
-
-	
 	
 	public Orientacion getOrientacion() {
 		return orientacion;
@@ -222,9 +244,6 @@ public abstract class Ente {
 	public void setOrientacion(Orientacion orientacion) {
 		this.orientacion = orientacion;
 	}
-	
-	
-	
 
 	public boolean isEstaVivo() {
 		return estaVivo;
@@ -291,13 +310,14 @@ public abstract class Ente {
 		if(ente.isEstaVivo()){
 			if(this.puedeAtacar()){
 				ente.serAtacado(this.calcularPuntosDeAtaque());
-				ente.despuesDeAtacar();
+				//ente.despuesDeAtacar();
 			}else{
 				System.out.println("Intento atacar pero fallo");
 			}
 		}else{
 			System.out.println("Aguanta He-Man, ya estoy muerto");
 		}
+		this.despuesDeAtacar(ente);
 	}
 	
 	public boolean puedeAtacar(){
@@ -315,7 +335,7 @@ public abstract class Ente {
 	//en la cual en un combate se vaya creando una pila de Evento
 	//y luego despues del ataque se llame a esa pila y haga lo que tenga que hacer
 	//hay que debatir este metodo
-	public abstract void despuesDeAtacar();
+	public abstract void despuesDeAtacar(Ente ente);
 	
 	public abstract void serHechizado(HabilidadPersonaje habilidad);
 	

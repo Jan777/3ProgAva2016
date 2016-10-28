@@ -3,6 +3,7 @@ package prograavanzada2016.anotherworld.NPCs;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import prograavanzada2016.anotherworld.entities.Ente;
 import prograavanzada2016.anotherworld.habilidades.*;
 import prograavanzada2016.anotherworld.mapas.Mapa;
 import prograavanzada2016.anotherworld.objetos.*;
@@ -14,6 +15,7 @@ public class Dragon extends NPC
 				  int inteligencia, boolean esPasivo, int expBaseQueOtorga)
 	{
 		super(nombre, nivel, salud, energia, mana, fuerza, destreza, inteligencia, esPasivo, expBaseQueOtorga);
+		this.estaVivo = true;
 		this.esPasivo = false;
 		habilidades = new ArrayList<Habilidad>(Arrays.asList(new AlientoDeFuegoNegro(), new RafagaAlada()));
 	}
@@ -44,7 +46,7 @@ public class Dragon extends NPC
 	}
 
 	@Override
-	public void despuesDeAtacar()
+	public void despuesDeAtacar(Ente ente)
 	{
 		int boostSalud = (int) ((int) this.saludEnUso * 0.05);
 		this.aumentarSalud(boostSalud);

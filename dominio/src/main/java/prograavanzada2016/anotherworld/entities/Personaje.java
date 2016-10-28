@@ -20,6 +20,7 @@ public class Personaje extends Ente{
 	//experiencia que necesita el jugador para subir de nivel
 	protected int experienciaLimite;
 	
+	
 	protected Alianza alianza = null;
 	
 	public Personaje(String nombre, Raza raza, Casta casta) throws Exception {
@@ -28,6 +29,7 @@ public class Personaje extends Ente{
 		this.casta=casta;
 		this.casta.calcularStats(this);
 		this.casta.guardarHabilidades();
+		this.puntosAdicionalesALosStats = 0;
 		//cuando se crea un personaje se le debe modificar sus stats segun la raza
 		//this.casta.calcularStats(this, raza);
 	}
@@ -54,9 +56,11 @@ public class Personaje extends Ente{
 	}
 
 	@Override
-	public void despuesDeAtacar() {
-		// TODO Auto-generated method stub
-		
+	public void despuesDeAtacar(Ente ente) {
+		if(!ente.estaVivo)
+		{
+			this.sumarExperiencia(5);;
+		}
 	}
 
 	@Override
@@ -71,6 +75,7 @@ public class Personaje extends Ente{
 	
 	public void subirNivel() {
 		this.nivel = this.nivel+1;
+		this.puntosAdicionalesALosStats += 5;
 	}
 
 	public void sumarExperiencia(int experiencia) {

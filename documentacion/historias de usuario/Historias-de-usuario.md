@@ -34,7 +34,7 @@ Como jugador, quiero eliminar enemigos para aumentar mi experiencia y poder subi
 
 Dado un jugador con su personaje
 Cuando elimine un enemigo
-Entonces el personaje sumara experiencia hasta subir un nivel
+Entonces el personaje sumara experiencia para subir un nivel
 
 ## Historia de usuario n°4
 
