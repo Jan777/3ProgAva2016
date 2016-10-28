@@ -182,4 +182,19 @@ public class Personaje extends Ente{
 			this.alianza = null;
 		}
 	}
+	
+	public String getNombreAlianza()
+	{
+		return (this.alianza != null) ? this.alianza.getNombre() : "";
+	}
+	
+	public int getCantMienbrosAlianza()
+	{
+		return (this.alianza != null) ? this.alianza.getCantMiembros() : 0;
+	}
+	
+	public float getBonusExp()
+	{
+		return (this.alianza != null) ? this.alianza.getBonusExp() : 1;
+	}
 }

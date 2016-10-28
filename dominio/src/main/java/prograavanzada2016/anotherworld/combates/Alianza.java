@@ -40,6 +40,21 @@ public class Alianza
 		this.recalcularBonus();
 	}
 	
+	public String getNombre()
+	{
+		return this.nombre;
+	}
+	
+	public int getCantMiembros()
+	{
+		return this.cantMiembros;
+	}
+	
+	public float getBonusExp()
+	{
+		return this.bonusExp;
+	}
+	
 	public List<String> obtenerMiembros()
 	{
 		List<String> miembros = new ArrayList<String>();
@@ -53,7 +68,7 @@ public class Alianza
 	// ** Métodos Privados ** \\
 	private void recalcularBonus()
 	{
-		this.bonusExp = (this.cantMiembros > 1) ? 1 + (this.cantMiembros / 20) : 1;
+		this.bonusExp = (this.cantMiembros > 1) ? 1 + ((float) this.cantMiembros / 20) : 1;
 	}
 	
 }
