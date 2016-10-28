@@ -9,6 +9,27 @@ import prograavanzada2016.anotherworld.razas.*;
 
 public class PruebaDeCreacionDePersonaje {
 
+	//Historia 1
+	@Test
+	public void crearPersonaje() throws Exception
+	{
+		Personaje p = new Personaje("pedro", new Orco(), new Curandero());
+		Assert.assertEquals(Orco.class , p.getRaza().getClass());
+		
+		p.setCasta(new Guerrero());
+		Assert.assertEquals(Guerrero.class, p.getCasta().getClass());
+	}
+	
+	//Historia 2
+	@Test
+	public void ganarExperienciaYSubirDeNivel() throws Exception
+	{
+		Personaje pepe = new Personaje("pepe", new Humano(), new Guerrero());
+		Assert.assertEquals(1, pepe.getNivel());
+		pepe.sumarExperiencia(20);
+		Assert.assertEquals(2, pepe.getNivel());
+	}
+	
 	@Test
 	public void ataqueEntrePersonajes() throws Exception{
 		Personaje p1 = new Personaje("pedro", new Orco(), new Curandero());
