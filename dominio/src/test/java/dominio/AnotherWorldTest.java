@@ -124,48 +124,70 @@ public class AnotherWorldTest {
 	}
 	
 	/**
-	 * Historia de usuario Nº6 y 7
+	 * Historia de usuario Nº 6
 	 * @throws Exception 
 	 * */
+	@Test
+	public void creacionAlianza() throws Exception
+	{
+		Personaje anselmo = new Personaje("Anselmo", new Orco(), new Guerrero());
+		anselmo.crearAlianza("Las Cobras");
+		
+		Assert.assertEquals("Las Cobras", anselmo.getNombreAlianza());
+	}
 	
-		@Test
-		public void creacionAlianza() throws Exception
-		{
-			Personaje anselmo = new Personaje("Anselmo", new Orco(), new Guerrero());
-			anselmo.crearAlianza("Las Cobras");
-			
-			Assert.assertEquals("Las Cobras", anselmo.getNombreAlianza());
-		}
+	@Test
+	public void agregaPersonajeAlianza() throws Exception
+	{
+		Personaje anselmo = new Personaje("Anselmo", new Orco(), new Guerrero());
+		Personaje braulio = new Personaje("Braulio", new Humano(), new Mago());
 		
-		@Test
-		public void agregaPersonajeAlianza() throws Exception
-		{
-			Personaje anselmo = new Personaje("Anselmo", new Orco(), new Guerrero());
-			Personaje braulio = new Personaje("Braulio", new Humano(), new Mago());
-			
-			anselmo.crearAlianza("Las Cobras");
-			anselmo.añadirPersonajeAlianza(braulio);
-			
-			Assert.assertEquals("Las Cobras", braulio.getNombreAlianza());
-		}
+		anselmo.crearAlianza("Las Cobras");
+		anselmo.añadirPersonajeAlianza(braulio);
 		
-		@Test
-		public void calculoBonusExperiencia() throws Exception
-		{
-			Personaje anselmo = new Personaje("Anselmo", new Orco(), new Guerrero());
-			Personaje braulio = new Personaje("Braulio", new Humano(), new Mago());
-			Personaje yolanda = new Personaje("Yolanda", new Orco(), new Guerrero());
-			
-			anselmo.crearAlianza("Hell's Satans");
-			anselmo.añadirPersonajeAlianza(braulio);
-			anselmo.añadirPersonajeAlianza(yolanda);
-			
-			Assert.assertEquals(3, yolanda.getCantMienbrosAlianza());
-			Assert.assertEquals(1.15, yolanda.getBonusExp(), 0.001);
-		}
-		
-		
+		Assert.assertEquals("Las Cobras", braulio.getNombreAlianza());
+	}
 	
+	
+	/**
+	 * Historia de usuario Nº 7
+	 * @throws Exception 
+	 * */
+	@Test
+	public void calculoBonusExperiencia() throws Exception
+	{
+		Personaje anselmo = new Personaje("Anselmo", new Orco(), new Guerrero());
+		Personaje braulio = new Personaje("Braulio", new Humano(), new Mago());
+		Personaje yolanda = new Personaje("Yolanda", new Orco(), new Guerrero());
+		
+		anselmo.crearAlianza("Hell's Satans");
+		anselmo.añadirPersonajeAlianza(braulio);
+		anselmo.añadirPersonajeAlianza(yolanda);
+		
+		Assert.assertEquals(3, yolanda.getCantMienbrosAlianza());
+		Assert.assertEquals(1.15, yolanda.getBonusExp(), 0.001);
+	}
+	
+	
+	/**
+	 * Historia de usuario Nº 9
+	 * @throws Exception 
+	 * */
+	@Test
+	public void abandonoDeAlianza() throws Exception
+	{
+		Personaje eulogio = new Personaje("Eulogio", new Orco(), new Guerrero());
+		Personaje menem = new Personaje("Menem", new Humano(), new Mago());
+		
+		menem.crearAlianza("Una Alianza");
+		menem.añadirPersonajeAlianza(eulogio);
+		Assert.assertEquals("Una Alianza", eulogio.getNombreAlianza());
+		
+		eulogio.abandonarAlianzaActual();
+		Assert.assertEquals("", eulogio.getNombreAlianza());
+	}
+		
+		
 	/**
 	 * Historia de usuario Nº10
 	 * @throws Exception 
