@@ -43,6 +43,7 @@ public abstract class Ente {
 	
 	//atributos de batalla de un ente
 	protected boolean estaVivo;
+	protected boolean estaEnBatalla;
 	
 	public Ente(String nombre){
 		this.nombre = nombre;
@@ -158,6 +159,7 @@ public abstract class Ente {
 	public void restarSaludEnUso(int saludEnUso) {
 		this.saludEnUso -= saludEnUso;
 		if(this.saludEnUso<=0){
+			this.saludEnUso=0;
 			this.estaVivo=false;
 			this.despuesDeMorir();
 		}
@@ -349,4 +351,9 @@ public abstract class Ente {
 	}
 	
 	public abstract void dropearObjetos(Loot loot);
+	
+	public boolean colisiona(){
+		return false;
+	}
+	
 }

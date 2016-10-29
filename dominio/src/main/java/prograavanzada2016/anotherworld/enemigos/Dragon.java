@@ -15,22 +15,19 @@ public class Dragon extends Enemigo
 	public Dragon(String nombre, int nivel, int salud, int energia, int mana, int fuerza, int destreza,
 				  int inteligencia, boolean esPasivo, int expBaseQueOtorga)
 	{
-		super(nombre, nivel, salud, energia, mana, fuerza, destreza, inteligencia, esPasivo, expBaseQueOtorga);
+		super(nombre, nivel, salud, energia, mana, fuerza, destreza, inteligencia, expBaseQueOtorga);
 		this.estaVivo = true;
-		this.esPasivo = false;
 		habilidades = new ArrayList<Habilidad>(Arrays.asList(new AlientoDeFuegoNegro(), new RafagaAlada()));
 	}
 	
 	public Dragon(String nombre, int nivel, int salud, int energia, int mana, int fuerza, int destreza,int inteligencia, boolean esPasivo, int expBaseQueOtorga,Mapa mapa){
-		super(nombre, nivel, salud, energia, mana, fuerza, destreza, inteligencia, esPasivo, expBaseQueOtorga);
-		this.esPasivo = false;
+		super(nombre, nivel, salud, energia, mana, fuerza, destreza, inteligencia, expBaseQueOtorga);
 		habilidades = new ArrayList<Habilidad>(Arrays.asList(new AlientoDeFuegoNegro(), new RafagaAlada()));
 		this.mapa=mapa;
 	}
 	
 	public Dragon(String nombre, int nivel, int salud, int energia, int mana, int fuerza, int destreza,int inteligencia, boolean esPasivo, int expBaseQueOtorga,Mapa mapa,int posicionX, int posicionY){
-		super(nombre, nivel, salud, energia, mana, fuerza, destreza, inteligencia, esPasivo, expBaseQueOtorga);
-		this.esPasivo = false;
+		super(nombre, nivel, salud, energia, mana, fuerza, destreza, inteligencia, expBaseQueOtorga);
 		habilidades = new ArrayList<Habilidad>(Arrays.asList(new AlientoDeFuegoNegro(), new RafagaAlada()));
 		this.mapa=mapa;
 		this.posicionX=posicionX;

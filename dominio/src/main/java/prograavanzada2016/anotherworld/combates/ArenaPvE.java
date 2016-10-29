@@ -27,7 +27,18 @@ public class ArenaPvE {
 			enemigo.setArena(this);
 		}
 	}
-
+	
+	public ArenaPvE(GrupoEnemigos grupoEnemigos, Alianza alianza) {
+		this.grupoEnemigos = grupoEnemigos;
+		this.grupoPersonajes.setGrupo(alianza.getMiembros()); 
+		listoPersonajes=new ArrayList<>();
+		listoEnemigos=new ArrayList<>();
+		this.loot = new Loot();
+		
+		for(Enemigo enemigo : grupoEnemigos.getGrupo()){
+			enemigo.setArena(this);
+		}
+	}	
 
 	public GrupoEnemigos getGrupoEnemigos() {
 		return grupoEnemigos;

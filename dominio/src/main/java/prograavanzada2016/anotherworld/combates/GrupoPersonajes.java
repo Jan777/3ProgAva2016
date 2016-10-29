@@ -22,6 +22,10 @@ public class GrupoPersonajes {
 		this.grupo = grupo;
 	}
 	
+	public void setGrupo(Alianza alianza) {
+		
+	}
+	
 	public Ente seleccionarUnoAlAzar(){
 		return this.grupo.get(GeneradorMagico.randInt(0, this.grupo.size()-1));
 	}

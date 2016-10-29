@@ -8,26 +8,23 @@ public class Alianza
 	private String nombre;
 	private float bonusExp;
 	private int cantMiembros;
-	private List<Personaje> miembros;
+	private ArrayList<Personaje> miembros;
 	
 	// ** Constructores ** \\
-	public Alianza(String nombre)
-	{
+	public Alianza(String nombre){
 		this.nombre = nombre;
 		this.cantMiembros = 0;
 		this.bonusExp = 1;
 		this.miembros = new ArrayList<Personaje>();
 	}
 	
-	public Alianza(String nombre, Personaje p)
-	{
+	public Alianza(String nombre, Personaje p){
 		this(nombre);
 		this.agregarMiembro(p);
 	}
 	
 	// ** Métodos Públicos ** \\
-	public void agregarMiembro(Personaje p)
-	{
+	public void agregarMiembro(Personaje p){
 		this.miembros.add(p);
 		this.cantMiembros++;
 		this.recalcularBonus();
@@ -69,6 +66,14 @@ public class Alianza
 	private void recalcularBonus()
 	{
 		this.bonusExp = (this.cantMiembros > 1) ? 1 + ((float) this.cantMiembros / 20) : 1;
+	}
+
+	public ArrayList<Personaje> getMiembros() {
+		return miembros;
+	}
+
+	public void setMiembros(ArrayList<Personaje> miembros) {
+		this.miembros = miembros;
 	}
 	
 }
