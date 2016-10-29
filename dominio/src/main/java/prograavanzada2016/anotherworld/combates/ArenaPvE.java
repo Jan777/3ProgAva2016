@@ -7,37 +7,37 @@ import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.resources.GeneradorMagico;
 
 public class ArenaPvE {
-	private Grupo grupoEnemigos;
-	private Grupo grupoPersonajes;
+	private GrupoEnemigos grupoEnemigos;
+	private GrupoPersonajes grupoPersonajes;
 	private int cantidadDeExperiencia;
 	private ArrayList<Float> listoPersonajes;
 	private ArrayList<Float> listoEnemigos;
 	private Loot loot;
 	private boolean gananLosPersonajes;
 	
-	public ArenaPvE(Grupo grupoEnemigos, Grupo grupoPersonajes) {
+	public ArenaPvE(GrupoEnemigos grupoEnemigos, GrupoPersonajes grupoPersonajes) {
 		this.grupoEnemigos = grupoEnemigos;
 		this.grupoPersonajes = grupoPersonajes;
 		this.loot = new Loot();
 	}
 
 
-	public Grupo getGrupoEnemigos() {
+	public GrupoEnemigos getGrupoEnemigos() {
 		return grupoEnemigos;
 	}
 
 
-	public void setGrupoEnemigos(Grupo grupoEnemigos) {
+	public void setGrupoEnemigos(GrupoEnemigos grupoEnemigos) {
 		this.grupoEnemigos = grupoEnemigos;
 	}
 
 
-	public Grupo getGrupoPersonajes() {
+	public GrupoPersonajes getGrupoPersonajes() {
 		return grupoPersonajes;
 	}
 
 
-	public void setGrupoPersonajes(Grupo grupoPersonajes) {
+	public void setGrupoPersonajes(GrupoPersonajes grupoPersonajes) {
 		this.grupoPersonajes = grupoPersonajes;
 	}
 
@@ -118,6 +118,7 @@ public class ArenaPvE {
 			
 			if(this.grupoEnemigos.viven()){
 				System.out.println("Murieron todos los Enemigos");
+				this.otorgarExperiencia();
 			}
 			if(this.grupoPersonajes.viven()) {
 				System.out.println("Murieron todos los Personajes");
@@ -161,8 +162,8 @@ public class ArenaPvE {
 	}
 	
 	private void otorgarExperiencia(){
-		for(Ente ente : this.getGrupoPersonajes().getGrupo()){
-			
+		for(Personaje personaje : this.getGrupoPersonajes().getGrupo()){
+			personaje.sumarExperiencia(this.getCantidadDeExperiencia());
 		}
 	}
 }

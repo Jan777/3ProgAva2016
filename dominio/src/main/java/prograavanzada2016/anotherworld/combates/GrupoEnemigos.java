@@ -2,22 +2,24 @@ package prograavanzada2016.anotherworld.combates;
 
 import java.util.ArrayList;
 
+import prograavanzada2016.anotherworld.entities.Enemigo;
 import prograavanzada2016.anotherworld.entities.Ente;
 import prograavanzada2016.anotherworld.resources.GeneradorMagico;
 
-public class Grupo {
-	ArrayList<Ente> grupo = new ArrayList<>();
+public class GrupoEnemigos {
 
-	public Grupo(ArrayList<Ente> grupo) {
+	ArrayList<Enemigo> grupo = new ArrayList<>();
+
+	public GrupoEnemigos(ArrayList<Enemigo> grupo) {
 		super();
 		this.grupo = grupo;
 	}
 
-	public ArrayList<Ente> getGrupo() {
+	public ArrayList<Enemigo> getGrupo() {
 		return grupo;
 	}
 
-	public void setGrupo(ArrayList<Ente> grupo) {
+	public void setGrupo(ArrayList<Enemigo> grupo) {
 		this.grupo = grupo;
 	}
 	
@@ -27,11 +29,12 @@ public class Grupo {
 	
 	public boolean viven(){
 		boolean flag=true;
-		for(Ente ente: this.getGrupo()){
-			if(ente.isEstaVivo()){
+		for(Enemigo enemigo: this.getGrupo()){
+			if(enemigo.isEstaVivo()){
 				flag=false;
 			}
 		}
 		return flag;
 	}
+
 }
