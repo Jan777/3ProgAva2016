@@ -1,13 +1,12 @@
-package prograavanzada2016.anotherworld.NPCs;
+package prograavanzada2016.anotherworld.entities;
 
 import java.util.*;
 import java.util.Map.Entry;
 import prograavanzada2016.anotherworld.combates.Loot;
-import prograavanzada2016.anotherworld.entities.Ente;
 import prograavanzada2016.anotherworld.habilidades.Habilidad;
 import prograavanzada2016.anotherworld.objetos.*;
 
-public abstract class NPC extends Ente
+public abstract class Enemigo extends Ente
 {
 	// ** Atributos ** \\
 	// Indica si va a atacar o no a los jugadores cercanos, sin que lo provoquen.
@@ -20,7 +19,7 @@ public abstract class NPC extends Ente
 	protected Map<Objeto, Integer> objetosDropeables = new HashMap<Objeto, Integer>();
 	
 	// ** Constructores ** \\
-	protected NPC (String nombre, int nivel, int salud, int energia, int mana, int fuerza,
+	protected Enemigo (String nombre, int nivel, int salud, int energia, int mana, int fuerza,
 				   int destreza, int inteligencia, boolean esPasivo, int expBaseQueOtorga)
 	{
 		super(nombre, nivel, salud, energia, mana, fuerza, destreza, inteligencia);

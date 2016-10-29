@@ -1,14 +1,15 @@
-package prograavanzada2016.anotherworld.NPCs;
+package prograavanzada2016.anotherworld.enemigos;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import prograavanzada2016.anotherworld.entities.Enemigo;
 import prograavanzada2016.anotherworld.entities.Ente;
 import prograavanzada2016.anotherworld.habilidades.*;
 import prograavanzada2016.anotherworld.mapas.Mapa;
 import prograavanzada2016.anotherworld.objetos.*;
 
-public class Dragon extends NPC
+public class Dragon extends Enemigo
 {
 
 	public Dragon(String nombre, int nivel, int salud, int energia, int mana, int fuerza, int destreza,

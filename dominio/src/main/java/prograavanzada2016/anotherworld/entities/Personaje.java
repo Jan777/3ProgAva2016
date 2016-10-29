@@ -82,6 +82,7 @@ public class Personaje extends Ente{
 		this.experienciaActual += experiencia;
 		if(this.experienciaActual>=this.experienciaLimite){
 			this.subirNivel();
+			this.experienciaActual=0;
 		}
 	}
 	

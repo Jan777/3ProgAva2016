@@ -3,12 +3,12 @@ package dominio;
 import org.junit.Assert;
 import org.junit.Test;
 
-import prograavanzada2016.anotherworld.NPCs.Dragon;
-import prograavanzada2016.anotherworld.NPCs.NPC;
 import prograavanzada2016.anotherworld.castas.Curandero;
 import prograavanzada2016.anotherworld.castas.Guerrero;
 import prograavanzada2016.anotherworld.castas.Mago;
 import prograavanzada2016.anotherworld.combates.Loot;
+import prograavanzada2016.anotherworld.enemigos.Dragon;
+import prograavanzada2016.anotherworld.entities.Enemigo;
 import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.mapas.Mapa;
 import prograavanzada2016.anotherworld.mapas.MapaNivelUno;
@@ -26,11 +26,10 @@ public class AnotherWorldTest {
 		@Test
 		public void crearPersonaje() throws Exception
 		{
-			Personaje p = new Personaje("pedro", new Orco(), new Curandero());
-			Assert.assertEquals(Orco.class , p.getRaza().getClass());
-			
-			p.setCasta(new Guerrero());
-			Assert.assertEquals(Guerrero.class, p.getCasta().getClass());
+			//se crea un orco curandero
+			Personaje pedro = new Personaje("pedro", new Orco(), new Curandero());
+			Assert.assertEquals(Orco.class , pedro.getRaza().getClass());
+			Assert.assertEquals(Curandero.class, pedro.getCasta().getClass());
 		}
 		
 		/**
@@ -41,9 +40,29 @@ public class AnotherWorldTest {
 		public void ganarExperienciaYSubirDeNivel() throws Exception
 		{
 			Personaje pepe = new Personaje("pepe", new Humano(), new Guerrero());
-			Assert.assertEquals(1, pepe.getNivel());
-			pepe.sumarExperiencia(20);
-			Assert.assertEquals(2, pepe.getNivel());
+			int saludDePepe = pepe.getSaludEnUso();
+			Personaje pablo = new Personaje("pablo", new Humano(), new Mago());
+			//se lanzan misilesArcanos que son de nivel 1
+			pablo.lanzarHabilidad(3, pepe);
+			Assert.assertTrue(saludDePepe>pepe.getSaludEnUso());
+			
+			saludDePepe = pepe.getSaludEnUso();
+			
+			//se lanza la bola de fuego que es de nivel 5 pero el personaje no podra ejecutar la tecnica
+			pablo.lanzarHabilidad(1, pepe);
+			Assert.assertTrue(pepe.getSaludEnUso()==saludDePepe);
+			
+			//se suben 5 niveles
+			pablo.sumarExperiencia(1000);
+			pablo.sumarExperiencia(1000);
+			pablo.sumarExperiencia(1000);
+			pablo.sumarExperiencia(1000);
+			
+			Assert.assertEquals(5, pablo.getNivel());
+			
+			//se lanza con exito la habilidad bola de fuego
+			pablo.lanzarHabilidad(1, pepe);
+			Assert.assertTrue(saludDePepe>pepe.getSaludEnUso());
 		}
 	
 		/**
@@ -160,7 +179,7 @@ public class AnotherWorldTest {
 		
 		//el personaje esta en distinta zona
 		Zona zonaRandom1 = mapa.getZona2();
-		NPC dragonMenor = zonaRandom1.getEnemigos().get(0);
+		Enemigo dragonMenor = zonaRandom1.getEnemigos().get(0);
 		Assert.assertFalse(personaje.puedeEntrarEnCombate(dragonMenor));
 		
 		//el personaje esta en la misma zona
@@ -169,7 +188,7 @@ public class AnotherWorldTest {
 		
 		//el personaje esta en distinta zona
 		Zona zonaRandom2 = mapa.getZona3();
-		NPC dragonMayor = zonaRandom2.getEnemigos().get(0);
+		Enemigo dragonMayor = zonaRandom2.getEnemigos().get(0);
 		Assert.assertFalse(personaje.puedeEntrarEnCombate(dragonMayor));
 		
 		//el personaje esta en la misma zona
@@ -203,7 +222,7 @@ public class AnotherWorldTest {
 	}
 	
 	//--------------------------------------------------------
-	
+/*	
 	@Test
 	public void pruebasDragon()
 	{
@@ -228,5 +247,5 @@ public class AnotherWorldTest {
 		int saludResultado = p3.getSalud();
 		
 		Assert.assertEquals(saludResultado, saludAProbar-(p1.getAtaque()-p3.getDefensa()));
-	}
+	}*/
 }

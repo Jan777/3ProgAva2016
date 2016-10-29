@@ -1,6 +1,6 @@
 package prograavanzada2016.anotherworld.mapas;
 
-import prograavanzada2016.anotherworld.NPCs.Dragon;
+import prograavanzada2016.anotherworld.enemigos.Dragon;
 import prograavanzada2016.anotherworld.resources.GeneradorMagico;
 
 public class MapaNivelUno extends Mapa{

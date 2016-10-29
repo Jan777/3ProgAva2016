@@ -2,7 +2,7 @@ package prograavanzada2016.anotherworld.mapas;
 
 import java.util.ArrayList;
 
-import prograavanzada2016.anotherworld.NPCs.NPC;
+import prograavanzada2016.anotherworld.entities.Enemigo;
 import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.resources.GeneradorMagico;
 
@@ -16,7 +16,7 @@ public abstract class Zona {
 	protected int anchoMaximo;
 	protected boolean neutral;
 	
-	protected ArrayList<NPC> enemigos;
+	protected ArrayList<Enemigo> enemigos;
 	
 	public String getNombre() {
 		return nombre;
@@ -66,14 +66,14 @@ public abstract class Zona {
 	public void setAnchoMaximo(int anchoMaximo) {
 		this.anchoMaximo = anchoMaximo;
 	}
-	public ArrayList<NPC> getEnemigos() {
+	public ArrayList<Enemigo> getEnemigos() {
 		return enemigos;
 	}
 	/*public void setEnemigos(ArrayList<NPC> enemigos) {
 		this.enemigos = enemigos;
 	}*/
 	
-	public void spawnear(NPC enemigo){
+	public void spawnear(Enemigo enemigo){
 		enemigo.setZona(this);
 		this.enemigos.add(enemigo);
 	}

@@ -13,6 +13,7 @@ public class ArenaPvE {
 	private ArrayList<Float> listoPersonajes;
 	private ArrayList<Float> listoEnemigos;
 	private Loot loot;
+	private boolean gananLosPersonajes;
 	
 	public ArenaPvE(Grupo grupoEnemigos, Grupo grupoPersonajes) {
 		this.grupoEnemigos = grupoEnemigos;
@@ -69,7 +70,15 @@ public class ArenaPvE {
 	public void setListoEnemigos(ArrayList<Float> listoEnemigos) {
 		this.listoEnemigos = listoEnemigos;
 	}
+	
+	public boolean isGananLosPersonajes() {
+		return gananLosPersonajes;
+	}
 
+
+	public void setGananLosPersonajes(boolean gananLosPersonajes) {
+		this.gananLosPersonajes = gananLosPersonajes;
+	}
 
 	private void armarTurnos(){
 		int contadorDeAtaquesPersonajes=0;
@@ -150,4 +159,6 @@ public class ArenaPvE {
 	private void resetearTurnosPersonajes(){
 		this.setListoPersonajes(new ArrayList<>());
 	}
+	
+	
 }
