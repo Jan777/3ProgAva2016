@@ -25,7 +25,7 @@ import prograavanzada2016.anotherworld.razas.Orco;
 public class AnotherWorldTest {
 	
 	/**
-	 * Historia de usuario Nº1
+	 * Historia de usuario Nï¿½1
 	 * @throws Exception 
 	 * */
 		@Test
@@ -38,7 +38,7 @@ public class AnotherWorldTest {
 		}
 		
 		/**
-		 * Historia de usuario Nº2
+		 * Historia de usuario Nï¿½2
 		 * @throws Exception 
 		 * */
 		@Test
@@ -71,7 +71,7 @@ public class AnotherWorldTest {
 		}
 	
 		/**
-		 * Historia de usuario Nº3
+		 * Historia de usuario Nï¿½3
 		 * @throws Exception 
 		 * */
 	@Test
@@ -102,7 +102,7 @@ public class AnotherWorldTest {
 	}
 	
 	/**
-	 * Historia de usuario Nº4
+	 * Historia de usuario Nï¿½4
 	 * @throws Exception 
 	 * */
 	@Test
@@ -122,7 +122,7 @@ public class AnotherWorldTest {
 	}
 	
 	/**
-	 * Historia de usuario Nº5
+	 * Historia de usuario Nï¿½5
 	 * @throws Exception 
 	 * */
 	@Test
@@ -143,18 +143,23 @@ public class AnotherWorldTest {
 	}
 	
 	/**
-	 * Historia de usuario Nº6
+	 * Historia de usuario Nï¿½6
 	 * @throws Exception 
 	 * */
+	@Test
+	public void creacionAlianza() throws Exception
+	{
+		Personaje anselmo = new Personaje("Anselmo", new Orco(), new Guerrero());
+		anselmo.crearAlianza("Las Cobras");
+		
+		Assert.assertEquals("Las Cobras", anselmo.getNombreAlianza());
+	}
 	
-		@Test
-		public void creacionAlianza() throws Exception
-		{
-			Personaje anselmo = new Personaje("Anselmo", new Orco(), new Guerrero());
-			anselmo.crearAlianza("Las Cobras");
-			
-			Assert.assertEquals("Las Cobras", anselmo.getNombreAlianza());
-		}
+	@Test
+	public void agregaPersonajeAlianza() throws Exception
+	{
+		Personaje anselmo = new Personaje("Anselmo", new Orco(), new Guerrero());
+		Personaje braulio = new Personaje("Braulio", new Humano(), new Mago());
 		
 		@Test
 		public void agregaPersonajeAlianza() throws Exception
@@ -163,12 +168,12 @@ public class AnotherWorldTest {
 			Personaje braulio = new Personaje("Braulio", new Humano(), new Mago());
 			
 			anselmo.crearAlianza("Las Cobras");
-			anselmo.añadirPersonajeAlianza(braulio);
+			anselmo.aï¿½adirPersonajeAlianza(braulio);
 			
 			Assert.assertEquals("Las Cobras", braulio.getNombreAlianza());
 		}
 	/**
-	 * Historia de usuario N°7
+	 * Historia de usuario Nï¿½7
 	 * metodo no terminado del todo
 	 * */
 		
@@ -201,8 +206,9 @@ public class AnotherWorldTest {
 		Assert.assertTrue(nivelPersonaje2<pers2.getNivel());
 	}
 	
+	
 	/**
-	 * Historia de usuario N°8
+	 * Historia de usuario Nï¿½8
 	 * **/
 	@Test
 	public void historialDeVictorias() throws Exception{
@@ -212,7 +218,7 @@ public class AnotherWorldTest {
 	}		
 	
 	/**
-	 * Historia de usuario Nº9
+	 * Historia de usuario Nï¿½9
 	 * 
 	 * **/
 	@Test
@@ -221,7 +227,7 @@ public class AnotherWorldTest {
 		Personaje braulio = new Personaje("Braulio", new Humano(), new Mago());
 		
 		anselmo.crearAlianza("Las Cobras");
-		anselmo.añadirPersonajeAlianza(braulio);
+		anselmo.aï¿½adirPersonajeAlianza(braulio);
 		
 		Assert.assertEquals("Las Cobras", braulio.getNombreAlianza());
 		
@@ -231,7 +237,7 @@ public class AnotherWorldTest {
 		
 	
 	/**
-	 * Historia de usuario Nº10
+	 * Historia de usuario Nï¿½10
 	 * @throws Exception 
 	 * */
 	@Test
@@ -261,7 +267,7 @@ public class AnotherWorldTest {
 	}
 	
 	/**
-	 * Historia de usuario Nº11
+	 * Historia de usuario Nï¿½11
 	 * @throws Exception 
 	 * */
 	@Test
@@ -294,7 +300,7 @@ public class AnotherWorldTest {
 		Loot loot = new Loot();
 		Dragon reinaldo = new Dragon("Reinaldo", 1, 10, 100, 300, 5, 7, 3, false, 200, mapa, 5, 5);
 		
-		// Acá se supone que un personaje mata al buen Reinaldo :)
+		// Acï¿½ se supone que un personaje mata al buen Reinaldo :)
 		reinaldo.restarSaludEnUso(10);
 		reinaldo.dropearObjetos(loot);
 		loot.mostrarObjetos();
@@ -321,8 +327,8 @@ public class AnotherWorldTest {
 			Personaje yolanda = new Personaje("Yolanda", new Orco(), new Guerrero());
 			
 			anselmo.crearAlianza("Hell's Satans");
-			anselmo.añadirPersonajeAlianza(braulio);
-			anselmo.añadirPersonajeAlianza(yolanda);
+			anselmo.aï¿½adirPersonajeAlianza(braulio);
+			anselmo.aï¿½adirPersonajeAlianza(yolanda);
 			
 			Assert.assertEquals(3, yolanda.getCantMienbrosAlianza());
 			Assert.assertEquals(1.15, yolanda.getBonusExp(), 0.001);
