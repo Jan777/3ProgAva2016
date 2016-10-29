@@ -48,7 +48,7 @@ public class ArenaPvE {
 
 
 	public void setCantidadDeExperiencia(int cantidadDeExperiencia) {
-		this.cantidadDeExperiencia = cantidadDeExperiencia;
+		this.cantidadDeExperiencia += cantidadDeExperiencia;
 	}
 	
 	
@@ -160,5 +160,9 @@ public class ArenaPvE {
 		this.setListoPersonajes(new ArrayList<>());
 	}
 	
-	
+	private void otorgarExperiencia(){
+		for(Ente ente : this.getGrupoPersonajes().getGrupo()){
+			
+		}
+	}
 }

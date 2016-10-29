@@ -159,9 +159,12 @@ public abstract class Ente {
 		this.saludEnUso -= saludEnUso;
 		if(this.saludEnUso<=0){
 			this.estaVivo=false;
+			this.despuesDeMorir();
 		}
 	}
-
+	
+	public abstract void despuesDeMorir();
+	
 	public int getMana() {
 		return mana;
 	}

@@ -2,6 +2,8 @@ package prograavanzada2016.anotherworld.entities;
 
 import java.util.*;
 import java.util.Map.Entry;
+
+import prograavanzada2016.anotherworld.combates.ArenaPvE;
 import prograavanzada2016.anotherworld.combates.Loot;
 import prograavanzada2016.anotherworld.habilidades.Habilidad;
 import prograavanzada2016.anotherworld.objetos.*;
@@ -17,6 +19,8 @@ public abstract class Enemigo extends Ente
 	protected List<Habilidad> habilidades;
 	// Por cada objeto, tengo una probabilidad de que sea o no dropeado.
 	protected Map<Objeto, Integer> objetosDropeables = new HashMap<Objeto, Integer>();
+	
+	protected ArenaPvE arenaPvE;
 	
 	// ** Constructores ** \\
 	protected Enemigo (String nombre, int nivel, int salud, int energia, int mana, int fuerza,
@@ -55,6 +59,30 @@ public abstract class Enemigo extends Ente
 				}
 			}
 		}
+	}
+
+	public ArenaPvE getArena() {
+		return arenaPvE;
+	}
+
+	public void setArena(ArenaPvE arenaPvE) {
+		this.arenaPvE = arenaPvE;
+	}
+	
+	
+	
+	public int getExpBaseQueOtorga() {
+		return expBaseQueOtorga;
+	}
+
+	public void setExpBaseQueOtorga(int expBaseQueOtorga) {
+		this.expBaseQueOtorga = expBaseQueOtorga;
+	}
+
+	@Override
+	public void despuesDeMorir() {
+		this.getArena().setCantidadDeExperiencia(this.getExpBaseQueOtorga());
+		
 	}
 	
 }

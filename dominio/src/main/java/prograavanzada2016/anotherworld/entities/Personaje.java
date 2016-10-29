@@ -203,4 +203,10 @@ public class Personaje extends Ente{
 	{
 		return (this.alianza != null) ? this.alianza.getBonusExp() : 1;
 	}
+
+	@Override
+	public void despuesDeMorir() {
+		// TODO Auto-generated method stub
+		
+	}
 }
