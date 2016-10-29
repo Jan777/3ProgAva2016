@@ -20,6 +20,8 @@ public class Personaje extends Ente{
 	//experiencia que necesita el jugador para subir de nivel
 	protected int experienciaLimite;
 	
+	protected int historialDeVictorias;
+	protected int historialDeDerrotas;
 	
 	protected Alianza alianza = null;
 	
@@ -140,6 +142,22 @@ public class Personaje extends Ente{
 	
 	
 	
+	public int getHistorialDeVictorias() {
+		return historialDeVictorias;
+	}
+
+	public void setHistorialDeVictorias(int historialDeVictorias) {
+		this.historialDeVictorias = historialDeVictorias;
+	}
+
+	public int getHistorialDeDerrotas() {
+		return historialDeDerrotas;
+	}
+
+	public void setHistorialDeDerrotas(int historialDeDerrotas) {
+		this.historialDeDerrotas = historialDeDerrotas;
+	}
+
 	public void mostrarStats(){
 		System.out.println("Nombre: "+super.getNombre());
 		System.out.println("Nivel: "+super.getNivel());

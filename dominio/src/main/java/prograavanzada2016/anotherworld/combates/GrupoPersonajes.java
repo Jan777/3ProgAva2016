@@ -29,7 +29,7 @@ public class GrupoPersonajes {
 	public boolean viven(){
 		boolean flag=true;
 		for(Personaje personaje: this.getGrupo()){
-			if(personaje.isEstaVivo()){
+			if(!personaje.isEstaVivo()){
 				flag=false;
 			}
 		}

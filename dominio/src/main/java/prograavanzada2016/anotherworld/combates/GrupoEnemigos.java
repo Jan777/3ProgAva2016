@@ -30,7 +30,7 @@ public class GrupoEnemigos {
 	public boolean viven(){
 		boolean flag=true;
 		for(Enemigo enemigo: this.getGrupo()){
-			if(enemigo.isEstaVivo()){
+			if(!enemigo.isEstaVivo()){
 				flag=false;
 			}
 		}

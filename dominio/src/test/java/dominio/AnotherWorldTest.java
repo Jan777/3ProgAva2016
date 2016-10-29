@@ -1,11 +1,16 @@
 package dominio;
 
+import java.util.ArrayList;
+
 import org.junit.Assert;
 import org.junit.Test;
 
 import prograavanzada2016.anotherworld.castas.Curandero;
 import prograavanzada2016.anotherworld.castas.Guerrero;
 import prograavanzada2016.anotherworld.castas.Mago;
+import prograavanzada2016.anotherworld.combates.ArenaPvE;
+import prograavanzada2016.anotherworld.combates.GrupoEnemigos;
+import prograavanzada2016.anotherworld.combates.GrupoPersonajes;
 import prograavanzada2016.anotherworld.combates.Loot;
 import prograavanzada2016.anotherworld.enemigos.Dragon;
 import prograavanzada2016.anotherworld.entities.Enemigo;
@@ -72,14 +77,28 @@ public class AnotherWorldTest {
 	@Test
 	public void eliminarYSubirDeNivel() throws Exception
 	{
+		//se crean personajes
 		Personaje pers = new Personaje("Aragorn", new Humano(), new Guerrero());
 		Dragon reinaldo = new Dragon("Reinaldo", 1, 10, 100, 300, 5, 7, 3, false, 200);
-		Assert.assertEquals(0, pers.getExperienciaActual());
-		while(reinaldo.isEstaVivo())
-		{
-			pers.atacar(reinaldo);
-		}
-		Assert.assertEquals(5, pers.getExperienciaActual());
+		
+		//se crea lo necesario para la arena
+		ArrayList<Enemigo> gge = new ArrayList<>();
+		gge.add(reinaldo);
+		GrupoEnemigos ge = new GrupoEnemigos(gge);
+		
+		ArrayList<Personaje> ggp = new ArrayList<>();
+		ggp.add(pers);
+		GrupoPersonajes gp = new GrupoPersonajes(ggp);
+		
+		ArenaPvE arena = new ArenaPvE(ge, gp);
+		
+		int nivelPersonaje = pers.getNivel();
+		
+		//hora de batallar
+		arena.armarTurnos();
+		
+		//mato al dragon y subio nivel
+		Assert.assertTrue(nivelPersonaje<pers.getNivel());
 	}
 	
 	/**
@@ -124,7 +143,7 @@ public class AnotherWorldTest {
 	}
 	
 	/**
-	 * Historia de usuario Nº6 y 7
+	 * Historia de usuario Nº6
 	 * @throws Exception 
 	 * */
 	
@@ -148,22 +167,67 @@ public class AnotherWorldTest {
 			
 			Assert.assertEquals("Las Cobras", braulio.getNombreAlianza());
 		}
+	/**
+	 * Historia de usuario N°7
+	 * metodo no terminado del todo
+	 * */
 		
-		@Test
-		public void calculoBonusExperiencia() throws Exception
-		{
-			Personaje anselmo = new Personaje("Anselmo", new Orco(), new Guerrero());
-			Personaje braulio = new Personaje("Braulio", new Humano(), new Mago());
-			Personaje yolanda = new Personaje("Yolanda", new Orco(), new Guerrero());
-			
-			anselmo.crearAlianza("Hell's Satans");
-			anselmo.añadirPersonajeAlianza(braulio);
-			anselmo.añadirPersonajeAlianza(yolanda);
-			
-			Assert.assertEquals(3, yolanda.getCantMienbrosAlianza());
-			Assert.assertEquals(1.15, yolanda.getBonusExp(), 0.001);
-		}
+	public void eliminarYSubirDeNivelEnAlianza() throws Exception{
+		//se crean personajes
+		Personaje pers = new Personaje("Aragorn", new Humano(), new Guerrero());
+		Personaje pers2 = new Personaje("Aragorn2", new Humano(), new Guerrero());
+		Dragon reinaldo = new Dragon("Reinaldo", 1, 10, 100, 300, 5, 7, 3, false, 200);
 		
+		//se crea lo necesario para la arena
+		ArrayList<Enemigo> gge = new ArrayList<>();
+		gge.add(reinaldo);
+		GrupoEnemigos ge = new GrupoEnemigos(gge);
+		
+		ArrayList<Personaje> ggp = new ArrayList<>();
+		ggp.add(pers);
+		ggp.add(pers2);
+		GrupoPersonajes gp = new GrupoPersonajes(ggp);
+		
+		ArenaPvE arena = new ArenaPvE(ge, gp);
+		
+		int nivelPersonaje = pers.getNivel();
+		int nivelPersonaje2 = pers2.getNivel();
+		
+		//hora de batallar
+		arena.armarTurnos();
+		
+		//mato al dragon y subio nivel
+		Assert.assertTrue(nivelPersonaje<pers.getNivel());
+		Assert.assertTrue(nivelPersonaje2<pers2.getNivel());
+	}
+	
+	/**
+	 * Historia de usuario N°8
+	 * **/
+	@Test
+	public void historialDeVictorias() throws Exception{
+		Personaje pedrito = new Personaje("pedrito", new Orco(), new Mago());
+		Assert.assertTrue(pedrito.getHistorialDeVictorias()==0);
+		Assert.assertTrue(pedrito.getHistorialDeDerrotas()==0);
+	}		
+	
+	/**
+	 * Historia de usuario Nº9
+	 * 
+	 * **/
+	@Test
+	public void salirDeLaAlianza() throws Exception{
+		Personaje anselmo = new Personaje("Anselmo", new Orco(), new Guerrero());
+		Personaje braulio = new Personaje("Braulio", new Humano(), new Mago());
+		
+		anselmo.crearAlianza("Las Cobras");
+		anselmo.añadirPersonajeAlianza(braulio);
+		
+		Assert.assertEquals("Las Cobras", braulio.getNombreAlianza());
+		
+		braulio.abandonarAlianzaActual();
+		Assert.assertEquals("", braulio.getNombreAlianza());
+	}
 		
 	
 	/**
@@ -247,5 +311,22 @@ public class AnotherWorldTest {
 		int saludResultado = p3.getSalud();
 		
 		Assert.assertEquals(saludResultado, saludAProbar-(p1.getAtaque()-p3.getDefensa()));
-	}*/
+	}
+	
+	@Test
+		public void calculoBonusExperiencia() throws Exception
+		{
+			Personaje anselmo = new Personaje("Anselmo", new Orco(), new Guerrero());
+			Personaje braulio = new Personaje("Braulio", new Humano(), new Mago());
+			Personaje yolanda = new Personaje("Yolanda", new Orco(), new Guerrero());
+			
+			anselmo.crearAlianza("Hell's Satans");
+			anselmo.añadirPersonajeAlianza(braulio);
+			anselmo.añadirPersonajeAlianza(yolanda);
+			
+			Assert.assertEquals(3, yolanda.getCantMienbrosAlianza());
+			Assert.assertEquals(1.15, yolanda.getBonusExp(), 0.001);
+		}
+	*
+	*/
 }

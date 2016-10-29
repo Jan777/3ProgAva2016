@@ -2,6 +2,7 @@ package prograavanzada2016.anotherworld.combates;
 
 import java.util.ArrayList;
 
+import prograavanzada2016.anotherworld.entities.Enemigo;
 import prograavanzada2016.anotherworld.entities.Ente;
 import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.resources.GeneradorMagico;
@@ -18,7 +19,13 @@ public class ArenaPvE {
 	public ArenaPvE(GrupoEnemigos grupoEnemigos, GrupoPersonajes grupoPersonajes) {
 		this.grupoEnemigos = grupoEnemigos;
 		this.grupoPersonajes = grupoPersonajes;
+		listoPersonajes=new ArrayList<>();
+		listoEnemigos=new ArrayList<>();
 		this.loot = new Loot();
+		
+		for(Enemigo enemigo : grupoEnemigos.getGrupo()){
+			enemigo.setArena(this);
+		}
 	}
 
 
@@ -80,10 +87,11 @@ public class ArenaPvE {
 		this.gananLosPersonajes = gananLosPersonajes;
 	}
 
-	private void armarTurnos(){
+	public void armarTurnos(){
 		int contadorDeAtaquesPersonajes=0;
 		int contadorDeAtaquesEnemigos=0;
 		for(int x=0; x<100000 && this.grupoEnemigos.viven() && this.grupoPersonajes.viven();x++){
+			System.out.println("**************************");
 			if(x%2==0){
 				//turno aliados
 				boolean flag=true;
@@ -116,11 +124,11 @@ public class ArenaPvE {
 				}
 			}
 			
-			if(this.grupoEnemigos.viven()){
+			if(!this.grupoEnemigos.viven()){
 				System.out.println("Murieron todos los Enemigos");
 				this.otorgarExperiencia();
 			}
-			if(this.grupoPersonajes.viven()) {
+			if(!this.grupoPersonajes.viven()) {
 				System.out.println("Murieron todos los Personajes");
 			}
 		}
