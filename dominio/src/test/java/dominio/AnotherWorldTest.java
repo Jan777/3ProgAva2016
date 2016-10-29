@@ -155,12 +155,7 @@ public class AnotherWorldTest {
 		Assert.assertEquals("Las Cobras", anselmo.getNombreAlianza());
 	}
 	
-	@Test
-	public void agregaPersonajeAlianza() throws Exception
-	{
-		Personaje anselmo = new Personaje("Anselmo", new Orco(), new Guerrero());
-		Personaje braulio = new Personaje("Braulio", new Humano(), new Mago());
-		
+
 		@Test
 		public void agregaPersonajeAlianza() throws Exception
 		{
@@ -168,7 +163,7 @@ public class AnotherWorldTest {
 			Personaje braulio = new Personaje("Braulio", new Humano(), new Mago());
 			
 			anselmo.crearAlianza("Las Cobras");
-			anselmo.aï¿½adirPersonajeAlianza(braulio);
+			anselmo.añadirPersonajeAlianza(braulio);
 			
 			Assert.assertEquals("Las Cobras", braulio.getNombreAlianza());
 		}
@@ -227,7 +222,7 @@ public class AnotherWorldTest {
 		Personaje braulio = new Personaje("Braulio", new Humano(), new Mago());
 		
 		anselmo.crearAlianza("Las Cobras");
-		anselmo.aï¿½adirPersonajeAlianza(braulio);
+		anselmo.añadirPersonajeAlianza(braulio);
 		
 		Assert.assertEquals("Las Cobras", braulio.getNombreAlianza());
 		
