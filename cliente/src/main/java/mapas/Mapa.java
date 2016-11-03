@@ -60,17 +60,34 @@ public class Mapa extends Canvas{
 	
 	@Override
 	public void paint(Graphics g){
-
+		//armo el mapa
+		//lo pienso como una matriz pero como es isometrico tengo que imaginar
+		//los cuadrados con un giro de 45°
+		//aca hay dos variables que todavia no tengo medidas que son
+		//offsetTileH y offsetTileW estas dos variables me sirven para mover el dibujo y posicionarlo donde yo quiera
+		//para que la pantalla no me salga cortada
 		for(int x=0;x<anchoMapa;x++){
+			//bajo un nivel el dibujo
+			//mas info
+			//http://www.java-gaming.org/topics/drawing-isometric-tiles-inside-a-screen/24922/msg/212780/view.html
 			oldX=(-tileW/2)*x;
 			oldY=(+tileH/2)*x;
 			for(int y=0;y<largoMapa;y++){
 				if(map[x][y]==0){
+					//si el contenido del array es un 0 dibujo cierto tile
 					g.drawImage(suelo,oldX+offsetTileW,oldY+offsetTileH,null);
-				}else{
+				}else if(map[x][y]==1){
+					//si el contenido del array es un 1 dibujo cierto tile
 					g.drawImage(pasto,oldX+offsetTileW,oldY+offsetTileH,null);
+				}else{
+					//por default dibujo cierto tile
+					g.drawImage(suelo,oldX+offsetTileW,oldY+offsetTileH,null);
 				}
-				
+				//cuando dibujo un cuadrado el siguiente cuadrado tiene que empezar
+				//en la mitad del que dibuje anteriormente por eso me muevo la mitad del ancho y del largo
+				//hacia adentro
+				//mas info
+				//http://www.java-gaming.org/topics/drawing-isometric-tiles-inside-a-screen/24922/msg/212780/view.html
 				oldX+=tileW/2;
 				oldY+=tileH/2;
 			}
