@@ -1,4 +1,6 @@
-package shadegraphics.mapas;
+package mapas;
+
+
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -11,8 +13,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import shadegraphics.utilities.BufferedImageLoader;
-import shadegraphics.utilities.SpriteSheet;
+
 
 
 public class Ventana extends JFrame {
@@ -40,7 +41,7 @@ public class Ventana extends JFrame {
 	 * Create the frame.
 	 */
 	public Ventana() {
-		setTitle("Prueba de mapa");
+		setTitle("Prueba de mapa another world");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//setBounds(0, 0, 320, 160);
 		setSize(800,600);

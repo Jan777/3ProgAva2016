@@ -1,4 +1,4 @@
-package shadegraphics.mapas;
+package mapas;
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -6,8 +6,10 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import shadegraphics.utilities.BufferedImageLoader;
-import shadegraphics.utilities.SpriteSheet;
+import utilities.BufferedImageLoader;
+import utilities.SpriteSheet;
+
+
 
 public class Mapa extends Canvas{
 	private static final int tileW = 64;

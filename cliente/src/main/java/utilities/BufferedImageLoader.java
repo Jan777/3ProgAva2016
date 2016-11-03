@@ -1,4 +1,6 @@
-package shadegraphics.utilities;
+package utilities;
+
+
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
