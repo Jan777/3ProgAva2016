@@ -5,15 +5,21 @@ import java.net.Socket;
 import java.util.Scanner;
 import java.util.zip.CheckedInputStream;
 
+import com.google.gson.Gson;
+
 public class ClienteChat implements Runnable{
 	Socket socket;
 	Scanner input;
 	Scanner send = new Scanner(System.in);
 	PrintWriter out;
 	String nombre;
+	
+	private Gson gson;
+	
 	public ClienteChat(Socket socket,String nombre){
 		this.socket=socket;
 		this.nombre=nombre;
+		gson = new Gson();
 	}
 
 	@Override
@@ -47,7 +53,9 @@ public class ClienteChat implements Runnable{
 	}
 	
 	public void send(String string){
-		out.println(this.nombre+": "+string);
+		string=this.nombre+": "+string;
+		MensajeEnviable mensajeEnviable = new MensajeEnviable(1, string);
+		out.println(gson.toJson(mensajeEnviable));
 		out.flush();
 	}
 	
