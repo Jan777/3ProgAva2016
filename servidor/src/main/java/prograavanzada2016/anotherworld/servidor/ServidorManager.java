@@ -72,6 +72,11 @@ public class ServidorManager implements Runnable{
 					}
 				}
 			break;
+			
+			case 2:
+				//opcion 2 es logeo
+				
+			break;
 			default:
 			break;
 		}
