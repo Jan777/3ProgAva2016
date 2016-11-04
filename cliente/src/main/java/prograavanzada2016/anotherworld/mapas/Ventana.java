@@ -1,4 +1,4 @@
-package mapas;
+package prograavanzada2016.anotherworld.mapas;
 
 
 

@@ -1,4 +1,4 @@
-package mapas;
+package prograavanzada2016.anotherworld.mapas;
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -6,8 +6,8 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import utilities.BufferedImageLoader;
-import utilities.SpriteSheet;
+import prograavanzada2016.anotherworld.utilities.BufferedImageLoader;
+import prograavanzada2016.anotherworld.utilities.SpriteSheet;
 
 
 

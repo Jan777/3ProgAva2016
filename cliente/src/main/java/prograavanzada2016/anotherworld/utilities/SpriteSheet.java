@@ -1,4 +1,4 @@
-package utilities;
+package prograavanzada2016.anotherworld.utilities;
 
 import java.awt.image.BufferedImage;
 import java.util.Observable;
