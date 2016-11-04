@@ -8,13 +8,13 @@ import java.util.Scanner;
 
 import com.google.gson.Gson;
 
-public class ServidorChat implements Runnable{
-	Socket socket;
-	private Scanner input;
+public class ServidorManager implements Runnable{
+	private Socket socket;
+	private Scanner entrada;
 	private String mensajeDeEntrada ="";
 	private ArrayList<Socket> salaDeChat;
 	private Gson gson;
-	public ServidorChat(Socket socket, ArrayList<Socket> salaDeChat){
+	public ServidorManager(Socket socket, ArrayList<Socket> salaDeChat){
 		this.socket=socket;
 		this.salaDeChat=salaDeChat;
 		gson = new Gson();
@@ -37,15 +37,15 @@ public class ServidorChat implements Runnable{
 		
 		try{
 			try{
-				input = new Scanner(socket.getInputStream());
+				entrada = new Scanner(socket.getInputStream());
 				new PrintWriter(socket.getOutputStream());
 				
 				while(true){
 					this.checkConnection();
-					if(!input.hasNext()){
+					if(!entrada.hasNext()){
 						return;
 					}
-					mensajeDeEntrada = input.nextLine();
+					mensajeDeEntrada = entrada.nextLine();
 					System.out.println("El cliente dice: "+mensajeDeEntrada);
 					this.dispatcherDeAcciones(gson.fromJson(mensajeDeEntrada, MensajeEnviable.class));
 				}

@@ -7,18 +7,15 @@ import java.util.zip.CheckedInputStream;
 
 import com.google.gson.Gson;
 
-public class ClienteChat implements Runnable{
-	Socket socket;
-	Scanner input;
-	Scanner send = new Scanner(System.in);
-	PrintWriter out;
-	String nombre;
+public class ClienteManager implements Runnable{
+	private Socket socket;
+	private Scanner entrada;
+	private PrintWriter salida;
 	
 	private Gson gson;
 	
-	public ClienteChat(Socket socket,String nombre){
+	public ClienteManager(Socket socket){
 		this.socket=socket;
-		this.nombre=nombre;
 		gson = new Gson();
 	}
 
@@ -26,9 +23,9 @@ public class ClienteChat implements Runnable{
 	public void run() {
 		try{
 			try{
-				input = new Scanner(socket.getInputStream());
-				out = new PrintWriter(socket.getOutputStream());
-				out.flush();
+				entrada = new Scanner(socket.getInputStream());
+				salida = new PrintWriter(socket.getOutputStream());
+				salida.flush();
 				chechStream();			
 			}finally{
 				this.socket.close();
@@ -46,22 +43,21 @@ public class ClienteChat implements Runnable{
 	}
 	
 	public void receive(){
-		if(input.hasNext()){
-			String message = input.nextLine();
+		if(entrada.hasNext()){
+			String message = entrada.nextLine();
 			System.out.println(message);
 		}
 	}
 	
-	public void send(String string){
-		string=this.nombre+": "+string;
+	public void sendMensaje(String string){
 		MensajeEnviable mensajeEnviable = new MensajeEnviable(1, string);
-		out.println(gson.toJson(mensajeEnviable));
-		out.flush();
+		salida.println(gson.toJson(mensajeEnviable));
+		salida.flush();
 	}
 	
 	public void disconnected()throws Exception{
-		this.send(this.nombre+" disconnected");
-		out.flush();
+		this.sendMensaje("disconnected");
+		salida.flush();
 		socket.close();
 		System.exit(0);
 	}
