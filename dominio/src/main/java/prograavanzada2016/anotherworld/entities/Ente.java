@@ -45,6 +45,10 @@ public abstract class Ente {
 	protected boolean estaVivo;
 	protected boolean estaEnBatalla;
 	
+	public Ente(){
+		
+	}
+	
 	public Ente(String nombre){
 		this.nombre = nombre;
 		this.setEstaVivo(true);

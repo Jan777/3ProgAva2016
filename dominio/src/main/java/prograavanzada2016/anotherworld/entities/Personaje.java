@@ -9,6 +9,7 @@ import prograavanzada2016.anotherworld.razas.Raza;
 
 public class Personaje extends Ente{
 	
+	protected String nombre;
 	protected Casta casta;
 	protected Raza raza;
 	
@@ -24,6 +25,10 @@ public class Personaje extends Ente{
 	protected int historialDeDerrotas;
 	
 	protected Alianza alianza = null;
+	
+	public Personaje(){
+		super();
+	}
 	
 	public Personaje(String nombre, Raza raza, Casta casta) throws Exception {
 		super(nombre);
@@ -227,4 +232,14 @@ public class Personaje extends Ente{
 		// TODO Auto-generated method stub
 		
 	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	
 }
