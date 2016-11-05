@@ -1,5 +1,5 @@
-package interfaz;
-import model.Usuario;
+package prograavanzada2016.anotherworld.interfaces;
+import prograavanzada2016.anotherworld.user.Usuario;
 
 import java.util.Properties;
 import java.awt.Dimension;

@@ -1,4 +1,4 @@
-package interfaz;
+package prograavanzada2016.anotherworld.interfaces;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -22,7 +22,7 @@ import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
-import model.Usuario;
+import prograavanzada2016.anotherworld.user.*;
 import java.awt.Toolkit;
 
 public class VentanaMapa extends JFrame {

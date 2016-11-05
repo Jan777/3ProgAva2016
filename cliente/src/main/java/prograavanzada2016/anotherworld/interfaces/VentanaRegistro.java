@@ -1,4 +1,4 @@
-package interfaz;
+package prograavanzada2016.anotherworld.interfaces;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -10,7 +10,7 @@ import javax.swing.border.EmptyBorder;
 
 import dao.DAOException;
 import dao.UsuarioDAO;
-import model.Usuario;
+import prograavanzada2016.anotherworld.user.Usuario;
 
 import javax.swing.JLabel;
 import javax.swing.JButton;

@@ -1,4 +1,4 @@
-package interfaz;
+package prograavanzada2016.anotherworld.interfaces;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;

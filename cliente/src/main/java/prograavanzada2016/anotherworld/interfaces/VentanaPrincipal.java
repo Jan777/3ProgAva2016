@@ -1,4 +1,4 @@
-package interfaz;
+package prograavanzada2016.anotherworld.interfaces;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -8,7 +8,7 @@ import javax.swing.border.EmptyBorder;
 import com.google.gson.Gson;
 
 import dao.UsuarioDAO;
-import model.Usuario;
+import prograavanzada2016.anotherworld.user.Usuario;
 
 import javax.swing.JTextField;
 import javax.swing.JLabel;

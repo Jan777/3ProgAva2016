@@ -1,5 +1,5 @@
-package interfaz;
-import model.Usuario;
+package prograavanzada2016.anotherworld.interfaces;
+import prograavanzada2016.anotherworld.user.Usuario;
 
 import java.awt.EventQueue;
 import java.awt.event.WindowAdapter;
@@ -13,7 +13,7 @@ import java.util.Properties;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import model.Usuario;
+import prograavanzada2016.anotherworld.user.Usuario;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JButton;
