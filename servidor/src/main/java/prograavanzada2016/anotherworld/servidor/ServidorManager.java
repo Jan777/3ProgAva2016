@@ -8,16 +8,22 @@ import java.util.Scanner;
 
 import com.google.gson.Gson;
 
+import prograavanzada2016.anotherworld.DAO.UsuarioDAO;
+import prograavanzada2016.anotherworld.entities.Personaje;
+import prograavanzada2016.anotherworld.user.Usuario;
+
 public class ServidorManager implements Runnable{
 	private Socket socket;
 	private Scanner entrada;
 	private String mensajeDeEntrada ="";
 	private ArrayList<Socket> salaDeChat;
 	private Gson gson;
+	private UsuarioDAO usuarioDAO;
 	public ServidorManager(Socket socket, ArrayList<Socket> salaDeChat){
 		this.socket=socket;
 		this.salaDeChat=salaDeChat;
 		gson = new Gson();
+		//usuarioDAO = new UsuarioDAO(conn, stat) 
 	}
 	
 	public void checkConnection()throws Exception{
@@ -75,6 +81,16 @@ public class ServidorManager implements Runnable{
 			
 			case 2:
 				//opcion 2 es logeo
+				Usuario usuario = gson.fromJson(mensajeEnviable.getMensaje(), Usuario.class);
+				//UsuarioDAO usuario;
+				//usuario.borrar(usuario);
+			break;
+			
+			case 3:
+				Personaje personaje = gson.fromJson(mensajeEnviable.getMensaje(), Personaje.class);
+			break;
+			
+			case 4:
 				
 			break;
 			default:
