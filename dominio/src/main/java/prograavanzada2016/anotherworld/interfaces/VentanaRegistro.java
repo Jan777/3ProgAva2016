@@ -1,4 +1,4 @@
-package prograavanzada2016.anotherworld.interfaces;
+package interfaz;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -8,9 +8,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import prograavanzada2016.anotherworld.DAO.DAOException;
-import prograavanzada2016.anotherworld.DAO.UsuarioDAO;
-import prograavanzada2016.anotherworld.user.Usuario;
+import dao.DAOException;
+import dao.UsuarioDAO;
+import model.Usuario;
 
 import javax.swing.JLabel;
 import javax.swing.JButton;
@@ -36,19 +36,6 @@ public class VentanaRegistro extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaRegistro frame = new VentanaRegistro();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
 	
 	public VentanaRegistro(){
 		initComponents();

@@ -1,4 +1,4 @@
-package prograavanzada2016.anotherworld.interfaces;
+package interfaz;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -7,8 +7,8 @@ import javax.swing.border.EmptyBorder;
 
 import com.google.gson.Gson;
 
-import prograavanzada2016.anotherworld.DAO.UsuarioDAO;
-import prograavanzada2016.anotherworld.user.Usuario;
+import dao.UsuarioDAO;
+import model.Usuario;
 
 import javax.swing.JTextField;
 import javax.swing.JLabel;
@@ -26,6 +26,8 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 
 public class VentanaPrincipal extends JFrame {
 
@@ -56,6 +58,7 @@ public class VentanaPrincipal extends JFrame {
 				try {
 					VentanaPrincipal frame = new VentanaPrincipal();
 					frame.setVisible(true);
+					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -63,11 +66,11 @@ public class VentanaPrincipal extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
-	
 	public VentanaPrincipal(){
+		setLocationRelativeTo(null);
+		setResizable(false);
+		setTitle("AnotherWorld");
+		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaPrincipal.class.getResource("/interfaz/IconoVentana.jpg")));
 		initComponents();
 		usuario = new Usuario();
 		ventanaRegistro = new VentanaRegistro();
@@ -91,6 +94,8 @@ public class VentanaPrincipal extends JFrame {
         }*/
 	}
 	public void initComponents() {
+		setTitle("AnotherWorld");
+		setLocationRelativeTo(null);
 		pf = new PropertiesFile();
 		propiedades = pf.getProperties();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -178,6 +183,7 @@ public class VentanaPrincipal extends JFrame {
                 	mensajeTextField.setText("Todo ok");
                 	ventanaInicio = new VentanaInicio(usuario);
                 	ventanaInicio.setVisible(true);
+                	ventanaInicio.setLocationRelativeTo(null);
                 	dispose();
                 }
                 else{

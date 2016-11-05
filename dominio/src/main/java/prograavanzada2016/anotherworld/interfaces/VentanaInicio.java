@@ -1,5 +1,5 @@
-package prograavanzada2016.anotherworld.interfaces;
-import prograavanzada2016.anotherworld.user.Usuario;
+package interfaz;
+import model.Usuario;
 
 import java.awt.EventQueue;
 import java.awt.event.WindowAdapter;
@@ -13,12 +13,13 @@ import java.util.Properties;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import prograavanzada2016.anotherworld.user.Usuario;
+import model.Usuario;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Toolkit;
 
 public class VentanaInicio extends JFrame {
 
@@ -31,10 +32,12 @@ public class VentanaInicio extends JFrame {
     private JButton jugarButton;
     static Properties propiedades;
 	static PropertiesFile pf;
-	
+
 	public VentanaCrearPersonaje ventanaCrearPersonaje;
 
 	public VentanaInicio(Usuario user) {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaInicio.class.getResource("/interfaz/IconoVentana.jpg")));
+		setTitle("Bienvenido!");
 		initComponents();
 		usuario = user;
 		textArea.setText("Bienvenido "+usuario.getNombre());
@@ -79,11 +82,13 @@ public class VentanaInicio extends JFrame {
 		if(usuario.getPersonajeJugador() != null){
 			VentanaMapa ventanaMapa = new VentanaMapa(usuario);
 			ventanaMapa.setVisible(true);
+			ventanaMapa.setLocationRelativeTo(null);
 			dispose();
 		}
 		else{
 			ventanaCrearPersonaje = new VentanaCrearPersonaje(usuario);
 			ventanaCrearPersonaje.setVisible(true);
+			ventanaCrearPersonaje.setLocationRelativeTo(null);
 			dispose();
 		}
 	}

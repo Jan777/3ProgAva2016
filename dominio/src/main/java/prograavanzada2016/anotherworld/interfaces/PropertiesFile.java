@@ -1,4 +1,4 @@
-package prograavanzada2016.anotherworld.interfaces;
+package interfaz;
 
 import java.io.IOException;
 import java.util.Properties;

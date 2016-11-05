@@ -1,14 +1,8 @@
-package prograavanzada2016.anotherworld.interfaces;
-import prograavanzada2016.anotherworld.castas.Guerrero;
-import prograavanzada2016.anotherworld.castas.Mago;
-import prograavanzada2016.anotherworld.entities.Personaje;
-import prograavanzada2016.anotherworld.razas.Humano;
-import prograavanzada2016.anotherworld.razas.Orco;
-import prograavanzada2016.anotherworld.user.Usuario;
+package interfaz;
+import model.Usuario;
 
 import java.util.Properties;
 import java.awt.Dimension;
-import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -20,8 +14,6 @@ import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.Toolkit;
 import java.awt.event.ActionListener;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.awt.event.ActionEvent;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
@@ -44,42 +36,19 @@ public class VentanaCrearPersonaje extends JFrame {
 	private JComboBox comboRaza;
 	private JComboBox comboCasta;
 	private JButton btnCrear;
-    
-	/*public static void main(String[] args) {
-		
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					//pf = new PropertiesFile();
-					//propiedades = pf.getProperties();
-					VentanaCrearPersonaje frame = new VentanaCrearPersonaje(Usuario);
-					frame.setVisible(true);
-					//frame.setSize(Integer.parseInt(propiedades.getProperty("w")),Integer.parseInt(propiedades.getProperty("h")));
-					frame.setSize(new Dimension(800,600));
-					frame.setLocationRelativeTo(null);
-					frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-					frame.setResizable(false);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}*/
 	
 	public VentanaCrearPersonaje(Usuario user){
 		initComponents();   
 		usuario = user;
-		   
 		}
-	
-	/**
-	 * Create the frame.
-	 */
+
 	public void initComponents() {
+		pf = new PropertiesFile();
+		propiedades = pf.getProperties();
+		setSize(Integer.parseInt(propiedades.getProperty("w")),Integer.parseInt(propiedades.getProperty("h")));
 		setIconImage(Toolkit.getDefaultToolkit().getImage("\\src\\interfaz\\IconoVentana.jpg"));
 		setTitle("Crear Personaje");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -149,40 +118,25 @@ public class VentanaCrearPersonaje extends JFrame {
 		btnCrear.setBounds(313, 206, 89, 23);
 		contentPane.add(btnCrear);
 		
-		JLabel lblImagen = new JLabel("");
-		lblImagen.setIcon(new ImageIcon("src\\interfaz\\BackgroundCrearPersonaje.jpeg"));
-		lblImagen.setBounds(0, 0, 1776, 1050);
-		contentPane.add(lblImagen);
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon(VentanaCrearPersonaje.class.getResource("/interfaz/BackgroundCrearPersonaje.jpeg")));
+		label.setBounds(0, 0, 784, 561);
+		contentPane.add(label);
 		
 	}
 	
 	public void textFieldFocusLost(FocusEvent evt){
-		personaje.setNombre(textField.getText());
+		personaje.setNombrePersonaje(textField.getText());
 	}
 	
 	public void comboRazaFocusLost(FocusEvent e){
 		//Esto va a tener un switch
-		switch((String)comboRaza.getSelectedItem()){
-		case "Humano":
-			personaje.setRaza(new Humano());
-			break;
-		case "Orco":
-			personaje.setRaza(new Orco());
-		}
-		
+		personaje.setRazaPersonaje((String)comboRaza.getSelectedItem());
 	}
 	
 	public void comboCastaFocusLost(FocusEvent e){
 		//Esto va a tener un switch
-		switch((String)comboCasta.getSelectedItem()){
-		case "Mago":
-			personaje.setCasta(new Mago());
-			break;
-		case "Guerrero":
-			personaje.setCasta(new Guerrero());
-			break;
-		}
-		
+		personaje.setCastaPersonaje((String)comboCasta.getSelectedItem());
 	}
 	
 	public void btnCrearActionPerformed(ActionEvent evt){
@@ -200,6 +154,4 @@ public class VentanaCrearPersonaje extends JFrame {
 		dispose();
 		
 	}
-
-	
 }
