@@ -7,7 +7,8 @@ import javax.swing.border.EmptyBorder;
 
 import com.google.gson.Gson;
 
-import dao.UsuarioDAO;
+import prograavanzada2016.anotherworld.cliente.Cliente;
+import prograavanzada2016.anotherworld.cliente.MensajeEnviable;
 import prograavanzada2016.anotherworld.user.Usuario;
 
 import javax.swing.JTextField;
@@ -40,10 +41,10 @@ public class VentanaPrincipal extends JFrame {
 	private Usuario usuario;
 	private VentanaRegistro ventanaRegistro;
 	private VentanaInicio ventanaInicio;
-	private UsuarioDAO usuarioDAO;
-	private ObjectInputStream entrada;
-    private ObjectOutputStream salida;
     
+	private Cliente cliente;
+	private MensajeEnviable mensajeEnviable;
+	
     static Properties propiedades;
 	static PropertiesFile pf;
     
@@ -66,33 +67,20 @@ public class VentanaPrincipal extends JFrame {
 		});
 	}
 
-	public VentanaPrincipal(){
+	public VentanaPrincipal() throws IOException{
 		setLocationRelativeTo(null);
 		setResizable(false);
 		setTitle("AnotherWorld");
-		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaPrincipal.class.getResource("/interfaz/IconoVentana.jpg")));
+		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaPrincipal.class.getResource("/interfaz/IconoVentana.jpg")));
 		initComponents();
 		usuario = new Usuario();
 		ventanaRegistro = new VentanaRegistro();
 		ventanaRegistro.setLocationRelativeTo(this);
 		gson = new Gson();
-		Connection conn = null;
-        Statement stat = null;
-        try {
-			usuarioDAO = new UsuarioDAO(conn, stat);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-		/*try {
-            Socket socket = new Socket("localhost", 4442);
-            salida = new ObjectOutputStream(socket.getOutputStream());
-            entrada = new ObjectInputStream(socket.getInputStream());
-            
-        } catch (IOException ex) {
-           ex.printStackTrace();
-        }*/
+		cliente = new Cliente();
 	}
+	
+	
 	public void initComponents() {
 		setTitle("AnotherWorld");
 		setLocationRelativeTo(null);
@@ -175,11 +163,12 @@ public class VentanaPrincipal extends JFrame {
             } 
             else{
             	
-            	/*salida.writeObject("buscar");
-                salida.reset();
-                salida.writeObject(gson.toJson(usuario));
-                usuario = gson.fromJson((String) entrada.readObject(), Usuario.class);*/
-                if(usuarioDAO.buscar(usuario) == 1){
+            	cliente.enviarMensaje(2, gson.toJson(usuario));//envio la pregunta
+            	
+            	MensajeEnviable respuesta = gson.fromJson(cliente.recibirMensaje(), MensajeEnviable.class);//leo la respuesta y la transformo en mensaje enviable
+            	///usuario = gson.fromJson((String) entrada.readObject(), Usuario.class);
+                if(respuesta.getCodigo() == 2){ ///usuarioDAO.buscar(usuario) == 1
+                	usuario = gson.fromJson(respuesta.getMensaje(), Usuario.class);//actualizo el usuario
                 	mensajeTextField.setText("Todo ok");
                 	ventanaInicio = new VentanaInicio(usuario);
                 	ventanaInicio.setVisible(true);

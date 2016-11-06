@@ -49,14 +49,22 @@ public class ClienteManager implements Runnable{
 		}
 	}
 	
-	public void sendMensaje(String string){
-		MensajeEnviable mensajeEnviable = new MensajeEnviable(1, string);
+	public void sendMensaje(int codigo, String json){
+		MensajeEnviable mensajeEnviable = new MensajeEnviable(codigo, json);
 		salida.println(gson.toJson(mensajeEnviable));
 		salida.flush();
 	}
 	
+	public String reciveMessage(){
+		if(entrada.hasNext()){
+			String message = entrada.nextLine();
+			return message;
+		}
+		return "";
+	}
+	
 	public void disconnected()throws Exception{
-		this.sendMensaje("disconnected");
+		this.sendMensaje(0, "disconnected");
 		salida.flush();
 		socket.close();
 		System.exit(0);

@@ -4,6 +4,7 @@ import java.io.DataInputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -25,7 +26,7 @@ public class Servidor
 		this.serverSocket = new ServerSocket(puerto);
 	}
 	
-	public void iniciarServidor() throws IOException{
+	public void iniciarServidor() throws IOException, SQLException{
 		this.enLinea=true;
 		while(this.enLinea){
 			System.out.println("Esperando conexion...");

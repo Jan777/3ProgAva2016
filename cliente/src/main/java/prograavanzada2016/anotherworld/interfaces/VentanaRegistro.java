@@ -8,8 +8,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import dao.DAOException;
-import dao.UsuarioDAO;
 import prograavanzada2016.anotherworld.user.Usuario;
 
 import javax.swing.JLabel;
@@ -31,7 +29,6 @@ public class VentanaRegistro extends JFrame {
 	private JButton registroButton;
 	private JButton cancelarButton;
 	private Usuario usuario;
-	private UsuarioDAO usuarioDAO;
 
 	/**
 	 * Launch the application.
@@ -40,11 +37,6 @@ public class VentanaRegistro extends JFrame {
 	public VentanaRegistro(){
 		initComponents();
 		usuario = new Usuario();
-		try {
-			usuarioDAO=new UsuarioDAO(null, null);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
 	}
 	/**
 	 * Create the frame.
@@ -153,12 +145,12 @@ public class VentanaRegistro extends JFrame {
 	}
 	
 	public void registroButtonActionPerformed(ActionEvent evt){
-		try {
+		/*try {
 			usuarioDAO.insertar(usuario);
 			dispose();
 		} catch (DAOException e) {
 			e.printStackTrace();
-		}
+		}*/
 		
 	}
 	

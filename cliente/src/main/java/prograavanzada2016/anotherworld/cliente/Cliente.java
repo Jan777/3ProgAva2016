@@ -23,7 +23,11 @@ public class Cliente {
 		clienteManager.disconnected();
 	}
 	
-	public void enviarMensaje(String mensaje){
-		clienteManager.sendMensaje(mensaje);
+	public void enviarMensaje(int codigo, String json){
+		clienteManager.sendMensaje(codigo, json);
+	}
+	
+	public String recibirMensaje(){
+		return clienteManager.reciveMessage(); //devuelve un MensajeEnviable en forma de json
 	}
 }

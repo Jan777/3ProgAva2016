@@ -1,13 +1,19 @@
 package prograavanzada2016.anotherworld.servidor;
 
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.google.gson.Gson;
 
+import prograavanzada2016.anotherworld.DAO.DAOException;
 import prograavanzada2016.anotherworld.DAO.UsuarioDAO;
 import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.user.Usuario;
@@ -19,11 +25,15 @@ public class ServidorManager implements Runnable{
 	private ArrayList<Socket> salaDeChat;
 	private Gson gson;
 	private UsuarioDAO usuarioDAO;
-	public ServidorManager(Socket socket, ArrayList<Socket> salaDeChat){
+	private Connection conn = null;
+    private Statement stat = null;
+
+    
+	public ServidorManager(Socket socket, ArrayList<Socket> salaDeChat) throws SQLException, IOException{
 		this.socket=socket;
 		this.salaDeChat=salaDeChat;
 		gson = new Gson();
-		//usuarioDAO = new UsuarioDAO(conn, stat) 
+		usuarioDAO = new UsuarioDAO(conn, stat);
 	}
 	
 	public void checkConnection()throws Exception{
@@ -64,7 +74,7 @@ public class ServidorManager implements Runnable{
 		
 	}
 	
-	public void dispatcherDeAcciones(MensajeEnviable mensajeEnviable) throws IOException{
+	public void dispatcherDeAcciones(MensajeEnviable mensajeEnviable) throws IOException, DAOException{
 		switch(mensajeEnviable.getCodigo()){
 			case 1:
 				//opcion 1 es mensaje normal
@@ -82,8 +92,12 @@ public class ServidorManager implements Runnable{
 			case 2:
 				//opcion 2 es logeo
 				Usuario usuario = gson.fromJson(mensajeEnviable.getMensaje(), Usuario.class);
-				//UsuarioDAO usuario;
-				//usuario.borrar(usuario);
+				if(usuarioDAO.buscar(usuario) == 1)
+				{
+					MensajeEnviable mensaje = new MensajeEnviable(2, gson.toJson(usuario));
+					gson.toJson(mensaje);
+					salida.write(mensaje);
+				}
 			break;
 			
 			case 3:

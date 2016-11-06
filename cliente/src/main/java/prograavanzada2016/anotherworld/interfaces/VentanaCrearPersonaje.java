@@ -20,7 +20,6 @@ import java.awt.event.FocusEvent;
 
 public class VentanaCrearPersonaje extends JFrame {
 	
-	Personaje personaje  = new Personaje();;
 	VentanaMapa ventanaMapaJuego;
 	
 	static Properties propiedades;
@@ -126,23 +125,23 @@ public class VentanaCrearPersonaje extends JFrame {
 	}
 	
 	public void textFieldFocusLost(FocusEvent evt){
-		personaje.setNombrePersonaje(textField.getText());
+		//personaje.setNombrePersonaje(textField.getText());
 	}
 	
 	public void comboRazaFocusLost(FocusEvent e){
 		//Esto va a tener un switch
-		personaje.setRazaPersonaje((String)comboRaza.getSelectedItem());
+		//personaje.setRazaPersonaje((String)comboRaza.getSelectedItem());
 	}
 	
 	public void comboCastaFocusLost(FocusEvent e){
 		//Esto va a tener un switch
-		personaje.setCastaPersonaje((String)comboCasta.getSelectedItem());
+		//personaje.setCastaPersonaje((String)comboCasta.getSelectedItem());
 	}
 	
 	public void btnCrearActionPerformed(ActionEvent evt){
 		try{
 			
-			usuario.setPersonajeJugador(personaje);
+			//usuario.setPersonajeJugador(personaje);
 			ventanaMapaJuego = new VentanaMapa(usuario);
 			
 		} catch (Exception e){
