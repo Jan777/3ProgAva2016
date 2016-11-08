@@ -40,9 +40,11 @@ public class ClienteManager implements Runnable, SubjectLogin{
 				salida = new PrintWriter(socket.getOutputStream());
 				salida.flush();
 				
-				if(!estaLogueado){
-					salida.println(new ComandoLogin("pepe", "123"));
-				}
+				/*if(!estaLogueado){
+					Thread.sleep(2000);
+					salida.println(new ComandoLogin(this.user, this.password));
+					estaLogueado=true;
+				}*/
 				
 				chechStream();			
 			}finally{
@@ -63,7 +65,9 @@ public class ClienteManager implements Runnable, SubjectLogin{
 	public void receive(){
 		//aca va el observador
 		if(entrada.hasNext()){
+			System.out.println("HUBO UN MENSAJE NUEVO");
 			String message = entrada.nextLine();
+			this.notifyAllObservers(message);
 			System.out.println(message);
 		}
 	}
@@ -71,6 +75,12 @@ public class ClienteManager implements Runnable, SubjectLogin{
 	public void sendMensaje(int codigo, String json){
 		MensajeEnviable mensajeEnviable = new MensajeEnviable(codigo, json);
 		salida.println(gson.toJson(mensajeEnviable));
+		salida.flush();
+	}
+	
+	public void sendMensaje(String mensaje){
+		System.out.println("El mensaje es:"+ mensaje);
+		salida.println(mensaje);
 		salida.flush();
 	}
 	

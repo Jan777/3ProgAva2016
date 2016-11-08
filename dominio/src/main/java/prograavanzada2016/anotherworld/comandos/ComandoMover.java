@@ -1,5 +1,7 @@
 package prograavanzada2016.anotherworld.comandos;
 
+import com.google.gson.Gson;
+
 public class ComandoMover extends Comando{
 	private int clienteId;
 	private int posX;
@@ -14,6 +16,7 @@ public class ComandoMover extends Comando{
 
 	@Override
 	public String enviarComando() {
+		Gson gson = new Gson();
 		return gson.toJson(this);
 	}
 

@@ -1,17 +1,22 @@
 package prograavanzada2016.anotherworld.comandos;
 
+import java.util.List;
+
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
 public class ComandoLogin extends Comando{
 	private String user;
 	private String password;
 	
 	public ComandoLogin(String user, String password){
-		this.gson=new Gson();
 		this.user=user;
 		this.password=password;
 		this.armarMensajeDesdeCliente();
 	}
+	
+	public ComandoLogin(){}
 	
 	public String getUser() {
 		return user;
@@ -31,6 +36,8 @@ public class ComandoLogin extends Comando{
 
 	@Override
 	public String enviarComando() {
+		Gson gson = new Gson();
+		System.out.println(gson.toJson(this));
 		return gson.toJson(this);
 	}
 
@@ -50,7 +57,7 @@ public class ComandoLogin extends Comando{
 	}
 
 	@Override
-	protected void armarMensajeDesdeServidor(String mensajeDeServidor) {
+	public void armarMensajeDesdeServidor(String mensajeDeServidor) {
 		this.responseFromServer="1 "+mensajeDeServidor;
 	}
 

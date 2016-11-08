@@ -1,19 +1,26 @@
 package prograavanzada2016.anotherworld.comandos;
 
+import com.google.gson.Gson;
+
 import prograavanzada2016.anotherworld.entities.Personaje;
 
 public class ComandoEntroNuevoPersonaje extends Comando{
+
+
 	private int clienteId;
 	private Personaje personaje;
 	
 	public ComandoEntroNuevoPersonaje(int clienteId, Personaje personaje) {
+		Gson gson = new Gson();
 		this.clienteId=clienteId;
 		this.personaje=personaje;
 		this.armarMensajeDesdeServidor("2 "+clienteId+" "+gson.toJson(personaje));
 	}
+	
 
 	@Override
 	public String enviarComando() {
+		Gson gson = new Gson();
 		return gson.toJson(this);
 	}
 

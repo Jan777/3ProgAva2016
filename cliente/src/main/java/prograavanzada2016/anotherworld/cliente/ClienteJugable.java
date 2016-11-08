@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
+import com.google.gson.Gson;
+
+import prograavanzada2016.anotherworld.comandos.Comando;
 import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.observer.ILogin;
 
@@ -64,14 +67,21 @@ public class ClienteJugable implements ILogin{
 		return clienteManager.reciveMessage(); //devuelve un MensajeEnviable en forma de json
 	}
 	
+	public void enviarComando(Comando comando){
+		clienteManager.sendMensaje(comando.enviarComando());
+	}
 	
 	
 	
 	@Override
 	public void update(String response) {
-		if(response.substring(0, 2).equals("OK")){
-			int idCliente = Integer.parseInt(response.substring(2,response.length()));
+		Gson gson = new Gson();
+		Comando comando = gson.fromJson(response, Comando.class); 
+		String mensaje[] = comando.getResponseFromServer().split(" ");
+		if(mensaje[1].equals("OK")){
+			int idCliente = Integer.parseInt(mensaje[2]);
 			this.idCliente=idCliente;
+			System.out.println("Me logre conectar y mi id es: " +this.idCliente);
 		}else{
 			//FAIL
 		}		

@@ -18,10 +18,13 @@ public class Servidor
 	private int puerto=444;
 	private ServerSocket serverSocket;
 	
+	public ArrayList<ClienteServicio> clientesSala1;
+	
 	public Servidor() throws IOException{
 		this.salaDeChat1 = new ArrayList<>();
 		this.salaDeChat2 = new ArrayList<>();
 		this.salaDeChat3 = new ArrayList<>();
+		this.clientesSala1 = new ArrayList<>();
 		this.cantidadDeConexiones=0;
 		this.serverSocket = new ServerSocket(puerto);
 	}
@@ -35,7 +38,12 @@ public class Servidor
 			this.cantidadDeConexiones++;
 			ServidorManager servidorManager=null;
 			this.salaDeChat1.add(socket);
-			servidorManager = new ServidorManager(socket,this.salaDeChat1);
+			
+			ClienteServicio cs = new ClienteServicio(socket,cantidadDeConexiones);
+			this.clientesSala1.add(cs);
+			
+			//servidorManager = new ServidorManager(socket,this.salaDeChat1);
+			servidorManager = new ServidorManager(socket,this.clientesSala1,cantidadDeConexiones);
 			Thread instancia = new Thread(servidorManager);
 			instancia.start();
 		}
