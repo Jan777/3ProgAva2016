@@ -3,6 +3,7 @@ package prograavanzada2016.anotherworld.cliente;
 import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 
 import com.google.gson.Gson;
 
@@ -15,10 +16,12 @@ public class ClienteJugable implements ILogin{
 	private Socket socket;
 	private ClienteManager clienteManager;
 	private Personaje personaje;
+	private ArrayList<ClienteJugable> otrosClientes;
 	
-	public ClienteJugable(String server, int port,String user, String password) throws UnknownHostException, IOException {
+	public ClienteJugable(String server, int port) throws UnknownHostException, IOException {
+		this.otrosClientes=new ArrayList<>();
 		this.socket = new Socket(server, port);
-		clienteManager = new ClienteManager(this, user, password);
+		clienteManager = new ClienteManager(this);
 		Thread instancia = new Thread(clienteManager);
 		instancia.start();
 	}

@@ -16,16 +16,13 @@ public class ClienteManager implements Runnable, SubjectLogin{
 	private Socket socket;
 	private Scanner entrada;
 	private PrintWriter salida;
-	private boolean estaLogueado = false;
 	private Gson gson;
-	private String user;
-	private String password;
 	
 	//variables observadoras
 	private static ArrayList<ILogin> observadoresLogin = new ArrayList<>();
 	//fin de variables observadoras
 	
-	public ClienteManager(ClienteJugable clienteJugable,String user, String password){
+	public ClienteManager(ClienteJugable clienteJugable){
 		//agrego los eventos para los observadores
 		observadoresLogin.add(clienteJugable);
 		this.socket=clienteJugable.getSocket();
@@ -39,13 +36,6 @@ public class ClienteManager implements Runnable, SubjectLogin{
 				entrada = new Scanner(socket.getInputStream());
 				salida = new PrintWriter(socket.getOutputStream());
 				salida.flush();
-				
-				/*if(!estaLogueado){
-					Thread.sleep(2000);
-					salida.println(new ComandoLogin(this.user, this.password));
-					estaLogueado=true;
-				}*/
-				
 				chechStream();			
 			}finally{
 				this.socket.close();
