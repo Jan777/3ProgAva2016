@@ -96,7 +96,7 @@ public class ServidorManager implements Runnable{
 				{
 					MensajeEnviable mensaje = new MensajeEnviable(2, gson.toJson(usuario));
 					gson.toJson(mensaje);
-					salida.write(mensaje);
+					//salida.write(mensaje);
 				}
 			break;
 			
