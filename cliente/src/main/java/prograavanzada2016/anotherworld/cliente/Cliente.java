@@ -13,7 +13,7 @@ public class Cliente {
 	
 	
 	public Cliente() throws IOException{
-		socket = new Socket(server, puerto);
+		//socket = new Socket(server, puerto);
 		clienteManager = new ClienteManager(socket);
 		Thread instancia = new Thread(clienteManager);
 		instancia.start();

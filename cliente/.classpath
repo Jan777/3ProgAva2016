@@ -8,5 +8,6 @@
 	<classpathentry kind="lib" path="src/main/resources/gson-2.2.4.jar"/>
 	<classpathentry kind="lib" path="src/main/resources/mysql-connector-java-5.1.35-bin.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/dominio"/>
+	<classpathentry kind="src" path="/servidor"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

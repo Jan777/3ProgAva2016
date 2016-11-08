@@ -24,9 +24,9 @@ public class UsuarioDAO extends DAO<Usuario>{
 	@Override
 	public void insertar(Usuario usuario) throws DAOException {
 		try {
-	        if(buscar(usuario)==ENCONTRADO){
+	       /* if(buscar(usuario)==ENCONTRADO){
 	            throw new DAOException("Alumno existente");
-	        }
+	        }*/
 	         String insert = "insert into jrpg.usuario (nombre, apellido, nombreUsuario, pass) values('"+usuario.getNombre()+"','"+usuario.getApellido()+"','"+usuario.getNombreUsuario()+"', '"+usuario.getPassword()+"');";
 	         statement.execute(insert);
 	        
@@ -35,17 +35,29 @@ public class UsuarioDAO extends DAO<Usuario>{
 	            System.out.println(ex);
 	        }		
 	}
+	
+	public long existeUsuario(String usuario) throws DAOException {
+		try {
+			String buscar = "select * from jrpg.usuario where nombreUsuario like '"+usuario+"';";
+			statement.execute(buscar);
+			ResultSet rs = statement.executeQuery(buscar);
+			if(rs.next())
+				return ENCONTRADO;
+				else
+				return NO_ENCONTRADO;
+					
+		}catch (SQLException ex) {
+	    	ex.printStackTrace();
+	        return NO_ENCONTRADO;
+	    }
+		}
 
 	@Override
 	public void borrar(Usuario usuario) throws DAOException {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void modificar(Usuario usuario) throws DAOException {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
@@ -70,7 +82,6 @@ public class UsuarioDAO extends DAO<Usuario>{
 
 	@Override
 	public List<Usuario> listarTodos() throws DAOException {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

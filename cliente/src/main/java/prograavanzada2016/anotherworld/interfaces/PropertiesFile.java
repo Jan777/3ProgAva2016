@@ -1,5 +1,6 @@
 package prograavanzada2016.anotherworld.interfaces;
 
+
 import java.io.IOException;
 import java.util.Properties;
 

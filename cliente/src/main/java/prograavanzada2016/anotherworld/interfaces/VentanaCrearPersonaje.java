@@ -1,12 +1,16 @@
 package prograavanzada2016.anotherworld.interfaces;
+import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.user.Usuario;
 
 import java.util.Properties;
 import java.awt.Dimension;
+import java.awt.Font;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.ImageIcon;
@@ -35,6 +39,8 @@ public class VentanaCrearPersonaje extends JFrame {
 	private JComboBox comboRaza;
 	private JComboBox comboCasta;
 	private JButton btnCrear;
+	
+	Personaje personaje;
 	
 	public VentanaCrearPersonaje(Usuario user){
 		initComponents();   
@@ -109,6 +115,10 @@ public class VentanaCrearPersonaje extends JFrame {
 		contentPane.add(comboCasta);
 		
 		btnCrear = new JButton("Crear");
+		btnCrear.setBackground(new Color(59, 89, 182));
+	    btnCrear.setForeground(Color.BLACK);
+	    btnCrear.setFocusPainted(false);
+	    btnCrear.setFont(new Font("Tahoma", Font.BOLD, 12));
 		btnCrear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
 				btnCrearActionPerformed(evt);
@@ -118,7 +128,7 @@ public class VentanaCrearPersonaje extends JFrame {
 		contentPane.add(btnCrear);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon(VentanaCrearPersonaje.class.getResource("/interfaz/BackgroundCrearPersonaje.jpeg")));
+		label.setIcon(new ImageIcon(VentanaCrearPersonaje.class.getResource("/prograavanzada2016/anotherworld/interfaces/BackgroundCrearPersonaje.jpeg")));
 		label.setBounds(0, 0, 784, 561);
 		contentPane.add(label);
 		
@@ -139,13 +149,17 @@ public class VentanaCrearPersonaje extends JFrame {
 	}
 	
 	public void btnCrearActionPerformed(ActionEvent evt){
-		try{
-			
-			//usuario.setPersonajeJugador(personaje);
-			ventanaMapaJuego = new VentanaMapa(usuario);
-			
-		} catch (Exception e){
-			e.printStackTrace();
+		if("".equals(textField.getText()))
+			JOptionPane.showMessageDialog(contentPane, "El personaje debe contener un nombre");
+		else{
+			try{
+				
+				//usuario.setPersonajeJugador(personaje);
+				ventanaMapaJuego = new VentanaMapa(personaje);
+				
+			} catch (Exception e){
+				e.printStackTrace();
+			}
 		}
 		ventanaMapaJuego.setSize(new Dimension(800,600));
 		ventanaMapaJuego.setLocationRelativeTo(null);

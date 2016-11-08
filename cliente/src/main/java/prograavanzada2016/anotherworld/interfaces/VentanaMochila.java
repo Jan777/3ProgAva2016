@@ -1,6 +1,7 @@
 package prograavanzada2016.anotherworld.interfaces;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -8,6 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JList;
@@ -24,10 +26,11 @@ public class VentanaMochila extends JFrame {
 	public VentanaMochila() {
 		setTitle("Mochila");
 		setResizable(false);
-		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaMochila.class.getResource("/interfaz/IconoVentana.jpg")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaMochila.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
 		getContentPane().setLayout(null);
 		
 		JLabel lblMochila = new JLabel("Mochila");
+		lblMochila.setForeground(Color.WHITE);
 		lblMochila.setFont(new Font("Tahoma", Font.PLAIN, 28));
 		lblMochila.setBounds(56, 28, 109, 24);
 		getContentPane().add(lblMochila);
@@ -39,25 +42,42 @@ public class VentanaMochila extends JFrame {
 		listaItems.setBounds(56, 78, 249, 95);
 		getContentPane().add(listaItems);
 		
-		JButton btnNewButton = new JButton("Equipar");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnEquipar = new JButton("Equipar");
+		btnEquipar.setBackground(new Color(59, 89, 182));
+	    btnEquipar.setForeground(Color.BLACK);
+	    btnEquipar.setFocusPainted(false);
+	    btnEquipar.setFont(new Font("Tahoma", Font.BOLD, 12));
+		btnEquipar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnNewButton.setBounds(56, 227, 89, 23);
-		getContentPane().add(btnNewButton);
+		btnEquipar.setBounds(56, 227, 89, 23);
+		getContentPane().add(btnEquipar);
 		
-		JButton btnNewButton_1 = new JButton("Tirar");
-		btnNewButton_1.setBounds(178, 227, 89, 23);
-		getContentPane().add(btnNewButton_1);
+		JButton btnTirar = new JButton("Tirar");
+		btnTirar.setBackground(new Color(59, 89, 182));
+	    btnTirar.setForeground(Color.BLACK);
+	    btnTirar.setFocusPainted(false);
+	    btnTirar.setFont(new Font("Tahoma", Font.BOLD, 12));
+		btnTirar.setBounds(178, 227, 89, 23);
+		getContentPane().add(btnTirar);
 		
-		JButton btnNewButton_2 = new JButton("Cancelar");
-		btnNewButton_2.addActionListener(new ActionListener() {
+		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar.setBackground(new Color(59, 89, 182));
+	    btnCancelar.setForeground(Color.BLACK);
+	    btnCancelar.setFocusPainted(false);
+	    btnCancelar.setFont(new Font("Tahoma", Font.BOLD, 12));
+		btnCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				setVisible(false);
 			}
 		});
-		btnNewButton_2.setBounds(299, 227, 89, 23);
-		getContentPane().add(btnNewButton_2);
+		btnCancelar.setBounds(299, 227, 89, 23);
+		getContentPane().add(btnCancelar);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(VentanaMochila.class.getResource("/prograavanzada2016/anotherworld/interfaces/BackgroundMochilaYAlianza.jpg")));
+		lblNewLabel.setBounds(0, 0, 444, 271);
+		getContentPane().add(lblNewLabel);
 	}
 }

@@ -1,17 +1,10 @@
 package prograavanzada2016.anotherworld.interfaces;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+import java.awt.Font;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.Component;
 import java.awt.Dimension;
-
-import javax.swing.BoxLayout;
-import java.awt.GridLayout;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
@@ -22,6 +15,8 @@ import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
+
+import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.user.*;
 import java.awt.Toolkit;
 
@@ -44,8 +39,8 @@ public class VentanaMapa extends JFrame {
 	private static Usuario user;
 	public VentanaAlianza ventanaAlianza;
 
-	public VentanaMapa(Usuario s) {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaMapa.class.getResource("/interfaz/IconoVentana.jpg")));
+	public VentanaMapa(Personaje pj) {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaMapa.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
 		setTitle("AnotherWorld");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -74,7 +69,7 @@ public class VentanaMapa extends JFrame {
 		gbl_jpBarraEstado.rowWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
 		jpBarraEstado.setLayout(gbl_jpBarraEstado);
 		
-		lblPersonaje = new JLabel("(Nombre Pj)");
+		lblPersonaje = new JLabel("PJ: "+pj.getNombre());
 		GridBagConstraints gbc_lblPersonaje = new GridBagConstraints();
 		gbc_lblPersonaje.fill = GridBagConstraints.HORIZONTAL;
 		gbc_lblPersonaje.insets = new Insets(0, 0, 5, 5);
@@ -91,6 +86,10 @@ public class VentanaMapa extends JFrame {
 		jpBarraEstado.add(lblSalud, gbc_lblSalud);
 		
 		btnMochila = new JButton("Mochila");
+		btnMochila.setBackground(new Color(59, 89, 182));
+	    btnMochila.setForeground(Color.BLACK);
+	    btnMochila.setFocusPainted(false);
+	    btnMochila.setFont(new Font("Tahoma", Font.BOLD, 12));
 		btnMochila.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaMochila ventanaMochila = new VentanaMochila();
@@ -112,6 +111,14 @@ public class VentanaMapa extends JFrame {
 		jpBarraEstado.add(lblFuerza, gbc_lblFuerza);
 		
 		JButton btnCombate = new JButton("Combatir");
+		btnCombate.setBackground(new Color(59, 89, 182));
+	    btnCombate.setForeground(Color.BLACK);
+	    btnCombate.setFocusPainted(false);
+	    btnCombate.setFont(new Font("Tahoma", Font.BOLD, 12));
+		btnCombate.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		GridBagConstraints gbc_btnCombate = new GridBagConstraints();
 		gbc_btnCombate.fill = GridBagConstraints.BOTH;
 		gbc_btnCombate.insets = new Insets(0, 0, 5, 5);
@@ -142,6 +149,10 @@ public class VentanaMapa extends JFrame {
 		jpBarraEstado.add(lblEnergia, gbc_lblEnergia);
 		
 		btnCrearAlianza = new JButton("Crear Alianza");
+		btnCrearAlianza.setBackground(new Color(59, 89, 182));
+	    btnCrearAlianza.setForeground(Color.BLACK);
+	    btnCrearAlianza.setFocusPainted(false);
+	    btnCrearAlianza.setFont(new Font("Tahoma", Font.BOLD, 12));
 		btnCrearAlianza.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaAlianza ventanaAlianza = new VentanaAlianza();

@@ -1,16 +1,24 @@
 package prograavanzada2016.anotherworld.interfaces;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.Toolkit;
 import java.awt.Window;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.border.EmptyBorder;
 
+import prograavanzada2016.anotherworld.*;
+import prograavanzada2016.anotherworld.DAO.DAOException;
+import prograavanzada2016.anotherworld.DAO.UsuarioDAO;
 import prograavanzada2016.anotherworld.user.Usuario;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import java.awt.event.FocusAdapter;
@@ -25,16 +33,20 @@ public class VentanaRegistro extends JFrame {
 	private JTextField nombreTextField;
 	private JTextField apellidoTextField;
 	private JTextField nombreUsuarioTextField;
-	private JTextField passwordTextField;
 	private JButton registroButton;
 	private JButton cancelarButton;
 	private Usuario usuario;
+	private JPasswordField passwordField;
+	private JLabel lblNewLabel;
+	private UsuarioDAO usuarioDAO;
 
 	/**
 	 * Launch the application.
 	 */
 	
 	public VentanaRegistro(){
+		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaRegistro.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
+		setTitle("Registrar");
 		initComponents();
 		usuario = new Usuario();
 	}
@@ -50,24 +62,32 @@ public class VentanaRegistro extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNombre = new JLabel("Nombre");
+		lblNombre.setForeground(Color.WHITE);
 		lblNombre.setBounds(32, 27, 56, 16);
 		contentPane.add(lblNombre);
 		
 		JLabel lblApellido = new JLabel("Apellido");
+		lblApellido.setForeground(Color.WHITE);
 		lblApellido.setBounds(32, 66, 56, 16);
 		contentPane.add(lblApellido);
 		
 		JLabel lblNombreDeUsuario = new JLabel("Nombre \r\nde \r\nUsuario");
+		lblNombreDeUsuario.setForeground(Color.WHITE);
 		lblNombreDeUsuario.setBounds(32, 95, 117, 49);
 		contentPane.add(lblNombreDeUsuario);
 		
 		JLabel lblPassword = new JLabel("Password");
-		lblPassword.setBounds(32, 157, 56, 16);
+		lblPassword.setForeground(Color.WHITE);
+		lblPassword.setBounds(32, 157, 87, 16);
 		contentPane.add(lblPassword);
 		
 		registroButton = new JButton("Registrarse");
+		registroButton.setBackground(new Color(59, 89, 182));
+	    registroButton.setForeground(Color.BLACK);
+	    registroButton.setFocusPainted(false);
+	    registroButton.setFont(new Font("Tahoma", Font.BOLD, 12));
 		registroButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent evt) {
+			public void actionPerformed(ActionEvent evt){
 				registroButtonActionPerformed(evt);
 			}
 		});
@@ -75,6 +95,10 @@ public class VentanaRegistro extends JFrame {
 		contentPane.add(registroButton);
 		
 		cancelarButton = new JButton("Cancelar");
+		cancelarButton.setBackground(new Color(59, 89, 182));
+	    cancelarButton.setForeground(Color.BLACK);
+	    cancelarButton.setFocusPainted(false);
+	    cancelarButton.setFont(new Font("Tahoma", Font.BOLD, 12));
 		cancelarButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
 				cancelarButtonActionPerformed(evt);
@@ -106,26 +130,24 @@ public class VentanaRegistro extends JFrame {
 		apellidoTextField.setColumns(10);
 		
 		nombreUsuarioTextField = new JTextField();
-		nombreUsuarioTextField.addFocusListener(new FocusAdapter() {
-			@Override
-			public void focusLost(FocusEvent e) {
-				nombreUsuarioTextFieldFocusLost(e);
-			}
-		});
 		nombreUsuarioTextField.setBounds(211, 108, 116, 22);
 		contentPane.add(nombreUsuarioTextField);
 		nombreUsuarioTextField.setColumns(10);
 		
-		passwordTextField = new JTextField();
-		passwordTextField.addFocusListener(new FocusAdapter() {
+		passwordField = new JPasswordField();
+		passwordField.addFocusListener(new FocusAdapter() {
 			@Override
-			public void focusLost(FocusEvent e) {
-				passwordTextFieldFocusLost(e);
+			public void focusLost(FocusEvent evt) {
+				passwordFieldFocusLost(evt);
 			}
 		});
-		passwordTextField.setBounds(211, 154, 116, 22);
-		contentPane.add(passwordTextField);
-		passwordTextField.setColumns(10);
+		passwordField.setBounds(211, 155, 116, 20);
+		contentPane.add(passwordField);
+		
+		lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(VentanaRegistro.class.getResource("/prograavanzada2016/anotherworld/interfaces/VentanaPrincipal.jpg")));
+		lblNewLabel.setBounds(0, 0, 434, 261);
+		contentPane.add(lblNewLabel);
 	}
 	
 	public void nombreTextFieldFocusLost(FocusEvent e){
@@ -136,23 +158,41 @@ public class VentanaRegistro extends JFrame {
 		usuario.setApellido(apellidoTextField.getText());
 	}
 	
-	public void nombreUsuarioTextFieldFocusLost(FocusEvent e){
-		usuario.setNombreUsuario(nombreUsuarioTextField.getText());
+	public void nombreUsuarioTextFieldFocusLost(FocusEvent e) throws Exception, DAOException{
+		if(usuarioDAO.existeUsuario(nombreUsuarioTextField.getText()) == 1)
+			JOptionPane.showMessageDialog(contentPane, "Usuario existen");
+			else
+			usuario.setNombreUsuario(nombreUsuarioTextField.getText());
 	}
 	
-	public void passwordTextFieldFocusLost(FocusEvent e){
-		usuario.setPassword(passwordTextField.getText());
+	public void passwordFieldFocusLost(FocusEvent evt){
+		char[] pass = passwordField.getPassword();
+		String passString = new String(pass);
+		usuario.setPassword(passString);
 	}
 	
 	public void registroButtonActionPerformed(ActionEvent evt){
-		/*try {
-			usuarioDAO.insertar(usuario);
-			dispose();
+		if("".equals(nombreTextField.getText()) || "".equals(apellidoTextField.getText()) || "".equals(nombreUsuarioTextField.getText()))
+			JOptionPane.showMessageDialog(contentPane, "Debe ingresar todos los campos");
+		else
+			try {
+				usuarioDAO.insertar(usuario);
+			} catch (DAOException e) {
+				e.printStackTrace();
+			}
+		try{
+			if(usuarioDAO.existeUsuario(nombreUsuarioTextField.getText()) == 1)
+				JOptionPane.showMessageDialog(contentPane, "Usuario existente");
+				else{
+					usuario.setNombreUsuario(nombreUsuarioTextField.getText());
+					usuarioDAO.insertar(usuario);
+					dispose();
+				}
 		} catch (DAOException e) {
 			e.printStackTrace();
-		}*/
-		
-	}
+		}
+			
+		}
 	
 	public void cancelarButtonActionPerformed(ActionEvent evt){
 		dispose();

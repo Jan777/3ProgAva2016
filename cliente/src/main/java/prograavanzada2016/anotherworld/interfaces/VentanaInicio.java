@@ -1,7 +1,10 @@
 package prograavanzada2016.anotherworld.interfaces;
 import prograavanzada2016.anotherworld.user.Usuario;
 
+import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.EventQueue;
+import java.awt.Font;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
@@ -11,11 +14,13 @@ import java.net.Socket;
 import java.util.Properties;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import prograavanzada2016.anotherworld.user.Usuario;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -25,7 +30,6 @@ public class VentanaInicio extends JFrame {
 
 	private JPanel contentPane;
 	private Usuario usuario;
-	private JTextArea textArea;
 	private boolean cancelar;
 	private ObjectInputStream entrada;
     private ObjectOutputStream salida;
@@ -34,13 +38,26 @@ public class VentanaInicio extends JFrame {
 	static PropertiesFile pf;
 
 	public VentanaCrearPersonaje ventanaCrearPersonaje;
+	
+	JLabel lblBienvenido = new JLabel("New label");
+	private JLabel lblNewLabel;
 
 	public VentanaInicio(Usuario user) {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaInicio.class.getResource("/interfaz/IconoVentana.jpg")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaInicio.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
 		setTitle("Bienvenido!");
 		initComponents();
 		usuario = user;
-		textArea.setText("Bienvenido "+usuario.getNombre());
+		
+		lblBienvenido.setForeground(Color.WHITE);
+		lblBienvenido.setFont(new Font("Tahoma", Font.PLAIN, 29));
+		lblBienvenido.setBounds(65, 68, 322, 52);
+		contentPane.add(lblBienvenido);
+		lblBienvenido.setText("Bienvenido "+usuario.getNombre());
+		
+		lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(VentanaInicio.class.getResource("/prograavanzada2016/anotherworld/interfaces/VentanaPrincipal.jpg")));
+		lblNewLabel.setBounds(0, 0, 359, 236);
+		contentPane.add(lblNewLabel);
 	
 				
 		/*try {
@@ -57,30 +74,30 @@ public class VentanaInicio extends JFrame {
 		pf = new PropertiesFile();
 		propiedades = pf.getProperties();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(Integer.parseInt(propiedades.getProperty("w")),Integer.parseInt(propiedades.getProperty("h")));
+		setSize(new Dimension(375,275));
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		jugarButton = new JButton("Jugar");
+		jugarButton.setBackground(new Color(59, 89, 182));
+	    jugarButton.setForeground(Color.BLACK);
+	    jugarButton.setFocusPainted(false);
+	    jugarButton.setFont(new Font("Tahoma", Font.BOLD, 12));
 		jugarButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
 				jugarButtonActionPerformed(evt);
 			}
 		});
-		jugarButton.setBounds(347, 391, 97, 25);
+		jugarButton.setBounds(136, 200, 97, 25);
 		contentPane.add(jugarButton);
-		
-		textArea = new JTextArea();
-		textArea.setBounds(232, 212, 309, 100);
-		contentPane.add(textArea);
 	}
 	
 	public void jugarButtonActionPerformed(ActionEvent evt){
 	
 		if(usuario.getPersonajeJugador() != null){
-			VentanaMapa ventanaMapa = new VentanaMapa(usuario);
+			VentanaMapa ventanaMapa = new VentanaMapa(usuario.getPersonajeJugador());
 			ventanaMapa.setVisible(true);
 			ventanaMapa.setLocationRelativeTo(null);
 			dispose();

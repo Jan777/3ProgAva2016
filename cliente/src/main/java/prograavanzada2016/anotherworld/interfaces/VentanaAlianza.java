@@ -1,14 +1,14 @@
 package prograavanzada2016.anotherworld.interfaces;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+
+import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JComboBox;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -19,7 +19,7 @@ public class VentanaAlianza extends JFrame {
 	private JPanel contentPane;
 
 	public VentanaAlianza() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaAlianza.class.getResource("/interfaz/IconoVentana.jpg")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaAlianza.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
 		setTitle("Alianzas");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -29,11 +29,13 @@ public class VentanaAlianza extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblAlianza = new JLabel("Alianza");
+		lblAlianza.setForeground(Color.WHITE);
 		lblAlianza.setFont(new Font("Tahoma", Font.PLAIN, 28));
 		lblAlianza.setBounds(142, 24, 103, 34);
 		contentPane.add(lblAlianza);
 		
 		JLabel lblSeleccione = new JLabel("Seleccione");
+		lblSeleccione.setForeground(Color.WHITE);
 		lblSeleccione.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		lblSeleccione.setBounds(50, 77, 97, 14);
 		contentPane.add(lblSeleccione);
@@ -58,5 +60,10 @@ public class VentanaAlianza extends JFrame {
 		});
 		btnCancelar.setBounds(196, 168, 89, 23);
 		contentPane.add(btnCancelar);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(VentanaAlianza.class.getResource("/prograavanzada2016/anotherworld/interfaces/BackgroundMochilaYAlianza.jpg")));
+		lblNewLabel.setBounds(0, 0, 434, 261);
+		contentPane.add(lblNewLabel);
 	}
 }
