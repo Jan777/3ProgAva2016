@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
+import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.user.Usuario;
 
 public class UsuarioDAO extends DAO<Usuario>{
@@ -63,17 +64,29 @@ public class UsuarioDAO extends DAO<Usuario>{
 	@Override
 	public long buscar(Usuario usuario) throws DAOException {
 		try {
+			ResultSet rs;
+			Personaje personaje;
             String buscar = "select * from jrpg.usuario where nombreUsuario like '"+usuario.getNombreUsuario()+"' and pass like '"+usuario.getPassword()+"';";
             statement.execute(buscar);
-            ResultSet rs = statement.executeQuery(buscar);
+            rs = statement.executeQuery(buscar);
             if(rs.next()){
             	usuario.setId(rs.getLong("id"));
             	usuario.setNombre(rs.getString("nombre"));
             	usuario.setApellido(rs.getString("apellido"));
-                return ENCONTRADO;
             }else{
                 return NO_ENCONTRADO;
             }
+            
+            String buscarPersonaje = "select * from jrpg.personaje where usuario_id = '"+usuario.getId()+"';";
+            statement.execute(buscarPersonaje);
+            rs = statement.executeQuery(buscar);
+            if(rs.next()){
+            	personaje = new Personaje(rs.getLong("id"),rs.getString("nombre"),rs.getInt("fuerza"),rs.getInt("salud"),rs.getInt("destreza"),
+            			rs.getInt("magia"),rs.getInt("mana"),rs.getInt("energia"),rs.getInt("nivel"),rs.getInt("experiencia"),rs.getLong("casta_id"),
+            			rs.getLong("raza_id"),rs.getLong("usuario_id"));
+            	
+            }
+            
         }catch (SQLException ex) {
         	ex.printStackTrace();
             return NO_ENCONTRADO;

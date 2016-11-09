@@ -10,12 +10,13 @@ import com.google.gson.Gson;
 import prograavanzada2016.anotherworld.comandos.Comando;
 import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.observer.ILogin;
+import prograavanzada2016.anotherworld.user.Usuario;
 
 public class ClienteJugable implements ILogin{
 	private int idCliente;
 	private Socket socket;
 	private ClienteManager clienteManager;
-	private Personaje personaje;
+	private Usuario usuario;
 	private ArrayList<ClienteJugable> otrosClientes;
 	
 	public ClienteJugable(String server, int port) throws UnknownHostException, IOException {
@@ -50,12 +51,12 @@ public class ClienteJugable implements ILogin{
 		this.clienteManager = clienteManager;
 	}
 
-	public Personaje getPersonaje() {
-		return personaje;
+	public Usuario getUsuario() {
+		return usuario;
 	}
 
-	public void setPersonaje(Personaje personaje) {
-		this.personaje = personaje;
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
 	public void desconectarse() throws Exception{
@@ -84,6 +85,7 @@ public class ClienteJugable implements ILogin{
 		if(mensaje[1].equals("OK")){
 			int idCliente = Integer.parseInt(mensaje[2]);
 			this.idCliente=idCliente;
+			this.setUsuario(gson.fromJson(mensaje[3], Usuario.class));
 			System.out.println("Me logre conectar y mi id es: " +this.idCliente);
 		}else{
 			//FAIL

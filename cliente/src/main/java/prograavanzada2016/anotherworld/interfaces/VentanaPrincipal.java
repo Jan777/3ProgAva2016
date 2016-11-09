@@ -12,8 +12,9 @@ import javax.swing.border.EmptyBorder;
 
 import com.google.gson.Gson;
 
-import prograavanzada2016.anotherworld.cliente.Cliente;
+import prograavanzada2016.anotherworld.cliente.ClienteJugable;
 import prograavanzada2016.anotherworld.cliente.MensajeEnviable;
+import prograavanzada2016.anotherworld.comandos.ComandoLogin;
 import prograavanzada2016.anotherworld.user.Usuario;
 
 import javax.swing.JTextField;
@@ -45,8 +46,8 @@ public class VentanaPrincipal extends JFrame {
 	private Usuario usuario;
 	private VentanaRegistro ventanaRegistro;
 	private VentanaInicio ventanaInicio;
-    
-	private Cliente cliente;
+	
+	private ClienteJugable clienteJugable;
 	private MensajeEnviable mensajeEnviable;
 	
     static Properties propiedades;
@@ -82,7 +83,7 @@ public class VentanaPrincipal extends JFrame {
 		ventanaRegistro = new VentanaRegistro();
 		ventanaRegistro.setLocationRelativeTo(this);
 		gson = new Gson();
-		cliente = new Cliente();
+		clienteJugable = new ClienteJugable("localhost",444);
 	}
 	
 	
@@ -181,11 +182,11 @@ public class VentanaPrincipal extends JFrame {
             } 
             else{
             	
-            	cliente.enviarMensaje(2, gson.toJson(usuario));//envio la pregunta
-            	
-            	MensajeEnviable respuesta = gson.fromJson(cliente.recibirMensaje(), MensajeEnviable.class);//leo la respuesta y la transformo en mensaje enviable
+            	//cliente.enviarMensaje(2, gson.toJson(usuario));//envio la pregunta
+            	clienteJugable.enviarComando(new ComandoLogin(usuarioTextField.getText(),passwordField.getPassword().toString() ));
+            	//MensajeEnviable respuesta = gson.fromJson(cliente.recibirMensaje(), MensajeEnviable.class);//leo la respuesta y la transformo en mensaje enviable
             	///usuario = gson.fromJson((String) entrada.readObject(), Usuario.class);
-                if(respuesta.getCodigo() == 2){ ///usuarioDAO.buscar(usuario) == 1
+                /*if(respuesta.getCodigo() == 2){ ///usuarioDAO.buscar(usuario) == 1
                 	usuario = gson.fromJson(respuesta.getMensaje(), Usuario.class);//actualizo el usuario
                 	ventanaInicio = new VentanaInicio(usuario);
                 	ventanaInicio.setVisible(true);
@@ -194,7 +195,7 @@ public class VentanaPrincipal extends JFrame {
                 }
                 else{
                 	JOptionPane.showMessageDialog(contentPane, "Usuario o password incorrecto");
-                }
+                }*/
             }
         } catch (Exception ex) {
         	JOptionPane.showMessageDialog(contentPane, "Problema de conexion con la base de datos");

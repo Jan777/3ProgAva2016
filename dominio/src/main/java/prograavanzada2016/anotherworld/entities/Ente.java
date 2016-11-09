@@ -76,6 +76,18 @@ public abstract class Ente {
 		this.inteligencia = inteligencia;
 	}
 	
+	protected Ente (long id, String nombre, int nivel, int salud, int energia, int mana, int fuerza, int destreza, int inteligencia)
+	{
+		this.idEnte = id;
+		this.nombre = nombre;
+		this.nivel = nivel;
+		this.salud = salud;
+		this.energia = energia;
+		this.mana = mana;
+		this.fuerza = fuerza;
+		this.destreza = destreza;
+		this.inteligencia = inteligencia;
+	}
 	
 	
 	public float getIdEnte() {

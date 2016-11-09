@@ -45,7 +45,7 @@ public class ServidorManager implements Runnable{
 		this.clientesSala=clientesSala;
 		this.idCliente=idCliente;
 		this.gson = new Gson();
-		//usuarioDAO = new UsuarioDAO(conn, stat);
+		usuarioDAO = new UsuarioDAO(conn, stat);
 	}
 	
 	public void checkConnection()throws Exception{
@@ -99,8 +99,9 @@ public class ServidorManager implements Runnable{
 			//la opcion 1 es la opcion de login me llega un usuario y contraseña
 			case 1:
 				//formato de respuesta
-				//OK idCliente
+				//OK idCliente Usuario
 				//FAIL
+				
 				String datos[]=mensajeDeCliente.split(" ");
 				if(datos[1].equals("pepe")){
 					ComandoLogin comandoLogin = new ComandoLogin();

@@ -40,6 +40,14 @@ public class Personaje extends Ente{
 		//cuando se crea un personaje se le debe modificar sus stats segun la raza
 		//this.casta.calcularStats(this, raza);
 	}
+	
+	public Personaje(long id, String nombre, int fuerza, int salud, int destreza, int inteligencia, int mana, int energia, int nivel, int experiencia, long casta_id, long raza_id, long usuario_id){
+		super(id,nombre,nivel,salud,energia,mana,fuerza,destreza,inteligencia);
+		this.experienciaActual = experiencia;
+		//this.id_casta
+		//this.id_raza
+		//this.usuario_id
+	}
 
 	@Override
 	public void serAtacado(int daño) {
