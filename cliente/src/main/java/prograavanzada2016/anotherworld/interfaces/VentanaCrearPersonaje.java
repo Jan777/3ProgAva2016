@@ -1,26 +1,11 @@
 package prograavanzada2016.anotherworld.interfaces;
-import prograavanzada2016.anotherworld.entities.Personaje;
-import prograavanzada2016.anotherworld.user.Usuario;
 
 import java.util.Properties;
 import java.awt.Dimension;
 import java.awt.Font;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JTextField;
-import javax.swing.JComboBox;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import java.awt.Color;
-import java.awt.Toolkit;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.event.FocusAdapter;
-import java.awt.event.FocusEvent;
+import javax.swing.*;
+import java.awt.*;
 
 public class VentanaCrearPersonaje extends JFrame {
 	
