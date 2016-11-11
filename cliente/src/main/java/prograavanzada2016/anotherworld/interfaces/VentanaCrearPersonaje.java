@@ -3,8 +3,17 @@ package prograavanzada2016.anotherworld.interfaces;
 import java.util.Properties;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+
+import prograavanzada2016.anotherworld.entities.Personaje;
+import prograavanzada2016.anotherworld.user.Usuario;
+
 import java.awt.*;
 
 public class VentanaCrearPersonaje extends JFrame {

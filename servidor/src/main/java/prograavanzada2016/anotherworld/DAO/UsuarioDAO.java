@@ -91,6 +91,7 @@ public class UsuarioDAO extends DAO<Usuario>{
         	ex.printStackTrace();
             return NO_ENCONTRADO;
         }
+		return 0;
 	}
 
 	@Override

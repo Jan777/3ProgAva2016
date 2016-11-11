@@ -6,7 +6,6 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import prograavanzada2016.anotherworld.utilities.BufferedImageLoader;
 import prograavanzada2016.anotherworld.utilities.SpriteSheet;
 
 
@@ -50,12 +49,12 @@ public class Mapa extends Canvas{
 	}
 	
 	private void iniciar() {
-		BufferedImageLoader bi = new BufferedImageLoader();
+		/*BufferedImageLoader bi = new BufferedImageLoader();
 		SpriteSheet hoja = new SpriteSheet(bi.loadImage("pisoPosta.png")); 
 		this.suelo=hoja.getTile(0, 0, 64, 32);
 		
 		SpriteSheet hoja2 = new SpriteSheet(bi.loadImage("tilePosta2.png")); 
-		this.pasto=hoja2.getTile(0, 0, 64, 32);
+		this.pasto=hoja2.getTile(0, 0, 64, 32);*/
 	}
 	
 	@Override
