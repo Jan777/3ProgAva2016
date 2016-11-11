@@ -19,6 +19,9 @@ import prograavanzada2016.anotherworld.DAO.UsuarioDAO;
 import prograavanzada2016.anotherworld.comandos.Comando;
 import prograavanzada2016.anotherworld.comandos.ComandoLogin;
 import prograavanzada2016.anotherworld.entities.Personaje;
+import prograavanzada2016.anotherworld.mensajes.LoginMessage;
+import prograavanzada2016.anotherworld.mensajes.MessageDeserializer;
+import prograavanzada2016.anotherworld.mensajes.RawMessage;
 import prograavanzada2016.anotherworld.user.Usuario;
 
 public class ServidorManager implements Runnable{
@@ -45,7 +48,7 @@ public class ServidorManager implements Runnable{
 		this.clientesSala=clientesSala;
 		this.idCliente=idCliente;
 		this.gson = new Gson();
-		usuarioDAO = new UsuarioDAO(conn, stat);
+		//usuarioDAO = new UsuarioDAO(conn, stat);
 	}
 	
 	public void checkConnection()throws Exception{
@@ -77,9 +80,20 @@ public class ServidorManager implements Runnable{
 					mensajeDeEntrada = entrada.nextLine();
 					System.out.println("El cliente dice: "+mensajeDeEntrada);
 					//this.dispatcherDeAcciones(gson.fromJson(mensajeDeEntrada, Mensaje.class));
-					Comando comando = gson.fromJson(mensajeDeEntrada, Comando.class);
-					System.out.println(gson.toJson(comando));
-					this.dispatcherDeAcciones(comando);
+					//Comando comando = gson.fromJson(mensajeDeEntrada, Comando.class);
+					//System.out.println(gson.toJson(comando));
+					//this.dispatcherDeAcciones(comando);
+					
+					 MessageDeserializer deserializer = new MessageDeserializer("type");
+				        
+				        RegisterMessageTypes(deserializer);
+				    	
+				        Gson gson = new GsonBuilder().registerTypeAdapter(RawMessage.class, deserializer).create();
+				        
+				        RawMessage deserializedCharMessage = gson.fromJson(mensajeDeEntrada, RawMessage.class);
+				        
+				        deserializedCharMessage.message.Resolve(); // Will print "Log In"
+					
 				}
 			}finally{
 				socket.close();
@@ -92,6 +106,11 @@ public class ServidorManager implements Runnable{
 	
 
 	
+	private void RegisterMessageTypes(MessageDeserializer deserializer) {
+		deserializer.registerMessageType("login", LoginMessage.class);
+        //deserializer.registerMessageType("createCharacter", CreateCharacterMessage.class);	
+	}
+
 	public void dispatcherDeAcciones(Comando comando) throws IOException, DAOException, InterruptedException{
 		int codigo = Integer.parseInt(comando.getRequestFromClient().substring(0,1));
 		String mensajeDeCliente = comando.getRequestFromClient().substring(0,comando.getRequestFromClient().length());
@@ -107,6 +126,7 @@ public class ServidorManager implements Runnable{
 					ComandoLogin comandoLogin = new ComandoLogin();
 					comandoLogin.armarMensajeDesdeServidor("OK "+this.idCliente);
 					boolean unaVez=true;
+					//buscamos el socket del login
 					for(int x=0; x<this.clientesSala.size() && unaVez; x++){
 						if(this.clientesSala.get(x).getId()==this.idCliente){
 							Socket socketDeSala =this.clientesSala.get(x).getSocket();

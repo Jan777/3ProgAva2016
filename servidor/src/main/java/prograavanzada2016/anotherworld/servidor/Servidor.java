@@ -1,18 +1,13 @@
 package prograavanzada2016.anotherworld.servidor;
 
-import java.io.DataInputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Scanner;
 
-public class Servidor
-{
-	public ArrayList<Socket> salaDeChat1;
-	public ArrayList<Socket> salaDeChat2;
-	public ArrayList<Socket> salaDeChat3;
+public class Servidor{
+	
 	private int cantidadDeConexiones;
 	private boolean enLinea;
 	private int puerto=444;
@@ -21,9 +16,6 @@ public class Servidor
 	public ArrayList<ClienteServicio> clientesSala1;
 	
 	public Servidor() throws IOException{
-		this.salaDeChat1 = new ArrayList<>();
-		this.salaDeChat2 = new ArrayList<>();
-		this.salaDeChat3 = new ArrayList<>();
 		this.clientesSala1 = new ArrayList<>();
 		this.cantidadDeConexiones=0;
 		this.serverSocket = new ServerSocket(puerto);
@@ -37,7 +29,6 @@ public class Servidor
 			System.out.println("Cliente conectado...");
 			this.cantidadDeConexiones++;
 			ServidorManager servidorManager=null;
-			this.salaDeChat1.add(socket);
 			
 			ClienteServicio cs = new ClienteServicio(socket,cantidadDeConexiones);
 			this.clientesSala1.add(cs);

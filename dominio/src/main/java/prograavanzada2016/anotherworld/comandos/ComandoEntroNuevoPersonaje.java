@@ -10,7 +10,7 @@ public class ComandoEntroNuevoPersonaje extends Comando{
 	private int clienteId;
 	private Personaje personaje;
 	
-	public ComandoEntroNuevoPersonaje(int clienteId, Personaje personaje) {
+	public ComandoEntroNuevoPersonaje(int clienteId, Personaje personaje, int id) {
 		Gson gson = new Gson();
 		this.clienteId=clienteId;
 		this.personaje=personaje;

@@ -5,25 +5,35 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 
+import javax.annotation.Generated;
+
 import com.google.gson.Gson;
+import com.google.gson.annotations.Expose;
 
 import prograavanzada2016.anotherworld.comandos.Comando;
 import prograavanzada2016.anotherworld.entities.Personaje;
+import prograavanzada2016.anotherworld.mensajes.RawMessage;
 import prograavanzada2016.anotherworld.observer.ILogin;
 import prograavanzada2016.anotherworld.user.Usuario;
 
 public class ClienteJugable implements ILogin{
 	private int idCliente;
+	@Expose(serialize=false)
 	private Socket socket;
+	@Expose(serialize=false)
 	private ClienteManager clienteManager;
 	private Usuario usuario;
+	@Expose(serialize=false)
 	private ArrayList<ClienteJugable> otrosClientes;
+	@Expose(serialize=false)
+	Gson gson;
 	
 	public ClienteJugable(String server, int port) throws UnknownHostException, IOException {
 		this.otrosClientes=new ArrayList<>();
 		this.socket = new Socket(server, port);
 		clienteManager = new ClienteManager(this);
 		Thread instancia = new Thread(clienteManager);
+		gson = new Gson();
 		instancia.start();
 	}
 		
@@ -75,6 +85,9 @@ public class ClienteJugable implements ILogin{
 		clienteManager.sendMensaje(comando.enviarComando());
 	}
 	
+	public void enviarComando(RawMessage rawMessage){
+		clienteManager.sendMensaje(gson.toJson(rawMessage));
+	}
 	
 	
 	@Override

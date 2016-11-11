@@ -5,15 +5,12 @@ import com.google.gson.Gson;
 public class Comando {
 	protected int codigo;
 	protected String mensaje;
-	//protected Gson gson;
 	protected String responseFromServer;
 	protected String requestFromClient;
-	protected String isA="Comando";
+	
 	public Comando(int codigo, String mensaje, Gson gson, String responseFromServer, String requestFromClient) {
-		super();
 		this.codigo = codigo;
 		this.mensaje = mensaje;
-		//this.gson = gson;
 		this.responseFromServer = responseFromServer;
 		this.requestFromClient = requestFromClient;
 	}
@@ -55,12 +52,6 @@ public class Comando {
 	public void setMensaje(String mensaje) {
 		this.mensaje = mensaje;
 	}
-//	public Gson getGson() {
-//		return gson;
-//	}
-//	public void setGson(Gson gson) {
-//		this.gson = gson;
-//	}
 	public String getResponseFromServer() {
 		return responseFromServer;
 	}
