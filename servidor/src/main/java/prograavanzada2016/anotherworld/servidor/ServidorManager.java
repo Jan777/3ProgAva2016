@@ -21,9 +21,10 @@ import prograavanzada2016.anotherworld.comandos.ComandoLogin;
 import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.mensajes.LoginMessage;
 import prograavanzada2016.anotherworld.mensajes.MessageDeserializer;
+import prograavanzada2016.anotherworld.mensajes.PersonajeConsultaMessage;
 import prograavanzada2016.anotherworld.mensajes.RawMessage;
+import prograavanzada2016.anotherworld.modelos.Usuario;
 import prograavanzada2016.anotherworld.servicios.ServiceLocator;
-import prograavanzada2016.anotherworld.user.Usuario;
 
 public class ServidorManager implements Runnable{
 	private Socket socket;
@@ -32,9 +33,6 @@ public class ServidorManager implements Runnable{
 	private ArrayList<Socket> salaDeChat;
 	private ArrayList<ClienteServicio> clientesSala;
 	private Gson gson;
-	private UsuarioDAO usuarioDAO;
-	private Connection conn = null;
-    private Statement stat = null;
     private int idCliente=0;
     
 	public ServidorManager(Socket socket, ArrayList<Socket> salaDeChat) throws SQLException, IOException{
@@ -107,7 +105,7 @@ public class ServidorManager implements Runnable{
 	
 	private void RegisterMessageTypes(MessageDeserializer deserializer) {
 		deserializer.registerMessageType("login", LoginMessage.class);
-        //deserializer.registerMessageType("createCharacter", CreateCharacterMessage.class);	
+        deserializer.registerMessageType("personajeConsulta", PersonajeConsultaMessage.class);	
 	}
 
 }

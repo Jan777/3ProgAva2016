@@ -1,6 +1,9 @@
 package prograavanzada2016.anotherworld.interfaces;
 import prograavanzada2016.anotherworld.cliente.ClienteJugable;
-import prograavanzada2016.anotherworld.user.Usuario;
+import prograavanzada2016.anotherworld.mensajes.LoginMessage;
+import prograavanzada2016.anotherworld.mensajes.PersonajeConsultaMessage;
+import prograavanzada2016.anotherworld.mensajes.RawMessage;
+import prograavanzada2016.anotherworld.modelos.Usuario;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -18,7 +21,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import prograavanzada2016.anotherworld.user.Usuario;
+
+import com.google.gson.Gson;
+
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.ImageIcon;
@@ -34,6 +39,7 @@ public class VentanaInicio extends JFrame {
 	private boolean cancelar;
 	private ObjectInputStream entrada;
     private ObjectOutputStream salida;
+    private ClienteJugable clienteJugable;
     private JButton jugarButton;
     static Properties propiedades;
 	static PropertiesFile pf;
@@ -44,6 +50,8 @@ public class VentanaInicio extends JFrame {
 	private JLabel lblNewLabel;
 
 	public VentanaInicio(ClienteJugable clienteJugable) {
+		this.clienteJugable=clienteJugable;
+		
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaInicio.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
 		setTitle("Bienvenido!");
 		initComponents();
@@ -99,18 +107,14 @@ public class VentanaInicio extends JFrame {
 	}
 	
 	public void jugarButtonActionPerformed(ActionEvent evt){
-	/*
-		if(usuario.getPersonajeJugador() != null){
-			VentanaMapa ventanaMapa = new VentanaMapa(usuario.getPersonajeJugador());
-			ventanaMapa.setVisible(true);
-			ventanaMapa.setLocationRelativeTo(null);
-			dispose();
-		}
-		else{
-			ventanaCrearPersonaje = new VentanaCrearPersonaje(usuario);
-			ventanaCrearPersonaje.setVisible(true);
-			ventanaCrearPersonaje.setLocationRelativeTo(null);
-			dispose();
-		}*/
+		//Usuario usuario = new Usuario();
+		//usuario.setNombreUsuario(nombreUsuario);
+		//usuario.setPassword(passwordUsuario);
+		RawMessage rawMessageLogin = new RawMessage();
+		rawMessageLogin.type = "personajeConsulta";
+		rawMessageLogin.message = new PersonajeConsultaMessage(new Gson().toJson(usuario));
+
+		clienteJugable.getClienteManager().sendMensaje(new Gson().toJson(rawMessageLogin));
+		this.setVisible(false);
 	}
 }

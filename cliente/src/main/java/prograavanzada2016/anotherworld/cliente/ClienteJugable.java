@@ -13,8 +13,8 @@ import com.google.gson.annotations.Expose;
 import prograavanzada2016.anotherworld.comandos.Comando;
 import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.mensajes.RawMessage;
+import prograavanzada2016.anotherworld.modelos.Usuario;
 import prograavanzada2016.anotherworld.observer.ILogin;
-import prograavanzada2016.anotherworld.user.Usuario;
 
 public class ClienteJugable{
 	private int idCliente;

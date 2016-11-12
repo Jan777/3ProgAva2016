@@ -17,8 +17,8 @@ import prograavanzada2016.anotherworld.cliente.MensajeEnviable;
 import prograavanzada2016.anotherworld.comandos.ComandoLogin;
 import prograavanzada2016.anotherworld.mensajes.LoginMessage;
 import prograavanzada2016.anotherworld.mensajes.RawMessage;
+import prograavanzada2016.anotherworld.modelos.Usuario;
 import prograavanzada2016.anotherworld.observer.ILogin;
-import prograavanzada2016.anotherworld.user.Usuario;
 
 import javax.swing.JTextField;
 import javax.swing.JLabel;

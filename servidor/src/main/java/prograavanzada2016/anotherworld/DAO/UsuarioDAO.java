@@ -8,7 +8,7 @@ import java.sql.Statement;
 import java.util.List;
 
 import prograavanzada2016.anotherworld.entities.Personaje;
-import prograavanzada2016.anotherworld.user.Usuario;
+import prograavanzada2016.anotherworld.modelos.Usuario;
 
 public class UsuarioDAO extends DAO<Usuario>{
 	

@@ -13,10 +13,10 @@ import prograavanzada2016.anotherworld.mensajes.LoginMessage;
 import prograavanzada2016.anotherworld.mensajes.LoginMessageResponse;
 import prograavanzada2016.anotherworld.mensajes.MessageBase;
 import prograavanzada2016.anotherworld.mensajes.RawMessage;
+import prograavanzada2016.anotherworld.modelos.Usuario;
 import prograavanzada2016.anotherworld.servicios.ServicioServer;
 import prograavanzada2016.anotherworld.servidor.ClienteServicio;
 import prograavanzada2016.anotherworld.servidor.Servidor;
-import prograavanzada2016.anotherworld.user.Usuario;
 
 public class LoginService implements ServicioServer{
 
@@ -26,6 +26,9 @@ public class LoginService implements ServicioServer{
 		LoginMessage lm = (LoginMessage) message;
 		Usuario user = new Gson().fromJson(lm.Payload, Usuario.class);
 		System.out.println("antes de entrar");
+		//el 1==1 lo hacemos para que siempre vaya ahi aunque no lo encuentre
+		//la logica de saber si llego o no esta en el cliente
+		//deberiamos modificar esto pero no tenemos tiempo
 		if(usuarioDAO.buscar(user) == 1 || 1==1){
 			System.out.println("enrttamos");
 			for(ClienteServicio cliente : Servidor.clientesSala1){
@@ -36,7 +39,7 @@ public class LoginService implements ServicioServer{
 						
 						RawMessage rawMessageLogin = new RawMessage();
 				    	rawMessageLogin.type = "loginResponse";
-				    	rawMessageLogin.message = new LoginMessage(new Gson().toJson(user));
+				    	rawMessageLogin.message = new LoginMessageResponse(new Gson().toJson(user));
 						
 						salida.println(new Gson().toJson(rawMessageLogin));
 						salida.flush();

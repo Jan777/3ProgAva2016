@@ -11,8 +11,9 @@ import java.awt.event.FocusEvent;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
+import prograavanzada2016.anotherworld.cliente.ClienteJugable;
 import prograavanzada2016.anotherworld.entities.Personaje;
-import prograavanzada2016.anotherworld.user.Usuario;
+import prograavanzada2016.anotherworld.modelos.Usuario;
 
 import java.awt.*;
 
@@ -36,10 +37,12 @@ public class VentanaCrearPersonaje extends JFrame {
 	
 	Personaje personaje;
 	
-	public VentanaCrearPersonaje(Usuario user){
+	public VentanaCrearPersonaje(ClienteJugable clienteJugable){
 		initComponents();   
-		usuario = user;
-		}
+		usuario = clienteJugable.getUsuario();
+		setVisible(true);
+		setLocationRelativeTo(null);
+	}
 
 	public void initComponents() {
 		pf = new PropertiesFile();

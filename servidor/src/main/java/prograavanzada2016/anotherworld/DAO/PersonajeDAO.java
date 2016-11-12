@@ -8,7 +8,8 @@ import java.sql.Statement;
 import java.util.List;
 
 import prograavanzada2016.anotherworld.entities.Personaje;
-import prograavanzada2016.anotherworld.user.Usuario;
+import prograavanzada2016.anotherworld.modelos.PersonajeModel;
+import prograavanzada2016.anotherworld.modelos.Usuario;
 
 public class PersonajeDAO extends DAO<Usuario> {
 	
@@ -56,15 +57,15 @@ public class PersonajeDAO extends DAO<Usuario> {
 	@Override
 	public long buscar(Usuario usuario) throws DAOException {
 		try {
-			Personaje personaje;
-			String buscar = "SELECT * FROM personaje where usuario_id = '"+usuario.getId()+"';";
+			PersonajeModel personaje;
+			String buscar = "SELECT * FROM personaje where usuario_idUsuario = '"+usuario.getId()+"';";
 			statement.execute(buscar);
 			ResultSet rs = statement.executeQuery(buscar);
 			if(rs.next()){
-				personaje = new Personaje(rs.getInt("idpersonaje"),rs.getString("nombre"),rs.getInt("fuerza"),rs.getInt("salud"),rs.getInt("destreza"),
-            			rs.getInt("inteligencia"),rs.getInt("mana"),rs.getInt("energia"),rs.getInt("nivel"),rs.getInt("experiencia"),rs.getInt("casta_idcasta"),
-            			rs.getInt("raza_idraza"),rs.getInt("usuario_idusuario"));
-				usuario.setPersonajeJugador(personaje);
+				personaje = new PersonajeModel(rs.getInt("idpersonaje"),rs.getInt("usuario_idUsuario"),rs.getInt("casta_idcasta"),
+            			rs.getInt("raza_idraza"),rs.getString("nombre"),rs.getInt("fuerza"),rs.getInt("destreza"),rs.getInt("inteligencia"),
+            			rs.getInt("mana"),rs.getInt("energia"),rs.getInt("nivel"),rs.getInt("salud"),rs.getInt("experiencia"));
+				usuario.setPersonaje(personaje);
 			}
 				else{
 					return NO_ENCONTRADO;

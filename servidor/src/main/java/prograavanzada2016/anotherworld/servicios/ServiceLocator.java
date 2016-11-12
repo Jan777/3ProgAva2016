@@ -12,6 +12,8 @@ public class ServiceLocator {
 		// TODO aca tiene que haber una forma de mapear tipo con clase correspondiente
 		if(tipo.equals("login")){
 			return new LoginService();
+		}else if(tipo.equals("personajeConsulta")){
+			return new PersonajeConsultaService();
 		}
 		return null;
 	}

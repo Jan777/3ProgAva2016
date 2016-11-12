@@ -1,4 +1,6 @@
-package prograavanzada2016.anotherworld.user;
+package prograavanzada2016.anotherworld.modelos;
+
+import com.google.gson.annotations.Expose;
 
 import prograavanzada2016.anotherworld.entities.Personaje;
 
@@ -8,26 +10,20 @@ public class Usuario {
 	private String apellido;
 	private String nombreUsuario;
 	private String password;
-	private Personaje personajeJugador;
+	private PersonajeModel personaje;
+	//private Personaje personajeJugador;
 	
-	public Usuario(long id, String nombre, String apellido, String nombreUsuario, String password, Personaje p) {
+	public Usuario(long id, String nombre, String apellido, String nombreUsuario, String password, PersonajeModel personaje) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.nombreUsuario = nombreUsuario;
 		this.password = password;
-		this.personajeJugador = p;
+		this.personaje = personaje;
 			
-		}
+	}
 	
-	public Personaje getPersonajeJugador() {
-		return personajeJugador;
-	}
-
-	public void setPersonajeJugador(Personaje personajeJugador) {
-		this.personajeJugador = personajeJugador;
-	}
 
 	public Usuario(){
 		id=0;
@@ -65,6 +61,12 @@ public class Usuario {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public PersonajeModel getPersonaje() {
+		return personaje;
+	}
+	public void setPersonaje(PersonajeModel personaje) {
+		this.personaje = personaje;
 	}
 	
 	

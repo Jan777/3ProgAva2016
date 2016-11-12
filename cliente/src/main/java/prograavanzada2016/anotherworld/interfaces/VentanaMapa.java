@@ -17,7 +17,8 @@ import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 
 import prograavanzada2016.anotherworld.entities.Personaje;
-import prograavanzada2016.anotherworld.user.*;
+import prograavanzada2016.anotherworld.modelos.*;
+
 import java.awt.Toolkit;
 
 public class VentanaMapa extends JFrame {

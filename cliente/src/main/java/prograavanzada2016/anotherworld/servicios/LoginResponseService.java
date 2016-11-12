@@ -18,15 +18,14 @@ import prograavanzada2016.anotherworld.interfaces.VentanaPrincipal;
 import prograavanzada2016.anotherworld.mensajes.LoginMessage;
 import prograavanzada2016.anotherworld.mensajes.LoginMessageResponse;
 import prograavanzada2016.anotherworld.mensajes.MessageBase;
+import prograavanzada2016.anotherworld.modelos.Usuario;
 import prograavanzada2016.anotherworld.observer.ILogin;
 import prograavanzada2016.anotherworld.observer.SubjectLogin;
 import prograavanzada2016.anotherworld.servicios.ServicioServer;
 import prograavanzada2016.anotherworld.servidor.ClienteServicio;
 import prograavanzada2016.anotherworld.servidor.Servidor;
-import prograavanzada2016.anotherworld.user.Usuario;
 
 public class LoginResponseService implements ServicioServer{
-	private VentanaInicio ventanaInicio;
 	private VentanaPrincipal ventanaPrincipal;
 	private ClienteJugable clienteJugable;
 	
@@ -45,7 +44,7 @@ public class LoginResponseService implements ServicioServer{
 		if(!usuario.getNombre().equals("")){
 			System.out.println("hay usuario: "+usuario.getNombre()+" "+usuario.getApellido());
 			clienteJugable.setUsuario(usuario);
-			ventanaInicio = new VentanaInicio(clienteJugable);
+			new VentanaInicio(clienteJugable);
 		}
 		else{
 			ventanaPrincipal = new VentanaPrincipal(clienteJugable);

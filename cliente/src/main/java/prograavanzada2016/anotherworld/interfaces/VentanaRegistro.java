@@ -14,7 +14,7 @@ import javax.swing.border.EmptyBorder;
 import prograavanzada2016.anotherworld.*;
 import prograavanzada2016.anotherworld.DAO.DAOException;
 import prograavanzada2016.anotherworld.DAO.UsuarioDAO;
-import prograavanzada2016.anotherworld.user.Usuario;
+import prograavanzada2016.anotherworld.modelos.Usuario;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
