@@ -10,6 +10,7 @@ public class Guerrero extends Casta{
 
 	public Guerrero() {
 		this.setNombre("Guerrero");
+		id = 2;
 	}
 
 	@Override

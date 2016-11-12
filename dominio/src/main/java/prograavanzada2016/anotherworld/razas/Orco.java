@@ -6,8 +6,11 @@ import prograavanzada2016.anotherworld.castas.Mago;
 import prograavanzada2016.anotherworld.entities.Personaje;
 
 public class Orco extends Raza{
+	
 
 	public Orco() {
+		
+		id = 1;
 	}
 
 	@Override

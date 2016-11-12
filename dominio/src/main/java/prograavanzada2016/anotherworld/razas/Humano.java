@@ -8,6 +8,8 @@ import prograavanzada2016.anotherworld.entities.Personaje;
 public class Humano extends Raza{
 
 	public Humano() {
+		
+		id = 2;
 	}
 
 	@Override

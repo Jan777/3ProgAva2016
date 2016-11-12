@@ -9,7 +9,7 @@ import prograavanzada2016.anotherworld.razas.Raza;
 
 public class Personaje extends Ente{
 	
-	protected String nombre;
+//	protected String nombrePj;
 	protected Casta casta;
 	protected Raza raza;
 	
@@ -41,7 +41,7 @@ public class Personaje extends Ente{
 		//this.casta.calcularStats(this, raza);
 	}
 	
-	public Personaje(long id, String nombre, int fuerza, int salud, int destreza, int inteligencia, int mana, int energia, int nivel, int experiencia, long casta_id, long raza_id, long usuario_id){
+	public Personaje(int id, String nombre, int fuerza, int salud, int destreza, int inteligencia, int mana, int energia, int nivel, int experiencia, int casta_id, int raza_id, int usuario_id){
 		super(id,nombre,nivel,salud,energia,mana,fuerza,destreza,inteligencia);
 		this.experienciaActual = experiencia;
 		//this.id_casta

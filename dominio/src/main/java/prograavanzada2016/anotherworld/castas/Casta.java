@@ -7,6 +7,7 @@ import prograavanzada2016.anotherworld.habilidades.HabilidadPersonaje;
 
 public abstract class Casta {
 	
+	protected int id;
 	protected String nombre;
 	protected ArrayList<HabilidadPersonaje> habilidades;
 	
@@ -40,6 +41,16 @@ public abstract class Casta {
 		
 	public abstract void guardarHabilidades();
 	
+	
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

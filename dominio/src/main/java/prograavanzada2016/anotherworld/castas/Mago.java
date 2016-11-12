@@ -12,6 +12,7 @@ public class Mago extends Casta{
 
 	public Mago() {
 		this.setNombre("Mago");
+		id = 3;
 	}
 
 	@Override

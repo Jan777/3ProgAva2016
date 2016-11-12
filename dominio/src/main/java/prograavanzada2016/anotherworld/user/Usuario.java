@@ -8,7 +8,7 @@ public class Usuario {
 	private String apellido;
 	private String nombreUsuario;
 	private String password;
-	//private Personaje personajeJugador;
+	private Personaje personajeJugador;
 	
 	public Usuario(long id, String nombre, String apellido, String nombreUsuario, String password, Personaje p) {
 		super();
@@ -17,17 +17,17 @@ public class Usuario {
 		this.apellido = apellido;
 		this.nombreUsuario = nombreUsuario;
 		this.password = password;
-//		this.personajeJugador = p;
+		this.personajeJugador = p;
 			
 		}
 	
-//	public Personaje getPersonajeJugador() {
-//		return personajeJugador;
-//	}
+	public Personaje getPersonajeJugador() {
+		return personajeJugador;
+	}
 
-//	public void setPersonajeJugador(Personaje personajeJugador) {
-//		this.personajeJugador = personajeJugador;
-//	}
+	public void setPersonajeJugador(Personaje personajeJugador) {
+		this.personajeJugador = personajeJugador;
+	}
 
 	public Usuario(){
 		id=0;
