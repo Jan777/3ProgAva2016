@@ -208,6 +208,7 @@ public class VentanaPrincipal extends JFrame implements ILogin{
 	
 	public void registrarseButtonActionPerformed(ActionEvent evt){
 		ventanaRegistro.setVisible(true);
+		this.setVisible(false);
 	}
 
 	@Override

@@ -2,6 +2,7 @@ package prograavanzada2016.anotherworld.DAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -13,6 +14,8 @@ import prograavanzada2016.anotherworld.modelos.Usuario;
 public class UsuarioDAO extends DAO<Usuario>{
 	
 	private Statement statement;
+	private Statement statement2;
+	private Connection conn;
     private static final int NO_ENCONTRADO = -1;
     private static final int ENCONTRADO = 1;
      
@@ -22,7 +25,9 @@ public class UsuarioDAO extends DAO<Usuario>{
 			conn = DriverManager.getConnection("jdbc:sqlite:C:\\GitAvanzada\\PrograAvanzada\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
 			conn.setAutoCommit(false);
 			statement = conn.createStatement();
+			statement2 = conn.createStatement();
 			stat = statement;
+			this.conn=conn;
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -36,8 +41,28 @@ public class UsuarioDAO extends DAO<Usuario>{
 	       /* if(buscar(usuario)==ENCONTRADO){
 	            throw new DAOException("Alumno existente");
 	        }*/
-	         String insert = "INSERT into usuario (idUsuario, nombre, apellido, usuario, pass) values('"+usuario.getId()+"','"+usuario.getNombre()+"','"+usuario.getApellido()+"', '"+usuario.getNombreUsuario()+"', '"+usuario.getPassword()+"');";
-	         statement.execute(insert);
+			int size = 0;
+			String count = "select * from usuario";
+			//statement.execute(count);
+			ResultSet rs = statement.executeQuery(count);
+			
+			while (rs.next()) {
+			    size++;
+			}
+			size++;
+			rs.close();
+			
+	        //String insert = "INSERT into usuario (idUsuario, nombre, apellido, usuario, pass) values('"+size+"','"+usuario.getNombre()+"','"+usuario.getApellido()+"', '"+usuario.getNombreUsuario()+"', '"+usuario.getPassword()+"');";
+			//String insert = "INSERT INTO 'main'.'usuario' ('idUsuario','nombre','apellido','usuario','pass') VALUES ("+size+",'"+usuario.getNombre()+"','"+usuario.getApellido()+"','"+usuario.getNombreUsuario()+"','"+usuario.getPassword()+"')";
+			
+			PreparedStatement statement = conn.prepareStatement(
+		            "INSERT INTO 'main'.'usuario' VALUES ("+size+",'"+usuario.getNombre()+"','"+usuario.getApellido()+"','"+usuario.getNombreUsuario()+"','"+usuario.getPassword()+"')");
+			//String insert = "INSERT INTO 'main'.'usuario' VALUES ("+size+",'"+usuario.getNombre()+"','"+usuario.getApellido()+"','"+usuario.getNombreUsuario()+"','"+usuario.getPassword()+"')";
+	        // int val=statement2.executeUpdate(insert);
+	        statement.executeUpdate();
+			conn.commit();
+			//System.out.println(insert);
+	         //System.out.println(val);
 	         return true;
 	        
 	       }
@@ -50,7 +75,7 @@ public class UsuarioDAO extends DAO<Usuario>{
 	public long existeUsuario(String usuario) throws DAOException {
 		try {
 			String buscar = "SELECT * FROM usuario where usuario like '"+usuario+"';";
-			statement.execute(buscar);
+			//statement.execute(buscar);
 			ResultSet rs = statement.executeQuery(buscar);
 			if(rs.next())
 				return ENCONTRADO;
