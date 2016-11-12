@@ -10,7 +10,7 @@ public class ServiceLocator {
 	
 	public static ServicioServer localizar(String tipo) {
 		// TODO aca tiene que haber una forma de mapear tipo con clase correspondiente
-		if(tipo.equals("prograavanzada2016.anotherworld.mensajes.RawMessage")){
+		if(tipo.equals("login")){
 			return new LoginService();
 		}
 		return null;

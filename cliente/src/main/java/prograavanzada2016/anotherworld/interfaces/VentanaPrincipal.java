@@ -15,6 +15,7 @@ import com.google.gson.Gson;
 import prograavanzada2016.anotherworld.cliente.ClienteJugable;
 import prograavanzada2016.anotherworld.cliente.MensajeEnviable;
 import prograavanzada2016.anotherworld.comandos.ComandoLogin;
+import prograavanzada2016.anotherworld.observer.ILogin;
 import prograavanzada2016.anotherworld.user.Usuario;
 
 import javax.swing.JTextField;
@@ -37,7 +38,7 @@ import java.util.Properties;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 
-public class VentanaPrincipal extends JFrame {
+public class VentanaPrincipal extends JFrame implements ILogin{
 
 	private JPanel contentPane;
 	private JTextField usuarioTextField;
@@ -59,7 +60,7 @@ public class VentanaPrincipal extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -71,11 +72,13 @@ public class VentanaPrincipal extends JFrame {
 				}
 			}
 		});
-	}
+	}*/
 
 	public VentanaPrincipal() throws IOException{
 		setLocationRelativeTo(null);
 		setResizable(false);
+		setVisible(true);
+		setLocationRelativeTo(null);
 		setTitle("AnotherWorld");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaPrincipal.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
 		initComponents();
@@ -205,5 +208,13 @@ public class VentanaPrincipal extends JFrame {
 	
 	public void registrarseButtonActionPerformed(ActionEvent evt){
 		ventanaRegistro.setVisible(true);
+	}
+
+	@Override
+	public void update(String response) {
+		ventanaInicio = new VentanaInicio(clienteJugable);
+    	ventanaInicio.setVisible(true);
+    	ventanaInicio.setLocationRelativeTo(null);
+    	dispose();
 	}
 }

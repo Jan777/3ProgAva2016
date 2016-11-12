@@ -1,9 +1,5 @@
 package prograavanzada2016.anotherworld.cliente;
 
-import com.google.gson.Gson;
-
-import prograavanzada2016.anotherworld.comandos.ComandoLogin;
-import prograavanzada2016.anotherworld.interfaces.VentanaPrincipal;
 import prograavanzada2016.anotherworld.mensajes.LoginMessage;
 import prograavanzada2016.anotherworld.mensajes.RawMessage;
 

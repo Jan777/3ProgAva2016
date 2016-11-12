@@ -7,16 +7,24 @@ import java.util.Scanner;
 import java.util.zip.CheckedInputStream;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import prograavanzada2016.anotherworld.comandos.ComandoLogin;
+import prograavanzada2016.anotherworld.interfaces.VentanaPrincipal;
+import prograavanzada2016.anotherworld.mensajes.LoginMessage;
+import prograavanzada2016.anotherworld.mensajes.MessageDeserializer;
+import prograavanzada2016.anotherworld.mensajes.RawMessage;
 import prograavanzada2016.anotherworld.observer.ILogin;
 import prograavanzada2016.anotherworld.observer.SubjectLogin;
+import prograavanzada2016.anotherworld.servicios.ServiceLocator;
 
 public class ClienteManager implements Runnable, SubjectLogin{
 	private Socket socket;
 	private Scanner entrada;
 	private PrintWriter salida;
 	private Gson gson;
+	private VentanaPrincipal ventanaPrincipal;
+	private ClienteJugable clienteJugable;
 	
 	//variables observadoras
 	private static ArrayList<ILogin> observadoresLogin = new ArrayList<>();
@@ -24,8 +32,10 @@ public class ClienteManager implements Runnable, SubjectLogin{
 	
 	public ClienteManager(ClienteJugable clienteJugable){
 		//agrego los eventos para los observadores
-		observadoresLogin.add(clienteJugable);
+		//observadoresLogin.add(clienteJugable);
+		//observadoresLogin.add(ventanaPrincipal);
 		this.socket=clienteJugable.getSocket();
+		this.clienteJugable = clienteJugable;
 		gson = new Gson();
 	}
 
@@ -33,6 +43,7 @@ public class ClienteManager implements Runnable, SubjectLogin{
 	public void run() {
 		try{
 			try{
+				ventanaPrincipal = new VentanaPrincipal();
 				entrada = new Scanner(socket.getInputStream());
 				salida = new PrintWriter(socket.getOutputStream());
 				salida.flush();
@@ -46,22 +57,35 @@ public class ClienteManager implements Runnable, SubjectLogin{
 		
 	}
 	
-	public void chechStream(){
+	public void chechStream() throws Exception{
 		while(true){
 			receive();
 		}
 	}
 	
-	public void receive(){
+	public void receive() throws Exception{
 		//aca va el observador
 		if(entrada.hasNext()){
 			System.out.println("HUBO UN MENSAJE NUEVO");
-			String message = entrada.nextLine();
-			this.notifyAllObservers(message);
-			System.out.println(message);
+			String mensajeDeEntrada = entrada.nextLine();
+			//this.notifyAllObservers(message);
+			MessageDeserializer deserializer = new MessageDeserializer("type");
+	        
+	        RegisterMessageTypes(deserializer);
+	    	
+	        Gson gson = new GsonBuilder().registerTypeAdapter(RawMessage.class, deserializer).create();
+	        
+	        RawMessage deserializedCharMessage = gson.fromJson(mensajeDeEntrada, RawMessage.class);
+	        deserializedCharMessage.message.servicio = ServiceLocator.localizar(deserializedCharMessage.type,this.clienteJugable);
+	        deserializedCharMessage.message.Resolve();
 		}
 	}
 	
+	private void RegisterMessageTypes(MessageDeserializer deserializer) {
+		deserializer.registerMessageType("loginRespuesta", LoginMessage.class);
+        //deserializer.registerMessageType("createCharacter", CreateCharacterMessage.class);		
+	}
+
 	public void sendMensaje(int codigo, String json){
 		MensajeEnviable mensajeEnviable = new MensajeEnviable(codigo, json);
 		salida.println(gson.toJson(mensajeEnviable));
@@ -83,7 +107,6 @@ public class ClienteManager implements Runnable, SubjectLogin{
 	}
 	
 	public void disconnected()throws Exception{
-		this.sendMensaje(0, "disconnected");
 		salida.flush();
 		socket.close();
 		System.exit(0);

@@ -1,4 +1,5 @@
 package prograavanzada2016.anotherworld.interfaces;
+import prograavanzada2016.anotherworld.cliente.ClienteJugable;
 import prograavanzada2016.anotherworld.user.Usuario;
 
 import java.awt.Color;
@@ -42,11 +43,11 @@ public class VentanaInicio extends JFrame {
 	JLabel lblBienvenido = new JLabel("New label");
 	private JLabel lblNewLabel;
 
-	public VentanaInicio(Usuario user) {
+	public VentanaInicio(ClienteJugable clienteJugable) {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaInicio.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
 		setTitle("Bienvenido!");
 		initComponents();
-		usuario = user;
+		usuario = clienteJugable.getUsuario();
 		
 		lblBienvenido.setForeground(Color.WHITE);
 		lblBienvenido.setFont(new Font("Tahoma", Font.PLAIN, 29));

@@ -79,11 +79,8 @@ public class ServidorManager implements Runnable{
 						return;
 					}
 					mensajeDeEntrada = entrada.nextLine();
+					
 					System.out.println("El cliente dice: "+mensajeDeEntrada);
-					//this.dispatcherDeAcciones(gson.fromJson(mensajeDeEntrada, Mensaje.class));
-					//Comando comando = gson.fromJson(mensajeDeEntrada, Comando.class);
-					//System.out.println(gson.toJson(comando));
-					//this.dispatcherDeAcciones(comando);
 					
 					MessageDeserializer deserializer = new MessageDeserializer("type");
 				        
@@ -93,8 +90,8 @@ public class ServidorManager implements Runnable{
 			        
 			        RawMessage deserializedCharMessage = gson.fromJson(mensajeDeEntrada, RawMessage.class);
 			        deserializedCharMessage.message.idCliente=this.idCliente;
-			        deserializedCharMessage.message.servicio = ServiceLocator.localizar(deserializedCharMessage.getClass().getName());
-			        deserializedCharMessage.message.Resolve(); // Will print "Log In"
+			        deserializedCharMessage.message.servicio = ServiceLocator.localizar(deserializedCharMessage.type);
+			        deserializedCharMessage.message.Resolve();
 					
 				}
 			}finally{
@@ -113,64 +110,4 @@ public class ServidorManager implements Runnable{
         //deserializer.registerMessageType("createCharacter", CreateCharacterMessage.class);	
 	}
 
-	public void dispatcherDeAcciones(Comando comando) throws IOException, DAOException, InterruptedException{
-		int codigo = Integer.parseInt(comando.getRequestFromClient().substring(0,1));
-		String mensajeDeCliente = comando.getRequestFromClient().substring(0,comando.getRequestFromClient().length());
-		switch(codigo){
-			//la opcion 1 es la opcion de login me llega un usuario y contraseña
-			case 1:
-				//formato de respuesta
-				//OK idCliente Usuario
-				//FAIL
-				
-				String datos[]=mensajeDeCliente.split(" ");
-				if(datos[1].equals("pepe")){
-					ComandoLogin comandoLogin = new ComandoLogin();
-					comandoLogin.armarMensajeDesdeServidor("OK "+this.idCliente);
-					boolean unaVez=true;
-					//buscamos el socket del login
-					for(int x=0; x<this.clientesSala.size() && unaVez; x++){
-						if(this.clientesSala.get(x).getId()==this.idCliente){
-							Socket socketDeSala =this.clientesSala.get(x).getSocket();
-							if(socketDeSala!=null && !socketDeSala.isClosed()){
-								PrintWriter salida = new PrintWriter(socketDeSala.getOutputStream());
-								salida.println(gson.toJson(comandoLogin));
-								salida.flush();
-								System.out.println("mensaje enviado a: "+socketDeSala.getLocalAddress().getHostName());
-							}
-							unaVez=false;
-						}						
-					}
-				}
-			break;
-			
-			case 2:
-				//opcion 2 es logeo
-//				Usuario usuario = gson.fromJson(mensajeEnviable.getMensaje(), Usuario.class);
-//				if(usuarioDAO.buscar(usuario) == 1)
-//				{
-//					MensajeEnviable mensaje = new MensajeEnviable(2, gson.toJson(usuario));
-//					gson.toJson(mensaje);
-//					//salida.write(mensaje);
-//				}
-			break;
-			
-			case 3:
-				//Personaje personaje = gson.fromJson(mensajeEnviable.getMensaje(), Personaje.class);
-			break;
-			
-			case 4:
-				
-			break;
-			default:
-			break;
-		}
-		
-	}
-	
-	public void dispatcherDeMensajes(int codigo, String json){
-		
-		
-		
-	}
 }

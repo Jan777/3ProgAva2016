@@ -16,7 +16,7 @@ import prograavanzada2016.anotherworld.mensajes.RawMessage;
 import prograavanzada2016.anotherworld.observer.ILogin;
 import prograavanzada2016.anotherworld.user.Usuario;
 
-public class ClienteJugable implements ILogin{
+public class ClienteJugable{
 	private int idCliente;
 	@Expose(serialize=false)
 	private Socket socket;
@@ -88,20 +88,5 @@ public class ClienteJugable implements ILogin{
 	public void enviarComando(RawMessage rawMessage){
 		clienteManager.sendMensaje(gson.toJson(rawMessage));
 	}
-	
-	
-	@Override
-	public void update(String response) {
-		Gson gson = new Gson();
-		Comando comando = gson.fromJson(response, Comando.class); 
-		String mensaje[] = comando.getResponseFromServer().split(" ");
-		if(mensaje[1].equals("OK")){
-			int idCliente = Integer.parseInt(mensaje[2]);
-			this.idCliente=idCliente;
-			this.setUsuario(gson.fromJson(mensaje[3], Usuario.class));
-			System.out.println("Me logre conectar y mi id es: " +this.idCliente);
-		}else{
-			//FAIL
-		}		
-	}	
+
 }

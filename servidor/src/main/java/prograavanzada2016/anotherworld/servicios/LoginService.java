@@ -20,7 +20,7 @@ public class LoginService implements ServicioServer{
 
 	@Override
 	public void ejecutar(MessageBase message) throws Exception {
-		UsuarioDAO usuarioDAO = new UsuarioDAO(null, null);
+		//UsuarioDAO usuarioDAO = new UsuarioDAO(null, null);
 		LoginMessage lm = (LoginMessage) message;
 		//Usuario user = new Gson().fromJson(lm.Payload, Usuario.class);
 		
