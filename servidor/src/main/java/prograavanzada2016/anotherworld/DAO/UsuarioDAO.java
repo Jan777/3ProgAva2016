@@ -12,15 +12,23 @@ import prograavanzada2016.anotherworld.user.Usuario;
 
 public class UsuarioDAO extends DAO<Usuario>{
 	
-	private final Statement statement;
+	private Statement statement;
     private static final int NO_ENCONTRADO = -1;
     private static final int ENCONTRADO = 1;
      
-    public UsuarioDAO(Connection conn, Statement stat) throws SQLException {
-        conn = DriverManager.getConnection("jdbc:mysql://localhost/jrpg", "root", "1234");
-        statement = conn.createStatement();
-        stat = statement;
+    public UsuarioDAO(Connection conn, Statement stat) throws SQLException{
+    	try {
+			Class.forName("org.sqlite.JDBC");
+			conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
+			conn.setAutoCommit(false);
+			statement = conn.createStatement();
+			stat = statement;
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
+    
 
 	@Override
 	public void insertar(Usuario usuario) throws DAOException {
@@ -28,7 +36,7 @@ public class UsuarioDAO extends DAO<Usuario>{
 	       /* if(buscar(usuario)==ENCONTRADO){
 	            throw new DAOException("Alumno existente");
 	        }*/
-	         String insert = "insert into jrpg.usuario (nombre, apellido, nombreUsuario, pass) values('"+usuario.getNombre()+"','"+usuario.getApellido()+"','"+usuario.getNombreUsuario()+"', '"+usuario.getPassword()+"');";
+	         String insert = "INSERT INT usuario (idUsuario, nombre, apellido, usuario, pass) values('"+usuario.getId()+"','"+usuario.getNombre()+"','"+usuario.getApellido()+"', '"+usuario.getNombreUsuario()+"', '"+usuario.getPassword()+"');";
 	         statement.execute(insert);
 	        
 	       }
@@ -39,7 +47,7 @@ public class UsuarioDAO extends DAO<Usuario>{
 	
 	public long existeUsuario(String usuario) throws DAOException {
 		try {
-			String buscar = "select * from jrpg.usuario where nombreUsuario like '"+usuario+"';";
+			String buscar = "SELECT * FROM usuario where usuario like '"+usuario+"';";
 			statement.execute(buscar);
 			ResultSet rs = statement.executeQuery(buscar);
 			if(rs.next())
@@ -66,18 +74,21 @@ public class UsuarioDAO extends DAO<Usuario>{
 		try {
 			ResultSet rs;
 			Personaje personaje;
-            String buscar = "select * from jrpg.usuario where nombreUsuario like '"+usuario.getNombreUsuario()+"' and pass like '"+usuario.getPassword()+"';";
+            String buscar = "SELECT * FROM usuario where usuario = '"+usuario.getNombreUsuario()+"' and pass = '"+usuario.getPassword()+"';";
             statement.execute(buscar);
             rs = statement.executeQuery(buscar);
             if(rs.next()){
-            	usuario.setId(rs.getLong("id"));
+            	usuario.setId(rs.getInt("idUsuario"));
             	usuario.setNombre(rs.getString("nombre"));
             	usuario.setApellido(rs.getString("apellido"));
+            	
+            	System.out.println("los datos son:"+usuario.getNombre());
+            	return ENCONTRADO;
             }else{
                 return NO_ENCONTRADO;
             }
             
-            String buscarPersonaje = "select * from jrpg.personaje where usuario_id = '"+usuario.getId()+"';";
+          /*  String buscarPersonaje = "SELECT * FROM jrpg.personaje where usuario_id = '"+usuario.getId()+"';";
             statement.execute(buscarPersonaje);
             rs = statement.executeQuery(buscar);
             if(rs.next()){
@@ -85,13 +96,12 @@ public class UsuarioDAO extends DAO<Usuario>{
             			rs.getInt("magia"),rs.getInt("mana"),rs.getInt("energia"),rs.getInt("nivel"),rs.getInt("experiencia"),rs.getLong("casta_id"),
             			rs.getLong("raza_id"),rs.getLong("usuario_id"));
             	
-            }
+            }*/
             
         }catch (SQLException ex) {
         	ex.printStackTrace();
             return NO_ENCONTRADO;
         }
-		return 0;
 	}
 
 	@Override

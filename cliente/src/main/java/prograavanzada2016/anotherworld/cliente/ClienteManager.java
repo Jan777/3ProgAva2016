@@ -12,6 +12,7 @@ import com.google.gson.GsonBuilder;
 import prograavanzada2016.anotherworld.comandos.ComandoLogin;
 import prograavanzada2016.anotherworld.interfaces.VentanaPrincipal;
 import prograavanzada2016.anotherworld.mensajes.LoginMessage;
+import prograavanzada2016.anotherworld.mensajes.LoginMessageResponse;
 import prograavanzada2016.anotherworld.mensajes.MessageDeserializer;
 import prograavanzada2016.anotherworld.mensajes.RawMessage;
 import prograavanzada2016.anotherworld.observer.ILogin;
@@ -43,7 +44,7 @@ public class ClienteManager implements Runnable, SubjectLogin{
 	public void run() {
 		try{
 			try{
-				ventanaPrincipal = new VentanaPrincipal();
+				//ventanaPrincipal = new VentanaPrincipal();
 				entrada = new Scanner(socket.getInputStream());
 				salida = new PrintWriter(socket.getOutputStream());
 				salida.flush();
@@ -82,7 +83,7 @@ public class ClienteManager implements Runnable, SubjectLogin{
 	}
 	
 	private void RegisterMessageTypes(MessageDeserializer deserializer) {
-		deserializer.registerMessageType("loginRespuesta", LoginMessage.class);
+		deserializer.registerMessageType("loginRespuesta", LoginMessageResponse.class);
         //deserializer.registerMessageType("createCharacter", CreateCharacterMessage.class);		
 	}
 

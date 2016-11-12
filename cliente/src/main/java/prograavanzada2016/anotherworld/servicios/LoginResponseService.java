@@ -32,9 +32,19 @@ public class LoginResponseService implements ServicioServer{
 	
 	@Override
 	public void ejecutar(MessageBase message) throws Exception {
-		ventanaInicio = new VentanaInicio(clienteJugable);
 		
 		LoginMessageResponse lm = (LoginMessageResponse) message;
+		
+		Usuario usuario = new Gson().fromJson(lm.Payload, Usuario.class);
+		
+		
+		if(usuario!=null){
+			clienteJugable.setUsuario(usuario);
+			ventanaInicio = new VentanaInicio(clienteJugable);
+		}
+		else
+			System.out.println("Error");
+		
 		if(lm.Payload.equals("OK")){
 			
 		}	
