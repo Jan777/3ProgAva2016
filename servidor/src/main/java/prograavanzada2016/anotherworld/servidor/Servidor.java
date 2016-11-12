@@ -13,7 +13,7 @@ public class Servidor{
 	private int puerto=444;
 	private ServerSocket serverSocket;
 	
-	public ArrayList<ClienteServicio> clientesSala1;
+	public static ArrayList<ClienteServicio> clientesSala1;
 	
 	public Servidor() throws IOException{
 		this.clientesSala1 = new ArrayList<>();

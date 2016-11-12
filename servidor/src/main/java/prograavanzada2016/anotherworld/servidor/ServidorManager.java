@@ -22,6 +22,7 @@ import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.mensajes.LoginMessage;
 import prograavanzada2016.anotherworld.mensajes.MessageDeserializer;
 import prograavanzada2016.anotherworld.mensajes.RawMessage;
+import prograavanzada2016.anotherworld.servicios.ServiceLocator;
 import prograavanzada2016.anotherworld.user.Usuario;
 
 public class ServidorManager implements Runnable{
@@ -84,15 +85,16 @@ public class ServidorManager implements Runnable{
 					//System.out.println(gson.toJson(comando));
 					//this.dispatcherDeAcciones(comando);
 					
-					 MessageDeserializer deserializer = new MessageDeserializer("type");
+					MessageDeserializer deserializer = new MessageDeserializer("type");
 				        
-				        RegisterMessageTypes(deserializer);
-				    	
-				        Gson gson = new GsonBuilder().registerTypeAdapter(RawMessage.class, deserializer).create();
-				        
-				        RawMessage deserializedCharMessage = gson.fromJson(mensajeDeEntrada, RawMessage.class);
-				        
-				        deserializedCharMessage.message.Resolve(); // Will print "Log In"
+			        RegisterMessageTypes(deserializer);
+			    	
+			        Gson gson = new GsonBuilder().registerTypeAdapter(RawMessage.class, deserializer).create();
+			        
+			        RawMessage deserializedCharMessage = gson.fromJson(mensajeDeEntrada, RawMessage.class);
+			        deserializedCharMessage.message.idCliente=this.idCliente;
+			        deserializedCharMessage.message.servicio = ServiceLocator.localizar(deserializedCharMessage.getClass().getName());
+			        deserializedCharMessage.message.Resolve(); // Will print "Log In"
 					
 				}
 			}finally{

@@ -14,7 +14,7 @@ public class App {
 		
 		RawMessage rawMessageLogin = new RawMessage();
     	rawMessageLogin.type = "login";
-    	rawMessageLogin.message = new LoginMessage();
+    	rawMessageLogin.message = new LoginMessage("");
 		
 		//cliente.enviarComando(new ComandoLogin("pepe", "12345"));
 		
