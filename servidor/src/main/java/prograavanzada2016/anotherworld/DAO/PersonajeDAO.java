@@ -84,7 +84,8 @@ public class PersonajeDAO extends DAO<Usuario> {
 	}
 
 	@Override
-	public void insertar(Usuario obj) throws DAOException {
+	public boolean insertar(Usuario obj) throws DAOException {
+		return false;
 		// TODO Auto-generated method stub
 		
 	}

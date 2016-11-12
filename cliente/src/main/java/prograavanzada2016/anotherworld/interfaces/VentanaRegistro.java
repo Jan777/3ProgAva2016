@@ -11,9 +11,15 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.border.EmptyBorder;
 
+import com.google.gson.Gson;
+
 import prograavanzada2016.anotherworld.*;
 import prograavanzada2016.anotherworld.DAO.DAOException;
 import prograavanzada2016.anotherworld.DAO.UsuarioDAO;
+import prograavanzada2016.anotherworld.cliente.ClienteJugable;
+import prograavanzada2016.anotherworld.mensajes.PersonajeConsultaMessage;
+import prograavanzada2016.anotherworld.mensajes.RawMessage;
+import prograavanzada2016.anotherworld.mensajes.UsuarioNuevoMessage;
 import prograavanzada2016.anotherworld.modelos.Usuario;
 
 import javax.swing.JLabel;
@@ -39,12 +45,14 @@ public class VentanaRegistro extends JFrame {
 	private JPasswordField passwordField;
 	private JLabel lblNewLabel;
 	private UsuarioDAO usuarioDAO;
+	private ClienteJugable clienteJugable;
 
 	/**
 	 * Launch the application.
 	 */
 	
-	public VentanaRegistro(){
+	public VentanaRegistro(ClienteJugable clienteJugable){
+		this.clienteJugable = clienteJugable;
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaRegistro.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
 		setTitle("Registrar");
 		initComponents();
@@ -172,27 +180,25 @@ public class VentanaRegistro extends JFrame {
 	}
 	
 	public void registroButtonActionPerformed(ActionEvent evt){
-		if("".equals(nombreTextField.getText()) || "".equals(apellidoTextField.getText()) || "".equals(nombreUsuarioTextField.getText()))
+		if("".equals(nombreTextField.getText()) || "".equals(apellidoTextField.getText()) || "".equals(nombreUsuarioTextField.getText())){
 			JOptionPane.showMessageDialog(contentPane, "Debe ingresar todos los campos");
-		else
-			try {
-				usuarioDAO.insertar(usuario);
-			} catch (DAOException e) {
-				e.printStackTrace();
-			}
-		try{
-			if(usuarioDAO.existeUsuario(nombreUsuarioTextField.getText()) == 1)
-				JOptionPane.showMessageDialog(contentPane, "Usuario existente");
-				else{
-					usuario.setNombreUsuario(nombreUsuarioTextField.getText());
-					usuarioDAO.insertar(usuario);
-					dispose();
-				}
-		} catch (DAOException e) {
-			e.printStackTrace();
 		}
+		else{
+			usuario.setNombre(nombreTextField.getText());
+			usuario.setApellido(apellidoTextField.getText());
+			usuario.setNombreUsuario(nombreUsuarioTextField.getText());
+			usuario.setPassword(new String(passwordField.getPassword()));
 			
+			RawMessage rawMessageLogin = new RawMessage();
+			rawMessageLogin.type = "usuarioNuevo";
+			rawMessageLogin.message = new UsuarioNuevoMessage(new Gson().toJson(usuario));
+
+			clienteJugable.getClienteManager().sendMensaje(new Gson().toJson(rawMessageLogin));
+			this.setVisible(false);
 		}
+		
+			
+	}
 	
 	public void cancelarButtonActionPerformed(ActionEvent evt){
 		dispose();

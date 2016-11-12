@@ -24,12 +24,12 @@ public class LoginService implements ServicioServer{
 	public void ejecutar(MessageBase message) throws Exception {
 		UsuarioDAO usuarioDAO = new UsuarioDAO(null, null);
 		LoginMessage lm = (LoginMessage) message;
-		Usuario user = new Gson().fromJson(lm.Payload, Usuario.class);
+		Usuario usuario = new Gson().fromJson(lm.Payload, Usuario.class);
 		System.out.println("antes de entrar");
 		//el 1==1 lo hacemos para que siempre vaya ahi aunque no lo encuentre
 		//la logica de saber si llego o no esta en el cliente
 		//deberiamos modificar esto pero no tenemos tiempo
-		if(usuarioDAO.buscar(user) == 1 || 1==1){
+		if(usuarioDAO.buscar(usuario) == 1 || 1==1){
 			System.out.println("enrttamos");
 			for(ClienteServicio cliente : Servidor.clientesSala1){
 					
@@ -39,7 +39,7 @@ public class LoginService implements ServicioServer{
 						
 						RawMessage rawMessageLogin = new RawMessage();
 				    	rawMessageLogin.type = "loginResponse";
-				    	rawMessageLogin.message = new LoginMessageResponse(new Gson().toJson(user));
+				    	rawMessageLogin.message = new LoginMessageResponse(new Gson().toJson(usuario));
 						
 						salida.println(new Gson().toJson(rawMessageLogin));
 						salida.flush();

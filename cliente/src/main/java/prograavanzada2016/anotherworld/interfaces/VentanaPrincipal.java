@@ -84,7 +84,7 @@ public class VentanaPrincipal extends JFrame implements ILogin{
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaPrincipal.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
 		initComponents();
 		usuario = new Usuario();
-		ventanaRegistro = new VentanaRegistro();
+		ventanaRegistro = new VentanaRegistro(this.clienteJugable);
 		ventanaRegistro.setLocationRelativeTo(this);
 		gson = new Gson();
 		setVisible(true);

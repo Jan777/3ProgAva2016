@@ -31,18 +31,20 @@ public class UsuarioDAO extends DAO<Usuario>{
     
 
 	@Override
-	public void insertar(Usuario usuario) throws DAOException {
+	public boolean insertar(Usuario usuario) throws DAOException {
 		try {
 	       /* if(buscar(usuario)==ENCONTRADO){
 	            throw new DAOException("Alumno existente");
 	        }*/
-	         String insert = "INSERT INT usuario (idUsuario, nombre, apellido, usuario, pass) values('"+usuario.getId()+"','"+usuario.getNombre()+"','"+usuario.getApellido()+"', '"+usuario.getNombreUsuario()+"', '"+usuario.getPassword()+"');";
+	         String insert = "INSERT into usuario (idUsuario, nombre, apellido, usuario, pass) values('"+usuario.getId()+"','"+usuario.getNombre()+"','"+usuario.getApellido()+"', '"+usuario.getNombreUsuario()+"', '"+usuario.getPassword()+"');";
 	         statement.execute(insert);
+	         return true;
 	        
 	       }
 	        catch (SQLException ex) {
 	            System.out.println(ex);
-	        }		
+	        }
+		return false;		
 	}
 	
 	public long existeUsuario(String usuario) throws DAOException {

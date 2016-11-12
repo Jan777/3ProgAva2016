@@ -14,6 +14,8 @@ public class ServiceLocator {
 			return new LoginService();
 		}else if(tipo.equals("personajeConsulta")){
 			return new PersonajeConsultaService();
+		}else if(tipo.equals("usuarioNuevo")){
+			return new UsuarioNuevoMessageService();
 		}
 		return null;
 	}
