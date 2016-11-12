@@ -73,10 +73,6 @@ public class ClienteJugable{
 		clienteManager.disconnected();
 	}
 	
-	public void enviarMensaje(int codigo, String json){
-		clienteManager.sendMensaje(codigo, json);
-	}
-	
 	public String recibirMensaje(){
 		return clienteManager.reciveMessage(); //devuelve un MensajeEnviable en forma de json
 	}

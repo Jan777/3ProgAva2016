@@ -15,6 +15,8 @@ import com.google.gson.Gson;
 import prograavanzada2016.anotherworld.cliente.ClienteJugable;
 import prograavanzada2016.anotherworld.cliente.MensajeEnviable;
 import prograavanzada2016.anotherworld.comandos.ComandoLogin;
+import prograavanzada2016.anotherworld.mensajes.LoginMessage;
+import prograavanzada2016.anotherworld.mensajes.RawMessage;
 import prograavanzada2016.anotherworld.observer.ILogin;
 import prograavanzada2016.anotherworld.user.Usuario;
 
@@ -74,10 +76,9 @@ public class VentanaPrincipal extends JFrame implements ILogin{
 		});
 	}*/
 
-	public VentanaPrincipal() throws IOException{
-		setLocationRelativeTo(null);
+	public VentanaPrincipal(ClienteJugable clienteJugable) throws IOException{
+		this.clienteJugable = clienteJugable;
 		setResizable(false);
-		setVisible(true);
 		setLocationRelativeTo(null);
 		setTitle("AnotherWorld");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaPrincipal.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
@@ -86,7 +87,9 @@ public class VentanaPrincipal extends JFrame implements ILogin{
 		ventanaRegistro = new VentanaRegistro();
 		ventanaRegistro.setLocationRelativeTo(this);
 		gson = new Gson();
-		clienteJugable = new ClienteJugable("localhost",444);
+		setVisible(true);
+		setLocationRelativeTo(null);
+		//clienteJugable = new ClienteJugable("localhost",444);
 	}
 	
 	
@@ -179,26 +182,23 @@ public class VentanaPrincipal extends JFrame implements ILogin{
 	public void ingresarButtonActionPerformed(ActionEvent evt)
 	{
 		try {
-			if("".equals(usuarioTextField.getText()) || "".equals(passwordField.getPassword()))
-            {
+			
+			String nombreUsuario = usuarioTextField.getText().trim();
+			String passwordUsuario = new String(passwordField.getPassword());
+			
+			if("".equals(passwordUsuario) || "".equals(nombreUsuario)){
 				JOptionPane.showMessageDialog(contentPane, "Debe ingresar todos los campos");
             } 
             else{
-            	
-            	//cliente.enviarMensaje(2, gson.toJson(usuario));//envio la pregunta
-            	clienteJugable.enviarComando(new ComandoLogin(usuarioTextField.getText(),passwordField.getPassword().toString() ));
-            	//MensajeEnviable respuesta = gson.fromJson(cliente.recibirMensaje(), MensajeEnviable.class);//leo la respuesta y la transformo en mensaje enviable
-            	///usuario = gson.fromJson((String) entrada.readObject(), Usuario.class);
-                /*if(respuesta.getCodigo() == 2){ ///usuarioDAO.buscar(usuario) == 1
-                	usuario = gson.fromJson(respuesta.getMensaje(), Usuario.class);//actualizo el usuario
-                	ventanaInicio = new VentanaInicio(usuario);
-                	ventanaInicio.setVisible(true);
-                	ventanaInicio.setLocationRelativeTo(null);
-                	dispose();
-                }
-                else{
-                	JOptionPane.showMessageDialog(contentPane, "Usuario o password incorrecto");
-                }*/
+				Usuario usuario = new Usuario();
+				usuario.setNombreUsuario(nombreUsuario);
+				usuario.setPassword(passwordUsuario);
+				RawMessage rawMessageLogin = new RawMessage();
+				rawMessageLogin.type = "login";
+				rawMessageLogin.message = new LoginMessage(new Gson().toJson(usuario));
+
+				clienteJugable.getClienteManager().sendMensaje(new Gson().toJson(rawMessageLogin));
+				this.setVisible(false);
             }
         } catch (Exception ex) {
         	JOptionPane.showMessageDialog(contentPane, "Problema de conexion con la base de datos");

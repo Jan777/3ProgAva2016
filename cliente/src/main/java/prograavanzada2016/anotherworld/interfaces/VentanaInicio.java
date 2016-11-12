@@ -49,6 +49,9 @@ public class VentanaInicio extends JFrame {
 		initComponents();
 		usuario = clienteJugable.getUsuario();
 		
+		setVisible(true);
+    	setLocationRelativeTo(null);
+		
 		lblBienvenido.setForeground(Color.WHITE);
 		lblBienvenido.setFont(new Font("Tahoma", Font.PLAIN, 29));
 		lblBienvenido.setBounds(65, 68, 322, 52);
@@ -96,7 +99,7 @@ public class VentanaInicio extends JFrame {
 	}
 	
 	public void jugarButtonActionPerformed(ActionEvent evt){
-	
+	/*
 		if(usuario.getPersonajeJugador() != null){
 			VentanaMapa ventanaMapa = new VentanaMapa(usuario.getPersonajeJugador());
 			ventanaMapa.setVisible(true);
@@ -108,6 +111,6 @@ public class VentanaInicio extends JFrame {
 			ventanaCrearPersonaje.setVisible(true);
 			ventanaCrearPersonaje.setLocationRelativeTo(null);
 			dispose();
-		}
+		}*/
 	}
 }

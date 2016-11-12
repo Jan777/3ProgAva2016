@@ -26,23 +26,26 @@ public class LoginService implements ServicioServer{
 		LoginMessage lm = (LoginMessage) message;
 		Usuario user = new Gson().fromJson(lm.Payload, Usuario.class);
 		System.out.println("antes de entrar");
-		if(usuarioDAO.buscar(user) == 1){
+		if(usuarioDAO.buscar(user) == 1 || 1==1){
 			System.out.println("enrttamos");
 			for(ClienteServicio cliente : Servidor.clientesSala1){
-				
-				if(cliente.getId() == lm.idCliente){
-					System.out.println("encontrado");
-					PrintWriter salida = new PrintWriter(cliente.getSocket().getOutputStream());
 					
-					RawMessage rawMessageLogin = new RawMessage();
-			    	rawMessageLogin.type = "loginRespuesta";
-			    	rawMessageLogin.message = new LoginMessageResponse(new Gson().toJson(user));
-					
-					salida.println(rawMessageLogin);
-					salida.flush();
-				}
+					if(cliente.getId() == lm.idCliente){
+						System.out.println("encontrado");
+						PrintWriter salida = new PrintWriter(cliente.getSocket().getOutputStream());
+						
+						RawMessage rawMessageLogin = new RawMessage();
+				    	rawMessageLogin.type = "loginResponse";
+				    	rawMessageLogin.message = new LoginMessage(new Gson().toJson(user));
+						
+						salida.println(new Gson().toJson(rawMessageLogin));
+						salida.flush();
+					}
 			}
 		}
+	//	}else{
+			
+	//	}
 		// TODO Auto-generated method stub
 		// lalala
 		

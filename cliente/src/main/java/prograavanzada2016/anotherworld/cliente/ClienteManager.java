@@ -44,7 +44,8 @@ public class ClienteManager implements Runnable, SubjectLogin{
 	public void run() {
 		try{
 			try{
-				//ventanaPrincipal = new VentanaPrincipal();
+				ventanaPrincipal = new VentanaPrincipal(this.clienteJugable);
+				System.out.println("ventana principal activada");
 				entrada = new Scanner(socket.getInputStream());
 				salida = new PrintWriter(socket.getOutputStream());
 				salida.flush();
@@ -65,10 +66,10 @@ public class ClienteManager implements Runnable, SubjectLogin{
 	}
 	
 	public void receive() throws Exception{
-		//aca va el observador
 		if(entrada.hasNext()){
 			System.out.println("HUBO UN MENSAJE NUEVO");
 			String mensajeDeEntrada = entrada.nextLine();
+			System.out.println("El servidor dice: "+mensajeDeEntrada);
 			//this.notifyAllObservers(message);
 			MessageDeserializer deserializer = new MessageDeserializer("type");
 	        
@@ -83,16 +84,10 @@ public class ClienteManager implements Runnable, SubjectLogin{
 	}
 	
 	private void RegisterMessageTypes(MessageDeserializer deserializer) {
-		deserializer.registerMessageType("loginRespuesta", LoginMessageResponse.class);
+		deserializer.registerMessageType("loginResponse", LoginMessageResponse.class);
         //deserializer.registerMessageType("createCharacter", CreateCharacterMessage.class);		
 	}
 
-	public void sendMensaje(int codigo, String json){
-		MensajeEnviable mensajeEnviable = new MensajeEnviable(codigo, json);
-		salida.println(gson.toJson(mensajeEnviable));
-		salida.flush();
-	}
-	
 	public void sendMensaje(String mensaje){
 		System.out.println("El mensaje es:"+ mensaje);
 		salida.println(mensaje);
