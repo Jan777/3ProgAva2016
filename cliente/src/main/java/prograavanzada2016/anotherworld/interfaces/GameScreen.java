@@ -16,7 +16,7 @@ import javax.swing.JToolBar;
 public class GameScreen {
 
 	private JFrame pantalla;
-	private Canvas canvas; // Objeto donde se grafica el juego
+	private Canvas canvas; // Aca donde se grafica el juego
 
 	public GameScreen(final String nombre, final int ancho, final int alto) {
 		pantalla = new JFrame(nombre);

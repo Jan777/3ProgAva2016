@@ -13,8 +13,8 @@ public class EstadoJuego extends Estado {
 
 	public EstadoJuego(Game juego) {
 		super(juego);
-		mundo = new Mundo(juego, "C:\\Users\\matut\\Desktop\\Prueba mapa de nuestro proyecto\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt");
-	    personaje = new Entidad(juego, mundo, 64, 64, 0, 0, Recursos.elfo, 150);
+		mundo = new Mundo(juego, "\\mundoBasic.txt"); //Aca construimos nuestro mundo según la matriz en mundoBasic.txt
+	    personaje = new Entidad(juego, mundo, 64, 64, 0, 0, Recursos.elfo, 150); //Aca construimos nuestro personaje segun el personaje del jugador
 	}
 
 	@Override

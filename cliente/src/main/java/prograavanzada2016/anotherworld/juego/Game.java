@@ -7,6 +7,7 @@ import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.interfaces.*;
 import prograavanzada2016.anotherworld.utilities.*;
 import prograavanzada2016.anotherworld.mapas.*;
+import prograavanzada2016.anotherworld.modelos.Usuario;
 
 
 public class Game implements Runnable{
@@ -15,6 +16,7 @@ public class Game implements Runnable{
 	private final String nombre;
 	private final int width;
 	private final int height;
+	private Usuario user;
 
 	private Thread hilo;
 	private boolean corriendo;
@@ -25,17 +27,17 @@ public class Game implements Runnable{
 	// Estados
 	private Estado estadoJuego;
 	
-	// HandlerMouse
+	// Controlador del point and click
 	private MouseController mouseController;
 	
-	// Camara
+	// Controlador de Camara
 	private Camera camara;
 
 	public Game(final String nombre, final int width, final int height) {
 		this.nombre = nombre;
 		this.width = width;
 		this.height = height;
-
+		//this.user = usuario;
 		mouseController = new MouseController();
 	}
 

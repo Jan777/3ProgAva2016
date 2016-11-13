@@ -13,6 +13,7 @@ import javax.swing.border.EmptyBorder;
 
 import prograavanzada2016.anotherworld.cliente.ClienteJugable;
 import prograavanzada2016.anotherworld.entities.Personaje;
+import prograavanzada2016.anotherworld.juego.Game;
 import prograavanzada2016.anotherworld.modelos.Usuario;
 
 import java.awt.*;
@@ -151,16 +152,18 @@ public class VentanaCrearPersonaje extends JFrame {
 		else{
 			try{
 				
+				Game game = new Game("Another World", 800, 600);
+				game.start();
 				//usuario.setPersonajeJugador(personaje);
-				ventanaMapaJuego = new VentanaMapa(personaje);
+				//ventanaMapaJuego = new VentanaMapa(personaje);
 				
 			} catch (Exception e){
 				e.printStackTrace();
 			}
 		}
-		ventanaMapaJuego.setSize(new Dimension(800,600));
-		ventanaMapaJuego.setLocationRelativeTo(null);
-		ventanaMapaJuego.setVisible(true);
+		//ventanaMapaJuego.setSize(new Dimension(800,600));
+		//ventanaMapaJuego.setLocationRelativeTo(null);
+		//ventanaMapaJuego.setVisible(true);
 		dispose();
 		
 	}
