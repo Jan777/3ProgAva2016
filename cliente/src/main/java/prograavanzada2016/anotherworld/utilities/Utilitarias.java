@@ -8,9 +8,9 @@ public class Utilitarias {
 
 	public static String archivoAString(String path) {
 		StringBuilder builder = new StringBuilder();
-
+		BufferedReader br = null;
 		try {
-			BufferedReader br = new BufferedReader(new FileReader(path));
+			br = new BufferedReader(new FileReader(path));
 			String linea;
 
 			while ((linea = br.readLine()) != null) {
@@ -18,6 +18,12 @@ public class Utilitarias {
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
+		}finally{
+			try {
+				br.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 
 		return builder.toString();
