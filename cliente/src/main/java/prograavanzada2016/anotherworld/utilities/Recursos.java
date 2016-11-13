@@ -21,6 +21,7 @@ public class Recursos {
 	// Fin Personajes
 	
 	// Entorno
+	public static BufferedImage piso;
 	public static BufferedImage pasto;
 	public static BufferedImage background;
 	// Fin Entorno
@@ -88,8 +89,9 @@ public class Recursos {
 		// Fin elfo
 		
 		// Inicio Entorno
-		pasto = CargadorImagen.cargarImagen("/pisoPosta.png");
-		background = CargadorImagen.cargarImagen("/background.jpg");
+		piso =CargadorImagen.cargarImagen("/pisoPosta.png");
+		pasto = CargadorImagen.cargarImagen("/pasto.png");
+		background = CargadorImagen.cargarImagen("/background2.jpg");
 		// Fin Entorno
 	}
 }

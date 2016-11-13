@@ -22,7 +22,7 @@ public class UsuarioDAO extends DAO<Usuario>{
     public UsuarioDAO(Connection conn, Statement stat) throws SQLException{
     	try {
 			Class.forName("org.sqlite.JDBC");
-			conn = DriverManager.getConnection("jdbc:sqlite:C:\\GitAvanzada\\PrograAvanzada\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
+			conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\matut\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
 			conn.setAutoCommit(false);
 			statement = conn.createStatement();
 			statement2 = conn.createStatement();

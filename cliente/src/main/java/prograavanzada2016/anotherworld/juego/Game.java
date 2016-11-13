@@ -1,0 +1,161 @@
+package prograavanzada2016.anotherworld.juego;
+
+import java.awt.Graphics;
+import java.awt.image.BufferStrategy;
+
+import prograavanzada2016.anotherworld.entities.Personaje;
+import prograavanzada2016.anotherworld.interfaces.*;
+import prograavanzada2016.anotherworld.utilities.*;
+import prograavanzada2016.anotherworld.mapas.*;
+
+
+public class Game implements Runnable{
+	
+	private GameScreen screen;
+	private final String nombre;
+	private final int width;
+	private final int height;
+
+	private Thread hilo;
+	private boolean corriendo;
+
+	private BufferStrategy bs; // Estrategia para graficar mediante buffers (Primero se "grafica" en el/los buffer/s y finalmente en el canvas)
+	private Graphics g;
+
+	// Estados
+	private Estado estadoJuego;
+	
+	// HandlerMouse
+	private MouseController mouseController;
+	
+	// Camara
+	private Camera camara;
+
+	public Game(final String nombre, final int width, final int height) {
+		this.nombre = nombre;
+		this.width = width;
+		this.height = height;
+
+		mouseController = new MouseController();
+	}
+
+	public void initGame() { // Carga lo necesario para iniciar el juego
+		screen = new GameScreen(nombre, width, height);
+
+		screen.getCanvas().addMouseListener(mouseController);
+
+		Recursos.cargar();
+
+		estadoJuego = new EstadoJuego(this);
+		Estado.setEstado(estadoJuego);
+		
+		camara = new Camera(this, 0, 0);
+	}
+
+	private void actualizar() { // Actualiza los objetos y sus posiciones
+		mouseController.actualizar();
+
+		if (Estado.getEstado() != null) {
+			Estado.getEstado().actualizar();
+		}
+	}
+
+	private void graficar() { // Grafica los objetos y sus posiciones
+		bs = screen.getCanvas().getBufferStrategy();
+		if (bs == null) { // Seteo una estrategia para el canvas en caso de que no tenga una
+			screen.getCanvas().createBufferStrategy(3);
+			return;
+		}
+
+		g = bs.getDrawGraphics(); // Permite graficar el buffer mediante g
+
+		g.clearRect(0, 0, width, height); // Limpiamos la pantalla
+
+		// Graficado de imagenes
+		
+		if (Estado.getEstado() != null) {
+			estadoJuego.graficar(g);
+		}
+
+		// Fin de graficado de imagenes
+
+		bs.show(); // Hace visible el próximo buffer disponible
+		g.dispose();
+	}
+
+	@Override
+	public void run() { // Hilo principal del juego
+		initGame();
+
+		int fps = 60; // Cantidad de actualizaciones por segundo que se desean
+		double tiempoPorActualizacion = 1000000000 / fps; // Cantidad de nanosegundos en FPS deseados
+		double delta = 0;
+		long ahora;
+		long ultimoTiempo = System.nanoTime();
+		long timer = 0; // Timer para mostrar fps cada un segundo
+		int actualizaciones = 0; // Cantidad de actualizaciones que se realizan realmente
+
+		while (corriendo) {
+			ahora = System.nanoTime();
+			delta += (ahora - ultimoTiempo) / tiempoPorActualizacion; // Calculo  para determinar cuando realizar la actualizacion y el graficado
+			timer += ahora - ultimoTiempo; // Sumo el tiempo transcurrido hasta que se acumule 1 segundo y mostrar los FPS
+			ultimoTiempo = ahora; // Para las proximas corridas del bucle
+
+			if (delta >= 1) {
+				actualizar();
+				graficar();
+				actualizaciones++;
+				delta--;
+			}
+
+			if (timer >= 1000000000) { // Si paso 1 segundo muestro los FPS
+				screen.getFrame().setTitle(nombre + " | " + "FPS: " + fps);
+				actualizaciones = 0;
+				timer = 0;
+			}
+		}
+
+		stop();
+	}
+
+	public synchronized void start() { // Inicia el juego
+		if (corriendo)
+			return;
+		corriendo = true;
+		hilo = new Thread(this);
+		hilo.start();
+	}
+
+	public synchronized void stop() { // Detiene el juego
+		if (!corriendo)
+			return;
+		try {
+			corriendo = false;
+			hilo.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public int getAncho() {
+		return width;
+	}
+
+	public int getAlto() {
+		return height;
+	}
+
+	public MouseController getHandlerMouse() {
+		return mouseController;
+	}
+	
+	public Camera getCamara() {
+		return camara;
+	}
+	
+	public EstadoJuego getEstadoJuego() {
+		return (EstadoJuego) estadoJuego;
+	}
+	
+	
+}
