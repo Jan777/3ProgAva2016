@@ -8,10 +8,10 @@ import prograavanzada2016.anotherworld.cliente.ClienteJugable;
 import prograavanzada2016.anotherworld.interfaces.VentanaCrearPersonaje;
 import prograavanzada2016.anotherworld.interfaces.VentanaInicio;
 import prograavanzada2016.anotherworld.interfaces.VentanaPrincipal;
-import prograavanzada2016.anotherworld.mensajes.LoginMessageResponse;
 import prograavanzada2016.anotherworld.mensajes.MessageBase;
-import prograavanzada2016.anotherworld.mensajes.PersonajeConsultaMessage;
-import prograavanzada2016.anotherworld.mensajes.PersonajeConsultaResponseMessage;
+import prograavanzada2016.anotherworld.mensajes.request.PersonajeConsultaMessage;
+import prograavanzada2016.anotherworld.mensajes.response.LoginMessageResponse;
+import prograavanzada2016.anotherworld.mensajes.response.PersonajeConsultaResponseMessage;
 import prograavanzada2016.anotherworld.modelos.Usuario;
 
 public class PersonajeConsultaResponseService implements ServicioServer{

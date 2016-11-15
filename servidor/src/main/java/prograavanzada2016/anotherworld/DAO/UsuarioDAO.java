@@ -14,7 +14,6 @@ import prograavanzada2016.anotherworld.modelos.Usuario;
 public class UsuarioDAO extends DAO<Usuario>{
 	
 	private Statement statement;
-	private Statement statement2;
 	private Connection conn;
     private static final int NO_ENCONTRADO = -1;
     private static final int ENCONTRADO = 1;
@@ -28,7 +27,6 @@ public class UsuarioDAO extends DAO<Usuario>{
 			conn = DriverManager.getConnection("jdbc:sqlite:C:\\GitAvanzada\\PrograAvanzada\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
 			conn.setAutoCommit(false);
 			statement = conn.createStatement();
-			statement2 = conn.createStatement();
 			stat = statement;
 			this.conn=conn;
 		} catch (ClassNotFoundException e) {
@@ -41,12 +39,8 @@ public class UsuarioDAO extends DAO<Usuario>{
 	@Override
 	public boolean insertar(Usuario usuario) throws DAOException {
 		try {
-	       /* if(buscar(usuario)==ENCONTRADO){
-	            throw new DAOException("Alumno existente");
-	        }*/
 			int size = 0;
 			String count = "select * from usuario";
-			//statement.execute(count);
 			ResultSet rs = statement.executeQuery(count);
 			
 			while (rs.next()) {
@@ -55,41 +49,36 @@ public class UsuarioDAO extends DAO<Usuario>{
 			size++;
 			rs.close();
 			
-	        //String insert = "INSERT into usuario (idUsuario, nombre, apellido, usuario, pass) values('"+size+"','"+usuario.getNombre()+"','"+usuario.getApellido()+"', '"+usuario.getNombreUsuario()+"', '"+usuario.getPassword()+"');";
-			//String insert = "INSERT INTO 'main'.'usuario' ('idUsuario','nombre','apellido','usuario','pass') VALUES ("+size+",'"+usuario.getNombre()+"','"+usuario.getApellido()+"','"+usuario.getNombreUsuario()+"','"+usuario.getPassword()+"')";
-			
 			PreparedStatement statement = conn.prepareStatement(
-		            "INSERT INTO 'main'.'usuario' VALUES ("+size+",'"+usuario.getNombre()+"','"+usuario.getApellido()+"','"+usuario.getNombreUsuario()+"','"+usuario.getPassword()+"')");
-			//String insert = "INSERT INTO 'main'.'usuario' VALUES ("+size+",'"+usuario.getNombre()+"','"+usuario.getApellido()+"','"+usuario.getNombreUsuario()+"','"+usuario.getPassword()+"')";
-	        // int val=statement2.executeUpdate(insert);
-	        statement.executeUpdate();
-			conn.commit();
-			//System.out.println(insert);
-	         //System.out.println(val);
-	         return true;
-	        
-	       }
+			        "INSERT INTO 'main'.'usuario' VALUES ("+size+",'"+usuario.getNombre()+"','"+usuario.getApellido()+"','"+usuario.getNombreUsuario()+"','"+usuario.getPassword()+"')");
+					statement.executeUpdate();
+					conn.commit();
+					conn.close();
+					 return true;
+		    
+		}
 	        catch (SQLException ex) {
 	            System.out.println(ex);
 	        }
 		return false;		
 	}
 	
-	public long existeUsuario(String usuario) throws DAOException {
-		try {
-			String buscar = "SELECT * FROM usuario where usuario like '"+usuario+"';";
-			//statement.execute(buscar);
-			ResultSet rs = statement.executeQuery(buscar);
-			if(rs.next())
-				return ENCONTRADO;
-				else
-				return NO_ENCONTRADO;
-					
-		}catch (SQLException ex) {
-	    	ex.printStackTrace();
-	        return NO_ENCONTRADO;
-	    }
-		}
+	public long existeUsuariooo(String usuario) throws DAOException {
+//		try {
+//			String buscar = "SELECT * FROM usuario where usuario like '"+usuario+"';";
+//			//statement.execute(buscar);
+//			ResultSet rs = statement.executeQuery(buscar);
+//			if(rs.next())
+//				return ENCONTRADO;
+//				else
+//				return NO_ENCONTRADO;
+//					
+//		}catch (SQLException ex) {
+//	    	ex.printStackTrace();
+//	        return NO_ENCONTRADO;
+//	    }
+		return 1;
+	}
 
 	@Override
 	public void borrar(Usuario usuario) throws DAOException {
@@ -113,8 +102,10 @@ public class UsuarioDAO extends DAO<Usuario>{
             	usuario.setApellido(rs.getString("apellido"));
             	
             	System.out.println("los datos son:"+usuario.getNombre());
+            	conn.close();
             	return ENCONTRADO;
             }else{
+            	conn.close();
                 return NO_ENCONTRADO;
             }
             
@@ -129,6 +120,12 @@ public class UsuarioDAO extends DAO<Usuario>{
             }*/
             
         }catch (SQLException ex) {
+        	try {
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
         	ex.printStackTrace();
             return NO_ENCONTRADO;
         }

@@ -20,6 +20,19 @@ public class Recursos {
 	private static BufferedImage[] elfoAbajoIzq; 
 	// Fin Personajes
 	
+	
+	// Inicio Personaje	
+		public static LinkedList<BufferedImage[]> humano = new LinkedList<>();
+		private static BufferedImage[] humanoIzq;
+		private static BufferedImage[] humanoArribaIzq;
+		private static BufferedImage[] humanoArriba;
+		private static BufferedImage[] humanoArribaDer;
+		private static BufferedImage[] humanoDer;
+		private static BufferedImage[] humanoAbajoDer;
+		private static BufferedImage[] humanoAbajo;
+		private static BufferedImage[] humanoAbajoIzq; 
+		// Fin Personajes
+	
 	// Entorno
 	public static BufferedImage piso;
 	public static BufferedImage pasto;
@@ -88,10 +101,68 @@ public class Recursos {
 		
 		// Fin elfo
 		
+		
+		// Inicio humano
+		ANCHO=64;
+		ALTO=96;
+				SpriteSheet spriteHumano = new SpriteSheet(CargadorImagen.cargarImagen("/human.gif"));
+				
+				humanoIzq = new BufferedImage[2];
+				humanoArribaIzq = new BufferedImage[2];
+				humanoArriba = new BufferedImage[2];
+				humanoArribaDer = new BufferedImage[2];
+				humanoDer = new BufferedImage[2];
+				humanoAbajoDer = new BufferedImage[2];
+				humanoAbajo = new BufferedImage[2];
+				humanoAbajoIzq = new BufferedImage[2];
+				
+				for(int i = 0; i < 2; i++) {
+					humanoIzq[i] = spriteelfo.getTile(ANCHO*5, ALTO*(2+i), ANCHO, ALTO);
+				}
+				
+				for(int i = 0; i < 2; i++) {
+					humanoArribaIzq[i] = spriteelfo.getTile(ANCHO*4, ALTO*(2+i), ANCHO, ALTO);
+				}
+				
+				for(int i = 0; i < 2; i++) {
+					humanoArriba[i] = spriteelfo.getTile(ANCHO*3, ALTO*(2+i), ANCHO, ALTO);
+				}
+				
+				for(int i = 0; i < 2; i++) {
+					humanoArribaDer[i] = spriteelfo.getTile(ANCHO*2, ALTO*(2+i), ANCHO, ALTO);
+				}
+				
+				for(int i = 0; i < 2; i++) {
+					humanoDer[i] = spriteelfo.getTile(ANCHO*1, ALTO*(2+i), ANCHO, ALTO);
+				}
+				
+				for(int i = 0; i < 2; i++) {
+					humanoAbajoDer[i] = spriteelfo.getTile(ANCHO*0, ALTO*(2+i), ANCHO, ALTO);
+				}
+				
+				for(int i = 0; i < 2; i++) {
+					humanoAbajo[i] = spriteelfo.getTile(ANCHO*7, ALTO*(2+i), ANCHO, ALTO);
+				}
+				
+				for(int i = 0; i < 2; i++) {
+					humanoAbajoIzq[i] = spriteelfo.getTile(ANCHO*6, ALTO*(2+i), ANCHO, ALTO);
+				}
+				
+				humano.add(humanoIzq);
+				humano.add(humanoArribaIzq);
+				humano.add(humanoArriba);
+				humano.add(humanoArribaDer);
+				humano.add(humanoDer);
+				humano.add(humanoAbajoDer);
+				humano.add(humanoAbajo);
+				humano.add(humanoAbajoIzq);
+				
+				// Fin humano
+		
 		// Inicio Entorno
 		piso =CargadorImagen.cargarImagen("/pisoPosta.png");
 		pasto = CargadorImagen.cargarImagen("/pasto.png");
-		background = CargadorImagen.cargarImagen("/background2.jpg");
+		//background = CargadorImagen.cargarImagen("/background2.jpg");
 		// Fin Entorno
 	}
 }

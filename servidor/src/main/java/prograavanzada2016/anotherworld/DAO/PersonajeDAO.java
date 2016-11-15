@@ -2,18 +2,18 @@ package prograavanzada2016.anotherworld.DAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
-import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.modelos.PersonajeModel;
-import prograavanzada2016.anotherworld.modelos.Usuario;
 
-public class PersonajeDAO extends DAO<Usuario> {
+public class PersonajeDAO extends DAO<PersonajeModel> {
 	
 	private Statement statement;
+	private Connection conn;
     private static final int NO_ENCONTRADO = -1;
     private static final int ENCONTRADO = 1;
     
@@ -27,6 +27,7 @@ public class PersonajeDAO extends DAO<Usuario> {
 			conn.setAutoCommit(false);
 			statement = conn.createStatement();
 			stat = statement;
+			this.conn=conn;
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -34,64 +35,83 @@ public class PersonajeDAO extends DAO<Usuario> {
     }
 
 	@Override
-	public void insertar(Personaje personaje, int usuarioID) throws DAOException {
-		String insert = "INSERT INT personaje (idpersonaje, usuario_idusuario, casta_idcasta, raza_idraza, nombre, fuerza, destreza, inteligencia, mana, energia, nivel, salud, experiencia) values('"+personaje.getIdEnte()+"','"+usuarioID+"','"+personaje.getCasta().getId()+"', '"+personaje.getRaza().getId()+"', '"+personaje.getNombre()+"', '"+personaje.getFuerza()+"', '"+personaje.getDestreza()+"', '"+personaje.getInteligencia()+"', '"+personaje.getMana()+"', '"+personaje.getEnergia()+"', '"+personaje.getNivel()+"', '"+personaje.getSalud()+"', '"+personaje.getExperienciaActual()+"');";
+	public boolean insertar(PersonajeModel pm) throws DAOException {
         try {
-			statement.execute(insert);
+			int size = 0;
+			String count = "select * from personaje";
+			ResultSet rs = statement.executeQuery(count);
+			
+			while (rs.next()) {
+			    size++;
+			}
+			size++;
+			rs.close();
+			
+			PreparedStatement statement = conn.prepareStatement(
+			        "INSERT INTO 'main'.'personaje' VALUES ("+size+",'"+pm.getUsuarioId()+"','"+pm.getCastaId()+"','"+pm.getRazaId()+"','"+pm.getNombre()+"','"+pm.getFuerza()+"','"+pm.getDestreza()+"','"+pm.getInteligencia()+"','"+pm.getMana()+"','"+pm.getEnergia()+"','"+pm.getNivel()+"','"+pm.getSalud()+"','"+pm.getExperiencia()+"')");
+					statement.executeUpdate();
+					conn.commit();
+					conn.close();
+					 return true;
+		    
 		} catch (SQLException e) {
+			try {
+				conn.close();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return false;
 		
 	}
 
-	@Override
-	public void borrar(Usuario obj) throws DAOException {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
-	public void modificar(Usuario obj) throws DAOException {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public long buscar(Usuario usuario) throws DAOException {
+	public long buscar(PersonajeModel personajeModel) throws DAOException {
 		try {
 			PersonajeModel personaje;
-			String buscar = "SELECT * FROM personaje where usuario_idUsuario = '"+usuario.getId()+"';";
+			String buscar = "SELECT * FROM personaje where usuario_idUsuario = '"+personajeModel.getUsuarioId()+"';";
 			statement.execute(buscar);
 			ResultSet rs = statement.executeQuery(buscar);
 			if(rs.next()){
 				personaje = new PersonajeModel(rs.getInt("idpersonaje"),rs.getInt("usuario_idUsuario"),rs.getInt("casta_idcasta"),
             			rs.getInt("raza_idraza"),rs.getString("nombre"),rs.getInt("fuerza"),rs.getInt("destreza"),rs.getInt("inteligencia"),
             			rs.getInt("mana"),rs.getInt("energia"),rs.getInt("nivel"),rs.getInt("salud"),rs.getInt("experiencia"));
-				usuario.setPersonaje(personaje);
+				//usuario.setPersonaje(personaje);
+				conn.close();
 			}
 				else{
+					conn.close();
 					return NO_ENCONTRADO;
 				}		
 		}catch (SQLException ex) {
 	    	ex.printStackTrace();
 	        return NO_ENCONTRADO;
 	    }
-		return NO_ENCONTRADO;
+		return ENCONTRADO;
 		}
 
 	@Override
-	public List<Usuario> listarTodos() throws DAOException {
+	public void borrar(PersonajeModel obj) throws DAOException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void modificar(PersonajeModel obj) throws DAOException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<PersonajeModel> listarTodos() throws DAOException {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
-	public boolean insertar(Usuario obj) throws DAOException {
-		return false;
-		// TODO Auto-generated method stub
-		
-	}
 	
 	
 

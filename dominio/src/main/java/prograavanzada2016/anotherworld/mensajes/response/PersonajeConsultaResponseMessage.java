@@ -1,4 +1,6 @@
-package prograavanzada2016.anotherworld.mensajes;
+package prograavanzada2016.anotherworld.mensajes.response;
+
+import prograavanzada2016.anotherworld.mensajes.MessageBase;
 
 public class PersonajeConsultaResponseMessage extends MessageBase{
 	

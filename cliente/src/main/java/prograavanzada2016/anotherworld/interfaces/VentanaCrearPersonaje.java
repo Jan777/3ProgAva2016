@@ -11,9 +11,14 @@ import java.awt.event.FocusEvent;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
+import com.google.gson.Gson;
+
 import prograavanzada2016.anotherworld.cliente.ClienteJugable;
 import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.juego.Game;
+import prograavanzada2016.anotherworld.mensajes.RawMessage;
+import prograavanzada2016.anotherworld.mensajes.request.PersonajeConsultaMessage;
+import prograavanzada2016.anotherworld.modelos.PersonajeModel;
 import prograavanzada2016.anotherworld.modelos.Usuario;
 
 import java.awt.*;
@@ -35,12 +40,13 @@ public class VentanaCrearPersonaje extends JFrame {
 	private JComboBox comboRaza;
 	private JComboBox comboCasta;
 	private JButton btnCrear;
-	
-	Personaje personaje;
+	private ClienteJugable clienteJugable;
+	private Personaje personaje;
 	
 	public VentanaCrearPersonaje(ClienteJugable clienteJugable){
 		initComponents();   
-		usuario = clienteJugable.getUsuario();
+		this.usuario = clienteJugable.getUsuario();
+		this.clienteJugable=clienteJugable;
 		setVisible(true);
 		setLocationRelativeTo(null);
 	}
@@ -150,10 +156,26 @@ public class VentanaCrearPersonaje extends JFrame {
 		if("".equals(textField.getText()))
 			JOptionPane.showMessageDialog(contentPane, "El personaje debe contener un nombre");
 		else{
+			//juego de mati esto no va a ir mas aca... hay que crear un servicio que lanze la nueva ventana
 			try{
+				String razaString = comboRaza.getSelectedItem().toString();
+				String castaString = comboCasta.getSelectedItem().toString();
+				String nombreString = textField.getText();
 				
-				Game game = new Game("Another World", 800, 600);
-				game.start();
+				System.out.println(razaString+castaString+nombreString);
+				
+				PersonajeModel pm = new PersonajeModel(nombreString,castaString,razaString,this.usuario.getId());
+				
+				RawMessage rawMessageLogin = new RawMessage();
+				rawMessageLogin.type = "crearPersonaje";
+				rawMessageLogin.message = new PersonajeConsultaMessage(new Gson().toJson(pm));
+
+				clienteJugable.getClienteManager().sendMensaje(new Gson().toJson(rawMessageLogin));
+				this.setVisible(false);
+				
+				
+				//Game game = new Game("Another World", 800, 600);
+				//game.start();
 				//usuario.setPersonajeJugador(personaje);
 				//ventanaMapaJuego = new VentanaMapa(personaje);
 				

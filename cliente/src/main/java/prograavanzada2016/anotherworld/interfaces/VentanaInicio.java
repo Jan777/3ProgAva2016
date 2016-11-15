@@ -1,8 +1,8 @@
 package prograavanzada2016.anotherworld.interfaces;
 import prograavanzada2016.anotherworld.cliente.ClienteJugable;
-import prograavanzada2016.anotherworld.mensajes.LoginMessage;
-import prograavanzada2016.anotherworld.mensajes.PersonajeConsultaMessage;
 import prograavanzada2016.anotherworld.mensajes.RawMessage;
+import prograavanzada2016.anotherworld.mensajes.request.LoginMessage;
+import prograavanzada2016.anotherworld.mensajes.request.PersonajeConsultaMessage;
 import prograavanzada2016.anotherworld.modelos.Usuario;
 
 import java.awt.Color;

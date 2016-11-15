@@ -9,10 +9,10 @@ import com.google.gson.JsonSyntaxException;
 
 import prograavanzada2016.anotherworld.DAO.DAOException;
 import prograavanzada2016.anotherworld.DAO.UsuarioDAO;
-import prograavanzada2016.anotherworld.mensajes.LoginMessage;
-import prograavanzada2016.anotherworld.mensajes.LoginMessageResponse;
 import prograavanzada2016.anotherworld.mensajes.MessageBase;
 import prograavanzada2016.anotherworld.mensajes.RawMessage;
+import prograavanzada2016.anotherworld.mensajes.request.LoginMessage;
+import prograavanzada2016.anotherworld.mensajes.response.LoginMessageResponse;
 import prograavanzada2016.anotherworld.modelos.Usuario;
 import prograavanzada2016.anotherworld.servicios.ServicioServer;
 import prograavanzada2016.anotherworld.servidor.ClienteServicio;

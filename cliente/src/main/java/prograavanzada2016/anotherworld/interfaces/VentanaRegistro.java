@@ -17,9 +17,9 @@ import prograavanzada2016.anotherworld.*;
 import prograavanzada2016.anotherworld.DAO.DAOException;
 import prograavanzada2016.anotherworld.DAO.UsuarioDAO;
 import prograavanzada2016.anotherworld.cliente.ClienteJugable;
-import prograavanzada2016.anotherworld.mensajes.PersonajeConsultaMessage;
 import prograavanzada2016.anotherworld.mensajes.RawMessage;
-import prograavanzada2016.anotherworld.mensajes.UsuarioNuevoMessage;
+import prograavanzada2016.anotherworld.mensajes.request.PersonajeConsultaMessage;
+import prograavanzada2016.anotherworld.mensajes.request.UsuarioNuevoMessage;
 import prograavanzada2016.anotherworld.modelos.Usuario;
 
 import javax.swing.JLabel;
@@ -167,10 +167,10 @@ public class VentanaRegistro extends JFrame {
 	}
 	
 	public void nombreUsuarioTextFieldFocusLost(FocusEvent e) throws Exception, DAOException{
-		if(usuarioDAO.existeUsuario(nombreUsuarioTextField.getText()) == 1)
+		/*if(usuarioDAO.existeUsuario(nombreUsuarioTextField.getText()) == 1)
 			JOptionPane.showMessageDialog(contentPane, "Usuario existen");
 			else
-			usuario.setNombreUsuario(nombreUsuarioTextField.getText());
+			usuario.setNombreUsuario(nombreUsuarioTextField.getText());*/
 	}
 	
 	public void passwordFieldFocusLost(FocusEvent evt){

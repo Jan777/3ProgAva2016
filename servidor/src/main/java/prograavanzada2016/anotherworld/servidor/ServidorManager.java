@@ -19,11 +19,12 @@ import prograavanzada2016.anotherworld.DAO.UsuarioDAO;
 import prograavanzada2016.anotherworld.comandos.Comando;
 import prograavanzada2016.anotherworld.comandos.ComandoLogin;
 import prograavanzada2016.anotherworld.entities.Personaje;
-import prograavanzada2016.anotherworld.mensajes.LoginMessage;
 import prograavanzada2016.anotherworld.mensajes.MessageDeserializer;
-import prograavanzada2016.anotherworld.mensajes.PersonajeConsultaMessage;
 import prograavanzada2016.anotherworld.mensajes.RawMessage;
-import prograavanzada2016.anotherworld.mensajes.UsuarioNuevoMessage;
+import prograavanzada2016.anotherworld.mensajes.request.CrearPersonajeNuevoMessage;
+import prograavanzada2016.anotherworld.mensajes.request.LoginMessage;
+import prograavanzada2016.anotherworld.mensajes.request.PersonajeConsultaMessage;
+import prograavanzada2016.anotherworld.mensajes.request.UsuarioNuevoMessage;
 import prograavanzada2016.anotherworld.modelos.Usuario;
 import prograavanzada2016.anotherworld.servicios.ServiceLocator;
 
@@ -108,6 +109,7 @@ public class ServidorManager implements Runnable{
 		deserializer.registerMessageType("login", LoginMessage.class);
         deserializer.registerMessageType("personajeConsulta", PersonajeConsultaMessage.class);
         deserializer.registerMessageType("usuarioNuevo", UsuarioNuevoMessage.class);
+        deserializer.registerMessageType("crearPersonaje", CrearPersonajeNuevoMessage.class);        
 	}
 
 }

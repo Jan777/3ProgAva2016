@@ -2,7 +2,7 @@ package prograavanzada2016.anotherworld.modelos;
 
 public class PersonajeModel {
 	private int id;
-	private int usuarioId;
+	private long usuarioId;
 	private int castaId;
 	private int razaId;
 	private String nombre;
@@ -30,18 +30,22 @@ public class PersonajeModel {
 		this.salud = salud;
 		this.experiencia = experiencia;
 	}
+	public PersonajeModel(String nombre, String casta, String raza,long usuarioId) {
+		this.nombre=nombre;
+		this.castaId=this.obtenerCasta(casta);
+		this.razaId=this.obtenerRaza(raza);
+		this.usuarioId=usuarioId;
+	}
+	public PersonajeModel() {
+		// TODO Auto-generated constructor stub
+	}
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getUsuarioId() {
-		return usuarioId;
-	}
-	public void setUsuarioId(int usuarioId) {
-		this.usuarioId = usuarioId;
-	}
+	
 	public int getCastaId() {
 		return castaId;
 	}
@@ -107,5 +111,26 @@ public class PersonajeModel {
 	}
 	public void setExperiencia(int experiencia) {
 		this.experiencia = experiencia;
+	}
+	public long getUsuarioId() {
+		return usuarioId;
+	}
+	public void setUsuarioId(long usuarioId) {
+		this.usuarioId = usuarioId;
+	}
+	public int obtenerCasta(String casta){
+		if(casta.equals("guerrero")){
+			return 1;
+		}else if(casta.equals("mago")){
+			return 2;
+		}
+		return 3;
+	}
+	
+	public int obtenerRaza(String raza){
+		if(raza.equals("humano")){
+			return 1;
+		}
+		return 2;
 	}
 }

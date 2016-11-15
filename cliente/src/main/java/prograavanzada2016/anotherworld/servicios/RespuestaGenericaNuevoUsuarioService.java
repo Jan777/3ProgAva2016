@@ -7,7 +7,7 @@ import com.google.gson.Gson;
 import prograavanzada2016.anotherworld.cliente.ClienteJugable;
 import prograavanzada2016.anotherworld.interfaces.VentanaPrincipal;
 import prograavanzada2016.anotherworld.mensajes.MessageBase;
-import prograavanzada2016.anotherworld.mensajes.RespuestaGenericaMessage;
+import prograavanzada2016.anotherworld.mensajes.response.RespuestaGenericaMessage;
 import prograavanzada2016.anotherworld.modelos.RespuestaGenerica;
 
 public class RespuestaGenericaNuevoUsuarioService implements ServicioServer{

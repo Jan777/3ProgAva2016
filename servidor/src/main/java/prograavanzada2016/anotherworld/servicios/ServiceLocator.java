@@ -2,8 +2,8 @@ package prograavanzada2016.anotherworld.servicios;
 
 import java.util.HashMap;
 
-import prograavanzada2016.anotherworld.mensajes.LoginMessage;
 import prograavanzada2016.anotherworld.mensajes.MessageDeserializer;
+import prograavanzada2016.anotherworld.mensajes.request.LoginMessage;
 import prograavanzada2016.anotherworld.servicios.ServicioServer;
 
 public class ServiceLocator {
@@ -16,6 +16,8 @@ public class ServiceLocator {
 			return new PersonajeConsultaService();
 		}else if(tipo.equals("usuarioNuevo")){
 			return new UsuarioNuevoMessageService();
+		}else if(tipo.equals("crearPersonaje")){
+			return new CrearPersonajeNuevoService();
 		}
 		return null;
 	}
