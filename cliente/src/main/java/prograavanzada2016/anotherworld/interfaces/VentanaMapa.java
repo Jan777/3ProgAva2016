@@ -17,6 +17,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 
 import prograavanzada2016.anotherworld.entities.Personaje;
+import prograavanzada2016.anotherworld.mapas.Mapa;
 import prograavanzada2016.anotherworld.modelos.*;
 
 import java.awt.Toolkit;
@@ -64,9 +65,9 @@ public class VentanaMapa extends JFrame {
 		gbc_jpBarraEstado.gridy = 0;
 		jpPpal.add(jpBarraEstado, gbc_jpBarraEstado);
 		GridBagLayout gbl_jpBarraEstado = new GridBagLayout();
-		gbl_jpBarraEstado.columnWidths = new int[]{0, 0, 0, 179, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0};
+		gbl_jpBarraEstado.columnWidths = new int[]{0, 0, 0, 179, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0};
 		gbl_jpBarraEstado.rowHeights = new int[]{0, 0, 0, 0};
-		gbl_jpBarraEstado.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_jpBarraEstado.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		gbl_jpBarraEstado.rowWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
 		jpBarraEstado.setLayout(gbl_jpBarraEstado);
 		
@@ -86,11 +87,35 @@ public class VentanaMapa extends JFrame {
 		gbc_lblSalud.gridy = 0;
 		jpBarraEstado.add(lblSalud, gbc_lblSalud);
 		
+		lblFuerza = new JLabel("Fuerza:");
+		GridBagConstraints gbc_lblFuerza = new GridBagConstraints();
+		gbc_lblFuerza.anchor = GridBagConstraints.WEST;
+		gbc_lblFuerza.insets = new Insets(0, 0, 5, 5);
+		gbc_lblFuerza.gridx = 7;
+		gbc_lblFuerza.gridy = 0;
+		jpBarraEstado.add(lblFuerza, gbc_lblFuerza);
+		
+		JButton btnCombate = new JButton("Combatir");
+		btnCombate.setBackground(new Color(59, 89, 182));
+		btnCombate.setForeground(Color.BLACK);
+		btnCombate.setFocusPainted(false);
+		btnCombate.setFont(new Font("Tahoma", Font.BOLD, 12));
+		btnCombate.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		GridBagConstraints gbc_btnCombate = new GridBagConstraints();
+		gbc_btnCombate.fill = GridBagConstraints.BOTH;
+		gbc_btnCombate.insets = new Insets(0, 0, 5, 5);
+		gbc_btnCombate.gridx = 14;
+		gbc_btnCombate.gridy = 0;
+		jpBarraEstado.add(btnCombate, gbc_btnCombate);
+		
 		btnMochila = new JButton("Mochila");
 		btnMochila.setBackground(new Color(59, 89, 182));
-	    btnMochila.setForeground(Color.BLACK);
-	    btnMochila.setFocusPainted(false);
-	    btnMochila.setFont(new Font("Tahoma", Font.BOLD, 12));
+		btnMochila.setForeground(Color.BLACK);
+		btnMochila.setFocusPainted(false);
+		btnMochila.setFont(new Font("Tahoma", Font.BOLD, 12));
 		btnMochila.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaMochila ventanaMochila = new VentanaMochila();
@@ -102,30 +127,6 @@ public class VentanaMapa extends JFrame {
 				ventanaMochila.setLocation(x,y);			
 			}
 		});
-		
-		lblFuerza = new JLabel("Fuerza:");
-		GridBagConstraints gbc_lblFuerza = new GridBagConstraints();
-		gbc_lblFuerza.anchor = GridBagConstraints.WEST;
-		gbc_lblFuerza.insets = new Insets(0, 0, 5, 5);
-		gbc_lblFuerza.gridx = 7;
-		gbc_lblFuerza.gridy = 0;
-		jpBarraEstado.add(lblFuerza, gbc_lblFuerza);
-		
-		JButton btnCombate = new JButton("Combatir");
-		btnCombate.setBackground(new Color(59, 89, 182));
-	    btnCombate.setForeground(Color.BLACK);
-	    btnCombate.setFocusPainted(false);
-	    btnCombate.setFont(new Font("Tahoma", Font.BOLD, 12));
-		btnCombate.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		GridBagConstraints gbc_btnCombate = new GridBagConstraints();
-		gbc_btnCombate.fill = GridBagConstraints.BOTH;
-		gbc_btnCombate.insets = new Insets(0, 0, 5, 5);
-		gbc_btnCombate.gridx = 14;
-		gbc_btnCombate.gridy = 0;
-		jpBarraEstado.add(btnCombate, gbc_btnCombate);
 		GridBagConstraints gbc_btnMochila = new GridBagConstraints();
 		gbc_btnMochila.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnMochila.insets = new Insets(0, 0, 5, 5);
@@ -149,11 +150,19 @@ public class VentanaMapa extends JFrame {
 		gbc_lblEnergia.gridy = 1;
 		jpBarraEstado.add(lblEnergia, gbc_lblEnergia);
 		
+		lblDestreza = new JLabel("Destreza:");
+		GridBagConstraints gbc_lblDestreza = new GridBagConstraints();
+		gbc_lblDestreza.anchor = GridBagConstraints.WEST;
+		gbc_lblDestreza.insets = new Insets(0, 0, 5, 5);
+		gbc_lblDestreza.gridx = 7;
+		gbc_lblDestreza.gridy = 1;
+		jpBarraEstado.add(lblDestreza, gbc_lblDestreza);
+		
 		btnCrearAlianza = new JButton("Crear Alianza");
 		btnCrearAlianza.setBackground(new Color(59, 89, 182));
-	    btnCrearAlianza.setForeground(Color.BLACK);
-	    btnCrearAlianza.setFocusPainted(false);
-	    btnCrearAlianza.setFont(new Font("Tahoma", Font.BOLD, 12));
+		btnCrearAlianza.setForeground(Color.BLACK);
+		btnCrearAlianza.setFocusPainted(false);
+		btnCrearAlianza.setFont(new Font("Tahoma", Font.BOLD, 12));
 		btnCrearAlianza.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaAlianza ventanaAlianza = new VentanaAlianza();
@@ -166,14 +175,6 @@ public class VentanaMapa extends JFrame {
 				
 			}
 		});
-		
-		lblDestreza = new JLabel("Destreza:");
-		GridBagConstraints gbc_lblDestreza = new GridBagConstraints();
-		gbc_lblDestreza.anchor = GridBagConstraints.WEST;
-		gbc_lblDestreza.insets = new Insets(0, 0, 5, 5);
-		gbc_lblDestreza.gridx = 7;
-		gbc_lblDestreza.gridy = 1;
-		jpBarraEstado.add(lblDestreza, gbc_lblDestreza);
 		GridBagConstraints gbc_btnCrearAlianza = new GridBagConstraints();
 		gbc_btnCrearAlianza.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnCrearAlianza.insets = new Insets(0, 0, 5, 5);
@@ -205,7 +206,9 @@ public class VentanaMapa extends JFrame {
 		gbc_lblInteligencia.gridy = 2;
 		jpBarraEstado.add(lblInteligencia, gbc_lblInteligencia);
 		
+		//ACA ABAJO VA EL MAPA
 		jpMapa = new JPanel();
+		//jpMapa = new Mapa();				//REVISAR HAY QUE ACOPLARLO BIEN
 		jpMapa.setBackground(Color.BLACK);
 		GridBagConstraints gbc_jpMapa = new GridBagConstraints();
 		gbc_jpMapa.fill = GridBagConstraints.BOTH;
