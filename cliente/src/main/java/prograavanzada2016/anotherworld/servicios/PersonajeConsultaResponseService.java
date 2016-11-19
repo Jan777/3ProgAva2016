@@ -8,6 +8,7 @@ import prograavanzada2016.anotherworld.cliente.ClienteJugable;
 import prograavanzada2016.anotherworld.interfaces.VentanaCrearPersonaje;
 import prograavanzada2016.anotherworld.interfaces.VentanaInicio;
 import prograavanzada2016.anotherworld.interfaces.VentanaPrincipal;
+import prograavanzada2016.anotherworld.juego.Game;
 import prograavanzada2016.anotherworld.mensajes.MessageBase;
 import prograavanzada2016.anotherworld.mensajes.request.PersonajeConsultaMessage;
 import prograavanzada2016.anotherworld.mensajes.response.LoginMessageResponse;
@@ -38,6 +39,9 @@ public class PersonajeConsultaResponseService implements ServicioServer{
 			//ventanaPrincipal = new VentanaPrincipal(clienteJugable);
 			//JOptionPane.showMessageDialog(ventanaPrincipal, "Datos incorrectos");
 			System.out.println("tiene un personaje");
+			
+			Game game = new Game("Another World", 800, 600, usuario);
+			game.start();
 		}
 		
 	}

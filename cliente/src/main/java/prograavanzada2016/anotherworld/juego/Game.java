@@ -2,6 +2,8 @@ package prograavanzada2016.anotherworld.juego;
 
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.interfaces.*;
@@ -33,15 +35,15 @@ public class Game implements Runnable{
 	// Controlador de Camara
 	private Camera camara;
 
-	public Game(final String nombre, final int width, final int height) {
+	public Game(final String nombre, final int width, final int height, Usuario usuario) {
 		this.nombre = nombre;
 		this.width = width;
 		this.height = height;
-		//this.user = usuario;
+		this.user = usuario;
 		mouseController = new MouseController();
 	}
 
-	public void initGame() { // Carga lo necesario para iniciar el juego
+	public void initGame() throws FileNotFoundException, IOException { // Carga lo necesario para iniciar el juego
 		screen = new GameScreen(nombre, width, height);
 
 		screen.getCanvas().addMouseListener(mouseController);
@@ -87,7 +89,13 @@ public class Game implements Runnable{
 
 	@Override
 	public void run() { // Hilo principal del juego
-		initGame();
+		try {
+			initGame();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 		int fps = 60; // Cantidad de actualizaciones por segundo que se desean
 		double tiempoPorActualizacion = 1000000000 / fps; // Cantidad de nanosegundos en FPS deseados

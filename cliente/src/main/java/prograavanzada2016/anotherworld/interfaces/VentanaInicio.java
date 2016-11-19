@@ -118,7 +118,6 @@ public class VentanaInicio extends JFrame {
 		clienteJugable.getClienteManager().sendMensaje(new Gson().toJson(rawMessageLogin));
 		this.setVisible(false);
 		
-		Game game = new Game("Another World", 800, 600);
-		game.start();
+		
 	}
 }

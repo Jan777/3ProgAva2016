@@ -117,35 +117,35 @@ public class Recursos {
 				humanoAbajoIzq = new BufferedImage[2];
 				
 				for(int i = 0; i < 2; i++) {
-					humanoIzq[i] = spriteelfo.getTile(ANCHO*5, ALTO*(2+i), ANCHO, ALTO);
+					humanoIzq[i] = spriteHumano.getTile(ANCHO*5, ALTO*(2+i), ANCHO, ALTO);
 				}
 				
 				for(int i = 0; i < 2; i++) {
-					humanoArribaIzq[i] = spriteelfo.getTile(ANCHO*4, ALTO*(2+i), ANCHO, ALTO);
+					humanoArribaIzq[i] = spriteHumano.getTile(ANCHO*4, ALTO*(2+i), ANCHO, ALTO);
 				}
 				
 				for(int i = 0; i < 2; i++) {
-					humanoArriba[i] = spriteelfo.getTile(ANCHO*3, ALTO*(2+i), ANCHO, ALTO);
+					humanoArriba[i] = spriteHumano.getTile(ANCHO*3, ALTO*(2+i), ANCHO, ALTO);
 				}
 				
 				for(int i = 0; i < 2; i++) {
-					humanoArribaDer[i] = spriteelfo.getTile(ANCHO*2, ALTO*(2+i), ANCHO, ALTO);
+					humanoArribaDer[i] = spriteHumano.getTile(ANCHO*2, ALTO*(2+i), ANCHO, ALTO);
 				}
 				
 				for(int i = 0; i < 2; i++) {
-					humanoDer[i] = spriteelfo.getTile(ANCHO*1, ALTO*(2+i), ANCHO, ALTO);
+					humanoDer[i] = spriteHumano.getTile(ANCHO*1, ALTO*(2+i), ANCHO, ALTO);
 				}
 				
 				for(int i = 0; i < 2; i++) {
-					humanoAbajoDer[i] = spriteelfo.getTile(ANCHO*0, ALTO*(2+i), ANCHO, ALTO);
+					humanoAbajoDer[i] = spriteHumano.getTile(ANCHO*0, ALTO*(2+i), ANCHO, ALTO);
 				}
 				
 				for(int i = 0; i < 2; i++) {
-					humanoAbajo[i] = spriteelfo.getTile(ANCHO*7, ALTO*(2+i), ANCHO, ALTO);
+					humanoAbajo[i] = spriteHumano.getTile(ANCHO*7, ALTO*(2+i), ANCHO, ALTO);
 				}
 				
 				for(int i = 0; i < 2; i++) {
-					humanoAbajoIzq[i] = spriteelfo.getTile(ANCHO*6, ALTO*(2+i), ANCHO, ALTO);
+					humanoAbajoIzq[i] = spriteHumano.getTile(ANCHO*6, ALTO*(2+i), ANCHO, ALTO);
 				}
 				
 				humano.add(humanoIzq);

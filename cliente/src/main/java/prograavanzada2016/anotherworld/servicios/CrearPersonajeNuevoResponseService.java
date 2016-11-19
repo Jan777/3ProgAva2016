@@ -22,8 +22,8 @@ public class CrearPersonajeNuevoResponseService implements ServicioServer{
 		
 		System.out.println("nuevo personaje aliado: "+personajeModel.getNombre());
 		
-		Game game = new Game("Another World", 800, 600);
-		game.start();
+		//Game game = new Game("Another World", 800, 600);
+		//game.start();
 	}
 
 }

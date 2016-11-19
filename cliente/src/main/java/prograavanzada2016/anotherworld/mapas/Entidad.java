@@ -236,7 +236,7 @@ public class Entidad {
 		drawY = (int) (y - juego.getCamara().getyOffset());
 		g.drawImage(getFrameAnimacionActual(), drawX, drawY, ancho, alto, null);
 		g.setColor(Color.WHITE);
-		g.drawString("<Elfo>", drawX, drawY); // aca obtener raza y casta para dibujarlos
+		g.drawString("<Humano>", drawX, drawY); // aca obtener raza y casta para dibujarlos
 		g.drawString("Mati - 100", drawX + 10, drawY - 12); //aca obtener el nombre del pj
 	}
 
@@ -259,7 +259,7 @@ public class Entidad {
 			return moverArribaDer.getFrameActual();
 		}
 
-		return Recursos.elfo.get(6)[0];
+		return Recursos.humano.get(6)[0];  //ojo aca
 	}
 
 	public float getX() {
