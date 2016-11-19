@@ -164,7 +164,8 @@ public class VentanaCrearPersonaje extends JFrame {
 				
 				System.out.println(razaString+castaString+nombreString);
 				
-				PersonajeModel pm = new PersonajeModel(nombreString,castaString,razaString,this.usuario.getId());
+				//PersonajeModel pm = new PersonajeModel(nombreString,castaString,razaString,this.usuario.getId());
+				Personaje pm = new Personaje();
 				
 				RawMessage rawMessageLogin = new RawMessage();
 				rawMessageLogin.type = "crearPersonaje";
@@ -174,8 +175,8 @@ public class VentanaCrearPersonaje extends JFrame {
 				this.setVisible(false);
 				
 				
-				//Game game = new Game("Another World", 800, 600);
-				//game.start();
+				Game game = new Game("Another World", 800, 600);
+				game.start();
 				//usuario.setPersonajeJugador(personaje);
 				//ventanaMapaJuego = new VentanaMapa(personaje);
 				

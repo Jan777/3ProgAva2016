@@ -1,5 +1,8 @@
 package prograavanzada2016.anotherworld.DAO;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -7,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
+import java.util.Properties;
 
 import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.modelos.Usuario;
@@ -18,14 +22,20 @@ public class UsuarioDAO extends DAO<Usuario>{
     private static final int NO_ENCONTRADO = -1;
     private static final int ENCONTRADO = 1;
      
-    public UsuarioDAO(Connection conn, Statement stat) throws SQLException{
+    public UsuarioDAO(Connection conn, Statement stat) throws SQLException, FileNotFoundException, IOException{
     	try {
 			Class.forName("org.sqlite.JDBC");
+			
+			Properties propiedades = new Properties();
+			FileInputStream entrada = new FileInputStream(System.getProperty("user.dir") +"\\src\\main\\resources\\cfg.properties");
+			propiedades.load(entrada);
+			conn = DriverManager.getConnection(propiedades.getProperty("rutaBddMati")); //solo cambiar esto :)
+			
 			//mati
 			//conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\matut\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
 			//agus
-			conn = DriverManager.getConnection("jdbc:sqlite:C:\\GitAvanzada\\PrograAvanzada\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
-			conn.setAutoCommit(false);
+			//conn = DriverManager.getConnection("jdbc:sqlite:C:\\GitAvanzada\\PrograAvanzada\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
+			//conn.setAutoCommit(false);
 			statement = conn.createStatement();
 			stat = statement;
 			this.conn=conn;

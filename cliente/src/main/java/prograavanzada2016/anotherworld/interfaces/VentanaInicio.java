@@ -1,5 +1,6 @@
 package prograavanzada2016.anotherworld.interfaces;
 import prograavanzada2016.anotherworld.cliente.ClienteJugable;
+import prograavanzada2016.anotherworld.juego.Game;
 import prograavanzada2016.anotherworld.mensajes.RawMessage;
 import prograavanzada2016.anotherworld.mensajes.request.LoginMessage;
 import prograavanzada2016.anotherworld.mensajes.request.PersonajeConsultaMessage;
@@ -116,5 +117,8 @@ public class VentanaInicio extends JFrame {
 
 		clienteJugable.getClienteManager().sendMensaje(new Gson().toJson(rawMessageLogin));
 		this.setVisible(false);
+		
+		Game game = new Game("Another World", 800, 600);
+		game.start();
 	}
 }

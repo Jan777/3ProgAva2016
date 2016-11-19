@@ -9,7 +9,14 @@ import prograavanzada2016.anotherworld.razas.Raza;
 
 public class Personaje extends Ente{
 	
-//	protected String nombrePj;
+	//Atributos de la bdd
+	protected int id;
+	protected long usuarioId;
+	protected int castaId;
+	protected int razaId;
+	protected String nombrePj;
+
+	//Atributos jugables
 	protected Casta casta;
 	protected Raza raza;
 	

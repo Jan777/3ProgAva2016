@@ -5,6 +5,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Properties;
 
 public class Servidor{
 	
@@ -29,7 +30,6 @@ public class Servidor{
 			System.out.println("Cliente conectado...");
 			this.cantidadDeConexiones++;
 			ServidorManager servidorManager=null;
-			
 			ClienteServicio cs = new ClienteServicio(socket,cantidadDeConexiones);
 			this.clientesSala1.add(cs);
 			
