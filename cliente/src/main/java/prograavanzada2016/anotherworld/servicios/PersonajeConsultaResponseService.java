@@ -6,16 +6,17 @@ import com.google.gson.Gson;
 
 import prograavanzada2016.anotherworld.cliente.ClienteJugable;
 import prograavanzada2016.anotherworld.interfaces.VentanaCrearPersonaje;
-import prograavanzada2016.anotherworld.interfaces.VentanaInicio;
-import prograavanzada2016.anotherworld.interfaces.VentanaPrincipal;
+import prograavanzada2016.anotherworld.interfaces.VentanaDeBienvenida;
 import prograavanzada2016.anotherworld.juego.Game;
 import prograavanzada2016.anotherworld.mensajes.MessageBase;
-import prograavanzada2016.anotherworld.mensajes.request.PersonajeConsultaMessage;
-import prograavanzada2016.anotherworld.mensajes.response.LoginMessageResponse;
+import prograavanzada2016.anotherworld.mensajes.request.PersonajeNuevoConectadoMessage;
 import prograavanzada2016.anotherworld.mensajes.response.PersonajeConsultaResponseMessage;
 import prograavanzada2016.anotherworld.modelos.Usuario;
 
 public class PersonajeConsultaResponseService implements ServicioServer{
+	
+	
+
 	private ClienteJugable clienteJugable;
 	
 	public PersonajeConsultaResponseService(ClienteJugable clienteJugable) {
@@ -27,7 +28,6 @@ public class PersonajeConsultaResponseService implements ServicioServer{
 		PersonajeConsultaResponseMessage pcm = (PersonajeConsultaResponseMessage) message;
 		
 		Usuario usuario = new Gson().fromJson(pcm.Payload, Usuario.class);
-		System.out.println("llegamos");
 		//pusimo esto asi por el momento para saber si hay o no hay usuario
 		if(usuario.getPersonaje()==null){
 			// es nuevo
@@ -45,5 +45,6 @@ public class PersonajeConsultaResponseService implements ServicioServer{
 		}
 		
 	}
+
 
 }

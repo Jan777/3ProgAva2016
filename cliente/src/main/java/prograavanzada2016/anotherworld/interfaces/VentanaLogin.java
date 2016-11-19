@@ -40,15 +40,15 @@ import java.util.Properties;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 
-public class VentanaPrincipal extends JFrame implements ILogin{
+public class VentanaLogin extends JFrame implements ILogin{
 
 	private JPanel contentPane;
 	private JTextField usuarioTextField;
 	private JButton logInButton;
 	private JButton registrarseButton;
 	private Usuario usuario;
-	private VentanaRegistro ventanaRegistro;
-	private VentanaInicio ventanaInicio;
+	private VentanaRegistroDeUsuario ventanaRegistro;
+	private VentanaDeBienvenida ventanaInicio;
 	
 	private ClienteJugable clienteJugable;
 	private MensajeEnviable mensajeEnviable;
@@ -76,15 +76,15 @@ public class VentanaPrincipal extends JFrame implements ILogin{
 		});
 	}*/
 
-	public VentanaPrincipal(ClienteJugable clienteJugable) throws IOException{
+	public VentanaLogin(ClienteJugable clienteJugable) throws IOException{
 		this.clienteJugable = clienteJugable;
 		setResizable(false);
 		setLocationRelativeTo(null);
 		setTitle("AnotherWorld");
-		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaPrincipal.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaLogin.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
 		initComponents();
 		usuario = new Usuario();
-		ventanaRegistro = new VentanaRegistro(this.clienteJugable);
+		ventanaRegistro = new VentanaRegistroDeUsuario(this.clienteJugable);
 		ventanaRegistro.setLocationRelativeTo(this);
 		gson = new Gson();
 		setVisible(true);
@@ -164,7 +164,7 @@ public class VentanaPrincipal extends JFrame implements ILogin{
 		contentPane.add(passwordField);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon(VentanaPrincipal.class.getResource("/prograavanzada2016/anotherworld/interfaces/VentanaPrincipal.jpg")));
+		lblNewLabel.setIcon(new ImageIcon(VentanaLogin.class.getResource("/prograavanzada2016/anotherworld/interfaces/VentanaPrincipal.jpg")));
 		lblNewLabel.setBounds(0, 0, 794, 571);
 		contentPane.add(lblNewLabel);
 	}
@@ -213,7 +213,7 @@ public class VentanaPrincipal extends JFrame implements ILogin{
 
 	@Override
 	public void update(String response) {
-		ventanaInicio = new VentanaInicio(clienteJugable);
+		ventanaInicio = new VentanaDeBienvenida(clienteJugable);
     	ventanaInicio.setVisible(true);
     	ventanaInicio.setLocationRelativeTo(null);
     	dispose();

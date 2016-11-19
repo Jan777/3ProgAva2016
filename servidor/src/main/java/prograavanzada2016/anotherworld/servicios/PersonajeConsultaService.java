@@ -30,12 +30,10 @@ public class PersonajeConsultaService implements ServicioServer{
 		//deberiamos modificar esto pero no tenemos tiempo
 		if(personajeDAO.buscar(pm)==1){
 			//si lo encuentra tenemos que avisarle a todos
-			System.out.println("enrttamos");
 			usuario.setPersonaje(pm);
 			for(ClienteServicio cliente : Servidor.clientesSala1){
 				//hay un personaje, le avisamos a su dueño y a todos los demas
 					if(cliente.getId() == pcm.idCliente){
-						System.out.println("encontrado");
 						PrintWriter salida = new PrintWriter(cliente.getSocket().getOutputStream());
 						
 						RawMessage rawMessageLogin = new RawMessage();
@@ -49,21 +47,19 @@ public class PersonajeConsultaService implements ServicioServer{
 							System.out.println("encontrado");
 							PrintWriter salida = new PrintWriter(cliente.getSocket().getOutputStream());
 							
-							RawMessage rawMessageLogin = new RawMessage();
-					    	rawMessageLogin.type = "personajeNuevoConectado";
-					    	rawMessageLogin.message = new PersonajeNuevoConectadoMessage(new Gson().toJson(usuario));
+							RawMessage rawMessageConexion = new RawMessage();
+							rawMessageConexion.type = "personajeNuevoConectado";
+							rawMessageConexion.message = new PersonajeNuevoConectadoMessage(new Gson().toJson(usuario));
 							
-							salida.println(new Gson().toJson(rawMessageLogin));
+							salida.println(new Gson().toJson(rawMessageConexion));
 							salida.flush();
 						}
 					}
 			}			
 		}else{
 			//si no lo encuentra le avisamos solo a el
-			System.out.println("enrttamos2");
 			for(ClienteServicio cliente : Servidor.clientesSala1){
 					if(cliente.getId() == pcm.idCliente){
-						System.out.println("encontrado");
 						PrintWriter salida = new PrintWriter(cliente.getSocket().getOutputStream());
 						
 						RawMessage rawMessageLogin = new RawMessage();

@@ -11,7 +11,7 @@ public class ServiceLocator {
 		}else if(tipo.equals("personajeConsultaResponse")){
 			return new PersonajeConsultaResponseService(clienteJugable);
 		}else if(tipo.equals("personajeNuevoConectado")){
-			
+			return new PersonajeNuevoResponseService(clienteJugable);
 		}else if(tipo.equals("respuestaGenericaNuevoUsuario")){
 			return new RespuestaGenericaNuevoUsuarioService(clienteJugable);
 		}else if(tipo.equals("crearPersonajeResponse")){

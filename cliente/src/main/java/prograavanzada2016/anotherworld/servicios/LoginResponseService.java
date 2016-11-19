@@ -6,15 +6,15 @@ import javax.swing.JOptionPane;
 import com.google.gson.Gson;
 
 import prograavanzada2016.anotherworld.cliente.ClienteJugable;
-import prograavanzada2016.anotherworld.interfaces.VentanaInicio;
-import prograavanzada2016.anotherworld.interfaces.VentanaPrincipal;
+import prograavanzada2016.anotherworld.interfaces.VentanaDeBienvenida;
+import prograavanzada2016.anotherworld.interfaces.VentanaLogin;
 import prograavanzada2016.anotherworld.mensajes.MessageBase;
 import prograavanzada2016.anotherworld.mensajes.response.LoginMessageResponse;
 import prograavanzada2016.anotherworld.modelos.Usuario;
 import prograavanzada2016.anotherworld.servicios.ServicioServer;
 
 public class LoginResponseService implements ServicioServer{
-	private VentanaPrincipal ventanaPrincipal;
+	private VentanaLogin ventanaPrincipal;
 	private ClienteJugable clienteJugable;
 	
 	public LoginResponseService(ClienteJugable clienteJugable) {
@@ -27,15 +27,12 @@ public class LoginResponseService implements ServicioServer{
 		LoginMessageResponse lm = (LoginMessageResponse) message;
 		
 		Usuario usuario = new Gson().fromJson(lm.Payload, Usuario.class);
-		System.out.println("llegamos");
-		//pusimo esto asi por el momento para saber si hay o no hay usuario
 		if(!usuario.getNombre().equals("")){
-			System.out.println("hay usuario: "+usuario.getNombre()+" "+usuario.getApellido());
 			clienteJugable.setUsuario(usuario);
-			new VentanaInicio(clienteJugable);
+			new VentanaDeBienvenida(clienteJugable);
 		}
 		else{
-			ventanaPrincipal = new VentanaPrincipal(clienteJugable);
+			ventanaPrincipal = new VentanaLogin(clienteJugable);
 			JOptionPane.showMessageDialog(ventanaPrincipal, "Datos incorrectos");
 		}
 			

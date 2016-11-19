@@ -24,7 +24,7 @@ public class ClienteJugable{
 	private ClienteManager clienteManager;
 	private Usuario usuario;
 	@Expose(serialize=false)
-	private ArrayList<ClienteJugable> otrosClientes;
+	private ArrayList<Usuario> otrosClientes;
 	@Expose(serialize=false)
 	Gson gson;
 	
@@ -85,4 +85,11 @@ public class ClienteJugable{
 		clienteManager.sendMensaje(gson.toJson(rawMessage));
 	}
 
+	public ArrayList<Usuario> getOtrosClientes() {
+		return otrosClientes;
+	}
+
+	public void setOtrosClientes(ArrayList<Usuario> otrosClientes) {
+		this.otrosClientes = otrosClientes;
+	}
 }

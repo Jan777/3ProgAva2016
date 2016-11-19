@@ -33,7 +33,7 @@ import java.sql.SQLException;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class VentanaRegistro extends JFrame {
+public class VentanaRegistroDeUsuario extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField nombreTextField;
@@ -51,9 +51,9 @@ public class VentanaRegistro extends JFrame {
 	 * Launch the application.
 	 */
 	
-	public VentanaRegistro(ClienteJugable clienteJugable){
+	public VentanaRegistroDeUsuario(ClienteJugable clienteJugable){
 		this.clienteJugable = clienteJugable;
-		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaRegistro.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaRegistroDeUsuario.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
 		setTitle("Registrar");
 		initComponents();
 		usuario = new Usuario();
@@ -153,7 +153,7 @@ public class VentanaRegistro extends JFrame {
 		contentPane.add(passwordField);
 		
 		lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(VentanaRegistro.class.getResource("/prograavanzada2016/anotherworld/interfaces/VentanaPrincipal.jpg")));
+		lblNewLabel.setIcon(new ImageIcon(VentanaRegistroDeUsuario.class.getResource("/prograavanzada2016/anotherworld/interfaces/VentanaPrincipal.jpg")));
 		lblNewLabel.setBounds(0, 0, 434, 261);
 		contentPane.add(lblNewLabel);
 	}

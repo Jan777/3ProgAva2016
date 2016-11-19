@@ -33,7 +33,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
 
-public class VentanaInicio extends JFrame {
+public class VentanaDeBienvenida extends JFrame {
 
 	private JPanel contentPane;
 	private Usuario usuario;
@@ -50,10 +50,10 @@ public class VentanaInicio extends JFrame {
 	JLabel lblBienvenido = new JLabel("New label");
 	private JLabel lblNewLabel;
 
-	public VentanaInicio(ClienteJugable clienteJugable) {
+	public VentanaDeBienvenida(ClienteJugable clienteJugable) {
 		this.clienteJugable=clienteJugable;
 		
-		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaInicio.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaDeBienvenida.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
 		setTitle("Bienvenido!");
 		initComponents();
 		usuario = clienteJugable.getUsuario();
@@ -68,7 +68,7 @@ public class VentanaInicio extends JFrame {
 		lblBienvenido.setText("Bienvenido "+usuario.getNombre());
 		
 		lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(VentanaInicio.class.getResource("/prograavanzada2016/anotherworld/interfaces/VentanaPrincipal.jpg")));
+		lblNewLabel.setIcon(new ImageIcon(VentanaDeBienvenida.class.getResource("/prograavanzada2016/anotherworld/interfaces/VentanaPrincipal.jpg")));
 		lblNewLabel.setBounds(0, 0, 359, 236);
 		contentPane.add(lblNewLabel);
 	

@@ -10,10 +10,11 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import prograavanzada2016.anotherworld.comandos.ComandoLogin;
-import prograavanzada2016.anotherworld.interfaces.VentanaPrincipal;
+import prograavanzada2016.anotherworld.interfaces.VentanaLogin;
 import prograavanzada2016.anotherworld.mensajes.MessageDeserializer;
 import prograavanzada2016.anotherworld.mensajes.RawMessage;
 import prograavanzada2016.anotherworld.mensajes.request.LoginMessage;
+import prograavanzada2016.anotherworld.mensajes.request.PersonajeNuevoConectadoMessage;
 import prograavanzada2016.anotherworld.mensajes.response.CrearPersonajeNuevoResponseMessage;
 import prograavanzada2016.anotherworld.mensajes.response.LoginMessageResponse;
 import prograavanzada2016.anotherworld.mensajes.response.PersonajeConsultaResponseMessage;
@@ -27,7 +28,7 @@ public class ClienteManager implements Runnable, SubjectLogin{
 	private Scanner entrada;
 	private PrintWriter salida;
 	private Gson gson;
-	private VentanaPrincipal ventanaPrincipal;
+	private VentanaLogin ventanaPrincipal;
 	private ClienteJugable clienteJugable;
 	
 	//variables observadoras
@@ -47,7 +48,7 @@ public class ClienteManager implements Runnable, SubjectLogin{
 	public void run() {
 		try{
 			try{
-				ventanaPrincipal = new VentanaPrincipal(this.clienteJugable);
+				ventanaPrincipal = new VentanaLogin(this.clienteJugable);
 				System.out.println("ventana principal activada");
 				entrada = new Scanner(socket.getInputStream());
 				salida = new PrintWriter(socket.getOutputStream());
@@ -89,10 +90,10 @@ public class ClienteManager implements Runnable, SubjectLogin{
 	private void RegisterMessageTypes(MessageDeserializer deserializer) {
 		deserializer.registerMessageType("loginResponse", LoginMessageResponse.class);
         deserializer.registerMessageType("personajeConsultaResponse", PersonajeConsultaResponseMessage.class);	
-        deserializer.registerMessageType("personajeNuevoConectado", PersonajeConsultaResponseMessage.class);
+        deserializer.registerMessageType("personajeNuevoConectado", PersonajeNuevoConectadoMessage.class);
         deserializer.registerMessageType("respuestaGenericaNuevoUsuario", RespuestaGenericaMessage.class);
         deserializer.registerMessageType("crearPersonajeResponse", CrearPersonajeNuevoResponseMessage.class);
-        deserializer.registerMessageType("personajeConsultaResponse", PersonajeConsultaResponseMessage.class);
+        //deserializer.registerMessageType("personajeConsultaResponse", PersonajeConsultaResponseMessage.class);
         
 	}
 
