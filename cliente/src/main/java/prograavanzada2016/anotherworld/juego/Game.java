@@ -166,6 +166,14 @@ public class Game implements Runnable{
 	public EstadoJuego getEstadoJuego() {
 		return (EstadoJuego) estadoJuego;
 	}
+
+	public Usuario getUser() {
+		return user;
+	}
+
+	public void setUser(Usuario user) {
+		this.user = user;
+	}
 	
 	
 }

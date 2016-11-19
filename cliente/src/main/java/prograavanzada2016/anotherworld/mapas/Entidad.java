@@ -236,8 +236,16 @@ public class Entidad {
 		drawY = (int) (y - juego.getCamara().getyOffset());
 		g.drawImage(getFrameAnimacionActual(), drawX, drawY, ancho, alto, null);
 		g.setColor(Color.WHITE);
-		g.drawString("<Humano>", drawX, drawY); // aca obtener raza y casta para dibujarlos
-		g.drawString("Mati - 100", drawX + 10, drawY - 12); //aca obtener el nombre del pj
+		if(juego.getUser().getPersonaje().getRazaId() == 1) // aca obtener raza y casta para dibujarlos
+		{
+			g.drawString("<Humano>", drawX, drawY);
+		}
+		else if(juego.getUser().getPersonaje().getRazaId() == 2){
+			g.drawString("<Elfo>", drawX + 10, drawY);
+		}
+		g.drawString("Energia: "+ juego.getUser().getPersonaje().getEnergia(), drawX + 10, drawY - 12);
+		g.drawString("Salud: "+ juego.getUser().getPersonaje().getSalud(), drawX +10 , drawY - 24);
+		g.drawString(juego.getUser().getPersonaje().getNombre() + " - "+ juego.getUser().getPersonaje().getNivel(), drawX + 10, drawY - 36); //aca obtener el nombre del pj
 	}
 
 	private BufferedImage getFrameAnimacionActual() {
@@ -257,9 +265,10 @@ public class Entidad {
 			return moverArribaIzq.getFrameActual();
 		} else if (diagonalSupDer) {
 			return moverArribaDer.getFrameActual();
+		} else if (juego.getUser().getPersonaje().getRazaId() == 2){
+			return Recursos.humano.get(6)[0];
 		}
-
-		return Recursos.humano.get(6)[0];  //ojo aca
+		return Recursos.elfo.get(6)[0];//ojo aca
 	}
 
 	public float getX() {

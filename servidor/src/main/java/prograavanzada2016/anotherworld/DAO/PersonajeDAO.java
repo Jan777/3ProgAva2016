@@ -79,15 +79,26 @@ public class PersonajeDAO extends DAO<PersonajeModel> {
 	@Override
 	public long buscar(PersonajeModel personajeModel) throws DAOException {
 		try {
-			PersonajeModel personaje;
 			String buscar = "SELECT * FROM personaje where usuario_idUsuario = '"+personajeModel.getUsuarioId()+"';";
 			statement.execute(buscar);
 			ResultSet rs = statement.executeQuery(buscar);
 			if(rs.next()){
-				personaje = new PersonajeModel(rs.getInt("idpersonaje"),rs.getInt("usuario_idUsuario"),rs.getInt("casta_idcasta"),
+				personajeModel.setId(rs.getInt("idpersonaje"));
+				personajeModel.setUsuarioId(rs.getInt("usuario_idUsuario"));
+				personajeModel.setCastaId(rs.getInt("casta_idcasta"));
+				personajeModel.setRazaId(rs.getInt("raza_idraza"));
+				personajeModel.setNombre(rs.getString("nombre"));
+				personajeModel.setFuerza(rs.getInt("fuerza"));
+				personajeModel.setDestreza(rs.getInt("destreza"));
+				personajeModel.setInteligencia(rs.getInt("inteligencia"));
+				personajeModel.setMana(rs.getInt("mana"));
+				personajeModel.setEnergia(rs.getInt("energia"));
+				personajeModel.setNivel(rs.getInt("nivel"));
+				personajeModel.setSalud(rs.getInt("salud"));
+				personajeModel.setExperiencia(rs.getInt("experiencia"));
+				/*personaje = new PersonajeModel(rs.getInt("idpersonaje"),rs.getInt("usuario_idUsuario"),rs.getInt("casta_idcasta"),
             			rs.getInt("raza_idraza"),rs.getString("nombre"),rs.getInt("fuerza"),rs.getInt("destreza"),rs.getInt("inteligencia"),
-            			rs.getInt("mana"),rs.getInt("energia"),rs.getInt("nivel"),rs.getInt("salud"),rs.getInt("experiencia"));
-				//usuario.setPersonaje(personaje);
+            			rs.getInt("mana"),rs.getInt("energia"),rs.getInt("nivel"),rs.getInt("salud"),rs.getInt("experiencia"));*/
 				conn.close();
 			}
 				else{
@@ -98,6 +109,7 @@ public class PersonajeDAO extends DAO<PersonajeModel> {
 	    	ex.printStackTrace();
 	        return NO_ENCONTRADO;
 	    }
+		
 		return ENCONTRADO;
 		}
 
