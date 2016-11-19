@@ -20,8 +20,8 @@ public class EstadoJuego extends Estado {
 		
 		Properties propiedades = new Properties();
 		propiedades.load(new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\resources\\cfg.properties"));
-		mundo = new Mundo(juego, propiedades.getProperty("mundoMati"));
-		//mundo = new Mundo(juego,"c:\\GitAvanzada\\PrograAvanzada\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt");
+		//mundo = new Mundo(juego, propiedades.getProperty("mundoMati"));
+		mundo = new Mundo(juego,"c:\\GitAvanzada\\PrograAvanzada\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt");
 		//mundo = new Mundo(juego, "C:\\Users\\matut\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt"); //Aca construimos nuestro mundo según la matriz en mundoBasic.txt
 		if(juego.getUser().getPersonaje().getRazaId() == 1){ //Aca construimos nuestro personaje segun el personaje del jugador
 			personaje = new Entidad(juego, mundo, 64, 64, 0, 0, Recursos.elfo, 150);
