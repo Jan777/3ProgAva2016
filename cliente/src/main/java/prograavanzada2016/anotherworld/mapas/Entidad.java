@@ -16,7 +16,12 @@ public class Entidad {
 	// Tamaño de la entidad
 	private int ancho;
 	private int alto;
-
+	
+	
+	//otroPersonaje
+	private int xAutomatico;
+	private int yAutomatico;
+	
 	// Posiciones
 	private float x;
 	private float y;
@@ -93,6 +98,7 @@ public class Entidad {
 		this.juego = juego;
 		this.ancho = ancho;
 		this.alto = alto;
+		
 		x = spawnX;
 		y = spawnY;
 
@@ -121,6 +127,8 @@ public class Entidad {
 		
 		if(soyUsuario){
 			getEntrada();
+		}else{
+			getEntradaAutomatica();
 		}
 		mover();
 		if(soyUsuario){
@@ -180,7 +188,76 @@ public class Entidad {
 			enMovimiento = true;
 		}
 	}
+	
+	
+	public void getEntradaAutomatica() {
 
+		//posMouse = juego.getHandlerMouse().getPosMouse();
+		int posMouse[] = new int[2];
+		posMouse[0]=this.getxAutomatico();
+		posMouse[1]=this.getxAutomatico();
+		if (juego.getHandlerMouse().getNuevoRecorrido() || 1==1) {
+			diagonalInfIzq = false;
+			diagonalInfDer = false;
+			diagonalSupIzq = false;
+			diagonalSupDer = false;
+			vertical = false;
+			horizontal = false;
+			enMovimiento = false;
+
+			xInicio = x;
+			yInicio = y;
+			
+			if(x==300 && y==300){
+				System.out.println("hola");
+				xAutomatico=100;
+				yAutomatico=100;
+			}else if(x==100 && y==100){
+				xAutomatico=300;
+				yAutomatico=300;
+			}
+			
+			//xFinal = Math.round(posMouse[0] + juego.getCamara().getxOffset() - xOffset);
+			//yFinal = Math.round(posMouse[1] + juego.getCamara().getyOffset() - yOffset);
+			
+			xFinal = Math.round(posMouse[0]  - xOffset);
+			yFinal = Math.round(posMouse[1] - yOffset);
+						
+			difX = Math.abs(xFinal - xInicio);
+			difY = Math.abs(yFinal - yInicio);
+			relacion = difX / difY;
+
+			if (difX == 0 || difY == 0) {
+				relacion = 1;
+			}
+
+			if (difX < ancho && yInicio != yFinal) {
+				vertical = true;
+				horizontal = true;
+			}
+			if (difY < alto && xInicio != xFinal) {
+				horizontal = true;
+				vertical = true;
+			}
+
+			if (!vertical && !horizontal) {
+				if (xFinal > xInicio && yFinal > yInicio) {
+					diagonalInfDer = true;
+				} else if (xFinal < xInicio && yFinal > yInicio) {
+					diagonalInfIzq = true;
+				} else if (xFinal > xInicio && yFinal < yInicio) {
+					diagonalSupDer = true;
+				} else if (xFinal < xInicio && yFinal < yInicio) {
+					diagonalSupIzq = true;
+				}
+			}
+
+			//juego.getHandlerMouse().setNuevoRecorrido(false);
+			enMovimiento = true;
+		}
+	}
+	
+	
 	public void mover() {
 
 		dx = 0;
@@ -339,4 +416,30 @@ public class Entidad {
 		return yOffset;
 	}
 
+	public int getxAutomatico() {
+		return xAutomatico;
+	}
+
+	public void setxAutomatico(int xAutomatico) {
+		this.xAutomatico = xAutomatico;
+	}
+
+	public int getyAutomatico() {
+		return yAutomatico;
+	}
+
+	public void setyAutomatico(int yAutomatico) {
+		this.yAutomatico = yAutomatico;
+	}
+
+	public Mundo getMundo() {
+		return mundo;
+	}
+
+	public void setMundo(Mundo mundo) {
+		this.mundo = mundo;
+	}
+	
+	
+	
 }

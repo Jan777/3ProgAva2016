@@ -15,7 +15,7 @@ public class EstadoJuego extends Estado {
 
 	private Entidad personaje;
 	private Mundo mundo;
-	
+	private boolean pruebita = true;
 	private ArrayList<Entidad> personajes;
 	
 	public EstadoJuego(Game juego) throws FileNotFoundException, IOException {
@@ -38,6 +38,11 @@ public class EstadoJuego extends Estado {
 		mundo.actualizar();
 		personaje.actualizar();
 		for(Entidad otroPersonaje : personajes){
+			if(pruebita){
+				otroPersonaje.setxAutomatico(300);
+				otroPersonaje.setyAutomatico(300);
+				pruebita=false;
+			}
 			otroPersonaje.actualizar();
 		}
 		
@@ -60,6 +65,7 @@ public class EstadoJuego extends Estado {
 	}
 	
 	public void addOtroPersonaje(Entidad otroPersonaje){
+		otroPersonaje.setMundo(this.mundo);
 		this.personajes.add(otroPersonaje);
 	}
 }
