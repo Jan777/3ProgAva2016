@@ -40,8 +40,9 @@ public class VentanaMapa extends JFrame {
 	private JButton btnMochila;
 	private static Usuario user;
 	public VentanaAlianza ventanaAlianza;
+	public VentanaMochila ventanaMochila;
 
-	public VentanaMapa(Personaje pj) {
+	public VentanaMapa(PersonajeModel personajeModel) {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaMapa.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
 		setTitle("AnotherWorld");
 		setResizable(false);
@@ -71,7 +72,7 @@ public class VentanaMapa extends JFrame {
 		gbl_jpBarraEstado.rowWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
 		jpBarraEstado.setLayout(gbl_jpBarraEstado);
 		
-		lblPersonaje = new JLabel("PJ: "+pj.getNombre());
+		lblPersonaje = new JLabel("PJ: "+personajeModel.getNombre());
 		GridBagConstraints gbc_lblPersonaje = new GridBagConstraints();
 		gbc_lblPersonaje.fill = GridBagConstraints.HORIZONTAL;
 		gbc_lblPersonaje.insets = new Insets(0, 0, 5, 5);
@@ -118,7 +119,7 @@ public class VentanaMapa extends JFrame {
 		btnMochila.setFont(new Font("Tahoma", Font.BOLD, 12));
 		btnMochila.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaMochila ventanaMochila = new VentanaMochila();
+				ventanaMochila = new VentanaMochila();
 				ventanaMochila.setVisible(true);
 				ventanaMochila.setSize(new Dimension(500,300));
 				Point p = MouseInfo.getPointerInfo().getLocation();
@@ -216,5 +217,12 @@ public class VentanaMapa extends JFrame {
 		gbc_jpMapa.gridy = 1;
 		//jpMapa.setSize(1000, 1000);
 		jpPpal.add(jpMapa, gbc_jpMapa);
+		
+		setVisible(true);
+	}
+	public static void main(String args[]){
+		PersonajeModel pm = new PersonajeModel();
+		pm.setNombre("agus");
+		VentanaMapa vm = new VentanaMapa(pm);
 	}
 }
