@@ -1,5 +1,7 @@
 package prograavanzada2016.anotherworld.servicios;
 
+import java.io.PrintWriter;
+
 import javax.swing.JOptionPane;
 
 import com.google.gson.Gson;
@@ -9,6 +11,7 @@ import prograavanzada2016.anotherworld.interfaces.VentanaCrearPersonaje;
 import prograavanzada2016.anotherworld.interfaces.VentanaDeBienvenida;
 import prograavanzada2016.anotherworld.juego.Game;
 import prograavanzada2016.anotherworld.mensajes.MessageBase;
+import prograavanzada2016.anotherworld.mensajes.RawMessage;
 import prograavanzada2016.anotherworld.mensajes.request.PersonajeNuevoConectadoMessage;
 import prograavanzada2016.anotherworld.mensajes.response.PersonajeConsultaResponseMessage;
 import prograavanzada2016.anotherworld.modelos.Usuario;
@@ -46,6 +49,17 @@ public class PersonajeConsultaResponseService implements ServicioServer{
 			clienteJugable.setJuego(game);
 			
 			game.start();
+			
+			PrintWriter salida = new PrintWriter(this.clienteJugable.getSocket().getOutputStream());
+			
+			RawMessage rawMessageLogin = new RawMessage();
+	    	rawMessageLogin.type = "buscarPersonajes";
+	    	rawMessageLogin.message = new PersonajeConsultaResponseMessage(new Gson().toJson(clienteJugable.getUsuario()));
+			
+			salida.println(new Gson().toJson(rawMessageLogin));
+			salida.flush();
+			
+			
 		}
 		
 	}

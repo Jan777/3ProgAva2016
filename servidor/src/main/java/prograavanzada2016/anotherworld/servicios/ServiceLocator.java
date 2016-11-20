@@ -20,6 +20,8 @@ public class ServiceLocator {
 			return new CrearPersonajeNuevoService();
 		}else if(tipo.equals("moverPersonaje")){
 			return new MoverService();
+		}else if(tipo.equals("buscarPersonajes")){
+			return new BuscarPersonajesService();
 		}
 		return null;
 	}

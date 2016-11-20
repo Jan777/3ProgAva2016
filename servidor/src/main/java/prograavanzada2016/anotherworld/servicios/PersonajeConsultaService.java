@@ -44,25 +44,6 @@ public class PersonajeConsultaService implements ServicioServer{
 						
 						salida.println(new Gson().toJson(rawMessageLogin));
 						salida.flush();
-						
-						
-						//logica para obtener los usuarios que ya estan adentro
-						ArrayList<Usuario> usuariosAdentro = new ArrayList<>();
-						for(ClienteServicio clienteAdentro : Servidor.clientesSala1){
-							if(clienteAdentro.getId()!=pcm.idCliente){
-								usuariosAdentro.add(clienteAdentro.getUsuario());
-							}
-						}
-						PrintWriter salida2 = new PrintWriter(cliente.getSocket().getOutputStream());
-						
-						RawMessage rawMessageLogin2 = new RawMessage();
-				    	rawMessageLogin2.type = "recibirPersonajes";
-				    	rawMessageLogin2.message = new PersonajeConsultaResponseMessage(new Gson().toJson(usuariosAdentro));
-						
-						salida2.println(new Gson().toJson(rawMessageLogin2));
-						salida2.flush();
-						//fin de logica
-						
 					}else{
 						if(!cliente.getSocket().isClosed()){
 							PrintWriter salida = new PrintWriter(cliente.getSocket().getOutputStream());
