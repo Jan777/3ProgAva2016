@@ -28,6 +28,7 @@ public class LoginResponseService implements ServicioServer{
 		
 		Usuario usuario = new Gson().fromJson(lm.Payload, Usuario.class);
 		if(!usuario.getNombre().equals("")){
+			usuario.setClienteId(this.clienteJugable.getIdCliente());
 			clienteJugable.setUsuario(usuario);
 			new VentanaDeBienvenida(clienteJugable);
 		}

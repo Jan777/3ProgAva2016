@@ -3,6 +3,7 @@ package prograavanzada2016.anotherworld.mapas;
 import java.awt.Graphics;
 
 import prograavanzada2016.anotherworld.juego.*;
+import prograavanzada2016.anotherworld.modelos.Usuario;
 
 public abstract class Estado {
 
@@ -26,5 +27,5 @@ public abstract class Estado {
 		return estadoActual;
 	}
 	
-	public abstract void addOtroPersonaje(Entidad otroPersonaje);
+	public abstract void addOtroPersonaje(Entidad otroPersonaje,Usuario usuario);
 }

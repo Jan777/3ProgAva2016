@@ -5,11 +5,14 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.util.LinkedList;
 
-import prograavanzada2016.anotherworld.mapas.*;
+import prograavanzada2016.anotherworld.modelos.PersonajeModel;
+import prograavanzada2016.anotherworld.modelos.Usuario;
 import prograavanzada2016.anotherworld.juego.*;
 import prograavanzada2016.anotherworld.utilities.*;
 
 public class Entidad {
+	
+	private Usuario usuario;
 	
 	Game juego;
 
@@ -196,9 +199,11 @@ public class Entidad {
 
 		//posMouse = juego.getHandlerMouse().getPosMouse();
 		int posMouse[] = new int[2];
-		posMouse[0]=this.getxAutomatico();
-		posMouse[1]=this.getxAutomatico();
-		if (juego.getHandlerMouse().getNuevoRecorrido() || 1==1) {
+		
+		if (this.getUsuario().getPersonaje().isNuevoCamino()) {
+			this.getUsuario().getPersonaje().setNuevoCamino(false);
+			posMouse[0]=this.getUsuario().getPersonaje().getMovimientoX();
+			posMouse[1]=this.getUsuario().getPersonaje().getMovimientoY();
 			diagonalInfIzq = false;
 			diagonalInfDer = false;
 			diagonalSupIzq = false;
@@ -210,13 +215,13 @@ public class Entidad {
 			xInicio = x;
 			yInicio = y;
 			
-			if(x==300 && y==300){
+			/*if(x==300 && y==300){
 				xAutomatico=100;
 				yAutomatico=100;
 			}else if(x==100 && y==100){
 				xAutomatico=300;
 				yAutomatico=300;
-			}
+			}*/
 			
 			//xFinal = Math.round(posMouse[0] + juego.getCamara().getxOffset() - xOffset);
 			//yFinal = Math.round(posMouse[1] + juego.getCamara().getyOffset() - yOffset);
@@ -440,7 +445,13 @@ public class Entidad {
 	public void setMundo(Mundo mundo) {
 		this.mundo = mundo;
 	}
-	
-	
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
 	
 }

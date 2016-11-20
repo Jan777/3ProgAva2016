@@ -14,6 +14,9 @@ public class PersonajeModel {
 	private int nivel;
 	private int salud;
 	private int experiencia;
+	private int movimientoX;
+	private int movimientoY;
+	private boolean nuevoCamino;
 	public PersonajeModel(int id, int usuarioId, int castaId, int razaId, String nombre, int fuerza, int destreza,
 			int inteligencia, int mana, int energia, int nivel, int salud, int experiencia) {
 		this.id = id;
@@ -133,4 +136,23 @@ public class PersonajeModel {
 		}
 		return 2;
 	}
+	public int getMovimientoX() {
+		return movimientoX;
+	}
+	public void setMovimientoX(int movimientoX) {
+		this.movimientoX = movimientoX;
+	}
+	public int getMovimientoY() {
+		return movimientoY;
+	}
+	public void setMovimientoY(int movimientoY) {
+		this.movimientoY = movimientoY;
+	}
+	public boolean isNuevoCamino() {
+		return nuevoCamino;
+	}
+	public void setNuevoCamino(boolean nuevoCamino) {
+		this.nuevoCamino = nuevoCamino;
+	}	
+	
 }

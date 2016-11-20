@@ -41,6 +41,7 @@ public class Game implements Runnable{
 		this.height = height;
 		this.user = usuario;
 		mouseController = new MouseController();
+		mouseController.setUsuario(usuario);
 	}
 
 	public void initGame() throws FileNotFoundException, IOException { // Carga lo necesario para iniciar el juego
@@ -182,7 +183,7 @@ public class Game implements Runnable{
 		} else if (otroUsuario.getPersonaje().getRazaId() == 2){
 			personaje = new Entidad(this, 64, 64, 0, 0, Recursos.humano, 150);
 		}
-		this.estadoJuego.addOtroPersonaje(personaje);
+		this.estadoJuego.addOtroPersonaje(personaje,otroUsuario);
 	}
 
 	public GameScreen getScreen() {

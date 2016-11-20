@@ -18,6 +18,8 @@ public class ServiceLocator {
 			return new UsuarioNuevoMessageService();
 		}else if(tipo.equals("crearPersonaje")){
 			return new CrearPersonajeNuevoService();
+		}else if(tipo.equals("moverPersonaje")){
+			return new MoverService();
 		}
 		return null;
 	}

@@ -5,6 +5,8 @@ import com.google.gson.annotations.Expose;
 import prograavanzada2016.anotherworld.entities.Personaje;
 
 public class Usuario {
+	
+	private int clienteId;
 	private long id;
 	private String nombre;
 	private String apellido;
@@ -68,7 +70,15 @@ public class Usuario {
 	public void setPersonaje(PersonajeModel personaje) {
 		this.personaje = personaje;
 	}
-	
-	
 
+
+	public int getClienteId() {
+		return clienteId;
+	}
+
+
+	public void setClienteId(int clienteId) {
+		this.clienteId = clienteId;
+	}
+	
 }

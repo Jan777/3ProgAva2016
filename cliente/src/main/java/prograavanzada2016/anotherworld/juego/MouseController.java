@@ -3,12 +3,18 @@ package prograavanzada2016.anotherworld.juego;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+import com.google.gson.Gson;
+
+import prograavanzada2016.anotherworld.mensajes.RawMessage;
+import prograavanzada2016.anotherworld.mensajes.request.PersonajeConsultaMessage;
+import prograavanzada2016.anotherworld.modelos.Usuario;
+
 public class MouseController implements MouseListener {
 	private int x;
 	private int y;
 	private int posMouse[];
 	private boolean nuevoRecorrido;
-	
+	private Usuario usuario;
 	
 	public MouseController() {
 		posMouse = new int[2];
@@ -24,6 +30,13 @@ public class MouseController implements MouseListener {
 		x = e.getX();
 		y = e.getY();
 		nuevoRecorrido = true;
+		
+		this.usuario.getPersonaje().setMovimientoX(x);
+		this.usuario.getPersonaje().setMovimientoY(y);
+		RawMessage rawMessageLogin = new RawMessage();
+		rawMessageLogin.type = "moverPersonaje";
+		rawMessageLogin.message = new PersonajeConsultaMessage(new Gson().toJson(this.usuario));
+		
 	}
 
 	@Override
@@ -56,5 +69,13 @@ public class MouseController implements MouseListener {
 	
 	public void setNuevoRecorrido(boolean b) {
 		nuevoRecorrido = b;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 }
