@@ -32,7 +32,7 @@ public class VentanaMochila extends JFrame {
 		JLabel lblMochila = new JLabel("Mochila");
 		lblMochila.setForeground(Color.WHITE);
 		lblMochila.setFont(new Font("Tahoma", Font.PLAIN, 28));
-		lblMochila.setBounds(56, 28, 109, 24);
+		lblMochila.setBounds(56, 10, 109, 24);
 		getContentPane().add(lblMochila);
 		
 		

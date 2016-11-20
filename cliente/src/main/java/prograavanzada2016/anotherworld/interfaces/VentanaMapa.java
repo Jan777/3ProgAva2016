@@ -71,9 +71,9 @@ public class VentanaMapa extends JFrame {
 		gbc_jpBarraEstado.gridy = 0;
 		jpPpal.add(jpBarraEstado, gbc_jpBarraEstado);
 		GridBagLayout gbl_jpBarraEstado = new GridBagLayout();
-		gbl_jpBarraEstado.columnWidths = new int[]{0, 0, 0, 179, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0};
+		gbl_jpBarraEstado.columnWidths = new int[]{0, 0, 0, 179, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0};
 		gbl_jpBarraEstado.rowHeights = new int[]{0, 0, 0, 0};
-		gbl_jpBarraEstado.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_jpBarraEstado.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		gbl_jpBarraEstado.rowWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
 		jpBarraEstado.setLayout(gbl_jpBarraEstado);
 		
@@ -93,30 +93,6 @@ public class VentanaMapa extends JFrame {
 		gbc_lblSalud.gridy = 0;
 		jpBarraEstado.add(lblSalud, gbc_lblSalud);
 		
-		lblFuerza = new JLabel("Fuerza:");
-		GridBagConstraints gbc_lblFuerza = new GridBagConstraints();
-		gbc_lblFuerza.anchor = GridBagConstraints.WEST;
-		gbc_lblFuerza.insets = new Insets(0, 0, 5, 5);
-		gbc_lblFuerza.gridx = 7;
-		gbc_lblFuerza.gridy = 0;
-		jpBarraEstado.add(lblFuerza, gbc_lblFuerza);
-		
-		JButton btnCombate = new JButton("Combatir");
-		btnCombate.setBackground(new Color(59, 89, 182));
-		btnCombate.setForeground(Color.BLACK);
-		btnCombate.setFocusPainted(false);
-		btnCombate.setFont(new Font("Tahoma", Font.BOLD, 12));
-		btnCombate.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		GridBagConstraints gbc_btnCombate = new GridBagConstraints();
-		gbc_btnCombate.fill = GridBagConstraints.BOTH;
-		gbc_btnCombate.insets = new Insets(0, 0, 5, 5);
-		gbc_btnCombate.gridx = 14;
-		gbc_btnCombate.gridy = 0;
-		jpBarraEstado.add(btnCombate, gbc_btnCombate);
-		
 		btnMochila = new JButton("Mochila");
 		btnMochila.setBackground(new Color(59, 89, 182));
 		btnMochila.setForeground(Color.BLACK);
@@ -126,17 +102,27 @@ public class VentanaMapa extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				ventanaMochila = new VentanaMochila();
 				ventanaMochila.setVisible(true);
-				ventanaMochila.setSize(new Dimension(500,300));
+				ventanaMochila.setResizable(false);
+				ventanaMochila.setSize(new Dimension(420,300));
+				ventanaMochila.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 				Point p = MouseInfo.getPointerInfo().getLocation();
 				int x = p.x;
 				int y= p.y;
 				ventanaMochila.setLocation(x,y);			
 			}
 		});
+		
+		lblFuerza = new JLabel("Fuerza:");
+		GridBagConstraints gbc_lblFuerza = new GridBagConstraints();
+		gbc_lblFuerza.anchor = GridBagConstraints.WEST;
+		gbc_lblFuerza.insets = new Insets(0, 0, 5, 5);
+		gbc_lblFuerza.gridx = 19;
+		gbc_lblFuerza.gridy = 0;
+		jpBarraEstado.add(lblFuerza, gbc_lblFuerza);
 		GridBagConstraints gbc_btnMochila = new GridBagConstraints();
 		gbc_btnMochila.fill = GridBagConstraints.HORIZONTAL;
-		gbc_btnMochila.insets = new Insets(0, 0, 5, 5);
-		gbc_btnMochila.gridx = 15;
+		gbc_btnMochila.insets = new Insets(0, 0, 5, 0);
+		gbc_btnMochila.gridx = 45;
 		gbc_btnMochila.gridy = 0;
 		jpBarraEstado.add(btnMochila, gbc_btnMochila);
 		
@@ -160,7 +146,7 @@ public class VentanaMapa extends JFrame {
 		GridBagConstraints gbc_lblDestreza = new GridBagConstraints();
 		gbc_lblDestreza.anchor = GridBagConstraints.WEST;
 		gbc_lblDestreza.insets = new Insets(0, 0, 5, 5);
-		gbc_lblDestreza.gridx = 7;
+		gbc_lblDestreza.gridx = 19;
 		gbc_lblDestreza.gridy = 1;
 		jpBarraEstado.add(lblDestreza, gbc_lblDestreza);
 		
@@ -173,7 +159,9 @@ public class VentanaMapa extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				VentanaAlianza ventanaAlianza = new VentanaAlianza();
 				ventanaAlianza.setVisible(true);
-				ventanaAlianza.setSize(new Dimension(500,300));
+				ventanaAlianza.setResizable(false);
+				ventanaAlianza.setSize(new Dimension(400,280));
+				ventanaAlianza.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 				Point p = MouseInfo.getPointerInfo().getLocation();
 				int x = p.x;
 				int y= p.y;
@@ -182,9 +170,9 @@ public class VentanaMapa extends JFrame {
 			}
 		});
 		GridBagConstraints gbc_btnCrearAlianza = new GridBagConstraints();
-		gbc_btnCrearAlianza.fill = GridBagConstraints.HORIZONTAL;
-		gbc_btnCrearAlianza.insets = new Insets(0, 0, 5, 5);
-		gbc_btnCrearAlianza.gridx = 14;
+		gbc_btnCrearAlianza.anchor = GridBagConstraints.WEST;
+		gbc_btnCrearAlianza.insets = new Insets(0, 0, 5, 0);
+		gbc_btnCrearAlianza.gridx = 45;
 		gbc_btnCrearAlianza.gridy = 1;
 		jpBarraEstado.add(btnCrearAlianza, gbc_btnCrearAlianza);
 		
@@ -208,7 +196,7 @@ public class VentanaMapa extends JFrame {
 		GridBagConstraints gbc_lblInteligencia = new GridBagConstraints();
 		gbc_lblInteligencia.anchor = GridBagConstraints.WEST;
 		gbc_lblInteligencia.insets = new Insets(0, 0, 0, 5);
-		gbc_lblInteligencia.gridx = 7;
+		gbc_lblInteligencia.gridx = 19;
 		gbc_lblInteligencia.gridy = 2;
 		jpBarraEstado.add(lblInteligencia, gbc_lblInteligencia);
 		

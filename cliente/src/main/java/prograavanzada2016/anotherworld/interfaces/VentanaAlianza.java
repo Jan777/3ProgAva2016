@@ -45,6 +45,11 @@ public class VentanaAlianza extends JFrame {
 		contentPane.add(comboBox);
 		
 		JButton btnNewButton = new JButton("Crear");
+		btnNewButton.setBackground(new Color(59, 89, 182));
+	    btnNewButton.setForeground(Color.BLACK);
+	    btnNewButton.setFocusPainted(false);
+	    btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 12));
+	    btnNewButton.setBounds(271, 147, 89, 23);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
@@ -53,6 +58,11 @@ public class VentanaAlianza extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar.setBackground(new Color(59, 89, 182));
+	    btnCancelar.setForeground(Color.BLACK);
+	    btnCancelar.setFocusPainted(false);
+	    btnCancelar.setFont(new Font("Tahoma", Font.BOLD, 12));
+	    btnCancelar.setBounds(271, 147, 89, 23);
 		btnCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				setVisible(false);

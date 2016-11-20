@@ -17,6 +17,7 @@ import prograavanzada2016.anotherworld.cliente.MensajeEnviable;
 import prograavanzada2016.anotherworld.comandos.ComandoLogin;
 import prograavanzada2016.anotherworld.mensajes.RawMessage;
 import prograavanzada2016.anotherworld.mensajes.request.LoginMessage;
+import prograavanzada2016.anotherworld.modelos.PersonajeModel;
 import prograavanzada2016.anotherworld.modelos.Usuario;
 import prograavanzada2016.anotherworld.observer.ILogin;
 
@@ -215,7 +216,9 @@ public class VentanaLogin extends JFrame implements ILogin{
 	public void update(String response) {
 		ventanaInicio = new VentanaDeBienvenida(clienteJugable);
     	ventanaInicio.setVisible(true);
+    	ventanaInicio.setResizable(false);
     	ventanaInicio.setLocationRelativeTo(null);
     	dispose();
 	}
+	
 }

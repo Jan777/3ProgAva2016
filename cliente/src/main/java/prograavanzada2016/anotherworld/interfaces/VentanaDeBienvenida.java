@@ -32,6 +32,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
+import javax.swing.SwingConstants;
 
 public class VentanaDeBienvenida extends JFrame {
 
@@ -48,7 +49,6 @@ public class VentanaDeBienvenida extends JFrame {
 	public VentanaCrearPersonaje ventanaCrearPersonaje;
 	
 	JLabel lblBienvenido = new JLabel("New label");
-	private JLabel lblNewLabel;
 
 	public VentanaDeBienvenida(ClienteJugable clienteJugable) {
 		this.clienteJugable=clienteJugable;
@@ -60,17 +60,18 @@ public class VentanaDeBienvenida extends JFrame {
 		
 		setVisible(true);
     	setLocationRelativeTo(null);
+		lblBienvenido.setVerticalAlignment(SwingConstants.TOP);
 		
 		lblBienvenido.setForeground(Color.WHITE);
 		lblBienvenido.setFont(new Font("Tahoma", Font.PLAIN, 29));
-		lblBienvenido.setBounds(65, 68, 322, 52);
+		lblBienvenido.setBounds(27, 91, 322, 52);
 		contentPane.add(lblBienvenido);
 		lblBienvenido.setText("Bienvenido "+usuario.getNombre());
 		
-		lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(VentanaDeBienvenida.class.getResource("/prograavanzada2016/anotherworld/interfaces/VentanaPrincipal.jpg")));
-		lblNewLabel.setBounds(0, 0, 359, 236);
-		contentPane.add(lblNewLabel);
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon(VentanaDeBienvenida.class.getResource("/prograavanzada2016/anotherworld/interfaces/VentanaPrincipal.jpg")));
+		label.setBounds(0, 0, 359, 236);
+		contentPane.add(label);
 	
 				
 		/*try {
