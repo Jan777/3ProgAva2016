@@ -17,6 +17,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 
 import prograavanzada2016.anotherworld.entities.Personaje;
+import prograavanzada2016.anotherworld.juego.Game;
 import prograavanzada2016.anotherworld.mapas.Mapa;
 import prograavanzada2016.anotherworld.modelos.*;
 
@@ -228,5 +229,8 @@ public class VentanaMapa extends JFrame {
 		PersonajeModel pm = new PersonajeModel();
 		pm.setNombre("agus");
 		VentanaMapa vm = new VentanaMapa(pm);
+		//Usuario usuario = new Usuario();
+		//Game game = new Game("pedro", 800, 600, usuario);
+		//vm.add(game.getScreen().getCanvas());
 	}
 }

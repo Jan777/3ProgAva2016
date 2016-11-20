@@ -184,4 +184,14 @@ public class Game implements Runnable{
 		}
 		this.estadoJuego.addOtroPersonaje(personaje);
 	}
+
+	public GameScreen getScreen() {
+		return screen;
+	}
+
+	public void setScreen(GameScreen screen) {
+		this.screen = screen;
+	}
+	
+	
 }

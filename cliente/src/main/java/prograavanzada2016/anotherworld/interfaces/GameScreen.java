@@ -19,12 +19,12 @@ public class GameScreen {
 	private Canvas canvas; // Aca donde se grafica el juego
 
 	public GameScreen(final String nombre, final int ancho, final int alto) {
-		pantalla = new JFrame(nombre);
-		pantalla.setSize(396, 229);
-		pantalla.setResizable(false);
-		pantalla.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		pantalla.setLocationRelativeTo(null);
-		pantalla.setVisible(true);
+		//pantalla = new JFrame(nombre);
+		//pantalla.setSize(396, 229);
+		//pantalla.setResizable(false);
+	//	pantalla.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//pantalla.setLocationRelativeTo(null);
+		//pantalla.setVisible(true);
 
 		canvas = new Canvas();
 		canvas.setPreferredSize(new Dimension(ancho, alto));
@@ -32,11 +32,11 @@ public class GameScreen {
 		canvas.setMinimumSize(new Dimension(ancho, alto));
 		canvas.setFocusable(false);
 		
-		pantalla.getContentPane().add(canvas);
+		//pantalla.getContentPane().add(canvas);
 		
 		JToolBar toolBar = new JToolBar();
-		pantalla.getContentPane().add(toolBar, BorderLayout.NORTH);
-		pantalla.pack();
+		//pantalla.getContentPane().add(toolBar, BorderLayout.NORTH);
+		//pantalla.pack();
 	}
 
 	public Canvas getCanvas() {
@@ -46,4 +46,10 @@ public class GameScreen {
 	public JFrame getFrame() {
 		return pantalla;
 	}
+
+	public void setCanvas(Canvas canvas) {
+		this.canvas = canvas;
+	}
+	
+	
 }
