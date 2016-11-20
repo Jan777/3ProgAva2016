@@ -41,6 +41,9 @@ public class PersonajeConsultaResponseService implements ServicioServer{
 			System.out.println("tiene un personaje");
 			
 			Game game = new Game("Another World", 800, 600, usuario);
+			
+			clienteJugable.setJuego(game);
+			
 			game.start();
 		}
 		

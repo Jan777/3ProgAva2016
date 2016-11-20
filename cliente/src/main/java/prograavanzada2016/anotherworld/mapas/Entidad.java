@@ -63,6 +63,8 @@ public class Entidad {
 	private final Animacion moverAbajoIzq;
 
 	private Mundo mundo;
+	
+	private boolean soyUsuario=false;
 
 	public Entidad(Game juego, Mundo mundo, int ancho, int alto, float spawnX, float spawnY, LinkedList<BufferedImage[]> animaciones, int velAnimacion) {
 		this.juego = juego;
@@ -71,6 +73,26 @@ public class Entidad {
 		this.mundo = mundo;
 		xOffset = ancho / 2;
 		yOffset = alto / 2;
+		x = spawnX;
+		y = spawnY;
+
+		this.animaciones = animaciones;
+		 
+	    moverIzq = new Animacion(velAnimacion, animaciones.get(0));
+	    moverArribaIzq = new Animacion(velAnimacion, animaciones.get(1));
+	    moverArriba = new Animacion(velAnimacion, animaciones.get(2));
+	    moverArribaDer = new Animacion(velAnimacion, animaciones.get(3));
+	    moverDer = new Animacion(velAnimacion, animaciones.get(4));
+	    moverAbajoDer = new Animacion(velAnimacion, animaciones.get(5));
+	    moverAbajo = new Animacion(velAnimacion, animaciones.get(6));
+	    moverAbajoIzq = new Animacion(velAnimacion, animaciones.get(7));
+	    this.soyUsuario=true;
+	}
+	
+	public Entidad(Game juego, int ancho, int alto, float spawnX, float spawnY, LinkedList<BufferedImage[]> animaciones, int velAnimacion) {
+		this.juego = juego;
+		this.ancho = ancho;
+		this.alto = alto;
 		x = spawnX;
 		y = spawnY;
 
@@ -95,9 +117,15 @@ public class Entidad {
 		moverAbajoDer.actualizar();
 		moverAbajo.actualizar();
 		moverAbajoIzq.actualizar();
-		getEntrada();
+		
+		
+		if(soyUsuario){
+			getEntrada();
+		}
 		mover();
-		juego.getCamara().Centrar(this);
+		if(soyUsuario){
+			juego.getCamara().Centrar(this);
+		}
 	}
 
 	public void getEntrada() {

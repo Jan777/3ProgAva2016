@@ -175,5 +175,13 @@ public class Game implements Runnable{
 		this.user = user;
 	}
 	
-	
+	public void agregarNuevoPersonaje(Usuario otroUsuario){
+		Entidad personaje=null;
+		if(otroUsuario.getPersonaje().getRazaId() == 1){ //Aca construimos nuestro personaje segun el personaje del jugador
+			personaje = new Entidad(this, 64, 64, 0, 0, Recursos.elfo, 150);
+		} else if (otroUsuario.getPersonaje().getRazaId() == 2){
+			personaje = new Entidad(this, 64, 64, 0, 0, Recursos.humano, 150);
+		}
+		this.estadoJuego.addOtroPersonaje(personaje);
+	}
 }

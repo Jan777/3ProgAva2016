@@ -11,9 +11,9 @@ import prograavanzada2016.anotherworld.mensajes.request.PersonajeNuevoConectadoM
 import prograavanzada2016.anotherworld.mensajes.response.PersonajeConsultaResponseMessage;
 import prograavanzada2016.anotherworld.modelos.Usuario;
 
-public class PersonajeNuevoResponseService implements ServicioServer{private ClienteJugable clienteJugable;
+public class EntroPersonajeNuevoResponseService implements ServicioServer{private ClienteJugable clienteJugable;
 
-public PersonajeNuevoResponseService(ClienteJugable clienteJugable) {
+public EntroPersonajeNuevoResponseService(ClienteJugable clienteJugable) {
 	this.clienteJugable=clienteJugable;
 }
 
@@ -21,7 +21,8 @@ public PersonajeNuevoResponseService(ClienteJugable clienteJugable) {
 public void ejecutar(MessageBase message) throws Exception {
 	PersonajeNuevoConectadoMessage resp = (PersonajeNuevoConectadoMessage) message;
 	Usuario usuario = new Gson().fromJson(resp.Payload, Usuario.class);
-	clienteJugable.getOtrosClientes().add(usuario);
+	this.clienteJugable.getOtrosClientes().add(usuario);
 	System.out.println("se agrego un nuevo personaje");
-	new VentanaDeBienvenida(clienteJugable);		
+	this.clienteJugable.getJuego().agregarNuevoPersonaje(usuario);
+	//new VentanaDeBienvenida(clienteJugable);		
 }}

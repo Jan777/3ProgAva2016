@@ -12,6 +12,7 @@ import com.google.gson.annotations.Expose;
 
 import prograavanzada2016.anotherworld.comandos.Comando;
 import prograavanzada2016.anotherworld.entities.Personaje;
+import prograavanzada2016.anotherworld.juego.Game;
 import prograavanzada2016.anotherworld.mensajes.RawMessage;
 import prograavanzada2016.anotherworld.modelos.Usuario;
 import prograavanzada2016.anotherworld.observer.ILogin;
@@ -27,12 +28,14 @@ public class ClienteJugable{
 	private ArrayList<Usuario> otrosClientes;
 	@Expose(serialize=false)
 	Gson gson;
+	private Game juego;
+	
 	
 	public ClienteJugable(String server, int port) throws UnknownHostException, IOException {
 		this.otrosClientes=new ArrayList<>();
 		this.socket = new Socket(server, port);
 		clienteManager = new ClienteManager(this);
-		Thread instancia = new Thread(clienteManager);
+		Thread instancia = new Thread(clienteManager,"Cliente");
 		gson = new Gson();
 		instancia.start();
 	}
@@ -91,5 +94,13 @@ public class ClienteJugable{
 
 	public void setOtrosClientes(ArrayList<Usuario> otrosClientes) {
 		this.otrosClientes = otrosClientes;
+	}
+
+	public Game getJuego() {
+		return juego;
+	}
+
+	public void setJuego(Game juego) {
+		this.juego = juego;
 	}
 }

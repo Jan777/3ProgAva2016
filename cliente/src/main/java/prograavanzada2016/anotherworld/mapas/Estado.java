@@ -25,4 +25,6 @@ public abstract class Estado {
 	public static Estado getEstado() {
 		return estadoActual;
 	}
+	
+	public abstract void addOtroPersonaje(Entidad otroPersonaje);
 }
