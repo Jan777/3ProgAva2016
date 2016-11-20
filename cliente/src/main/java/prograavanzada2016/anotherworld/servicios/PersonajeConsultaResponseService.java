@@ -29,10 +29,11 @@ public class PersonajeConsultaResponseService implements ServicioServer{
 		
 		Usuario usuario = new Gson().fromJson(pcm.Payload, Usuario.class);
 		//pusimo esto asi por el momento para saber si hay o no hay usuario
+		this.clienteJugable.setUsuario(usuario);
 		if(usuario.getPersonaje()==null){
 			// es nuevo
 			System.out.println("hay usuario: "+usuario.getNombre()+" "+usuario.getApellido());
-			this.clienteJugable.setUsuario(usuario);
+			
 			new VentanaCrearPersonaje(this.clienteJugable);
 		}
 		else{
@@ -40,7 +41,7 @@ public class PersonajeConsultaResponseService implements ServicioServer{
 			//JOptionPane.showMessageDialog(ventanaPrincipal, "Datos incorrectos");
 			System.out.println("tiene un personaje");
 			
-			Game game = new Game("Another World", 800, 600, usuario);
+			Game game = new Game("Another World", 800, 600, clienteJugable);
 			
 			clienteJugable.setJuego(game);
 			

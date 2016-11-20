@@ -174,7 +174,7 @@ public class VentanaCrearPersonaje extends JFrame {
 				this.setVisible(false);
 				
 				usuario.setPersonaje(pm);
-				Game game = new Game("Another World", 800, 600, usuario);
+				Game game = new Game("Another World", 800, 600, clienteJugable);
 				game.start();
 				//usuario.setPersonajeJugador(personaje);
 				//ventanaMapaJuego = new VentanaMapa(personaje);

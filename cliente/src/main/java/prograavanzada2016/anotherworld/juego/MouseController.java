@@ -5,6 +5,7 @@ import java.awt.event.MouseListener;
 
 import com.google.gson.Gson;
 
+import prograavanzada2016.anotherworld.cliente.ClienteJugable;
 import prograavanzada2016.anotherworld.mensajes.RawMessage;
 import prograavanzada2016.anotherworld.mensajes.request.PersonajeConsultaMessage;
 import prograavanzada2016.anotherworld.modelos.Usuario;
@@ -14,7 +15,7 @@ public class MouseController implements MouseListener {
 	private int y;
 	private int posMouse[];
 	private boolean nuevoRecorrido;
-	private Usuario usuario;
+	private ClienteJugable clienteJugable;
 	
 	public MouseController() {
 		posMouse = new int[2];
@@ -31,12 +32,12 @@ public class MouseController implements MouseListener {
 		y = e.getY();
 		nuevoRecorrido = true;
 		
-		this.usuario.getPersonaje().setMovimientoX(x);
-		this.usuario.getPersonaje().setMovimientoY(y);
+		this.clienteJugable.getUsuario().getPersonaje().setMovimientoX(x);
+		this.clienteJugable.getUsuario().getPersonaje().setMovimientoY(y);
 		RawMessage rawMessageLogin = new RawMessage();
 		rawMessageLogin.type = "moverPersonaje";
-		rawMessageLogin.message = new PersonajeConsultaMessage(new Gson().toJson(this.usuario));
-		
+		rawMessageLogin.message = new PersonajeConsultaMessage(new Gson().toJson(this.clienteJugable.getUsuario()));
+		this.clienteJugable.getClienteManager().sendMensaje(new Gson().toJson(rawMessageLogin));
 	}
 
 	@Override
@@ -71,11 +72,13 @@ public class MouseController implements MouseListener {
 		nuevoRecorrido = b;
 	}
 
-	public Usuario getUsuario() {
-		return usuario;
+	public ClienteJugable getClienteJugable() {
+		return clienteJugable;
 	}
 
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
+	public void setClienteJugable(ClienteJugable clienteJugable) {
+		this.clienteJugable = clienteJugable;
 	}
+
+	
 }

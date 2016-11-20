@@ -5,6 +5,7 @@ import java.awt.image.BufferStrategy;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import prograavanzada2016.anotherworld.cliente.ClienteJugable;
 import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.interfaces.*;
 import prograavanzada2016.anotherworld.utilities.*;
@@ -35,13 +36,13 @@ public class Game implements Runnable{
 	// Controlador de Camara
 	private Camera camara;
 
-	public Game(final String nombre, final int width, final int height, Usuario usuario) {
+	public Game(final String nombre, final int width, final int height, ClienteJugable clienteJugable) {
 		this.nombre = nombre;
 		this.width = width;
 		this.height = height;
-		this.user = usuario;
+		this.user = clienteJugable.getUsuario();
 		mouseController = new MouseController();
-		mouseController.setUsuario(usuario);
+		mouseController.setClienteJugable(clienteJugable);
 	}
 
 	public void initGame() throws FileNotFoundException, IOException { // Carga lo necesario para iniciar el juego
