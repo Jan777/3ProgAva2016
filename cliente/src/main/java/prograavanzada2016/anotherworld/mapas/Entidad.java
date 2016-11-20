@@ -5,9 +5,13 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.util.LinkedList;
 
+import com.google.gson.Gson;
+
 import prograavanzada2016.anotherworld.modelos.PersonajeModel;
 import prograavanzada2016.anotherworld.modelos.Usuario;
 import prograavanzada2016.anotherworld.juego.*;
+import prograavanzada2016.anotherworld.mensajes.RawMessage;
+import prograavanzada2016.anotherworld.mensajes.request.PersonajeConsultaMessage;
 import prograavanzada2016.anotherworld.utilities.*;
 
 public class Entidad {
@@ -161,6 +165,18 @@ public class Entidad {
 			xFinal = Math.round(posMouse[0] + juego.getCamara().getxOffset() - xOffset);
 			yFinal = Math.round(posMouse[1] + juego.getCamara().getyOffset() - yOffset);
 			
+			//enviamos coordenadas
+			this.juego.getClienteJugable().getUsuario().getPersonaje().setMovimientoX((int)x);
+			this.juego.getClienteJugable().getUsuario().getPersonaje().setMovimientoY((int)y);
+			this.juego.getClienteJugable().getUsuario().getPersonaje().setMovimientoXFinal((int)xFinal);
+			this.juego.getClienteJugable().getUsuario().getPersonaje().setMovimientoYFinal((int)yFinal);
+			RawMessage rawMessageLogin = new RawMessage();
+			rawMessageLogin.type = "moverPersonaje";
+			rawMessageLogin.message = new PersonajeConsultaMessage(new Gson().toJson(this.juego.getClienteJugable().getUsuario()));
+			this.juego.getClienteJugable().getClienteManager().sendMensaje(new Gson().toJson(rawMessageLogin));
+			
+			
+			
 			System.out.println("movimiento mouse posMouse: "+posMouse[0]+" "+posMouse[1]);
 			System.out.println("movimiento mouse en: "+xInicio+" "+yInicio+" "+xFinal+" "+yFinal);
 			System.out.println("movimiento mouse camara offset en: "+juego.getCamara().getxOffset()+" "+juego.getCamara().getyOffset());
@@ -209,6 +225,10 @@ public class Entidad {
 			this.getUsuario().getPersonaje().setNuevoCamino(false);
 			posMouse[0]=this.getUsuario().getPersonaje().getMovimientoX();
 			posMouse[1]=this.getUsuario().getPersonaje().getMovimientoY();
+			
+			int xOffsetAutomatico = this.getUsuario().getPersonaje().getMovimientoOffsetX();
+			int yOffsetAutomatico = this.getUsuario().getPersonaje().getMovimientoOffsetY();
+			
 			diagonalInfIzq = false;
 			diagonalInfDer = false;
 			diagonalSupIzq = false;
@@ -231,15 +251,21 @@ public class Entidad {
 			//xFinal = Math.round(posMouse[0] + juego.getCamara().getxOffset() - xOffset);
 			//yFinal = Math.round(posMouse[1] + juego.getCamara().getyOffset() - yOffset);
 			
+			//xFinal = Math.round(posMouse[0] + xOffsetAutomatico - xOffset);
+		//	yFinal = Math.round(posMouse[1] + yOffsetAutomatico - yOffset);
+			
+			xFinal = this.getUsuario().getPersonaje().getMovimientoXFinal();
+			yFinal = this.getUsuario().getPersonaje().getMovimientoYFinal();
+			
 			//hardcore
 			//xFinal = Math.round(posMouse[0] -368 - xOffset);
 			//yFinal = Math.round(posMouse[1] -268 - yOffset);
-			xFinal = Math.round(posMouse[0]  - xOffset);
-			yFinal = Math.round(posMouse[1] - yOffset);
+			//xFinal = Math.round(posMouse[0]  - xOffset);
+			//yFinal = Math.round(posMouse[1] - yOffset);
 			
 			System.out.println("movimiento automatico posMouse: "+posMouse[0]+" "+posMouse[1]);
 			System.out.println("movimiento automatico en: "+xInicio+" "+yInicio+" "+xFinal+" "+yFinal);
-			System.out.println("movimiento automatico offset en: "+juego.getCamara().getxOffset()+" "+juego.getCamara().getyOffset());
+			System.out.println("movimiento automatico offset en: "+xOffsetAutomatico+" "+yOffsetAutomatico);
 			System.out.println("movimiento automatico offset en: "+xOffset+" "+yOffset);
 			
 			
@@ -358,14 +384,11 @@ public class Entidad {
 	}
 
 	public void graficar(Graphics g) {
-		if(soyUsuario && 1==1){
-			drawX = (int) (x - juego.getCamara().getxOffset());
-			drawY = (int) (y - juego.getCamara().getyOffset());
-		}else{
-			drawX = (int) (x);
-			drawY = (int) (y);
-		}
+		
+		drawX = (int) (x - juego.getCamara().getxOffset());
+		drawY = (int) (y - juego.getCamara().getyOffset());
 		g.drawImage(getFrameAnimacionActual(), drawX, drawY, ancho, alto, null);
+		
 		g.setColor(Color.WHITE);
 		if(juego.getUser().getPersonaje().getRazaId() == 1) // aca obtener raza y casta para dibujarlos
 		{

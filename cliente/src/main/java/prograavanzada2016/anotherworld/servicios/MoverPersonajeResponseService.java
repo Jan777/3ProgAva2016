@@ -22,6 +22,8 @@ public class MoverPersonajeResponseService implements ServicioServer{
 				otroUsuario.getPersonaje().setNuevoCamino(true);
 				otroUsuario.getPersonaje().setMovimientoX(usuarioSeMovio.getPersonaje().getMovimientoX());
 				otroUsuario.getPersonaje().setMovimientoY(usuarioSeMovio.getPersonaje().getMovimientoY());
+				otroUsuario.getPersonaje().setMovimientoXFinal(usuarioSeMovio.getPersonaje().getMovimientoXFinal());
+				otroUsuario.getPersonaje().setMovimientoYFinal(usuarioSeMovio.getPersonaje().getMovimientoYFinal());
 			}
 		}		
 }

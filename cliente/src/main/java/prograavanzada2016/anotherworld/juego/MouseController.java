@@ -32,12 +32,12 @@ public class MouseController implements MouseListener {
 		y = e.getY();
 		nuevoRecorrido = true;
 		
-		this.clienteJugable.getUsuario().getPersonaje().setMovimientoX(x);
-		this.clienteJugable.getUsuario().getPersonaje().setMovimientoY(y);
-		RawMessage rawMessageLogin = new RawMessage();
-		rawMessageLogin.type = "moverPersonaje";
-		rawMessageLogin.message = new PersonajeConsultaMessage(new Gson().toJson(this.clienteJugable.getUsuario()));
-		this.clienteJugable.getClienteManager().sendMensaje(new Gson().toJson(rawMessageLogin));
+		//this.clienteJugable.getUsuario().getPersonaje().setMovimientoX(x);
+		//this.clienteJugable.getUsuario().getPersonaje().setMovimientoY(y);
+		//RawMessage rawMessageLogin = new RawMessage();
+		//rawMessageLogin.type = "moverPersonaje";
+		//rawMessageLogin.message = new PersonajeConsultaMessage(new Gson().toJson(this.clienteJugable.getUsuario()));
+		//this.clienteJugable.getClienteManager().sendMensaje(new Gson().toJson(rawMessageLogin));
 	}
 
 	@Override

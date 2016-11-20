@@ -14,8 +14,15 @@ public class PersonajeModel {
 	private int nivel;
 	private int salud;
 	private int experiencia;
+	
+	//movimientos
 	private int movimientoX;
 	private int movimientoY;
+	private int movimientoOffsetX;
+	private int movimientoOffsetY;
+	private int movimientoXFinal;
+	private int movimientoYFinal;
+	
 	private boolean nuevoCamino;
 	public PersonajeModel(int id, int usuarioId, int castaId, int razaId, String nombre, int fuerza, int destreza,
 			int inteligencia, int mana, int energia, int nivel, int salud, int experiencia) {
@@ -153,6 +160,29 @@ public class PersonajeModel {
 	}
 	public void setNuevoCamino(boolean nuevoCamino) {
 		this.nuevoCamino = nuevoCamino;
+	}
+	public int getMovimientoOffsetX() {
+		return movimientoOffsetX;
+	}
+	public void setMovimientoOffsetX(int movimientoOffsetX) {
+		this.movimientoOffsetX = movimientoOffsetX;
+	}
+	public int getMovimientoOffsetY() {
+		return movimientoOffsetY;
+	}
+	public void setMovimientoOffsetY(int movimientoOffsetY) {
+		this.movimientoOffsetY = movimientoOffsetY;
+	}
+	public int getMovimientoXFinal() {
+		return movimientoXFinal;
+	}
+	public void setMovimientoXFinal(int movimientoXFinal) {
+		this.movimientoXFinal = movimientoXFinal;
+	}
+	public int getMovimientoYFinal() {
+		return movimientoYFinal;
+	}
+	public void setMovimientoYFinal(int movimientoYFinal) {
+		this.movimientoYFinal = movimientoYFinal;
 	}	
-	
 }

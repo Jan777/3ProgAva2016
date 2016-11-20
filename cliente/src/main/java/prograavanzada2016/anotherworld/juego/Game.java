@@ -35,8 +35,11 @@ public class Game implements Runnable{
 	
 	// Controlador de Camara
 	private Camera camara;
+	
+	private ClienteJugable clienteJugable;
 
 	public Game(final String nombre, final int width, final int height, ClienteJugable clienteJugable) {
+		this.clienteJugable=clienteJugable;
 		this.nombre = nombre;
 		this.width = width;
 		this.height = height;
@@ -193,6 +196,14 @@ public class Game implements Runnable{
 
 	public void setScreen(GameScreen screen) {
 		this.screen = screen;
+	}
+
+	public ClienteJugable getClienteJugable() {
+		return clienteJugable;
+	}
+
+	public void setClienteJugable(ClienteJugable clienteJugable) {
+		this.clienteJugable = clienteJugable;
 	}
 	
 	
