@@ -8,6 +8,7 @@ import org.junit.Test;
 import prograavanzada2016.anotherworld.castas.Guerrero;
 import prograavanzada2016.anotherworld.castas.Mago;
 import prograavanzada2016.anotherworld.combates.ArenaPvE;
+import prograavanzada2016.anotherworld.combates.ArenaPvP;
 import prograavanzada2016.anotherworld.combates.GrupoEnemigos;
 import prograavanzada2016.anotherworld.combates.GrupoPersonajes;
 import prograavanzada2016.anotherworld.enemigos.Dragon;
@@ -55,5 +56,35 @@ public class CombatesTest {
 		Personaje pedrito = new Personaje("pedrito", new Orco(), new Mago());
 		Assert.assertTrue(pedrito.getHistorialDeVictorias()==0);
 		Assert.assertTrue(pedrito.getHistorialDeDerrotas()==0);
+	}
+	
+	/**
+	 * Combate Entre Personajes
+	 * @throws Exception 
+	 * */
+	@Test
+	public void combateEntrePersonajes() throws Exception{
+		//Creo los personajes
+		Personaje pers = new Personaje("Aragorn", new Humano(), new Guerrero());
+		Personaje pers2 = new Personaje("Ernest", new Orco(), new Mago());
+		
+		//se crea lo necesario para la arena
+		
+		ArrayList<Personaje> ggp = new ArrayList<>();
+		ArrayList<Personaje> ggp2 = new ArrayList<>();
+		ggp.add(pers);
+		ggp2.add(pers2);
+		GrupoPersonajes gp = new GrupoPersonajes(ggp);
+		GrupoPersonajes gp2 = new GrupoPersonajes(ggp2);
+		
+		ArenaPvP arena = new ArenaPvP(gp, gp2);
+		
+		int nivelPersonajeA = pers.getNivel();
+		
+		//hora de batallar
+		arena.armarTurnos();
+		
+		//Mato al personaje B y subio de nivel
+		Assert.assertTrue(gp.viven());
 	}
 }

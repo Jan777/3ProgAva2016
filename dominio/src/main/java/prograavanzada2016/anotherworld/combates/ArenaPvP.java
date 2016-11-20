@@ -54,7 +54,7 @@ public class ArenaPvP {
 	public void armarTurnos(){
 		int contadorDeAtaquesPersonajes=0;
 		int contadorDeAtaquesEnemigos=0;
-		for(int x=0; x<100000 && this.grupoPersonajesA.viven() && this.grupoPersonajesB.viven();x++){
+		for(int x=0; x<4 && this.grupoPersonajesA.viven() && this.grupoPersonajesB.viven();x++){
 			System.out.println("**************************");
 			if(x%2==0){
 				//turno aliados
