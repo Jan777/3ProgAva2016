@@ -21,12 +21,14 @@ import prograavanzada2016.anotherworld.mapas.Mapa;
 import prograavanzada2016.anotherworld.modelos.*;
 
 import java.awt.Toolkit;
+import javax.swing.JInternalFrame;
+import java.awt.Canvas;
+import java.awt.BorderLayout;
 
 public class VentanaMapa extends JFrame {
 
 	private JPanel jpPpal;
 	private JPanel jpBarraEstado;
-	private JPanel jpMapa;
 	private JLabel lblNivel;
 	private JLabel lblPersonaje;
 	private JLabel lblSalud;
@@ -41,6 +43,8 @@ public class VentanaMapa extends JFrame {
 	private static Usuario user;
 	public VentanaAlianza ventanaAlianza;
 	public VentanaMochila ventanaMochila;
+	private JInternalFrame internalFrame;
+	private Canvas canvas;
 
 	public VentanaMapa(PersonajeModel personajeModel) {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaMapa.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
@@ -53,9 +57,9 @@ public class VentanaMapa extends JFrame {
 		setContentPane(jpPpal);
 		GridBagLayout gbl_jpPpal = new GridBagLayout();
 		gbl_jpPpal.columnWidths = new int[]{324, 0};
-		gbl_jpPpal.rowHeights = new int[]{75, 0, 0};
+		gbl_jpPpal.rowHeights = new int[]{75, 0, 0, 0};
 		gbl_jpPpal.columnWeights = new double[]{1.0, Double.MIN_VALUE};
-		gbl_jpPpal.rowWeights = new double[]{0.0, 1.0, Double.MIN_VALUE};
+		gbl_jpPpal.rowWeights = new double[]{0.0, 1.0, 0.0, Double.MIN_VALUE};
 		jpPpal.setLayout(gbl_jpPpal);
 		
 		jpBarraEstado = new JPanel();
@@ -207,16 +211,16 @@ public class VentanaMapa extends JFrame {
 		gbc_lblInteligencia.gridy = 2;
 		jpBarraEstado.add(lblInteligencia, gbc_lblInteligencia);
 		
-		//ACA ABAJO VA EL MAPA
-		jpMapa = new JPanel();
-		//jpMapa = new Mapa();				//REVISAR HAY QUE ACOPLARLO BIEN
-		jpMapa.setBackground(Color.BLACK);
-		GridBagConstraints gbc_jpMapa = new GridBagConstraints();
-		gbc_jpMapa.fill = GridBagConstraints.BOTH;
-		gbc_jpMapa.gridx = 0;
-		gbc_jpMapa.gridy = 1;
-		//jpMapa.setSize(1000, 1000);
-		jpPpal.add(jpMapa, gbc_jpMapa);
+		internalFrame = new JInternalFrame("New JInternalFrame");
+		GridBagConstraints gbc_internalFrame = new GridBagConstraints();
+		gbc_internalFrame.insets = new Insets(0, 0, 5, 0);
+		gbc_internalFrame.gridx = 0;
+		gbc_internalFrame.gridy = 1;
+		jpPpal.add(internalFrame, gbc_internalFrame);
+		
+		canvas = new Canvas();
+		internalFrame.getContentPane().add(canvas, BorderLayout.NORTH);
+		internalFrame.setVisible(true);
 		
 		setVisible(true);
 	}
