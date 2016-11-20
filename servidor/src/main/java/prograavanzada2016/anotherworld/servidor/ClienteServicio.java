@@ -2,9 +2,12 @@ package prograavanzada2016.anotherworld.servidor;
 
 import java.net.Socket;
 
+import prograavanzada2016.anotherworld.modelos.Usuario;
+
 public class ClienteServicio {
 	private Socket socket;
 	private int id;
+	private Usuario usuario;
 	
 	public ClienteServicio(){}
 	
@@ -28,6 +31,12 @@ public class ClienteServicio {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
-	
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}	
 }

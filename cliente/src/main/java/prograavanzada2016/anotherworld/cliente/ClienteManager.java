@@ -19,6 +19,7 @@ import prograavanzada2016.anotherworld.mensajes.response.CrearPersonajeNuevoResp
 import prograavanzada2016.anotherworld.mensajes.response.LoginMessageResponse;
 import prograavanzada2016.anotherworld.mensajes.response.MoverResponseMessage;
 import prograavanzada2016.anotherworld.mensajes.response.PersonajeConsultaResponseMessage;
+import prograavanzada2016.anotherworld.mensajes.response.RecibirPersonajesConectadosMessage;
 import prograavanzada2016.anotherworld.mensajes.response.RespuestaGenericaMessage;
 import prograavanzada2016.anotherworld.observer.ILogin;
 import prograavanzada2016.anotherworld.observer.SubjectLogin;
@@ -95,7 +96,7 @@ public class ClienteManager implements Runnable, SubjectLogin{
         deserializer.registerMessageType("respuestaGenericaNuevoUsuario", RespuestaGenericaMessage.class);
         deserializer.registerMessageType("crearPersonajeResponse", CrearPersonajeNuevoResponseMessage.class);
         deserializer.registerMessageType("moverPersonajeResponse", MoverResponseMessage.class);
-        
+        deserializer.registerMessageType("recibirPersonajes", RecibirPersonajesConectadosMessage.class);
 	}
 
 	public void sendMensaje(String mensaje){

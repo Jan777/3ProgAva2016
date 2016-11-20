@@ -18,6 +18,8 @@ public class ServiceLocator {
 			return new CrearPersonajeNuevoResponseService(clienteJugable);
 		}else if(tipo.equals("moverPersonajeResponse")){
 			return new MoverPersonajeResponseService(clienteJugable);
+		}else if(tipo.equals("recibirPersonajes")){
+			return new RecibirPersonajesConectadosService(clienteJugable);
 		}
 		return null;
 	}
