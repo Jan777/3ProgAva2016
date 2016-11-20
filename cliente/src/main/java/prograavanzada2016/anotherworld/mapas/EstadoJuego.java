@@ -39,9 +39,11 @@ public class EstadoJuego extends Estado {
 		personaje.actualizar();
 		for(Entidad otroPersonaje : personajes){
 			if(pruebita){
-				otroPersonaje.setxAutomatico(300);
-				otroPersonaje.setyAutomatico(300);
-				pruebita=false;
+				if(otroPersonaje.tengoUnCaminoAutomatico){
+					otroPersonaje.setxAutomatico(300);
+					otroPersonaje.setyAutomatico(300);
+					otroPersonaje.tengoUnCaminoAutomatico=false;
+				}
 			}
 			otroPersonaje.actualizar();
 		}

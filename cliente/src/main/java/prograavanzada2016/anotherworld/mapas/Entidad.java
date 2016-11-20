@@ -70,6 +70,7 @@ public class Entidad {
 	private Mundo mundo;
 	
 	private boolean soyUsuario=false;
+	public boolean tengoUnCaminoAutomatico=false;
 
 	public Entidad(Game juego, Mundo mundo, int ancho, int alto, float spawnX, float spawnY, LinkedList<BufferedImage[]> animaciones, int velAnimacion) {
 		this.juego = juego;
@@ -112,6 +113,7 @@ public class Entidad {
 	    moverAbajoDer = new Animacion(velAnimacion, animaciones.get(5));
 	    moverAbajo = new Animacion(velAnimacion, animaciones.get(6));
 	    moverAbajoIzq = new Animacion(velAnimacion, animaciones.get(7));
+	    this.tengoUnCaminoAutomatico=true;
 	}
 
 	public void actualizar() {
@@ -209,7 +211,6 @@ public class Entidad {
 			yInicio = y;
 			
 			if(x==300 && y==300){
-				System.out.println("hola");
 				xAutomatico=100;
 				yAutomatico=100;
 			}else if(x==100 && y==100){
