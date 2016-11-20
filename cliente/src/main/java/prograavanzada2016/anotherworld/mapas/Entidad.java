@@ -11,7 +11,7 @@ import prograavanzada2016.anotherworld.juego.*;
 import prograavanzada2016.anotherworld.utilities.*;
 
 public class Entidad {
-	
+		
 	private Usuario usuario;
 	
 	Game juego;
@@ -102,7 +102,8 @@ public class Entidad {
 		this.juego = juego;
 		this.ancho = ancho;
 		this.alto = alto;
-		
+		xOffset = ancho / 2;
+		yOffset = alto / 2;
 		x = spawnX;
 		y = spawnY;
 
@@ -159,7 +160,11 @@ public class Entidad {
 						
 			xFinal = Math.round(posMouse[0] + juego.getCamara().getxOffset() - xOffset);
 			yFinal = Math.round(posMouse[1] + juego.getCamara().getyOffset() - yOffset);
-						
+			
+			System.out.println("movimiento mouse posMouse: "+posMouse[0]+" "+posMouse[1]);
+			System.out.println("movimiento mouse en: "+xInicio+" "+yInicio+" "+xFinal+" "+yFinal);
+			System.out.println("movimiento mouse camara offset en: "+juego.getCamara().getxOffset()+" "+juego.getCamara().getyOffset());
+			System.out.println("movimiento mouse offset en: "+xOffset+" "+yOffset);
 			difX = Math.abs(xFinal - xInicio);
 			difY = Math.abs(yFinal - yInicio);
 			relacion = difX / difY;
@@ -226,8 +231,18 @@ public class Entidad {
 			//xFinal = Math.round(posMouse[0] + juego.getCamara().getxOffset() - xOffset);
 			//yFinal = Math.round(posMouse[1] + juego.getCamara().getyOffset() - yOffset);
 			
+			//hardcore
+			//xFinal = Math.round(posMouse[0] -368 - xOffset);
+			//yFinal = Math.round(posMouse[1] -268 - yOffset);
 			xFinal = Math.round(posMouse[0]  - xOffset);
 			yFinal = Math.round(posMouse[1] - yOffset);
+			
+			System.out.println("movimiento automatico posMouse: "+posMouse[0]+" "+posMouse[1]);
+			System.out.println("movimiento automatico en: "+xInicio+" "+yInicio+" "+xFinal+" "+yFinal);
+			System.out.println("movimiento automatico offset en: "+juego.getCamara().getxOffset()+" "+juego.getCamara().getyOffset());
+			System.out.println("movimiento automatico offset en: "+xOffset+" "+yOffset);
+			
+			
 						
 			difX = Math.abs(xFinal - xInicio);
 			difY = Math.abs(yFinal - yInicio);
@@ -343,8 +358,13 @@ public class Entidad {
 	}
 
 	public void graficar(Graphics g) {
-		drawX = (int) (x - juego.getCamara().getxOffset());
-		drawY = (int) (y - juego.getCamara().getyOffset());
+		if(soyUsuario && 1==1){
+			drawX = (int) (x - juego.getCamara().getxOffset());
+			drawY = (int) (y - juego.getCamara().getyOffset());
+		}else{
+			drawX = (int) (x);
+			drawY = (int) (y);
+		}
 		g.drawImage(getFrameAnimacionActual(), drawX, drawY, ancho, alto, null);
 		g.setColor(Color.WHITE);
 		if(juego.getUser().getPersonaje().getRazaId() == 1) // aca obtener raza y casta para dibujarlos
@@ -452,6 +472,7 @@ public class Entidad {
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
-	}
+	}	
+	
 	
 }
