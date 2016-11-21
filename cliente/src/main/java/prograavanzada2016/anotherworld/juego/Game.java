@@ -16,7 +16,7 @@ import prograavanzada2016.anotherworld.modelos.Usuario;
 
 public class Game implements Runnable{
 	
-	//private GameScreen screen;
+	//private GameScreen screen;		borrar
 	private final String nombre;
 	private final int width;
 	private final int height;
@@ -57,8 +57,7 @@ public class Game implements Runnable{
 		//screen.getCanvas().addMouseListener(mouseController);
 		
 		PersonajeModel jorge = new PersonajeModel();
-		jorge.setNombre("jorge");
-		
+		jorge.setNombre(user.getPersonaje().getNombre());
 		screen = new VentanaMapa(jorge);
 		screen.game.getCanvas().addMouseListener(mouseController);
 		

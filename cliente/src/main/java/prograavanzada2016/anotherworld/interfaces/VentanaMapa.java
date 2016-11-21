@@ -14,6 +14,7 @@ import java.awt.Point;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.event.ActionListener;
+import java.beans.PropertyVetoException;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 
@@ -205,14 +206,16 @@ public class VentanaMapa extends JFrame {
 		gbc_lblInteligencia.gridy = 2;
 		jpBarraEstado.add(lblInteligencia, gbc_lblInteligencia);
 		
-		internalFrame = new JInternalFrame("");
+		internalFrame = new JInternalFrame();
+		internalFrame.setBorder(null);
+		internalFrame.setFrameIcon(null);
 		GridBagConstraints gbc_internalFrame = new GridBagConstraints();
 		gbc_internalFrame.insets = new Insets(0, 0, 5, 0);
 		gbc_internalFrame.gridx = 0;
 		gbc_internalFrame.gridy = 1;
 		jpPpal.add(internalFrame, gbc_internalFrame);
 		
-		game = new GameScreen("prueba", 800, 500);
+		game = new GameScreen("prueba", 800, 550);
 		internalFrame.getContentPane().add(game.getCanvas());
 		internalFrame.setVisible(true);
 		

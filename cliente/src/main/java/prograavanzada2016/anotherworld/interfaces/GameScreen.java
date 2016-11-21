@@ -15,7 +15,7 @@ import javax.swing.JToolBar;
 
 public class GameScreen {
 
-	public JFrame pantalla;
+	public JFrame pantalla;		//borrar
 	private Canvas canvas; // Aca donde se grafica el juego
 
 	public GameScreen(final String nombre, final int ancho, final int alto) {
@@ -26,15 +26,13 @@ public class GameScreen {
 		pantalla.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		pantalla.setLocationRelativeTo(null);
 		pantalla.setVisible(true);
-		   */ 
+		*/ 
 		canvas = new Canvas();
 		canvas.setPreferredSize(new Dimension(ancho, alto));
 		canvas.setMaximumSize(new Dimension(ancho, alto));
 		canvas.setMinimumSize(new Dimension(ancho, alto));
 		canvas.setFocusable(false);
-		
 		//pantalla.getContentPane().add(canvas);
-		
 		//JToolBar toolBar = new JToolBar();
 		//pantalla.getContentPane().add(toolBar, BorderLayout.NORTH);
 		//pantalla.pack();

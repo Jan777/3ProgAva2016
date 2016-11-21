@@ -27,9 +27,6 @@ public class EstadoJuego extends Estado {
 		//mundo = new Mundo(juego, propiedades.getProperty("mundoMati"));
 		
 		//martin
-		///CASA
-		//mundo = new Mundo(juego,"c:\\GitAvanzada\\PrograAvanzada\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt");
-		///LABURO
 		mundo = new Mundo(juego,"C:\\Users\\martin.f.andres\\Documents\\GitHub\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt");
 		
 		//mundo = new Mundo(juego,"C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt");
