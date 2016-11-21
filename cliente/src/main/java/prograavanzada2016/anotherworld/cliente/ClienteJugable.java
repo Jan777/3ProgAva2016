@@ -30,6 +30,7 @@ public class ClienteJugable{
 	Gson gson;
 	private Game juego;
 	
+	
 	public ClienteJugable(String server, int port) throws UnknownHostException, IOException {
 		this.otrosClientes=new ArrayList<>();
 		this.socket = new Socket(server, port);
