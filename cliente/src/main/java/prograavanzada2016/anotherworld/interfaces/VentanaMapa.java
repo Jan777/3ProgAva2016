@@ -12,6 +12,7 @@ import java.awt.Insets;
 import java.awt.MouseInfo;
 import java.awt.Point;
 import java.awt.Color;
+import java.awt.Container;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
@@ -46,10 +47,13 @@ public class VentanaMapa extends JFrame {
 	public VentanaMochila ventanaMochila;
 	private JInternalFrame internalFrame;
 	private Canvas canvas;
+	
+	public GameScreen game;
 
 	public VentanaMapa(PersonajeModel personajeModel) {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaMapa.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
 		setTitle("AnotherWorld");
+		setSize(900,700);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 681, 554);
@@ -61,7 +65,8 @@ public class VentanaMapa extends JFrame {
 		gbl_jpPpal.rowHeights = new int[]{75, 0, 0, 0};
 		gbl_jpPpal.columnWeights = new double[]{1.0, Double.MIN_VALUE};
 		gbl_jpPpal.rowWeights = new double[]{0.0, 1.0, 0.0, Double.MIN_VALUE};
-		jpPpal.setLayout(gbl_jpPpal);
+		jpPpal.setLayout(gbl_jpPpal);		
+		setSize(900, 700);
 		
 		jpBarraEstado = new JPanel();
 		GridBagConstraints gbc_jpBarraEstado = new GridBagConstraints();
@@ -200,25 +205,20 @@ public class VentanaMapa extends JFrame {
 		gbc_lblInteligencia.gridy = 2;
 		jpBarraEstado.add(lblInteligencia, gbc_lblInteligencia);
 		
-		internalFrame = new JInternalFrame("New JInternalFrame");
+		internalFrame = new JInternalFrame("");
 		GridBagConstraints gbc_internalFrame = new GridBagConstraints();
 		gbc_internalFrame.insets = new Insets(0, 0, 5, 0);
 		gbc_internalFrame.gridx = 0;
 		gbc_internalFrame.gridy = 1;
 		jpPpal.add(internalFrame, gbc_internalFrame);
 		
-		canvas = new Canvas();
-		internalFrame.getContentPane().add(canvas, BorderLayout.NORTH);
+		game = new GameScreen("prueba", 800, 500);
+		internalFrame.getContentPane().add(game.getCanvas());
 		internalFrame.setVisible(true);
 		
+		//internalFrame.getContentPane().add(game.getCanvas(), BorderLayout.NORTH);
+		//internalFrame.add(game.getCanvas());
 		setVisible(true);
 	}
-	public static void main(String args[]){
-		PersonajeModel pm = new PersonajeModel();
-		pm.setNombre("agus");
-		VentanaMapa vm = new VentanaMapa(pm);
-		//Usuario usuario = new Usuario();
-		//Game game = new Game("pedro", 800, 600, usuario);
-		//vm.add(game.getScreen().getCanvas());
-	}
+
 }

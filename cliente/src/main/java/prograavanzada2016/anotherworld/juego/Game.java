@@ -10,16 +10,20 @@ import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.interfaces.*;
 import prograavanzada2016.anotherworld.utilities.*;
 import prograavanzada2016.anotherworld.mapas.*;
+import prograavanzada2016.anotherworld.modelos.PersonajeModel;
 import prograavanzada2016.anotherworld.modelos.Usuario;
 
 
 public class Game implements Runnable{
 	
-	private GameScreen screen;
+	//private GameScreen screen;
 	private final String nombre;
 	private final int width;
 	private final int height;
 	private Usuario user;
+	
+	//prueba
+	private VentanaMapa screen;
 
 	private Thread hilo;
 	private boolean corriendo;
@@ -49,10 +53,15 @@ public class Game implements Runnable{
 	}
 
 	public void initGame() throws FileNotFoundException, IOException { // Carga lo necesario para iniciar el juego
-		screen = new GameScreen(nombre, width, height);
-
-		screen.getCanvas().addMouseListener(mouseController);
-
+		//screen = new GameScreen(nombre, width, height);
+		//screen.getCanvas().addMouseListener(mouseController);
+		
+		PersonajeModel jorge = new PersonajeModel();
+		jorge.setNombre("jorge");
+		
+		screen = new VentanaMapa(jorge);
+		screen.game.getCanvas().addMouseListener(mouseController);
+		
 		Recursos.cargar();
 
 		estadoJuego = new EstadoJuego(this);
@@ -70,9 +79,9 @@ public class Game implements Runnable{
 	}
 
 	private void graficar() { // Grafica los objetos y sus posiciones
-		bs = screen.getCanvas().getBufferStrategy();
+		bs = screen.game.getCanvas().getBufferStrategy();
 		if (bs == null) { // Seteo una estrategia para el canvas en caso de que no tenga una
-			screen.getCanvas().createBufferStrategy(3);
+			screen.game.getCanvas().createBufferStrategy(3);
 			return;
 		}
 
@@ -124,7 +133,7 @@ public class Game implements Runnable{
 			}
 
 			if (timer >= 1000000000) { // Si paso 1 segundo muestro los FPS
-				screen.getFrame().setTitle(nombre + " | " + "FPS: " + fps);
+				//screen.game.getFrame().setTitle(nombre + " | " + "FPS: " + fps);
 				actualizaciones = 0;
 				timer = 0;
 			}
@@ -190,11 +199,11 @@ public class Game implements Runnable{
 		this.estadoJuego.addOtroPersonaje(personaje,otroUsuario);
 	}
 
-	public GameScreen getScreen() {
+	public VentanaMapa getScreen() {
 		return screen;
 	}
 
-	public void setScreen(GameScreen screen) {
+	public void setScreen(VentanaMapa screen) {
 		this.screen = screen;
 	}
 

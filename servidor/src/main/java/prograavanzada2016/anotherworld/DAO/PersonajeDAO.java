@@ -30,7 +30,9 @@ public class PersonajeDAO extends DAO<PersonajeModel> {
 			//mati
 			//conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\matut\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
 			//agus
-			conn = DriverManager.getConnection("jdbc:sqlite:C:\\GitAvanzada\\PrograAvanzada\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
+			//conn = DriverManager.getConnection("jdbc:sqlite:C:\\GitAvanzada\\PrograAvanzada\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
+			//martin
+			conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\martin.f.andres\\Documents\\GitHub\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
 			conn.setAutoCommit(false);
 			statement = conn.createStatement();
 			stat = statement;
