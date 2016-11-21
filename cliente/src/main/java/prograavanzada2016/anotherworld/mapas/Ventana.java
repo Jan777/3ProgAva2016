@@ -18,7 +18,7 @@ public class Ventana extends JFrame {
 
 	//private JPanel contentPane;
 	BufferedImage sprite;
-	Mapa mapa;
+	MapaViejoParaElRecuerdo mapa;
 	/**
 	 * Launch the application.
 	 */
@@ -52,7 +52,7 @@ public class Ventana extends JFrame {
 		//contentPane.setBackground(Color.BLACK);
 		//contentPane.setVisible(true);
 		//setContentPane(contentPane);
-		mapa = new Mapa();
+		mapa = new MapaViejoParaElRecuerdo();
 		add(mapa);
 		System.out.println("ventana principal:"+this.getWidth()+" "+this.getHeight());
 	}

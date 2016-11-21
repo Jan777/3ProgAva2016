@@ -10,7 +10,7 @@ import prograavanzada2016.anotherworld.utilities.SpriteSheet;
 
 
 
-public class Mapa extends Canvas{
+public class MapaViejoParaElRecuerdo extends Canvas{
 	private static final int tileW = 64;
 	private static final int tileH = 32;
 	
@@ -36,7 +36,7 @@ public class Mapa extends Canvas{
 	private BufferedImage suelo;
 	private BufferedImage pasto;
 	
-	public Mapa(){
+	public MapaViejoParaElRecuerdo(){
 		setSize(new Dimension(320, 160));
 		this.iniciar();
 	}

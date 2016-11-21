@@ -18,7 +18,7 @@ import javax.swing.JLabel;
 
 import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.juego.Game;
-import prograavanzada2016.anotherworld.mapas.Mapa;
+import prograavanzada2016.anotherworld.mapas.MapaViejoParaElRecuerdo;
 import prograavanzada2016.anotherworld.modelos.*;
 
 import java.awt.Toolkit;
