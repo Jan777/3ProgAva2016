@@ -200,17 +200,16 @@ public class VentanaMapa extends JFrame {
 		gbc_lblInteligencia.gridy = 2;
 		jpBarraEstado.add(lblInteligencia, gbc_lblInteligencia);
 		
-		internalFrame = new JInternalFrame("");
+		internalFrame = new JInternalFrame("New JInternalFrame");
 		GridBagConstraints gbc_internalFrame = new GridBagConstraints();
 		gbc_internalFrame.insets = new Insets(0, 0, 5, 0);
 		gbc_internalFrame.gridx = 0;
 		gbc_internalFrame.gridy = 1;
-		GameScreen gameScreen = new GameScreen("prueba", 550, 350);
-		internalFrame.add(gameScreen.getCanvas(), BorderLayout.NORTH);
-		internalFrame.setVisible(true);
 		jpPpal.add(internalFrame, gbc_internalFrame);
 		
-
+		canvas = new Canvas();
+		internalFrame.getContentPane().add(canvas, BorderLayout.NORTH);
+		internalFrame.setVisible(true);
 		
 		setVisible(true);
 	}
