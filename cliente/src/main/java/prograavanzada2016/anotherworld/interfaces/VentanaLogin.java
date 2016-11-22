@@ -30,6 +30,9 @@ import java.awt.event.ActionEvent;
 import javax.swing.JTextArea;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.io.File;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -39,9 +42,17 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 import java.awt.Toolkit;
+
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.DataLine;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.SourceDataLine;
 import javax.swing.ImageIcon;
 
-public class VentanaLogin extends JFrame implements ILogin{
+public class VentanaLogin extends JFrame implements ILogin {
 
 	private JPanel contentPane;
 	private JTextField usuarioTextField;
@@ -50,39 +61,39 @@ public class VentanaLogin extends JFrame implements ILogin{
 	private Usuario usuario;
 	private VentanaRegistroDeUsuario ventanaRegistro;
 	private VentanaDeBienvenida ventanaInicio;
-	
+
 	private ClienteJugable clienteJugable;
 	private MensajeEnviable mensajeEnviable;
-	
-    static Properties propiedades;
+
+	Clip sonido;
+
+	static Properties propiedades;
 	static PropertiesFile pf;
-    
-    private Gson gson;
-    private JPasswordField passwordField;
+
+	private Gson gson;
+	private JPasswordField passwordField;
 
 	/**
 	 * Launch the application.
+	 * @throws Exception 
 	 */
-	/*public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaPrincipal frame = new VentanaPrincipal();
-					frame.setVisible(true);
-					frame.setLocationRelativeTo(null);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}*/
+	/*
+	 * public static void main(String[] args) { EventQueue.invokeLater(new
+	 * Runnable() { public void run() { try { VentanaPrincipal frame = new
+	 * VentanaPrincipal(); frame.setVisible(true);
+	 * frame.setLocationRelativeTo(null); } catch (Exception e) {
+	 * e.printStackTrace(); } } }); }
+	 */
 
-	public VentanaLogin(ClienteJugable clienteJugable) throws IOException{
+	public VentanaLogin(ClienteJugable clienteJugable) throws Exception {
+		sonido = AudioSystem.getClip();
+		AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File("C:\\Users\\lukki\\Desktop\\GitHub - Progra Avanzada\\Prueba\\ProJuego\\src\\juego\\Sounds\\clap.wav"));
 		this.clienteJugable = clienteJugable;
 		setResizable(false);
 		setLocationRelativeTo(null);
 		setTitle("AnotherWorld");
-		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaLogin.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(
+				VentanaLogin.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
 		initComponents();
 		usuario = new Usuario();
 		ventanaRegistro = new VentanaRegistroDeUsuario(this.clienteJugable);
@@ -90,22 +101,23 @@ public class VentanaLogin extends JFrame implements ILogin{
 		gson = new Gson();
 		setVisible(true);
 		setLocationRelativeTo(null);
-		//clienteJugable = new ClienteJugable("localhost",444);
+		sonido.open(inputStream);
+		sonido.loop(Clip.LOOP_CONTINUOUSLY);
+		// clienteJugable = new ClienteJugable("localhost",444);
 	}
-	
-	
+
 	public void initComponents() {
 		setTitle("AnotherWorld");
 		setLocationRelativeTo(null);
 		pf = new PropertiesFile();
 		propiedades = pf.getProperties();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(new Dimension(375,275));
+		setSize(new Dimension(375, 275));
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		usuarioTextField = new JTextField();
 		usuarioTextField.addFocusListener(new FocusAdapter() {
 			@Override
@@ -116,23 +128,23 @@ public class VentanaLogin extends JFrame implements ILogin{
 		usuarioTextField.setBounds(145, 43, 116, 22);
 		contentPane.add(usuarioTextField);
 		usuarioTextField.setColumns(10);
-		
+
 		JLabel lblUsuario = new JLabel("Usuario");
 		lblUsuario.setForeground(Color.WHITE);
 		lblUsuario.setBounds(77, 46, 56, 16);
 		contentPane.add(lblUsuario);
-		
+
 		JLabel lblPassword = new JLabel("Password");
 		lblPassword.setBounds(77, 84, 56, 16);
 		lblPassword.setForeground(Color.WHITE);
 		lblPassword.setBounds(70, 84, 84, 16);
 		contentPane.add(lblPassword);
-		
+
 		logInButton = new JButton("LogIn");
 		logInButton.setBackground(new Color(59, 89, 182));
-	    logInButton.setForeground(Color.BLACK);
-	    logInButton.setFocusPainted(false);
-	    logInButton.setFont(new Font("Tahoma", Font.BOLD, 12));
+		logInButton.setForeground(Color.BLACK);
+		logInButton.setFocusPainted(false);
+		logInButton.setFont(new Font("Tahoma", Font.BOLD, 12));
 		logInButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
 				ingresarButtonActionPerformed(evt);
@@ -140,12 +152,12 @@ public class VentanaLogin extends JFrame implements ILogin{
 		});
 		logInButton.setBounds(145, 142, 116, 25);
 		contentPane.add(logInButton);
-		
+
 		registrarseButton = new JButton("Registrarse");
 		registrarseButton.setBackground(new Color(59, 89, 182));
-	    registrarseButton.setForeground(Color.BLACK);
-	    registrarseButton.setFocusPainted(false);
-	    registrarseButton.setFont(new Font("Tahoma", Font.BOLD, 12));
+		registrarseButton.setForeground(Color.BLACK);
+		registrarseButton.setFocusPainted(false);
+		registrarseButton.setFont(new Font("Tahoma", Font.BOLD, 12));
 		registrarseButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
 				registrarseButtonActionPerformed(evt);
@@ -153,7 +165,7 @@ public class VentanaLogin extends JFrame implements ILogin{
 		});
 		registrarseButton.setBounds(145, 193, 116, 25);
 		contentPane.add(registrarseButton);
-		
+
 		passwordField = new JPasswordField();
 		passwordField.addFocusListener(new FocusAdapter() {
 			@Override
@@ -163,34 +175,33 @@ public class VentanaLogin extends JFrame implements ILogin{
 		});
 		passwordField.setBounds(145, 82, 116, 18);
 		contentPane.add(passwordField);
-		
+
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon(VentanaLogin.class.getResource("/prograavanzada2016/anotherworld/interfaces/VentanaPrincipal.jpg")));
+		lblNewLabel.setIcon(new ImageIcon(
+				VentanaLogin.class.getResource("/prograavanzada2016/anotherworld/interfaces/VentanaPrincipal.jpg")));
 		lblNewLabel.setBounds(0, 0, 794, 571);
 		contentPane.add(lblNewLabel);
 	}
-	
-	public void usuarioTextFieldFocusLost(FocusEvent evt){
+
+	public void usuarioTextFieldFocusLost(FocusEvent evt) {
 		usuario.setNombreUsuario(usuarioTextField.getText());
 	}
-	
-	public void passwordTextFieldFocusLost(FocusEvent evt){
+
+	public void passwordTextFieldFocusLost(FocusEvent evt) {
 		char[] pass = passwordField.getPassword();
 		String passString = new String(pass);
 		usuario.setPassword(passString);
 	}
-	
-	public void ingresarButtonActionPerformed(ActionEvent evt)
-	{
+
+	public void ingresarButtonActionPerformed(ActionEvent evt) {
 		try {
-			
+
 			String nombreUsuario = usuarioTextField.getText().trim();
 			String passwordUsuario = new String(passwordField.getPassword());
-			
-			if("".equals(passwordUsuario) || "".equals(nombreUsuario)){
+
+			if ("".equals(passwordUsuario) || "".equals(nombreUsuario)) {
 				JOptionPane.showMessageDialog(contentPane, "Debe ingresar todos los campos");
-            } 
-            else{
+			} else {
 				Usuario usuario = new Usuario();
 				usuario.setNombreUsuario(nombreUsuario);
 				usuario.setPassword(passwordUsuario);
@@ -200,14 +211,16 @@ public class VentanaLogin extends JFrame implements ILogin{
 
 				clienteJugable.getClienteManager().sendMensaje(new Gson().toJson(rawMessageLogin));
 				this.setVisible(false);
-            }
-        } catch (Exception ex) {
-        	JOptionPane.showMessageDialog(contentPane, "Problema de conexion con la base de datos");
-            ex.printStackTrace();
-        }
+				sonido.close();
+
+			}
+		} catch (Exception ex) {
+			JOptionPane.showMessageDialog(contentPane, "Problema de conexion con la base de datos");
+			ex.printStackTrace();
+		}
 	}
-	
-	public void registrarseButtonActionPerformed(ActionEvent evt){
+
+	public void registrarseButtonActionPerformed(ActionEvent evt) {
 		ventanaRegistro.setVisible(true);
 		this.setVisible(false);
 	}
@@ -215,10 +228,10 @@ public class VentanaLogin extends JFrame implements ILogin{
 	@Override
 	public void update(String response) {
 		ventanaInicio = new VentanaDeBienvenida(clienteJugable);
-    	ventanaInicio.setVisible(true);
-    	ventanaInicio.setResizable(false);
-    	ventanaInicio.setLocationRelativeTo(null);
-    	dispose();
+		ventanaInicio.setVisible(true);
+		ventanaInicio.setResizable(false);
+		ventanaInicio.setLocationRelativeTo(null);
+		dispose();
 	}
 	
 }

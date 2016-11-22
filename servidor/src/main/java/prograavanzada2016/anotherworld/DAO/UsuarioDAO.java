@@ -36,7 +36,7 @@ public class UsuarioDAO extends DAO<Usuario>{
 			//agus
 			//conn = DriverManager.getConnection("jdbc:sqlite:C:\\GitAvanzada\\PrograAvanzada\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
 			//martin
-			conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\martin.f.andres\\Documents\\GitHub\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
+			conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
 			//conn.setAutoCommit(false);
 			statement = conn.createStatement();
 			stat = statement;

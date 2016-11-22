@@ -27,7 +27,7 @@ public class EstadoJuego extends Estado {
 		//mundo = new Mundo(juego, propiedades.getProperty("mundoMati"));
 		
 		//martin
-		mundo = new Mundo(juego,"C:\\Users\\martin.f.andres\\Documents\\GitHub\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt");
+		mundo = new Mundo(juego,"C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt");
 		
 		//mundo = new Mundo(juego,"C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt");
 		//mundo = new Mundo(juego, "C:\\Users\\matut\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt"); //Aca construimos nuestro mundo según la matriz en mundoBasic.txt
