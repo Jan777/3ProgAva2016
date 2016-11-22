@@ -7,6 +7,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
+import java.io.IOException;
+import java.net.UnknownHostException;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -173,9 +175,12 @@ public class VentanaCrearPersonaje extends JFrame {
 				clienteJugable.getClienteManager().sendMensaje(new Gson().toJson(rawMessageLogin));
 				this.setVisible(false);
 				
-				usuario.setPersonaje(pm);
-				Game game = new Game("Another World", 800, 600, clienteJugable);
-				game.start();
+				//usuario.setPersonaje(pm);
+				//Game game = new Game("Another World", 800, 600, clienteJugable);
+				//game.start();
+				
+				VentanaLogin ven = new VentanaLogin(clienteJugable);
+				
 				//usuario.setPersonajeJugador(personaje);
 				//ventanaMapaJuego = new VentanaMapa(personaje);
 				
@@ -189,4 +194,5 @@ public class VentanaCrearPersonaje extends JFrame {
 		dispose();
 		
 	}
+
 }
