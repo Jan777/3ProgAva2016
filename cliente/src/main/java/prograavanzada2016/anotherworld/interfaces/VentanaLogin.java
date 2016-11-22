@@ -87,7 +87,13 @@ public class VentanaLogin extends JFrame implements ILogin {
 
 	public VentanaLogin(ClienteJugable clienteJugable) throws Exception {
 		sonido = AudioSystem.getClip();
-		AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File("C:\\Users\\lukki\\Desktop\\GitHub - Progra Avanzada\\Prueba\\ProJuego\\src\\juego\\Sounds\\clap.wav"));
+		
+		//lukki
+		//AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File("C:\\Users\\lukki\\Desktop\\GitHub - Progra Avanzada\\Prueba\\ProJuego\\src\\juego\\Sounds\\clap.wav"));
+		
+		//martin
+		AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File("C:\\Users\\martin.f.andres\\Documents\\GitHub\\jrpg\\cliente\\src\\main\\resources\\clap.wav"));
+		
 		this.clienteJugable = clienteJugable;
 		setResizable(false);
 		setLocationRelativeTo(null);
