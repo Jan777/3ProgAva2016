@@ -238,7 +238,10 @@ public class VentanaMapa extends JFrame {
 		}
 		AudioInputStream inputStream = null;
 		try {
-			inputStream = AudioSystem.getAudioInputStream(new File("C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\cliente\\src\\main\\resources\\ventanaMapa.wav"));
+			//lukki
+			//inputStream = AudioSystem.getAudioInputStream(new File("C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\cliente\\src\\main\\resources\\ventanaMapa.wav"));
+			//martin
+			inputStream = AudioSystem.getAudioInputStream(new File("C:\\Users\\martin.f.andres\\Documents\\GitHub\\jrpg\\cliente\\src\\main\\resources\\ventanaMapa.wav"));
 		} catch (UnsupportedAudioFileException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
