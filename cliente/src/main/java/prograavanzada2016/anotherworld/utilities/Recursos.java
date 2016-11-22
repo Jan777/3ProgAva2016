@@ -36,6 +36,8 @@ public class Recursos {
 	// Entorno
 	public static BufferedImage piso;
 	public static BufferedImage pasto;
+	public static BufferedImage asfalto;
+	public static BufferedImage agua;
 	public static BufferedImage background;
 	// Fin Entorno
 	
@@ -162,6 +164,8 @@ public class Recursos {
 		// Inicio Entorno
 		piso =CargadorImagen.cargarImagen("/pisoPosta.png");
 		pasto = CargadorImagen.cargarImagen("/pasto.png");
+		asfalto = CargadorImagen.cargarImagen("/asfalto.png");
+		
 		//background = CargadorImagen.cargarImagen("/background2.jpg");
 		// Fin Entorno
 	}
