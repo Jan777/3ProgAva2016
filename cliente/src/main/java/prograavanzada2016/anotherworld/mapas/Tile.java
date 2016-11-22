@@ -10,6 +10,12 @@ public class Tile {
 	public static Tile fuego = new TileFuego(1);
 	public static Tile asfalto = new TileAsfalto(2);
 	public static Tile tierra = new TileTierra(3);
+	public static Tile asfaltoNOpisable = new TileAsfaltoNoPisable(4);
+	
+	public static Tile lago1 = new TileLago1(5);
+	public static Tile lago2 = new TileLago2(6);
+	public static Tile lago3 = new TileLago3(7);
+	public static Tile lago4 = new TileLago4(8);
 	
 	public static final int ANCHO = 64;
 	public static final int ALTO = 32;

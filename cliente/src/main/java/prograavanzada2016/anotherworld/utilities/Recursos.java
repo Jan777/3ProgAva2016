@@ -39,6 +39,12 @@ public class Recursos {
 	public static BufferedImage asfalto;
 	public static BufferedImage tierra;
 	public static BufferedImage background;
+	
+	public static BufferedImage lago1;
+	public static BufferedImage lago2;
+	public static BufferedImage lago3;
+	public static BufferedImage lago4;
+		
 	// Fin Entorno
 	
 	// Cargo todos los recursos una sola vez para no tener que hacerlo en cada actualizacion
@@ -160,12 +166,22 @@ public class Recursos {
 				humano.add(humanoAbajoIzq);
 				
 				// Fin humano
+				
+				
+		//comienza minotauro
+		
+		//fin minotauro
 		
 		// Inicio Entorno
 		piso =CargadorImagen.cargarImagen("/pisoPosta.png");
-		pasto = CargadorImagen.cargarImagen("/pasto.png");
+		pasto = CargadorImagen.cargarImagen("/pasto1.png");
 		asfalto = CargadorImagen.cargarImagen("/asfalto.png");
 		tierra = CargadorImagen.cargarImagen("/tierra.png");
+		
+		lago1 = CargadorImagen.cargarImagen("/lago1.png");
+		lago2 = CargadorImagen.cargarImagen("/lago2.png");
+		lago3 = CargadorImagen.cargarImagen("/lago3.png");
+		lago4 = CargadorImagen.cargarImagen("/lago4.png");
 		
 		//background = CargadorImagen.cargarImagen("/background2.jpg");
 		// Fin Entorno
