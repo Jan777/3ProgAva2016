@@ -10,6 +10,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
@@ -44,7 +45,6 @@ public class VentanaDeBienvenida extends JFrame {
     private ClienteJugable clienteJugable;
     private JButton jugarButton;
     static Properties propiedades;
-	static PropertiesFile pf;
 
 	public VentanaCrearPersonaje ventanaCrearPersonaje;
 	
@@ -52,8 +52,9 @@ public class VentanaDeBienvenida extends JFrame {
 
 	public VentanaDeBienvenida(ClienteJugable clienteJugable) throws Exception {
 		this.clienteJugable=clienteJugable;
-		
-		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaDeBienvenida.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
+		Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
+		setIconImage(image);
+		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaDeBienvenida.class.getResource("src/main/resources/IconoVentana.jpg")));
 		setTitle("Bienvenido!");
 		initComponents();
 		usuario = clienteJugable.getUsuario();
@@ -69,7 +70,9 @@ public class VentanaDeBienvenida extends JFrame {
 		lblBienvenido.setText("Bienvenido "+usuario.getNombre());
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon(VentanaDeBienvenida.class.getResource("/prograavanzada2016/anotherworld/interfaces/VentanaPrincipal.jpg")));
+		Image image2 = new ImageIcon("src/main/resources/VentanaPrincipal.jpg").getImage();
+		label.setIcon(new ImageIcon(image2));
+		//label.setIcon(new ImageIcon(VentanaDeBienvenida.class.getResource("src/main/resources/VentanaPrincipal.jpg")));
 		label.setBounds(0, 0, 359, 236);
 		contentPane.add(label);
 	
@@ -85,8 +88,6 @@ public class VentanaDeBienvenida extends JFrame {
 	}
 	
 	public void initComponents() throws Exception{
-		pf = new PropertiesFile();
-		propiedades = pf.getProperties();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(new Dimension(375,275));
 		contentPane = new JPanel();

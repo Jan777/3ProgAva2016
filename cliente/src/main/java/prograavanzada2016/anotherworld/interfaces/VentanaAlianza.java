@@ -7,6 +7,8 @@ import javax.swing.JLabel;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Image;
+
 import javax.swing.JComboBox;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -19,7 +21,9 @@ public class VentanaAlianza extends JFrame {
 	private JPanel contentPane;
 
 	public VentanaAlianza() throws Exception{
-		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaAlianza.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
+		Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
+		setIconImage(image);
+		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaAlianza.class.getResource("src/main/resources/IconoVentana.jpg")));
 		setTitle("Alianzas");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -72,7 +76,7 @@ public class VentanaAlianza extends JFrame {
 		contentPane.add(btnCancelar);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(VentanaAlianza.class.getResource("/prograavanzada2016/anotherworld/interfaces/BackgroundMochilaYAlianza.jpg")));
+		lblNewLabel.setIcon(new ImageIcon(VentanaAlianza.class.getResource("src/main/resources/BackgroundMochilaYAlianza.jpg")));
 		lblNewLabel.setBounds(0, 0, 434, 261);
 		contentPane.add(lblNewLabel);
 	}

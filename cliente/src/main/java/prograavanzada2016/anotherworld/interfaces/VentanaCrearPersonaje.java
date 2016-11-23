@@ -1,8 +1,6 @@
 package prograavanzada2016.anotherworld.interfaces;
 
 import java.util.Properties;
-import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusAdapter;
@@ -22,6 +20,7 @@ import prograavanzada2016.anotherworld.mensajes.RawMessage;
 import prograavanzada2016.anotherworld.mensajes.request.PersonajeConsultaMessage;
 import prograavanzada2016.anotherworld.modelos.PersonajeModel;
 import prograavanzada2016.anotherworld.modelos.Usuario;
+import prograavanzada2016.anotherworld.resources.Propiedades;
 
 import java.awt.*;
 
@@ -30,7 +29,7 @@ public class VentanaCrearPersonaje extends JFrame {
 	VentanaMapa ventanaMapaJuego;
 	
 	static Properties propiedades;
-	static PropertiesFile pf;
+	//static PropertiesFile pf;
 	
 	private String nombrePersonaje;
 	private String razaPersonaje;
@@ -54,10 +53,11 @@ public class VentanaCrearPersonaje extends JFrame {
 	}
 
 	public void initComponents() throws Exception {
-		pf = new PropertiesFile();
-		propiedades = pf.getProperties();
+		Propiedades propiedades = Propiedades.getInstance();
 		setSize(Integer.parseInt(propiedades.getProperty("w")),Integer.parseInt(propiedades.getProperty("h")));
-		setIconImage(Toolkit.getDefaultToolkit().getImage("\\src\\interfaz\\IconoVentana.jpg"));
+		Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
+		setIconImage(image);
+		//setIconImage(Toolkit.getDefaultToolkit().getImage("src/main/resources/IconoVentana.jpg"));
 		setTitle("Crear Personaje");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		contentPane = new JPanel();
@@ -134,7 +134,7 @@ public class VentanaCrearPersonaje extends JFrame {
 		contentPane.add(btnCrear);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon(VentanaCrearPersonaje.class.getResource("/prograavanzada2016/anotherworld/interfaces/BackgroundCrearPersonaje.jpeg")));
+		label.setIcon(new ImageIcon(VentanaCrearPersonaje.class.getResource("src/main/resources/BackgroundCrearPersonaje.jpeg")));
 		label.setBounds(0, 0, 784, 561);
 		contentPane.add(label);
 		

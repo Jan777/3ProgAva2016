@@ -9,9 +9,11 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.Toolkit;
 
@@ -39,7 +41,9 @@ public class VentanaUnionAlianza extends JFrame {
 	 * Create the frame.
 	 */
 	public VentanaUnionAlianza() throws Exception{
-		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaUnionAlianza.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
+		Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
+		setIconImage(image);
+		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaUnionAlianza.class.getResource("src/main/resources/IconoVentana.jpg")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 250);
 		contentPane = new JPanel();

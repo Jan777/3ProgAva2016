@@ -12,6 +12,8 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Image;
+
 import javax.swing.JList;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.ListSelectionModel;
@@ -26,7 +28,9 @@ public class VentanaMochila extends JFrame {
 	public VentanaMochila() throws Exception{
 		setTitle("Mochila");
 		setResizable(false);
-		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaMochila.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
+		Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
+		setIconImage(image);
+		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaMochila.class.getResource("src/main/resources/IconoVentana.jpg")));
 		getContentPane().setLayout(null);
 		
 		JLabel lblMochila = new JLabel("Mochila");
@@ -76,7 +80,7 @@ public class VentanaMochila extends JFrame {
 		getContentPane().add(btnCancelar);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(VentanaMochila.class.getResource("/prograavanzada2016/anotherworld/interfaces/BackgroundMochilaYAlianza.jpg")));
+		lblNewLabel.setIcon(new ImageIcon(VentanaMochila.class.getResource("src/main/resources/BackgroundMochilaYAlianza.jpg")));
 		lblNewLabel.setBounds(0, 0, 444, 271);
 		getContentPane().add(lblNewLabel);
 	}

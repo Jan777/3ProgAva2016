@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.Window;
 import javax.swing.JFrame;
@@ -53,7 +54,9 @@ public class VentanaRegistroDeUsuario extends JFrame {
 	
 	public VentanaRegistroDeUsuario(ClienteJugable clienteJugable) throws Exception{
 		this.clienteJugable = clienteJugable;
-		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaRegistroDeUsuario.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
+		Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
+		setIconImage(image);
+		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaRegistroDeUsuario.class.getResource("src/main/resources/IconoVentana.jpg")));
 		setTitle("Registrar");
 		initComponents();
 		usuario = new Usuario();
@@ -153,7 +156,9 @@ public class VentanaRegistroDeUsuario extends JFrame {
 		contentPane.add(passwordField);
 		
 		lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(VentanaRegistroDeUsuario.class.getResource("/prograavanzada2016/anotherworld/interfaces/VentanaPrincipal.jpg")));
+		Image image = new ImageIcon("src/main/resources/VentanaPrincipal.jpg").getImage();
+		lblNewLabel.setIcon(new ImageIcon(image));
+		//lblNewLabel.setIcon(new ImageIcon(VentanaRegistroDeUsuario.class.getResource("src/main/resources/VentanaPrincipal.jpg")));
 		lblNewLabel.setBounds(0, 0, 434, 261);
 		contentPane.add(lblNewLabel);
 	}

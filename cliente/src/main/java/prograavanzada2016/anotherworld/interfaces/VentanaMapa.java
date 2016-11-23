@@ -11,8 +11,10 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.GridBagLayout;
+import java.awt.Image;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.MouseInfo;
@@ -62,7 +64,9 @@ public class VentanaMapa extends JFrame {
 	public GameScreen game;
 
 	public VentanaMapa(PersonajeModel personajeModel) throws Exception{
-		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaMapa.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
+		Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
+		setIconImage(image);
+		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaMapa.class.getResource("src/main/resources/IconoVentana.jpg")));
 		setTitle("AnotherWorld");
 		setSize(900,700);
 		setResizable(false);
@@ -242,7 +246,7 @@ public class VentanaMapa extends JFrame {
 		//internalFrame.add(game.getCanvas());
 		setVisible(true);
 		sm = SonidoManager.getInstance();
-		sm.setMusic("src\\main\\resources\\ventanaMapa.wav");
+		sm.setMusic("src/main/resources/ventanaMapa.wav");
 		sm.play();
 	}
 

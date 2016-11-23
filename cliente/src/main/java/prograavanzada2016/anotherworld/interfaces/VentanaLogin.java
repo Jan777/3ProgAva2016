@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.Image;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -20,6 +21,7 @@ import prograavanzada2016.anotherworld.mensajes.request.LoginMessage;
 import prograavanzada2016.anotherworld.modelos.PersonajeModel;
 import prograavanzada2016.anotherworld.modelos.Usuario;
 import prograavanzada2016.anotherworld.observer.ILogin;
+import prograavanzada2016.anotherworld.resources.Propiedades;
 import prograavanzada2016.anotherworld.utilities.SonidoManager;
 
 import javax.swing.JTextField;
@@ -69,9 +71,7 @@ public class VentanaLogin extends JFrame implements ILogin {
 	//Clip sonido;
 
 	SonidoManager sm;
-	static Properties propiedades;
-	static PropertiesFile pf;
-
+	
 	private Gson gson;
 	private JPasswordField passwordField;
 
@@ -88,14 +88,16 @@ public class VentanaLogin extends JFrame implements ILogin {
 	 */
 
 	public VentanaLogin(ClienteJugable clienteJugable) throws Exception {
+		Propiedades propiedades = Propiedades.getInstance();
 		sm = SonidoManager.getInstance();
-		sm.setMusic("src\\main\\resources\\clap.wav");
+		sm.setMusic(propiedades.getProperty("sonidoLogin"));
 		this.clienteJugable = clienteJugable;
 		setResizable(false);
 		setLocationRelativeTo(null);
 		setTitle("AnotherWorld");
-		setIconImage(Toolkit.getDefaultToolkit().getImage(
-				VentanaLogin.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
+		Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
+		setIconImage(image);
+		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaLogin.class.getResource("/src/main/resources/IconoVentana.jpg")));
 		initComponents();
 		usuario = new Usuario();
 		ventanaRegistro = new VentanaRegistroDeUsuario(this.clienteJugable);
@@ -110,8 +112,6 @@ public class VentanaLogin extends JFrame implements ILogin {
 	public void initComponents() throws Exception {
 		setTitle("AnotherWorld");
 		setLocationRelativeTo(null);
-		pf = new PropertiesFile();
-		propiedades = pf.getProperties();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(new Dimension(375, 275));
 		contentPane = new JPanel();
@@ -178,8 +178,10 @@ public class VentanaLogin extends JFrame implements ILogin {
 		contentPane.add(passwordField);
 
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon(
-				VentanaLogin.class.getResource("/prograavanzada2016/anotherworld/interfaces/VentanaPrincipal.jpg")));
+		Image image = new ImageIcon("src/main/resources/VentanaPrincipal.jpg").getImage();
+		lblNewLabel.setIcon(new ImageIcon(image));
+		/*lblNewLabel.setIcon(new ImageIcon(
+				VentanaLogin.class.getResource("src/main/resources/VentanaPrincipal.jpg")));*/
 		lblNewLabel.setBounds(0, 0, 794, 571);
 		contentPane.add(lblNewLabel);
 	}
