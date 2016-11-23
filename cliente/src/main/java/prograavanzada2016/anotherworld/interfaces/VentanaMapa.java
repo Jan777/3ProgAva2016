@@ -32,6 +32,7 @@ import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.juego.Game;
 import prograavanzada2016.anotherworld.mapas.MapaViejoParaElRecuerdo;
 import prograavanzada2016.anotherworld.modelos.*;
+import prograavanzada2016.anotherworld.resources.Propiedades;
 import prograavanzada2016.anotherworld.utilities.SonidoManager;
 
 import java.awt.Toolkit;
@@ -65,6 +66,7 @@ public class VentanaMapa extends JFrame {
 
 	public VentanaMapa(PersonajeModel personajeModel) throws Exception{
 		Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
+		Propiedades propiedades = Propiedades.getInstance();
 		setIconImage(image);
 		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaMapa.class.getResource("src/main/resources/IconoVentana.jpg")));
 		setTitle("AnotherWorld");
@@ -246,7 +248,7 @@ public class VentanaMapa extends JFrame {
 		//internalFrame.add(game.getCanvas());
 		setVisible(true);
 		sm = SonidoManager.getInstance();
-		sm.setMusic("src/main/resources/ventanaMapa.wav");
+		sm.setMusic(propiedades.getProperty("mapTheme"));
 		sm.play();
 	}
 

@@ -39,9 +39,6 @@ public class VentanaDeBienvenida extends JFrame {
 
 	private JPanel contentPane;
 	private Usuario usuario;
-	private boolean cancelar;
-	private ObjectInputStream entrada;
-    private ObjectOutputStream salida;
     private ClienteJugable clienteJugable;
     private JButton jugarButton;
     static Properties propiedades;
@@ -75,16 +72,6 @@ public class VentanaDeBienvenida extends JFrame {
 		//label.setIcon(new ImageIcon(VentanaDeBienvenida.class.getResource("src/main/resources/VentanaPrincipal.jpg")));
 		label.setBounds(0, 0, 359, 236);
 		contentPane.add(label);
-	
-				
-		/*try {
-            Socket socket = new Socket("localhost", 4444);
-            salida = new ObjectOutputStream(socket.getOutputStream());
-            entrada = new ObjectInputStream(socket.getInputStream());
-            
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }*/
 	}
 	
 	public void initComponents() throws Exception{
@@ -110,9 +97,6 @@ public class VentanaDeBienvenida extends JFrame {
 	}
 	
 	public void jugarButtonActionPerformed(ActionEvent evt){
-		//Usuario usuario = new Usuario();
-		//usuario.setNombreUsuario(nombreUsuario);
-		//usuario.setPassword(passwordUsuario);
 		RawMessage rawMessageLogin = new RawMessage();
 		rawMessageLogin.type = "personajeConsulta";
 		rawMessageLogin.message = new PersonajeConsultaMessage(new Gson().toJson(usuario));
