@@ -248,6 +248,7 @@ public class VentanaMapa extends JFrame {
 		//internalFrame.add(game.getCanvas());
 		setVisible(true);
 		sm = SonidoManager.getInstance();
+		sm.stop();
 		sm.setMusic(propiedades.getProperty("mapTheme"));
 		sm.play();
 	}

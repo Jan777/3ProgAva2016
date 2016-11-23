@@ -90,6 +90,7 @@ public class VentanaLogin extends JFrame implements ILogin {
 	public VentanaLogin(ClienteJugable clienteJugable) throws Exception {
 		Propiedades propiedades = Propiedades.getInstance();
 		sm = SonidoManager.getInstance();
+		sm.stop();
 		sm.setMusic(propiedades.getProperty("sonidoLogin"));
 		this.clienteJugable = clienteJugable;
 		setResizable(false);
@@ -214,7 +215,7 @@ public class VentanaLogin extends JFrame implements ILogin {
 
 				clienteJugable.getClienteManager().sendMensaje(new Gson().toJson(rawMessageLogin));
 				this.setVisible(false);
-				sm.stop();
+				//sm.stop();
 
 			}
 		} catch (Exception ex) {
@@ -226,7 +227,7 @@ public class VentanaLogin extends JFrame implements ILogin {
 	public void registrarseButtonActionPerformed(ActionEvent evt) {
 		ventanaRegistro.setVisible(true);
 		this.setVisible(false);
-		sm.stop();
+		//sm.stop();
 	}
 
 	@Override
