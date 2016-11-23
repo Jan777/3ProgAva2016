@@ -7,6 +7,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Properties;
 
+import prograavanzada2016.anotherworld.modelos.InteligenciaArtificial;
+
+
 public class Servidor{
 	
 	private int cantidadDeConexiones;
@@ -15,13 +18,23 @@ public class Servidor{
 	private ServerSocket serverSocket;
 	
 	public static ArrayList<ClienteServicio> clientesSala1;
+	public static ArrayList<InteligenciaArtificial> enemigos;
 	
 	public Servidor() throws IOException{
+		this.enemigos=new ArrayList<>();
+		this.iniciarEnemigos(enemigos);
 		this.clientesSala1 = new ArrayList<>();
 		this.cantidadDeConexiones=0;
 		this.serverSocket = new ServerSocket(puerto);
 	}
 	
+	private void iniciarEnemigos(ArrayList<InteligenciaArtificial> lista) {
+		for(int x=0;x<1;x++){
+			InteligenciaArtificial ai = new InteligenciaArtificial(x+1);
+			lista.add(ai);
+		}
+	}
+
 	public void iniciarServidor() throws IOException, SQLException{
 		this.enLinea=true;
 		while(this.enLinea){

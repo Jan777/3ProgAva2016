@@ -78,7 +78,8 @@ public class Entidad {
 	
 	private boolean soyUsuario=false;
 	public boolean tengoUnCaminoAutomatico=false;
-
+	private boolean soyInteligenciaArtificial=false;
+	
 	public Entidad(Game juego, Mundo mundo, int ancho, int alto, float spawnX, float spawnY, LinkedList<BufferedImage[]> animaciones, int velAnimacion) throws Exception {
 		this.juego = juego;
 		this.ancho = ancho;
@@ -102,7 +103,7 @@ public class Entidad {
 	    this.soyUsuario=true;
 	}
 	
-	public Entidad(Game juego, int ancho, int alto, float spawnX, float spawnY, LinkedList<BufferedImage[]> animaciones, int velAnimacion) throws Exception {
+	public Entidad(Game juego, int ancho, int alto, float spawnX, float spawnY, LinkedList<BufferedImage[]> animaciones, int velAnimacion,boolean inteligenciaArtificial) throws Exception {
 		this.juego = juego;
 		this.ancho = ancho;
 		this.alto = alto;
@@ -122,6 +123,7 @@ public class Entidad {
 	    moverAbajo = new Animacion(velAnimacion, animaciones.get(6));
 	    moverAbajoIzq = new Animacion(velAnimacion, animaciones.get(7));
 	    this.tengoUnCaminoAutomatico=true;
+	    this.soyInteligenciaArtificial=inteligenciaArtificial;
 	}
 
 	public void actualizar() {
@@ -140,11 +142,14 @@ public class Entidad {
 		}else{
 			getEntradaAutomatica();
 		}
+		
 		mover();
 		if(soyUsuario){
 			juego.getCamara().Centrar(this);
 		}
 	}
+
+	
 
 	public void getEntrada() {
 
@@ -221,7 +226,7 @@ public class Entidad {
 		//posMouse = juego.getHandlerMouse().getPosMouse();
 		int posMouse[] = new int[2];
 		
-		if (this.getUsuario().getPersonaje().isNuevoCamino()) {
+		if (!soyInteligenciaArtificial && this.getUsuario().getPersonaje().isNuevoCamino()) {
 			this.getUsuario().getPersonaje().setNuevoCamino(false);
 			posMouse[0]=this.getUsuario().getPersonaje().getMovimientoX();
 			posMouse[1]=this.getUsuario().getPersonaje().getMovimientoY();
@@ -240,28 +245,10 @@ public class Entidad {
 			xInicio = x;
 			yInicio = y;
 			
-			/*if(x==300 && y==300){
-				xAutomatico=100;
-				yAutomatico=100;
-			}else if(x==100 && y==100){
-				xAutomatico=300;
-				yAutomatico=300;
-			}*/
-			
-			//xFinal = Math.round(posMouse[0] + juego.getCamara().getxOffset() - xOffset);
-			//yFinal = Math.round(posMouse[1] + juego.getCamara().getyOffset() - yOffset);
-			
-			//xFinal = Math.round(posMouse[0] + xOffsetAutomatico - xOffset);
-		//	yFinal = Math.round(posMouse[1] + yOffsetAutomatico - yOffset);
 			
 			xFinal = this.getUsuario().getPersonaje().getMovimientoXFinal();
 			yFinal = this.getUsuario().getPersonaje().getMovimientoYFinal();
 			
-			//hardcore
-			//xFinal = Math.round(posMouse[0] -368 - xOffset);
-			//yFinal = Math.round(posMouse[1] -268 - yOffset);
-			//xFinal = Math.round(posMouse[0]  - xOffset);
-			//yFinal = Math.round(posMouse[1] - yOffset);
 			
 			System.out.println("movimiento automatico posMouse: "+posMouse[0]+" "+posMouse[1]);
 			System.out.println("movimiento automatico en: "+xInicio+" "+yInicio+" "+xFinal+" "+yFinal);
@@ -301,9 +288,71 @@ public class Entidad {
 
 			//juego.getHandlerMouse().setNuevoRecorrido(false);
 			enMovimiento = true;
+		}else if(soyInteligenciaArtificial){
+
+			
+			diagonalInfIzq = false;
+			diagonalInfDer = false;
+			diagonalSupIzq = false;
+			diagonalSupDer = false;
+			vertical = false;
+			horizontal = false;
+			enMovimiento = false;
+
+			xInicio = x;
+			yInicio = y;
+			//movimiento de la inteligencia
+			if(x==300 && y==300){
+				xFinal = 300;
+				yFinal = 400;
+			}else if(x==300 && y==400){
+				xFinal=400;
+				yFinal=400;
+			}else if(x==400 && y==400){
+				xFinal=300;
+				yFinal=400;
+			}else if(x==300 && y==400){
+				xFinal=300;
+				yFinal=300;
+			}
+			
+						
+			difX = Math.abs(xFinal - xInicio);
+			difY = Math.abs(yFinal - yInicio);
+			relacion = difX / difY;
+
+			if (difX == 0 || difY == 0) {
+				relacion = 1;
+			}
+
+			if (difX < ancho && yInicio != yFinal) {
+				vertical = true;
+				horizontal = true;
+			}
+			if (difY < alto && xInicio != xFinal) {
+				horizontal = true;
+				vertical = true;
+			}
+
+			if (!vertical && !horizontal) {
+				if (xFinal > xInicio && yFinal > yInicio) {
+					diagonalInfDer = true;
+				} else if (xFinal < xInicio && yFinal > yInicio) {
+					diagonalInfIzq = true;
+				} else if (xFinal > xInicio && yFinal < yInicio) {
+					diagonalSupDer = true;
+				} else if (xFinal < xInicio && yFinal < yInicio) {
+					diagonalSupIzq = true;
+				}
+			}
+
+			//juego.getHandlerMouse().setNuevoRecorrido(false);
+			enMovimiento = true;
+		
 		}
 	}
 	
+	//private void getEntradaAutomaticaEnemigos() {}
 	
 	public void mover() {
 
@@ -395,17 +444,11 @@ public class Entidad {
 		drawY = (int) (y - juego.getCamara().getyOffset());
 		g.drawImage(getFrameAnimacionActual(), drawX, drawY, ancho, alto, null);
 		
-		g.setColor(Color.WHITE);
-		if(juego.getUser().getPersonaje().getRazaId() == 1) // aca obtener raza y casta para dibujarlos
-		{
-			g.drawString("<Humano>", drawX, drawY);
+		if(!soyUsuario){
+			g.setColor(Color.WHITE);
+			g.drawString("Salud: "+ juego.getUser().getPersonaje().getSalud(), drawX +10 , drawY - 24);
+			g.drawString(juego.getUser().getPersonaje().getNombre() + " - "+ juego.getUser().getPersonaje().getNivel(), drawX + 10, drawY - 36); //aca obtener el nombre del pj
 		}
-		else if(juego.getUser().getPersonaje().getRazaId() == 2){
-			g.drawString("<Elfo>", drawX + 10, drawY);
-		}
-		g.drawString("Energia: "+ juego.getUser().getPersonaje().getEnergia(), drawX + 10, drawY - 12);
-		g.drawString("Salud: "+ juego.getUser().getPersonaje().getSalud(), drawX +10 , drawY - 24);
-		g.drawString(juego.getUser().getPersonaje().getNombre() + " - "+ juego.getUser().getPersonaje().getNivel(), drawX + 10, drawY - 36); //aca obtener el nombre del pj
 	}
 
 	private BufferedImage getFrameAnimacionActual() {

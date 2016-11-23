@@ -34,6 +34,7 @@ public class App {
 			+" vea el LOG del sistema.", "ERROR", JOptionPane.ERROR_MESSAGE);
 			//System.out.print("Ocurrió un error, para más información vea el LOG del sistema.");
 			logger.log(e.getMessage());
+			e.printStackTrace();
 			//LOGGER.info("No se pudo iniciar el servidor, por favor verificar si el puerto se encuentra disponible");
 		}
 		

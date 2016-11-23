@@ -10,6 +10,7 @@ import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.interfaces.*;
 import prograavanzada2016.anotherworld.utilities.*;
 import prograavanzada2016.anotherworld.mapas.*;
+import prograavanzada2016.anotherworld.modelos.InteligenciaArtificial;
 import prograavanzada2016.anotherworld.modelos.PersonajeModel;
 import prograavanzada2016.anotherworld.modelos.Usuario;
 
@@ -193,9 +194,9 @@ public class Game implements Runnable{
 	public void agregarNuevoPersonaje(Usuario otroUsuario) throws Exception{
 		Entidad personaje=null;
 		if(otroUsuario.getPersonaje().getRazaId() == 1){ //Aca construimos nuestro personaje segun el personaje del jugador
-			personaje = new Entidad(this, 64, 64, 0, 0, Recursos.elfo, 150);
+			personaje = new Entidad(this, 64, 64, 0, 0, Recursos.elfo, 150,false);
 		} else if (otroUsuario.getPersonaje().getRazaId() == 2){
-			personaje = new Entidad(this, 64, 64, 0, 0, Recursos.humano, 150);
+			personaje = new Entidad(this, 64, 64, 0, 0, Recursos.humano, 150,false);
 		}
 		this.estadoJuego.addOtroPersonaje(personaje,otroUsuario);
 	}
@@ -214,6 +215,14 @@ public class Game implements Runnable{
 
 	public void setClienteJugable(ClienteJugable clienteJugable) {
 		this.clienteJugable = clienteJugable;
+	}
+
+	public void agregarNuevoEnemigo(InteligenciaArtificial enemigoArt) throws Exception {
+		Entidad enemigo=null;
+		Usuario usuarioArt = new Usuario();
+		usuarioArt.setId(enemigoArt.getId());
+		enemigo = new Entidad(this, 64, 64, 300, 300, Recursos.minotauro, 150,true);
+		this.estadoJuego.addOtroEnemigo(enemigo, usuarioArt);
 	}
 	
 	

@@ -1,5 +1,6 @@
 package prograavanzada2016.anotherworld.servicios;
 
+import java.io.PrintWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +12,8 @@ import prograavanzada2016.anotherworld.cliente.ClienteJugable;
 import prograavanzada2016.anotherworld.interfaces.VentanaCrearPersonaje;
 import prograavanzada2016.anotherworld.juego.Game;
 import prograavanzada2016.anotherworld.mensajes.MessageBase;
+import prograavanzada2016.anotherworld.mensajes.RawMessage;
+import prograavanzada2016.anotherworld.mensajes.request.EnemigoConsultaMessage;
 import prograavanzada2016.anotherworld.mensajes.response.PersonajeConsultaResponseMessage;
 import prograavanzada2016.anotherworld.mensajes.response.RecibirPersonajesConectadosMessage;
 import prograavanzada2016.anotherworld.modelos.Usuario;
@@ -38,7 +41,16 @@ public class RecibirPersonajesConectadosService implements ServicioServer{
 			this.clienteJugable.getOtrosClientes().add(usuarioOtro);
 			System.out.println("se agrego un nuevo personaje");
 			this.clienteJugable.getJuego().agregarNuevoPersonaje(usuarioOtro);
-		}		
+		}
+		
+		PrintWriter salida = new PrintWriter(this.clienteJugable.getSocket().getOutputStream());
+		
+		RawMessage rawMessageLogin = new RawMessage();
+    	rawMessageLogin.type = "buscarEnemigos";
+    	rawMessageLogin.message = new EnemigoConsultaMessage(new Gson().toJson(clienteJugable.getUsuario()));
+		
+		salida.println(new Gson().toJson(rawMessageLogin));
+		salida.flush();
 	}
 	
 }

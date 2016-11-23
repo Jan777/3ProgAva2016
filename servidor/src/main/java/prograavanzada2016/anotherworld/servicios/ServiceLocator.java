@@ -22,6 +22,8 @@ public class ServiceLocator {
 			return new MoverService();
 		}else if(tipo.equals("buscarPersonajes")){
 			return new BuscarPersonajesService();
+		}else if(tipo.equals("buscarEnemigos")){
+			return new EnemigoConsultaService();
 		}
 		return null;
 	}

@@ -14,6 +14,7 @@ import prograavanzada2016.anotherworld.comandos.Comando;
 import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.juego.Game;
 import prograavanzada2016.anotherworld.mensajes.RawMessage;
+import prograavanzada2016.anotherworld.modelos.InteligenciaArtificial;
 import prograavanzada2016.anotherworld.modelos.Usuario;
 import prograavanzada2016.anotherworld.observer.ILogin;
 
@@ -28,11 +29,14 @@ public class ClienteJugable{
 	private ArrayList<Usuario> otrosClientes;
 	@Expose(serialize=false)
 	Gson gson;
+	@Expose(serialize=false)
+	private ArrayList<InteligenciaArtificial> enemigos;
 	private Game juego;
 	
 	
 	public ClienteJugable(String server, int port) throws UnknownHostException, IOException {
 		this.otrosClientes=new ArrayList<>();
+		this.enemigos=new ArrayList<>();
 		this.socket = new Socket(server, port);
 		clienteManager = new ClienteManager(this);
 		Thread instancia = new Thread(clienteManager,"Cliente");
@@ -102,5 +106,13 @@ public class ClienteJugable{
 
 	public void setJuego(Game juego) {
 		this.juego = juego;
+	}
+
+	public ArrayList<InteligenciaArtificial> getEnemigos() {
+		return enemigos;
+	}
+
+	public void setEnemigos(ArrayList<InteligenciaArtificial> enemigos) {
+		this.enemigos = enemigos;
 	}
 }

@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Properties;
 
 import prograavanzada2016.anotherworld.juego.*;
+import prograavanzada2016.anotherworld.modelos.InteligenciaArtificial;
 import prograavanzada2016.anotherworld.modelos.Usuario;
 import prograavanzada2016.anotherworld.resources.Propiedades;
 import prograavanzada2016.anotherworld.utilities.*;
@@ -19,21 +20,15 @@ public class EstadoJuego extends Estado {
 	private Mundo mundo;
 	private boolean pruebita = true;
 	private ArrayList<Entidad> personajes;
+	private ArrayList<Entidad> enemigos;
 	
 	public EstadoJuego(Game juego) throws Exception {
 		super(juego);
 		this.personajes = new ArrayList<>();
+		this.enemigos = new ArrayList<>();
 		Propiedades propiedades = Propiedades.getInstance();
 		mundo = new Mundo(juego, propiedades.getProperty("mundo"));
 		
-		//lukki
-		//mundo = new Mundo(juego,"C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt");
-		
-		//martin
-		//mundo = new Mundo(juego,"src\\main\\resources\\mundoBasic.txt");
-		
-		//mundo = new Mundo(juego,"C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt");
-		//mundo = new Mundo(juego, "C:\\Users\\matut\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt"); //Aca construimos nuestro mundo según la matriz en mundoBasic.txt
 		if(juego.getUser().getPersonaje().getRazaId() == 1){ //Aca construimos nuestro personaje segun el personaje del jugador
 			personaje = new Entidad(juego, mundo, 64, 64, 0, 0, Recursos.elfo, 150);
 		} else if (juego.getUser().getPersonaje().getRazaId() == 2){
@@ -49,7 +44,9 @@ public class EstadoJuego extends Estado {
 		for(Entidad otroPersonaje : personajes){
 			otroPersonaje.actualizar();
 		}
-		
+		for(Entidad enemigo : enemigos){
+			enemigo.actualizar();
+		}
 	}
 
 	@Override
@@ -67,6 +64,9 @@ public class EstadoJuego extends Estado {
 		for(Entidad otroPersonaje : personajes){
 			otroPersonaje.graficar(g);
 		}
+		for(Entidad enemigo : enemigos){
+			enemigo.graficar(g);
+		}
 	}
 	
 	public Entidad getPersonaje() {
@@ -81,5 +81,20 @@ public class EstadoJuego extends Estado {
 
 	public ArrayList<Entidad> getPersonajes() {
 		return this.personajes;
+	}
+
+	public ArrayList<Entidad> getEnemigos() {
+		return enemigos;
+	}
+
+	public void setEnemigos(ArrayList<Entidad> enemigos) {
+		this.enemigos = enemigos;
+	}
+	
+	@Override
+	public void addOtroEnemigo(Entidad enemigo,Usuario usuario){
+		enemigo.setMundo(this.mundo);
+		enemigo.setUsuario(usuario);
+		this.enemigos.add(enemigo);
 	}
 }
