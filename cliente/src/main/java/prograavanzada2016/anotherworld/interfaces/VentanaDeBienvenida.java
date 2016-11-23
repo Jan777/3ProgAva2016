@@ -18,6 +18,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.Properties;
+import javax.swing.Timer;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -34,6 +35,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
 import javax.swing.SwingConstants;
+import javax.swing.JProgressBar;
 
 public class VentanaDeBienvenida extends JFrame {
 
@@ -42,6 +44,8 @@ public class VentanaDeBienvenida extends JFrame {
     private ClienteJugable clienteJugable;
     private JButton jugarButton;
     static Properties propiedades;
+    private Timer timer;
+    private JProgressBar progressBar;
 
 	public VentanaCrearPersonaje ventanaCrearPersonaje;
 	
@@ -49,8 +53,8 @@ public class VentanaDeBienvenida extends JFrame {
 
 	public VentanaDeBienvenida(ClienteJugable clienteJugable) throws Exception {
 		this.clienteJugable=clienteJugable;
-		Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
-		setIconImage(image);
+		//Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
+		//setIconImage(image);
 		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaDeBienvenida.class.getResource("src/main/resources/IconoVentana.jpg")));
 		setTitle("Bienvenido!");
 		initComponents();
@@ -67,8 +71,8 @@ public class VentanaDeBienvenida extends JFrame {
 		lblBienvenido.setText("Bienvenido "+usuario.getNombre());
 		
 		JLabel label = new JLabel("");
-		Image image2 = new ImageIcon("src/main/resources/VentanaPrincipal.jpg").getImage();
-		label.setIcon(new ImageIcon(image2));
+		//Image image2 = new ImageIcon("src/main/resources/VentanaPrincipal.jpg").getImage();
+		//label.setIcon(new ImageIcon(image2));
 		//label.setIcon(new ImageIcon(VentanaDeBienvenida.class.getResource("src/main/resources/VentanaPrincipal.jpg")));
 		label.setBounds(0, 0, 359, 236);
 		contentPane.add(label);
@@ -92,16 +96,37 @@ public class VentanaDeBienvenida extends JFrame {
 				jugarButtonActionPerformed(evt);
 			}
 		});
+		
+		progressBar = new JProgressBar(0, 2000);
+		progressBar.setBounds(27, 156, 293, 31);
+		progressBar.setStringPainted(true);
+		progressBar.setForeground(Color.GREEN);
+		contentPane.add(progressBar);
 		jugarButton.setBounds(136, 200, 97, 25);
 		contentPane.add(jugarButton);
 	}
 	
+	public void iterate(){
+		 	int num=0;
+			while (num < 100) {
+		 		progressBar.setValue(num); // Asignar un valor a la barra de progreso.
+			  try {
+			  Thread.sleep(1000);
+			  } catch (InterruptedException e) { }
+			  num += 10;
+			  }
+	}
+	
 	public void jugarButtonActionPerformed(ActionEvent evt){
+		
+		iterate();
 		RawMessage rawMessageLogin = new RawMessage();
 		rawMessageLogin.type = "personajeConsulta";
 		rawMessageLogin.message = new PersonajeConsultaMessage(new Gson().toJson(usuario));
 
 		clienteJugable.getClienteManager().sendMensaje(new Gson().toJson(rawMessageLogin));
+		
+		
 		this.setVisible(false);
 		
 		

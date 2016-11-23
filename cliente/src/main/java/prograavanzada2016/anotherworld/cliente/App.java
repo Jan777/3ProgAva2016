@@ -32,6 +32,3 @@ public class App {
 		
 	}
 }
-
-
-//throws Exception
