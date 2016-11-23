@@ -198,27 +198,27 @@ public class Personaje extends Ente{
 		// Al morir, ¿dropea el mejor item?
 	}
 	
-	public void crearAlianza(String nombreAlianza)
+	public void crearAlianza(String nombreAlianza) throws Exception
 	{
 		abandonarAlianzaActual();
 		this.alianza = new Alianza(nombreAlianza, this);
 	}
 	
-	public void añadirPersonajeAlianza(Personaje p)
+	public void añadirPersonajeAlianza(Personaje p) throws Exception
 	{
 		// Checkear que el personaje a añadir no esté en la alianza.
 		this.alianza.agregarMiembro(p);
 		p.serAñadidoAlianza(this.alianza);
 	}
 	
-	public void serAñadidoAlianza(Alianza a)
+	public void serAñadidoAlianza(Alianza a) throws Exception
 	{
 		// Consultar si quiere aceptar.
 		this.abandonarAlianzaActual();
 		this.alianza = a;
 	}
 	
-	public void abandonarAlianzaActual()
+	public void abandonarAlianzaActual() throws Exception
 	{
 		if (this.alianza != null)
 		{

@@ -8,7 +8,7 @@ public abstract class Raza implements ICalculaStats{
 	
 	public Raza(){}
 	
-	protected void aumentarStatsSegunCasta(Personaje personaje, int fuerza, int destreza, int inteligencia, int salud, int mana, int energia){
+	protected void aumentarStatsSegunCasta(Personaje personaje, int fuerza, int destreza, int inteligencia, int salud, int mana, int energia) throws Exception{
 		personaje.aumentarFuerza(fuerza);
 		personaje.aumentarDestreza(destreza);
 		personaje.aumentarInteligencia(inteligencia);

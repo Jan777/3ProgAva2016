@@ -11,7 +11,7 @@ public class ClienteServicio {
 	
 	public ClienteServicio(){}
 	
-	public ClienteServicio(Socket socket, int id){
+	public ClienteServicio(Socket socket, int id) {
 		this.socket=socket;
 		this.id=id;
 	}

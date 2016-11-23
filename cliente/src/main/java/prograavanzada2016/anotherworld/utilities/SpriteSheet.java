@@ -7,11 +7,11 @@ public class SpriteSheet extends Observable{
 
 	private BufferedImage sprite;
 	
-	public SpriteSheet(BufferedImage sprite) {
+	public SpriteSheet(BufferedImage sprite) throws Exception{
 		this.sprite = sprite;
 	}
 	
-	public BufferedImage getTile(int x, int y, int ancho, int alto) {
+	public BufferedImage getTile(int x, int y, int ancho, int alto) throws Exception{
 		return sprite.getSubimage(x, y, ancho, alto);
 	}
 }

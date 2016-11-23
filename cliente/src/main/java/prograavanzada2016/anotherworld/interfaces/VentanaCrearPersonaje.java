@@ -45,7 +45,7 @@ public class VentanaCrearPersonaje extends JFrame {
 	private ClienteJugable clienteJugable;
 	private Personaje personaje;
 	
-	public VentanaCrearPersonaje(ClienteJugable clienteJugable){
+	public VentanaCrearPersonaje(ClienteJugable clienteJugable) throws Exception{
 		initComponents();   
 		this.usuario = clienteJugable.getUsuario();
 		this.clienteJugable=clienteJugable;
@@ -53,7 +53,7 @@ public class VentanaCrearPersonaje extends JFrame {
 		setLocationRelativeTo(null);
 	}
 
-	public void initComponents() {
+	public void initComponents() throws Exception {
 		pf = new PropertiesFile();
 		propiedades = pf.getProperties();
 		setSize(Integer.parseInt(propiedades.getProperty("w")),Integer.parseInt(propiedades.getProperty("h")));

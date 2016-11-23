@@ -8,7 +8,7 @@ public class Comando {
 	protected String responseFromServer;
 	protected String requestFromClient;
 	
-	public Comando(int codigo, String mensaje, Gson gson, String responseFromServer, String requestFromClient) {
+	public Comando(int codigo, String mensaje, Gson gson, String responseFromServer, String requestFromClient) throws Exception {
 		this.codigo = codigo;
 		this.mensaje = mensaje;
 		this.responseFromServer = responseFromServer;

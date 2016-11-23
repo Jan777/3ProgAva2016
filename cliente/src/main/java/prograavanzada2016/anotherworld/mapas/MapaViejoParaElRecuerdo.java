@@ -36,7 +36,7 @@ public class MapaViejoParaElRecuerdo extends Canvas{
 	private BufferedImage suelo;
 	private BufferedImage pasto;
 	
-	public MapaViejoParaElRecuerdo(){
+	public MapaViejoParaElRecuerdo() throws Exception{
 		setSize(new Dimension(320, 160));
 		this.iniciar();
 	}
@@ -48,7 +48,7 @@ public class MapaViejoParaElRecuerdo extends Canvas{
 		this.map = map;
 	}
 	
-	private void iniciar() {
+	private void iniciar() throws Exception{
 		/*BufferedImageLoader bi = new BufferedImageLoader();
 		SpriteSheet hoja = new SpriteSheet(bi.loadImage("pisoPosta.png")); 
 		this.suelo=hoja.getTile(0, 0, 64, 32);

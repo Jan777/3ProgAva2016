@@ -6,7 +6,7 @@ import prograavanzada2016.anotherworld.castas.Mago;
 import prograavanzada2016.anotherworld.entities.Personaje;
 
 public interface ICalculaStats {
-	public void calcularStats(Personaje personaje, Mago mago);
-	public void calcularStats(Personaje personaje, Guerrero guerrero);
-	public void calcularStats(Personaje personaje, Curandero curandero);
+	public void calcularStats(Personaje personaje, Mago mago) throws Exception;
+	public void calcularStats(Personaje personaje, Guerrero guerrero) throws Exception;
+	public void calcularStats(Personaje personaje, Curandero curandero) throws Exception;
 }

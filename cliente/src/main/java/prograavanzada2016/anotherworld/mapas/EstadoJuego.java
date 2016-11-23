@@ -19,7 +19,7 @@ public class EstadoJuego extends Estado {
 	private boolean pruebita = true;
 	private ArrayList<Entidad> personajes;
 	
-	public EstadoJuego(Game juego) throws FileNotFoundException, IOException {
+	public EstadoJuego(Game juego) throws Exception {
 		super(juego);
 		this.personajes = new ArrayList<>();
 		Properties propiedades = new Properties();
@@ -30,7 +30,7 @@ public class EstadoJuego extends Estado {
 		//mundo = new Mundo(juego,"C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt");
 		
 		//martin
-		mundo = new Mundo(juego,"C:\\Users\\martin.f.andres\\Documents\\GitHub\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt");
+		mundo = new Mundo(juego,"C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt");
 		
 		//mundo = new Mundo(juego,"C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt");
 		//mundo = new Mundo(juego, "C:\\Users\\matut\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt"); //Aca construimos nuestro mundo según la matriz en mundoBasic.txt
@@ -57,7 +57,12 @@ public class EstadoJuego extends Estado {
 		//g.drawImage(Recursos.background, 0, 0, juego.getAncho(), juego.getAlto(), null);
 		g.setColor(Color.black);
 		g.fillRect(0, 0, juego.getAncho(), juego.getAlto());
-		mundo.graficar(g);
+		try {
+			mundo.graficar(g);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		personaje.graficar(g);
 		for(Entidad otroPersonaje : personajes){
 			otroPersonaje.graficar(g);

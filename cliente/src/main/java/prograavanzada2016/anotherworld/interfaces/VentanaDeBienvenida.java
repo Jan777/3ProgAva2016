@@ -50,7 +50,7 @@ public class VentanaDeBienvenida extends JFrame {
 	
 	JLabel lblBienvenido = new JLabel("New label");
 
-	public VentanaDeBienvenida(ClienteJugable clienteJugable) {
+	public VentanaDeBienvenida(ClienteJugable clienteJugable) throws Exception {
 		this.clienteJugable=clienteJugable;
 		
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaDeBienvenida.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
@@ -84,7 +84,7 @@ public class VentanaDeBienvenida extends JFrame {
         }*/
 	}
 	
-	public void initComponents(){
+	public void initComponents() throws Exception{
 		pf = new PropertiesFile();
 		propiedades = pf.getProperties();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -7,7 +7,7 @@ public class ComandoMover extends Comando{
 	private int posX;
 	private int posY;
 	
-	public ComandoMover(int clienteId, int posX, int posY) {
+	public ComandoMover(int clienteId, int posX, int posY) throws Exception{
 		this.clienteId = clienteId;
 		this.posX = posX;
 		this.posY = posY;

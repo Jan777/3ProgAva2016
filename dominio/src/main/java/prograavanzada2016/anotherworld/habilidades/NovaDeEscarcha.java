@@ -6,7 +6,7 @@ import prograavanzada2016.anotherworld.entities.Ente;
 
 public class NovaDeEscarcha extends HabilidadPersonaje{
 	
-	public NovaDeEscarcha() {
+	public NovaDeEscarcha() throws Exception {
 		this.id=2;
 		this.costeMana=30;
 		this.casta = new Mago();

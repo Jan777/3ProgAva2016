@@ -18,7 +18,7 @@ public class GameScreen {
 	public JFrame pantalla;		//borrar
 	private Canvas canvas; // Aca donde se grafica el juego
 
-	public GameScreen(final String nombre, final int ancho, final int alto) {
+	public GameScreen(final String nombre, final int ancho, final int alto) throws Exception {
 		/*
 		pantalla = new JFrame(nombre);
 		pantalla.setSize(396, 229);

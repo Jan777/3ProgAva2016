@@ -109,7 +109,7 @@ public abstract class Zona {
 		return true;
 	}
 	
-	public void transportarAlCentroDeLaZona(Personaje personaje){
+	public void transportarAlCentroDeLaZona(Personaje personaje) throws Exception{
 		personaje.moverse(GeneradorMagico.randInt(this.getAnchoMinimo(), this.getAnchoMaximo()), GeneradorMagico.randInt(this.getLargoMinimo(),this.getLargoMaximo()));
 	}
 }

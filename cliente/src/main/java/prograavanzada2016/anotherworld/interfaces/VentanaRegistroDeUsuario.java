@@ -51,7 +51,7 @@ public class VentanaRegistroDeUsuario extends JFrame {
 	 * Launch the application.
 	 */
 	
-	public VentanaRegistroDeUsuario(ClienteJugable clienteJugable){
+	public VentanaRegistroDeUsuario(ClienteJugable clienteJugable) throws Exception{
 		this.clienteJugable = clienteJugable;
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaRegistroDeUsuario.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
 		setTitle("Registrar");
@@ -61,7 +61,7 @@ public class VentanaRegistroDeUsuario extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public void initComponents() {
+	public void initComponents() throws Exception{
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();

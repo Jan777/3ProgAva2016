@@ -52,7 +52,7 @@ public class Game implements Runnable{
 		mouseController.setClienteJugable(clienteJugable);
 	}
 
-	public void initGame() throws FileNotFoundException, IOException { // Carga lo necesario para iniciar el juego
+	public void initGame() throws Exception { // Carga lo necesario para iniciar el juego
 		//screen = new GameScreen(nombre, width, height);
 		//screen.getCanvas().addMouseListener(mouseController);
 		
@@ -107,6 +107,8 @@ public class Game implements Runnable{
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
@@ -188,7 +190,7 @@ public class Game implements Runnable{
 		this.user = user;
 	}
 	
-	public void agregarNuevoPersonaje(Usuario otroUsuario){
+	public void agregarNuevoPersonaje(Usuario otroUsuario) throws Exception{
 		Entidad personaje=null;
 		if(otroUsuario.getPersonaje().getRazaId() == 1){ //Aca construimos nuestro personaje segun el personaje del jugador
 			personaje = new Entidad(this, 64, 64, 0, 0, Recursos.elfo, 150);

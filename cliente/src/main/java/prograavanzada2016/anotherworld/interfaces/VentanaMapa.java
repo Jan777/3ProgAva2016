@@ -60,7 +60,7 @@ public class VentanaMapa extends JFrame {
 	
 	public GameScreen game;
 
-	public VentanaMapa(PersonajeModel personajeModel){
+	public VentanaMapa(PersonajeModel personajeModel) throws Exception{
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaMapa.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
 		setTitle("AnotherWorld");
 		setSize(900,700);
@@ -115,7 +115,11 @@ public class VentanaMapa extends JFrame {
 		btnMochila.setFont(new Font("Tahoma", Font.BOLD, 12));
 		btnMochila.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				ventanaMochila = new VentanaMochila();
+				try {
+					ventanaMochila = new VentanaMochila();
+				} catch (Exception e) {
+					System.out.print("No se puede inicializar ventana de Mochila");
+				}
 				ventanaMochila.setVisible(true);
 				ventanaMochila.setResizable(false);
 				ventanaMochila.setSize(new Dimension(420,300));
@@ -172,7 +176,12 @@ public class VentanaMapa extends JFrame {
 		btnCrearAlianza.setFont(new Font("Tahoma", Font.BOLD, 12));
 		btnCrearAlianza.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				VentanaAlianza ventanaAlianza = new VentanaAlianza();
+				VentanaAlianza ventanaAlianza = null;
+				try {
+					ventanaAlianza = new VentanaAlianza();
+				} catch (Exception e) {
+					System.out.print("No se puede inicializar ventana de Alianza");
+				}
 				ventanaAlianza.setVisible(true);
 				ventanaAlianza.setResizable(false);
 				ventanaAlianza.setSize(new Dimension(400,280));
@@ -241,7 +250,7 @@ public class VentanaMapa extends JFrame {
 			//lukki
 			//inputStream = AudioSystem.getAudioInputStream(new File("C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\cliente\\src\\main\\resources\\ventanaMapa.wav"));
 			//martin
-			inputStream = AudioSystem.getAudioInputStream(new File("C:\\Users\\martin.f.andres\\Documents\\GitHub\\jrpg\\cliente\\src\\main\\resources\\ventanaMapa.wav"));
+			inputStream = AudioSystem.getAudioInputStream(new File("C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\cliente\\src\\main\\resources\\ventanaMapa.wav"));
 		} catch (UnsupportedAudioFileException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

@@ -37,8 +37,9 @@ public class Ventana extends JFrame {
 
 	/**
 	 * Create the frame.
+	 * @throws Exception 
 	 */
-	public Ventana() {
+	public Ventana() throws Exception {
 		setTitle("Prueba de mapa another world");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//setBounds(0, 0, 320, 160);

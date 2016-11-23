@@ -9,7 +9,7 @@ import prograavanzada2016.anotherworld.resources.GeneradorMagico;
 public class GrupoPersonajes {
 	ArrayList<Personaje> grupo = new ArrayList<>();
 
-	public GrupoPersonajes(ArrayList<Personaje> grupo) {
+	public GrupoPersonajes(ArrayList<Personaje> grupo) throws Exception {
 		super();
 		this.grupo = grupo;
 	}
@@ -26,11 +26,11 @@ public class GrupoPersonajes {
 		
 	}
 	
-	public Ente seleccionarUnoAlAzar(){
+	public Ente seleccionarUnoAlAzar() throws Exception{
 		return this.grupo.get(GeneradorMagico.randInt(0, this.grupo.size()-1));
 	}
 	
-	public boolean viven(){
+	public boolean viven() throws Exception{
 		boolean flag=true;
 		for(Personaje personaje: this.getGrupo()){
 			if(!personaje.isEstaVivo()){

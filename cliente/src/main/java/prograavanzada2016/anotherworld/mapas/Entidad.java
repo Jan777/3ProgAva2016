@@ -79,7 +79,7 @@ public class Entidad {
 	private boolean soyUsuario=false;
 	public boolean tengoUnCaminoAutomatico=false;
 
-	public Entidad(Game juego, Mundo mundo, int ancho, int alto, float spawnX, float spawnY, LinkedList<BufferedImage[]> animaciones, int velAnimacion) {
+	public Entidad(Game juego, Mundo mundo, int ancho, int alto, float spawnX, float spawnY, LinkedList<BufferedImage[]> animaciones, int velAnimacion) throws Exception {
 		this.juego = juego;
 		this.ancho = ancho;
 		this.alto = alto;
@@ -102,7 +102,7 @@ public class Entidad {
 	    this.soyUsuario=true;
 	}
 	
-	public Entidad(Game juego, int ancho, int alto, float spawnX, float spawnY, LinkedList<BufferedImage[]> animaciones, int velAnimacion) {
+	public Entidad(Game juego, int ancho, int alto, float spawnX, float spawnY, LinkedList<BufferedImage[]> animaciones, int velAnimacion) throws Exception {
 		this.juego = juego;
 		this.ancho = ancho;
 		this.alto = alto;

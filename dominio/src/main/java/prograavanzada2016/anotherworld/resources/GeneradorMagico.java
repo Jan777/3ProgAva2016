@@ -3,7 +3,7 @@ package prograavanzada2016.anotherworld.resources;
 import java.util.Random;
 
 public class GeneradorMagico {
-	public static int randInt(int min, int max) {
+	public static int randInt(int min, int max) throws Exception{
 	    // Usually this can be a field rather than a method variable
 	    Random rand = new Random();
 

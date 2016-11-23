@@ -9,7 +9,7 @@ public class Animacion {
 	private long ultimoTiempo, timer;
 	private BufferedImage[] frames;
 	
-	public Animacion(int velocidad, BufferedImage[] frames) {
+	public Animacion(int velocidad, BufferedImage[] frames) throws Exception{
 		this.velocidad = velocidad;
 		this.frames = frames;
 		indice = 0;

@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Utilitarias {
 
-	public static String archivoAString(String path) {
+	public static String archivoAString(String path) throws Exception{
 		StringBuilder builder = new StringBuilder();
 		BufferedReader br = null;
 		try {
@@ -29,7 +29,7 @@ public class Utilitarias {
 		return builder.toString();
 	}
 
-	public static int parseInt(String numero) {
+	public static int parseInt(String numero) throws Exception{
 		try {
 			return Integer.parseInt(numero);
 		} catch (NumberFormatException e) {

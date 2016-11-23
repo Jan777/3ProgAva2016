@@ -13,20 +13,20 @@ public class Dragon extends Enemigo
 {
 
 	public Dragon(String nombre, int nivel, int salud, int energia, int mana, int fuerza, int destreza,
-				  int inteligencia, boolean esPasivo, int expBaseQueOtorga)
+				  int inteligencia, boolean esPasivo, int expBaseQueOtorga) throws Exception
 	{
 		super(nombre, nivel, salud, energia, mana, fuerza, destreza, inteligencia, expBaseQueOtorga);
 		this.estaVivo = true;
 		habilidades = new ArrayList<Habilidad>(Arrays.asList(new AlientoDeFuegoNegro(), new RafagaAlada()));
 	}
 	
-	public Dragon(String nombre, int nivel, int salud, int energia, int mana, int fuerza, int destreza,int inteligencia, boolean esPasivo, int expBaseQueOtorga,Mapa mapa){
+	public Dragon(String nombre, int nivel, int salud, int energia, int mana, int fuerza, int destreza,int inteligencia, boolean esPasivo, int expBaseQueOtorga,Mapa mapa) throws Exception{
 		super(nombre, nivel, salud, energia, mana, fuerza, destreza, inteligencia, expBaseQueOtorga);
 		habilidades = new ArrayList<Habilidad>(Arrays.asList(new AlientoDeFuegoNegro(), new RafagaAlada()));
 		this.mapa=mapa;
 	}
 	
-	public Dragon(String nombre, int nivel, int salud, int energia, int mana, int fuerza, int destreza,int inteligencia, boolean esPasivo, int expBaseQueOtorga,Mapa mapa,int posicionX, int posicionY){
+	public Dragon(String nombre, int nivel, int salud, int energia, int mana, int fuerza, int destreza,int inteligencia, boolean esPasivo, int expBaseQueOtorga,Mapa mapa,int posicionX, int posicionY) throws Exception{
 		super(nombre, nivel, salud, energia, mana, fuerza, destreza, inteligencia, expBaseQueOtorga);
 		habilidades = new ArrayList<Habilidad>(Arrays.asList(new AlientoDeFuegoNegro(), new RafagaAlada()));
 		this.mapa=mapa;

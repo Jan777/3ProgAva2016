@@ -8,7 +8,7 @@ import prograavanzada2016.anotherworld.servicios.ServicioServer;
 
 public class ServiceLocator {
 	
-	public static ServicioServer localizar(String tipo) {
+	public static ServicioServer localizar(String tipo) throws Exception{
 		// TODO aca tiene que haber una forma de mapear tipo con clase correspondiente
 		if(tipo.equals("login")){
 			return new LoginService();

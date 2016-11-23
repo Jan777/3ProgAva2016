@@ -12,7 +12,7 @@ public class ArenaPvP {
 	private ArrayList<Float> listoPersonajesA;
 	private ArrayList<Float> listoPersonajesB;
 	
-	public ArenaPvP(GrupoPersonajes grupoPersonajesA, GrupoPersonajes grupoPersonajesB) {
+	public ArenaPvP(GrupoPersonajes grupoPersonajesA, GrupoPersonajes grupoPersonajesB) throws Exception {
 		this.grupoPersonajesA = grupoPersonajesA;
 		this.grupoPersonajesB = grupoPersonajesB;
 		listoPersonajesA=new ArrayList<>();
@@ -51,7 +51,7 @@ public class ArenaPvP {
 		this.listoPersonajesB = listoPersonajesB;
 	}
 
-	public void armarTurnos(){
+	public void armarTurnos() throws Exception{
 		int contadorDeAtaquesPersonajes=0;
 		int contadorDeAtaquesEnemigos=0;
 		for(int x=0; x<4 && this.grupoPersonajesA.viven() && this.grupoPersonajesB.viven();x++){
@@ -100,7 +100,7 @@ public class ArenaPvP {
 	}
 
 
-		private boolean yaAtacoPersonajeA(Ente ente) {
+		private boolean yaAtacoPersonajeA(Ente ente) throws Exception{
 			boolean flag=false;
 			for(Float id: this.getListoPersonajesA()){
 				if(id.equals(ente.getIdEnte())){
@@ -113,7 +113,7 @@ public class ArenaPvP {
 			return flag;
 		}
 		
-		private boolean yaAtacoPersonajeB(Ente ente) {
+		private boolean yaAtacoPersonajeB(Ente ente) throws Exception {
 			boolean flag=false;
 			for(Float id: this.getListoPersonajesB()){
 				if(id.equals(ente.getIdEnte())){
@@ -126,14 +126,14 @@ public class ArenaPvP {
 			return flag;
 		}
 		
-		private void resetearTurnosPersonajesA(){
+		private void resetearTurnosPersonajesA() throws Exception{
 			this.setListoPersonajesA(new ArrayList<>());
 		}
-		private void resetearTurnosPersonajesB(){
+		private void resetearTurnosPersonajesB() throws Exception{
 			this.setListoPersonajesB(new ArrayList<>());
 		}
 		
-		private void armarHistorial(GrupoPersonajes ganadores, GrupoPersonajes perdedores){
+		private void armarHistorial(GrupoPersonajes ganadores, GrupoPersonajes perdedores) throws Exception{
 			for(Personaje personaje : ganadores.getGrupo()){
 				personaje.setHistorialDeVictorias(personaje.getHistorialDeVictorias()+1);
 			}

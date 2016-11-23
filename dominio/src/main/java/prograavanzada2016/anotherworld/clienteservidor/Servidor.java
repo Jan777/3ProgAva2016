@@ -14,7 +14,7 @@ public class Servidor
 	public ArrayList<Socket> salaDeChat2;
 	public ArrayList<Socket> salaDeChat3;
 	
-	public Servidor(){
+	public Servidor() throws Exception{
 		salaDeChat1 = new ArrayList<>();
 		salaDeChat2 = new ArrayList<>();
 		salaDeChat3 = new ArrayList<>();

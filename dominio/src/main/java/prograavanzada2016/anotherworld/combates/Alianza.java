@@ -11,26 +11,26 @@ public class Alianza
 	private ArrayList<Personaje> miembros;
 	
 	// ** Constructores ** \\
-	public Alianza(String nombre){
+	public Alianza(String nombre) throws Exception{
 		this.nombre = nombre;
 		this.cantMiembros = 0;
 		this.bonusExp = 1;
 		this.miembros = new ArrayList<Personaje>();
 	}
 	
-	public Alianza(String nombre, Personaje p){
+	public Alianza(String nombre, Personaje p) throws Exception{
 		this(nombre);
 		this.agregarMiembro(p);
 	}
 	
 	// ** Métodos Públicos ** \\
-	public void agregarMiembro(Personaje p){
+	public void agregarMiembro(Personaje p) throws Exception{
 		this.miembros.add(p);
 		this.cantMiembros++;
 		this.recalcularBonus();
 	}
 	
-	public void quitarMiembro(Personaje p)
+	public void quitarMiembro(Personaje p) throws Exception
 	{
 		this.miembros.remove(p);
 		this.cantMiembros--;
@@ -52,7 +52,7 @@ public class Alianza
 		return this.bonusExp;
 	}
 	
-	public List<String> obtenerMiembros()
+	public List<String> obtenerMiembros() throws Exception
 	{
 		List<String> miembros = new ArrayList<String>();
 		
@@ -63,7 +63,7 @@ public class Alianza
 	}
 	
 	// ** Métodos Privados ** \\
-	private void recalcularBonus()
+	private void recalcularBonus() throws Exception
 	{
 		this.bonusExp = (this.cantMiembros > 1) ? 1 + ((float) this.cantMiembros / 20) : 1;
 	}

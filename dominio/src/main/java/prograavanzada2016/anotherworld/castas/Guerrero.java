@@ -8,7 +8,7 @@ import prograavanzada2016.anotherworld.razas.*;
 
 public class Guerrero extends Casta{
 
-	public Guerrero() {
+	public Guerrero() throws Exception {
 		this.setNombre("Guerrero");
 		id = 2;
 	}
@@ -20,13 +20,13 @@ public class Guerrero extends Casta{
 	}
 
 	@Override
-	public void guardarHabilidades() {
+	public void guardarHabilidades() throws Exception {
 		this.habilidades=new ArrayList<>();
 		this.habilidades.add(new Rodillazo());
 	}
 
 	@Override
-	public void calcularStats(Personaje personaje) {
+	public void calcularStats(Personaje personaje) throws Exception {
 		personaje.getRaza().calcularStats(personaje, this);
 	}
 

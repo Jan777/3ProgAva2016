@@ -5,7 +5,7 @@ import prograavanzada2016.anotherworld.entities.Ente;
 
 public class BolaDeFuego extends HabilidadPersonaje{
 	
-	public BolaDeFuego(){
+	public BolaDeFuego() throws Exception{
 		this.id=1;
 		this.costeMana=50;
 		this.casta = new Mago();

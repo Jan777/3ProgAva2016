@@ -309,7 +309,7 @@ public abstract class Ente {
 		this.mapa = mapa;
 	}
 		
-	public Zona getZona() {
+	public Zona getZona() throws Exception {
 		return this.getMapa().getZonaByEnte(this);
 	}
 
@@ -360,7 +360,7 @@ public abstract class Ente {
 	
 	public abstract void serHechizado(HabilidadPersonaje habilidad);
 	
-	public boolean puedeEntrarEnCombate(Ente ente){
+	public boolean puedeEntrarEnCombate(Ente ente) throws Exception{
 		//si la zona no es neutral y al menos estan en la misma zona puede atacar
 		return ente.getZona().equals(this.getZona())&&
 				this.getMapa().getZonaByEnte(this).isNeutral();

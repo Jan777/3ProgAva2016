@@ -6,7 +6,7 @@ import java.util.Properties;
 
 public class PropertiesFile {
   
-	public Properties getProperties(){
+	public Properties getProperties() throws Exception{
 
 			Properties propiedades = new Properties();
 			try {

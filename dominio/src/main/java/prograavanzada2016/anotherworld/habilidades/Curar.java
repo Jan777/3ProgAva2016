@@ -5,7 +5,7 @@ import prograavanzada2016.anotherworld.entities.Ente;
 
 public class Curar extends HabilidadPersonaje{
 	
-	public Curar(){
+	public Curar() throws Exception{
 		this.id=3;
 		this.costeMana=20;
 		this.casta = new Curandero();

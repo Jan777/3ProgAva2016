@@ -49,7 +49,7 @@ public class Recursos {
 	
 	// Cargo todos los recursos una sola vez para no tener que hacerlo en cada actualizacion
 	
-	public static void cargar() {
+	public static void cargar() throws Exception {
 		
 		ANCHO = 256;
 		ALTO = 256;
@@ -178,10 +178,10 @@ public class Recursos {
 		asfalto = CargadorImagen.cargarImagen("/asfalto.png");
 		tierra = CargadorImagen.cargarImagen("/tierra.png");
 		
-		lago1 = CargadorImagen.cargarImagen("/lago1.png");
+		/*lago1 = CargadorImagen.cargarImagen("/lago1.png");
 		lago2 = CargadorImagen.cargarImagen("/lago2.png");
 		lago3 = CargadorImagen.cargarImagen("/lago3.png");
-		lago4 = CargadorImagen.cargarImagen("/lago4.png");
+		lago4 = CargadorImagen.cargarImagen("/lago4.png");*/
 		
 		//background = CargadorImagen.cargarImagen("/background2.jpg");
 		// Fin Entorno

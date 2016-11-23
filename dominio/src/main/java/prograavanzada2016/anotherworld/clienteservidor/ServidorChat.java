@@ -11,7 +11,7 @@ public class ServidorChat implements Runnable{
 	private String message = "";
 	private ArrayList<Socket> salaDeChat;
 	
-	public ServidorChat(Socket socket, ArrayList<Socket> salaDeChat){
+	public ServidorChat(Socket socket, ArrayList<Socket> salaDeChat) throws Exception{
 		this.socket=socket;
 		this.salaDeChat=salaDeChat;
 	}

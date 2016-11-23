@@ -7,7 +7,7 @@ import javax.imageio.ImageIO;
 
 public class CargadorImagen {
 
-	public static BufferedImage cargarImagen(String path) {
+	public static BufferedImage cargarImagen(String path) throws Exception{
 		try {
 			return ImageIO.read(CargadorImagen.class.getResource(path));
 		} catch (IOException e) {

@@ -22,7 +22,7 @@ public class VentanaUnionAlianza extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -38,7 +38,7 @@ public class VentanaUnionAlianza extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public VentanaUnionAlianza() {
+	public VentanaUnionAlianza() throws Exception{
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaUnionAlianza.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 250);

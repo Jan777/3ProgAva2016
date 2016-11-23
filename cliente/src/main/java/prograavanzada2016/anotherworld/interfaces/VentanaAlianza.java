@@ -18,7 +18,7 @@ public class VentanaAlianza extends JFrame {
 
 	private JPanel contentPane;
 
-	public VentanaAlianza() {
+	public VentanaAlianza() throws Exception{
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaAlianza.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));
 		setTitle("Alianzas");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

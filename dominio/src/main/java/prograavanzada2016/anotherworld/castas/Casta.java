@@ -11,7 +11,7 @@ public abstract class Casta {
 	protected String nombre;
 	protected ArrayList<HabilidadPersonaje> habilidades;
 	
-	protected void setNombre(String nombre){
+	protected void setNombre(String nombre) throws Exception{
 		this.nombre=nombre;
 	};
 	
@@ -37,9 +37,9 @@ public abstract class Casta {
 	}
 
 	
-	public abstract void saludar();
+	public abstract void saludar() throws Exception;
 		
-	public abstract void guardarHabilidades();
+	public abstract void guardarHabilidades() throws Exception;
 	
 	
 	
@@ -68,5 +68,5 @@ public abstract class Casta {
 		return true;
 	}
 
-	public abstract void calcularStats(Personaje personaje);
+	public abstract void calcularStats(Personaje personaje) throws Exception;
 }

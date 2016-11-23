@@ -17,7 +17,7 @@ public class ClienteChat implements Runnable{
 	}
 
 	@Override
-	public void run() {
+	public void run(){
 		try{
 			try{
 				input = new Scanner(socket.getInputStream());
@@ -33,20 +33,20 @@ public class ClienteChat implements Runnable{
 		
 	}
 	
-	public void chechStream(){
+	public void chechStream() throws Exception{
 		while(true){
 			receive();
 		}
 	}
 	
-	public void receive(){
+	public void receive() throws Exception{
 		if(input.hasNext()){
 			String message = input.nextLine();
 			System.out.println(message);
 		}
 	}
 	
-	public void send(String string){
+	public void send(String string) throws Exception{
 		out.println(this.nombre+": "+string);
 		out.flush();
 	}

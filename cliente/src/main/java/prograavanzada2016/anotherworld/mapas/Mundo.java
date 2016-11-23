@@ -22,7 +22,7 @@ public class Mundo {
 	private int yMinimo;
 	private int yMaximo;
 
-	public Mundo(Game juego, String path) {
+	public Mundo(Game juego, String path) throws Exception{
 		this.juego = juego;
 		cargarMundo(path);
 	}
@@ -31,7 +31,7 @@ public class Mundo {
 
 	}
 
-	public void graficar(Graphics g) {
+	public void graficar(Graphics g) throws Exception{
 		xOffset = juego.getEstadoJuego().getPersonaje().getxOffset();
 		yOffset = juego.getEstadoJuego().getPersonaje().getYOffset();
 
@@ -59,7 +59,7 @@ public class Mundo {
 		return t;
 	}
 
-	private void cargarMundo(String path) {
+	private void cargarMundo(String path) throws Exception {
 		String archivo = Utilitarias.archivoAString(path);
 		String[] tokens = archivo.split("\\s+");
 		ancho = Utilitarias.parseInt(tokens[0]);

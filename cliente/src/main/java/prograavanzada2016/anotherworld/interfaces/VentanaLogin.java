@@ -92,7 +92,7 @@ public class VentanaLogin extends JFrame implements ILogin {
 		//AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File("C:\\Users\\lukki\\Desktop\\GitHub - Progra Avanzada\\Prueba\\ProJuego\\src\\juego\\Sounds\\clap.wav"));
 		
 		//martin
-		AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File("C:\\Users\\martin.f.andres\\Documents\\GitHub\\jrpg\\cliente\\src\\main\\resources\\clap.wav"));
+		AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File("C:\\Users\\lukki\\Desktop\\GitHub - Progra Avanzada\\Prueba\\ProJuego\\src\\juego\\Sounds\\clap.wav"));
 		
 		this.clienteJugable = clienteJugable;
 		setResizable(false);
@@ -112,7 +112,7 @@ public class VentanaLogin extends JFrame implements ILogin {
 		// clienteJugable = new ClienteJugable("localhost",444);
 	}
 
-	public void initComponents() {
+	public void initComponents() throws Exception {
 		setTitle("AnotherWorld");
 		setLocationRelativeTo(null);
 		pf = new PropertiesFile();
@@ -233,7 +233,11 @@ public class VentanaLogin extends JFrame implements ILogin {
 
 	@Override
 	public void update(String response) {
-		ventanaInicio = new VentanaDeBienvenida(clienteJugable);
+		try {
+			ventanaInicio = new VentanaDeBienvenida(clienteJugable);
+		} catch (Exception e) {
+			System.out.print("No se puede abrir ventana de Bienvenida");
+		}
 		ventanaInicio.setVisible(true);
 		ventanaInicio.setResizable(false);
 		ventanaInicio.setLocationRelativeTo(null);

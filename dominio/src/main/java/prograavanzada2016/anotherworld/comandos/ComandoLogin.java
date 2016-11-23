@@ -10,7 +10,7 @@ public class ComandoLogin extends Comando{
 	private String user;
 	private String password;
 	
-	public ComandoLogin(String user, String password){
+	public ComandoLogin(String user, String password) throws Exception{
 		this.user=user;
 		this.password=password;
 		this.armarMensajeDesdeCliente();
@@ -52,7 +52,7 @@ public class ComandoLogin extends Comando{
 	}
 
 	@Override
-	protected void armarMensajeDesdeCliente() {
+	protected void armarMensajeDesdeCliente(){
 		this.requestFromClient="1 "+this.user+" "+this.password;
 	}
 

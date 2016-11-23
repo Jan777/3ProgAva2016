@@ -16,7 +16,7 @@ public class ArenaPvE {
 	private Loot loot;
 	private boolean gananLosPersonajes;
 	
-	public ArenaPvE(GrupoEnemigos grupoEnemigos, GrupoPersonajes grupoPersonajes) {
+	public ArenaPvE(GrupoEnemigos grupoEnemigos, GrupoPersonajes grupoPersonajes)throws Exception {
 		this.grupoEnemigos = grupoEnemigos;
 		this.grupoPersonajes = grupoPersonajes;
 		listoPersonajes=new ArrayList<>();
@@ -28,7 +28,7 @@ public class ArenaPvE {
 		}
 	}
 	
-	public ArenaPvE(GrupoEnemigos grupoEnemigos, Alianza alianza) {
+	public ArenaPvE(GrupoEnemigos grupoEnemigos, Alianza alianza) throws Exception {
 		this.grupoEnemigos = grupoEnemigos;
 		this.grupoPersonajes.setGrupo(alianza.getMiembros()); 
 		listoPersonajes=new ArrayList<>();
@@ -98,7 +98,7 @@ public class ArenaPvE {
 		this.gananLosPersonajes = gananLosPersonajes;
 	}
 
-	public void armarTurnos(){
+	public void armarTurnos() throws Exception{
 		int contadorDeAtaquesPersonajes=0;
 		int contadorDeAtaquesEnemigos=0;
 		for(int x=0; x<100000 && this.grupoEnemigos.viven() && this.grupoPersonajes.viven();x++){
@@ -146,7 +146,7 @@ public class ArenaPvE {
 	}
 
 
-	private boolean yaAtacoPersnaje(Ente ente) {
+	private boolean yaAtacoPersnaje(Ente ente) throws Exception{
 		boolean flag=false;
 		for(Float id: this.getListoPersonajes()){
 			if(id.equals(ente.getIdEnte())){
@@ -159,7 +159,7 @@ public class ArenaPvE {
 		return flag;
 	}
 	
-	private boolean yaAtacoEnemigo(Ente ente) {
+	private boolean yaAtacoEnemigo(Ente ente) throws Exception{
 		boolean flag=false;
 		for(Float id: this.getListoEnemigos()){
 			if(id.equals(ente.getIdEnte())){
@@ -172,11 +172,11 @@ public class ArenaPvE {
 		return flag;
 	}
 	
-	private void resetearTurnosEnemigos(){
+	private void resetearTurnosEnemigos() throws Exception{
 		this.setListoEnemigos(new ArrayList<>());
 	}
 	
-	private void resetearTurnosPersonajes(){
+	private void resetearTurnosPersonajes() throws Exception{
 		this.setListoPersonajes(new ArrayList<>());
 	}
 	

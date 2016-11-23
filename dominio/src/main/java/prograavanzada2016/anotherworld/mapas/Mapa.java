@@ -13,7 +13,7 @@ public abstract class Mapa {
 	protected Zona zona3;
 	protected Zona zona4;
 		
-	public Zona getZonaByEnte(Ente ente){
+	public Zona getZonaByEnte(Ente ente) throws Exception{
 		int posicionX = ente.getPosicionX();
 		int posicionY = ente.getPosicionY();
 		
@@ -28,7 +28,7 @@ public abstract class Mapa {
 		}
 	}
 	
-	protected void armarMapa(){
+	protected void armarMapa() throws Exception{
 		this.zona1.setAnchoMinimo(0);
 		this.zona1.setAnchoMaximo(199);
 		this.zona1.setLargoMinimo(0);
@@ -50,7 +50,7 @@ public abstract class Mapa {
 		this.zona4.setLargoMaximo(399);
 	}
 	
-	protected abstract void spawnearEnemigos();
+	protected abstract void spawnearEnemigos() throws Exception;
 
 	public Zona getZona1() {
 		return zona1;

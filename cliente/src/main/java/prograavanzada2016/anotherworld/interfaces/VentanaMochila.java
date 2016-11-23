@@ -23,7 +23,7 @@ import java.awt.Toolkit;
 
 public class VentanaMochila extends JFrame {
 
-	public VentanaMochila() {
+	public VentanaMochila() throws Exception{
 		setTitle("Mochila");
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaMochila.class.getResource("/prograavanzada2016/anotherworld/interfaces/IconoVentana.jpg")));

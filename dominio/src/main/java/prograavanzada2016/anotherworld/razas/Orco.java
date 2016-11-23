@@ -14,17 +14,17 @@ public class Orco extends Raza{
 	}
 
 	@Override
-	public void calcularStats(Personaje personaje, Mago mago) {
+	public void calcularStats(Personaje personaje, Mago mago) throws Exception {
 		this.aumentarStatsSegunCasta(personaje, 0, 5, 3, 150, 100, 50);
 	}
 
 	@Override
-	public void calcularStats(Personaje personaje, Guerrero guerrero) {
+	public void calcularStats(Personaje personaje, Guerrero guerrero) throws Exception{
 		this.aumentarStatsSegunCasta(personaje, 5, 10, 0, 100, 0, 100);		
 	}
 
 	@Override
-	public void calcularStats(Personaje personaje, Curandero curandero) {
+	public void calcularStats(Personaje personaje, Curandero curandero) throws Exception {
 		this.aumentarStatsSegunCasta(personaje, 0, 0, 10, 250, 150, 50);
 	}
 	

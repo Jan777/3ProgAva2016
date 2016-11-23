@@ -21,7 +21,7 @@ public abstract class Enemigo extends Ente
 	protected ArenaPvE arenaPvE;
 	
 	// ** Constructores ** \\
-	protected Enemigo (String nombre, int nivel, int salud, int energia, int mana, int fuerza,int destreza, int inteligencia, int expBaseQueOtorga)
+	protected Enemigo (String nombre, int nivel, int salud, int energia, int mana, int fuerza,int destreza, int inteligencia, int expBaseQueOtorga) throws Exception
 	{
 		super(nombre, nivel, salud, energia, mana, fuerza, destreza, inteligencia);
 		this.expBaseQueOtorga = expBaseQueOtorga;
@@ -51,7 +51,11 @@ public abstract class Enemigo extends Ente
 				if(loDropea)
 				{
 					Objeto objeto = (Objeto) entry.getKey();
-					loot.agregarObjeto(objeto);
+					try {
+						loot.agregarObjeto(objeto);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
 				}
 			}
 		}

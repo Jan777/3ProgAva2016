@@ -107,7 +107,7 @@ public class ServidorManager implements Runnable{
 	
 
 	
-	private void RegisterMessageTypes(MessageDeserializer deserializer) {
+	private void RegisterMessageTypes(MessageDeserializer deserializer) throws Exception{
 		deserializer.registerMessageType("login", LoginMessage.class);
         deserializer.registerMessageType("personajeConsulta", PersonajeConsultaMessage.class);
         deserializer.registerMessageType("usuarioNuevo", UsuarioNuevoMessage.class);

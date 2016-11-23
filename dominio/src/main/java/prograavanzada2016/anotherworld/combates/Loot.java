@@ -10,17 +10,17 @@ public class Loot
 	// el número más alto se la lleva.
 	private List<Objeto> objetos;
 	
-	public Loot()
-	{
+	public Loot() throws Exception
+	{ 
 		this.objetos = new ArrayList<Objeto>();
 	}
 	
-	public void agregarObjeto(Objeto objeto)
+	public void agregarObjeto(Objeto objeto) throws Exception
 	{
 		this.objetos.add(objeto);
 	}
 	
-	public void mostrarObjetos()
+	public void mostrarObjetos() throws Exception
 	{
 		for(Objeto o : this.objetos)
 			System.out.println(o.getNombre());

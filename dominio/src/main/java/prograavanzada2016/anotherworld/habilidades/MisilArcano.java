@@ -5,7 +5,7 @@ import prograavanzada2016.anotherworld.entities.Ente;
 
 public class MisilArcano extends HabilidadPersonaje{
 	
-	public MisilArcano(){
+	public MisilArcano() throws Exception{
 		this.id=3;
 		this.costeMana=5;
 		this.casta = new Mago();
