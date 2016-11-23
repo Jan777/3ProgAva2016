@@ -30,6 +30,7 @@ import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.juego.Game;
 import prograavanzada2016.anotherworld.mapas.MapaViejoParaElRecuerdo;
 import prograavanzada2016.anotherworld.modelos.*;
+import prograavanzada2016.anotherworld.utilities.SonidoManager;
 
 import java.awt.Toolkit;
 import javax.swing.JInternalFrame;
@@ -56,7 +57,7 @@ public class VentanaMapa extends JFrame {
 	public VentanaMochila ventanaMochila;
 	private JInternalFrame internalFrame;
 	private Canvas canvas;
-	Clip sonido;
+	SonidoManager sm;
 	
 	public GameScreen game;
 
@@ -240,30 +241,9 @@ public class VentanaMapa extends JFrame {
 		//internalFrame.getContentPane().add(game.getCanvas(), BorderLayout.NORTH);
 		//internalFrame.add(game.getCanvas());
 		setVisible(true);
-		try {
-			sonido = AudioSystem.getClip();
-		} catch (LineUnavailableException e) {
-			e.printStackTrace();
-		}
-		AudioInputStream inputStream = null;
-		try {
-			//lukki
-			//inputStream = AudioSystem.getAudioInputStream(new File("C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\cliente\\src\\main\\resources\\ventanaMapa.wav"));
-			//martin
-			inputStream = AudioSystem.getAudioInputStream(new File("C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\cliente\\src\\main\\resources\\ventanaMapa.wav"));
-		} catch (UnsupportedAudioFileException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		try {
-			sonido.open(inputStream);
-		} catch (LineUnavailableException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		sonido.loop(Clip.LOOP_CONTINUOUSLY);
+		sm = SonidoManager.getInstance();
+		sm.setMusic("C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\cliente\\src\\main\\resources\\ventanaMapa.wav");
+		sm.play();
 	}
 
 }

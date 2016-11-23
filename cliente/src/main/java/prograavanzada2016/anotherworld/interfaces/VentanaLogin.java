@@ -20,6 +20,7 @@ import prograavanzada2016.anotherworld.mensajes.request.LoginMessage;
 import prograavanzada2016.anotherworld.modelos.PersonajeModel;
 import prograavanzada2016.anotherworld.modelos.Usuario;
 import prograavanzada2016.anotherworld.observer.ILogin;
+import prograavanzada2016.anotherworld.utilities.SonidoManager;
 
 import javax.swing.JTextField;
 import javax.swing.JLabel;
@@ -65,8 +66,9 @@ public class VentanaLogin extends JFrame implements ILogin {
 	private ClienteJugable clienteJugable;
 	private MensajeEnviable mensajeEnviable;
 
-	Clip sonido;
+	//Clip sonido;
 
+	SonidoManager sm;
 	static Properties propiedades;
 	static PropertiesFile pf;
 
@@ -86,14 +88,8 @@ public class VentanaLogin extends JFrame implements ILogin {
 	 */
 
 	public VentanaLogin(ClienteJugable clienteJugable) throws Exception {
-		sonido = AudioSystem.getClip();
-		
-		//lukki
-		//AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File("C:\\Users\\lukki\\Desktop\\GitHub - Progra Avanzada\\Prueba\\ProJuego\\src\\juego\\Sounds\\clap.wav"));
-		
-		//martin
-		AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File("C:\\Users\\lukki\\Desktop\\GitHub - Progra Avanzada\\Prueba\\ProJuego\\src\\juego\\Sounds\\clap.wav"));
-		
+		sm = SonidoManager.getInstance();
+		sm.setMusic("C:\\Users\\lukki\\Desktop\\GitHub - Progra Avanzada\\Prueba\\ProJuego\\src\\juego\\Sounds\\clap.wav");
 		this.clienteJugable = clienteJugable;
 		setResizable(false);
 		setLocationRelativeTo(null);
@@ -107,8 +103,7 @@ public class VentanaLogin extends JFrame implements ILogin {
 		gson = new Gson();
 		setVisible(true);
 		setLocationRelativeTo(null);
-		sonido.open(inputStream);
-		sonido.loop(Clip.LOOP_CONTINUOUSLY);
+		sm.play();
 		// clienteJugable = new ClienteJugable("localhost",444);
 	}
 
@@ -217,7 +212,7 @@ public class VentanaLogin extends JFrame implements ILogin {
 
 				clienteJugable.getClienteManager().sendMensaje(new Gson().toJson(rawMessageLogin));
 				this.setVisible(false);
-				sonido.close();
+				sm.stop();
 
 			}
 		} catch (Exception ex) {
