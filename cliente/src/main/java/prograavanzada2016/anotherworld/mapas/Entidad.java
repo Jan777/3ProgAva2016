@@ -309,9 +309,13 @@ public class Entidad {
 
 		dx = 0;
 		dy = 0;
-
+		
+		
+		
 		if (enMovimiento && (x != xFinal || y != yFinal)) {
 
+			this.chechColition(x,y);
+			
 			if (vertical) {
 				if (yFinal > y) {
 					dy++;
@@ -350,6 +354,8 @@ public class Entidad {
 			}
 			
 			tile = Mundo.mouseATile(auxX, auxY);
+			
+			
 			
 			if (mundo.getTile((int) tile[0], (int) tile[1]).esSolido()) {
 				xFinal = x;
@@ -497,5 +503,19 @@ public class Entidad {
 		this.usuario = usuario;
 	}	
 	
-	
+	public void chechColition(float xActual,float yActual){
+		int tileColision[] = Mundo.mouseATile(xActual, yActual);
+		for(Entidad ent : this.juego.getEstadoJuego().getPersonajes()){
+			int tileColisionOtro[] = Mundo.mouseATile(ent.getX(), ent.getY());
+			if(this.getUsuario().getId()!=ent.getUsuario().getId()){
+				if(tileColision[0]==tileColisionOtro[0] || tileColision[0]==tileColisionOtro[0]+1 || tileColision[0]==tileColisionOtro[0]-1){
+					if(tileColision[1]==tileColisionOtro[1] || tileColision[1]==tileColisionOtro[1]+1 || tileColision[1]==tileColisionOtro[1]-1){
+						System.out.println("COALISIONARON");
+					}
+				}
+			}
+		}
+		
+		
+	}
 }

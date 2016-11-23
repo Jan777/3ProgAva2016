@@ -78,4 +78,8 @@ public class EstadoJuego extends Estado {
 		otroPersonaje.setUsuario(usuario);
 		this.personajes.add(otroPersonaje);
 	}
+
+	public ArrayList<Entidad> getPersonajes() {
+		return this.personajes;
+	}
 }
