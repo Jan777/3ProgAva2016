@@ -10,6 +10,7 @@ import java.util.Properties;
 
 import prograavanzada2016.anotherworld.juego.*;
 import prograavanzada2016.anotherworld.modelos.Usuario;
+import prograavanzada2016.anotherworld.resources.Propiedades;
 import prograavanzada2016.anotherworld.utilities.*;
 
 public class EstadoJuego extends Estado {
@@ -22,15 +23,14 @@ public class EstadoJuego extends Estado {
 	public EstadoJuego(Game juego) throws Exception {
 		super(juego);
 		this.personajes = new ArrayList<>();
-		Properties propiedades = new Properties();
-		propiedades.load(new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\resources\\cfg.properties"));
-		//mundo = new Mundo(juego, propiedades.getProperty("mundoMati"));
+		Propiedades propiedades = Propiedades.getInstance();
+		mundo = new Mundo(juego, propiedades.getProperty("mundo"));
 		
 		//lukki
 		//mundo = new Mundo(juego,"C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt");
 		
 		//martin
-		mundo = new Mundo(juego,"src\\main\\resources\\mundoBasic.txt");
+		//mundo = new Mundo(juego,"src\\main\\resources\\mundoBasic.txt");
 		
 		//mundo = new Mundo(juego,"C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt");
 		//mundo = new Mundo(juego, "C:\\Users\\matut\\jrpg\\cliente\\src\\main\\resources\\mundoBasic.txt"); //Aca construimos nuestro mundo según la matriz en mundoBasic.txt

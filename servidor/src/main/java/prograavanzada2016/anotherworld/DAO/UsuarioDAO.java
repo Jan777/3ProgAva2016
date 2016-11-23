@@ -14,6 +14,7 @@ import java.util.Properties;
 
 import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.modelos.Usuario;
+import prograavanzada2016.anotherworld.resources.Propiedades;
 
 public class UsuarioDAO extends DAO<Usuario>{
 	
@@ -26,10 +27,8 @@ public class UsuarioDAO extends DAO<Usuario>{
     	try {
 			Class.forName("org.sqlite.JDBC");
 			
-			Properties propiedades = new Properties();
-			FileInputStream entrada = new FileInputStream(System.getProperty("user.dir") +"\\src\\main\\resources\\cfg.properties");
-			propiedades.load(entrada);
-			conn = DriverManager.getConnection("jdbc:sqlite:src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite"); //solo cambiar esto :)
+			Propiedades propiedades = Propiedades.getInstance();
+			conn = DriverManager.getConnection(propiedades.getProperty("rutaBdd")); //solo cambiar esto :)
 			//conn = DriverManager.getConnection(System.getProperty("user.dir") +"\\src\\main\\resources\\jrpg.sqlite");
 			//mati
 			//conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\matut\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");

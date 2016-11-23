@@ -8,6 +8,7 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
 import prograavanzada2016.anotherworld.interfaces.VentanaMapa;
+import prograavanzada2016.anotherworld.resources.Propiedades;
 
 public class App {
 	
@@ -15,13 +16,12 @@ public class App {
 	static FileHandler fh;
 	
 	public static void main(String[] args){
-		Properties propiedades = new Properties();
 		try{
-			fh = new FileHandler("src\\main\\java\\prograavanzada2016\\anotherworld\\cliente\\Cliente.log");
+			Propiedades propiedades = Propiedades.getInstance();
+			fh = new FileHandler(propiedades.getProperty("logger"));
 			LOGGER.addHandler(fh);
 	        SimpleFormatter formatter = new SimpleFormatter();  
 	        fh.setFormatter(formatter);
-			propiedades.load(new FileInputStream("src\\main\\resources\\cfg.properties"));
 			ClienteJugable cliente = new ClienteJugable(propiedades.getProperty("ip"), Integer.parseInt(propiedades.getProperty("puerto")));
 			
 		}

@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Properties;
 
 import prograavanzada2016.anotherworld.modelos.PersonajeModel;
+import prograavanzada2016.anotherworld.resources.Propiedades;
 
 public class PersonajeDAO extends DAO<PersonajeModel> {
 	
@@ -24,9 +25,8 @@ public class PersonajeDAO extends DAO<PersonajeModel> {
     public PersonajeDAO(Connection conn, Statement stat) throws SQLException, FileNotFoundException, IOException{
     	try {
 			Class.forName("org.sqlite.JDBC");
-			Properties propiedades = new Properties();
-			propiedades.load(new FileInputStream(System.getProperty("user.dir") +"\\src\\main\\resources\\cfg.properties"));
-			conn = DriverManager.getConnection("jdbc:sqlite:src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite"); //solo cambiar esto :)
+			Propiedades propiedades = Propiedades.getInstance();
+			conn = DriverManager.getConnection(propiedades.getProperty("rutaBdd")); //solo cambiar esto :)
 			//mati
 			//conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\matut\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
 			//agus
