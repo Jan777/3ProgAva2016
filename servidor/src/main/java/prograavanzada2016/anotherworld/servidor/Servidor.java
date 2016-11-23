@@ -29,7 +29,7 @@ public class Servidor{
 	}
 	
 	private void iniciarEnemigos(ArrayList<InteligenciaArtificial> lista) {
-		for(int x=0;x<1;x++){
+		for(int x=0;x<5;x++){
 			InteligenciaArtificial ai = new InteligenciaArtificial(x+1);
 			lista.add(ai);
 		}

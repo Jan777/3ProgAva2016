@@ -444,10 +444,12 @@ public class Entidad {
 		drawY = (int) (y - juego.getCamara().getyOffset());
 		g.drawImage(getFrameAnimacionActual(), drawX, drawY, ancho, alto, null);
 		
-		if(!soyUsuario){
+		if(!soyUsuario && !soyInteligenciaArtificial){
 			g.setColor(Color.WHITE);
 			g.drawString("Salud: "+ juego.getUser().getPersonaje().getSalud(), drawX +10 , drawY - 24);
-			g.drawString(juego.getUser().getPersonaje().getNombre() + " - "+ juego.getUser().getPersonaje().getNivel(), drawX + 10, drawY - 36); //aca obtener el nombre del pj
+			g.drawString(this.getUsuario().getPersonaje().getNombre() + " - "+ this.getUsuario().getPersonaje().getNivel(), drawX + 10, drawY - 36); //aca obtener el nombre del pj
+		}else if(soyInteligenciaArtificial){
+			g.drawString("Minotauro Furioso - 5", drawX + 10, drawY - 36);
 		}
 	}
 
@@ -566,7 +568,88 @@ public class Entidad {
 				}
 			}
 		}
-		
-		
+	}
+	
+	public int[] calcularMovimientoDeMaquina(float x, float y){
+		switch(this.getUsuario().getPersonaje().getId()){
+			case 1:
+				if(x==300 && y==300){
+					xFinal = 300;
+					yFinal = 400;
+				}else if(x==300 && y==400){
+					xFinal=400;
+					yFinal=400;
+				}else if(x==400 && y==400){
+					xFinal=300;
+					yFinal=400;
+				}else if(x==300 && y==400){
+					xFinal=300;
+					yFinal=300;
+				}
+				break;
+			case 2:
+				if(x==300 && y==300){
+					xFinal = 300;
+					yFinal = 400;
+				}else if(x==300 && y==400){
+					xFinal=400;
+					yFinal=400;
+				}else if(x==400 && y==400){
+					xFinal=300;
+					yFinal=400;
+				}else if(x==300 && y==400){
+					xFinal=300;
+					yFinal=300;
+				}
+				break;
+			case 3:
+				if(x==300 && y==300){
+					xFinal = 300;
+					yFinal = 400;
+				}else if(x==300 && y==400){
+					xFinal=400;
+					yFinal=400;
+				}else if(x==400 && y==400){
+					xFinal=300;
+					yFinal=400;
+				}else if(x==300 && y==400){
+					xFinal=300;
+					yFinal=300;
+				}
+				break;
+			case 4:
+				if(x==300 && y==300){
+					xFinal = 300;
+					yFinal = 400;
+				}else if(x==300 && y==400){
+					xFinal=400;
+					yFinal=400;
+				}else if(x==400 && y==400){
+					xFinal=300;
+					yFinal=400;
+				}else if(x==300 && y==400){
+					xFinal=300;
+					yFinal=300;
+				}
+				break;
+			case 5:
+				if(x==300 && y==300){
+					xFinal = 300;
+					yFinal = 400;
+				}else if(x==300 && y==400){
+					xFinal=400;
+					yFinal=400;
+				}else if(x==400 && y==400){
+					xFinal=300;
+					yFinal=400;
+				}else if(x==300 && y==400){
+					xFinal=300;
+					yFinal=300;
+				}
+				break;
+			default:
+				break;
+		}
+		return null;
 	}
 }
