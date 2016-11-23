@@ -91,6 +91,12 @@ public class VentanaDeBienvenida extends JFrame {
 					progressBar.setValue(progressBar.getValue()+10);
 				}else{
 					timer.stop();
+					RawMessage rawMessageLogin = new RawMessage();
+					rawMessageLogin.type = "personajeConsulta";
+					rawMessageLogin.message = new PersonajeConsultaMessage(new Gson().toJson(usuario));
+
+					clienteJugable.getClienteManager().sendMensaje(new Gson().toJson(rawMessageLogin));
+					setVisible(false);
 				}
 								
 			}
@@ -114,7 +120,7 @@ public class VentanaDeBienvenida extends JFrame {
 			}
 		});
 		
-		progressBar = new JProgressBar(0, 110);
+		progressBar = new JProgressBar(0, 100);
 		progressBar.setBounds(27, 156, 293, 31);
 		progressBar.setValue(0);
 		progressBar.setStringPainted(true);
@@ -129,14 +135,6 @@ public class VentanaDeBienvenida extends JFrame {
 		
 		if(!timer.isRunning()){
 			timer.start();
-		}
-		while(!timer.isRunning() && progressBar.getValue() < 100){
-			RawMessage rawMessageLogin = new RawMessage();
-			rawMessageLogin.type = "personajeConsulta";
-			rawMessageLogin.message = new PersonajeConsultaMessage(new Gson().toJson(usuario));
-
-			clienteJugable.getClienteManager().sendMensaje(new Gson().toJson(rawMessageLogin));
-			this.setVisible(false);
 		}
 		
 	}
