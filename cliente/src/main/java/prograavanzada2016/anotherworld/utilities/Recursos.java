@@ -20,18 +20,29 @@ public class Recursos {
 	private static BufferedImage[] elfoAbajoIzq; 
 	// Fin Personajes
 	
+	// Inicio Personaje	
+	public static LinkedList<BufferedImage[]> minotauro = new LinkedList<>();
+	private static BufferedImage[] minotauroIzq;
+	private static BufferedImage[] minotauroArribaIzq;
+	private static BufferedImage[] minotauroArriba;
+	private static BufferedImage[] minotauroArribaDer;
+	private static BufferedImage[] minotauroDer;
+	private static BufferedImage[] minotauroAbajoDer;
+	private static BufferedImage[] minotauroAbajo;
+	private static BufferedImage[] minotauroAbajoIzq; 
+	// Fin Personajes
 	
 	// Inicio Personaje	
-		public static LinkedList<BufferedImage[]> humano = new LinkedList<>();
-		private static BufferedImage[] humanoIzq;
-		private static BufferedImage[] humanoArribaIzq;
-		private static BufferedImage[] humanoArriba;
-		private static BufferedImage[] humanoArribaDer;
-		private static BufferedImage[] humanoDer;
-		private static BufferedImage[] humanoAbajoDer;
-		private static BufferedImage[] humanoAbajo;
-		private static BufferedImage[] humanoAbajoIzq; 
-		// Fin Personajes
+	public static LinkedList<BufferedImage[]> humano = new LinkedList<>();
+	private static BufferedImage[] humanoIzq;
+	private static BufferedImage[] humanoArribaIzq;
+	private static BufferedImage[] humanoArriba;
+	private static BufferedImage[] humanoArribaDer;
+	private static BufferedImage[] humanoDer;
+	private static BufferedImage[] humanoAbajoDer;
+	private static BufferedImage[] humanoAbajo;
+	private static BufferedImage[] humanoAbajoIzq; 
+	// Fin Personajes
 	
 	// Entorno
 	public static BufferedImage piso;
@@ -113,63 +124,115 @@ public class Recursos {
 		// Inicio humano
 		ANCHO=64;
 		ALTO=96;
-				SpriteSheet spriteHumano = new SpriteSheet(CargadorImagen.cargarImagen("/human.gif"));
-				
-				humanoIzq = new BufferedImage[2];
-				humanoArribaIzq = new BufferedImage[2];
-				humanoArriba = new BufferedImage[2];
-				humanoArribaDer = new BufferedImage[2];
-				humanoDer = new BufferedImage[2];
-				humanoAbajoDer = new BufferedImage[2];
-				humanoAbajo = new BufferedImage[2];
-				humanoAbajoIzq = new BufferedImage[2];
-				
-				for(int i = 0; i < 2; i++) {
-					humanoIzq[i] = spriteHumano.getTile(ANCHO*5, ALTO*(2+i), ANCHO, ALTO);
-				}
-				
-				for(int i = 0; i < 2; i++) {
-					humanoArribaIzq[i] = spriteHumano.getTile(ANCHO*4, ALTO*(2+i), ANCHO, ALTO);
-				}
-				
-				for(int i = 0; i < 2; i++) {
-					humanoArriba[i] = spriteHumano.getTile(ANCHO*3, ALTO*(2+i), ANCHO, ALTO);
-				}
-				
-				for(int i = 0; i < 2; i++) {
-					humanoArribaDer[i] = spriteHumano.getTile(ANCHO*2, ALTO*(2+i), ANCHO, ALTO);
-				}
-				
-				for(int i = 0; i < 2; i++) {
-					humanoDer[i] = spriteHumano.getTile(ANCHO*1, ALTO*(2+i), ANCHO, ALTO);
-				}
-				
-				for(int i = 0; i < 2; i++) {
-					humanoAbajoDer[i] = spriteHumano.getTile(ANCHO*0, ALTO*(2+i), ANCHO, ALTO);
-				}
-				
-				for(int i = 0; i < 2; i++) {
-					humanoAbajo[i] = spriteHumano.getTile(ANCHO*7, ALTO*(2+i), ANCHO, ALTO);
-				}
-				
-				for(int i = 0; i < 2; i++) {
-					humanoAbajoIzq[i] = spriteHumano.getTile(ANCHO*6, ALTO*(2+i), ANCHO, ALTO);
-				}
-				
-				humano.add(humanoIzq);
-				humano.add(humanoArribaIzq);
-				humano.add(humanoArriba);
-				humano.add(humanoArribaDer);
-				humano.add(humanoDer);
-				humano.add(humanoAbajoDer);
-				humano.add(humanoAbajo);
-				humano.add(humanoAbajoIzq);
-				
-				// Fin humano
-				
+		SpriteSheet spriteHumano = new SpriteSheet(CargadorImagen.cargarImagen("/human.gif"));
+		
+		humanoIzq = new BufferedImage[2];
+		humanoArribaIzq = new BufferedImage[2];
+		humanoArriba = new BufferedImage[2];
+		humanoArribaDer = new BufferedImage[2];
+		humanoDer = new BufferedImage[2];
+		humanoAbajoDer = new BufferedImage[2];
+		humanoAbajo = new BufferedImage[2];
+		humanoAbajoIzq = new BufferedImage[2];
+		
+		for(int i = 0; i < 2; i++) {
+			humanoIzq[i] = spriteHumano.getTile(ANCHO*5, ALTO*(2+i), ANCHO, ALTO);
+		}
+		
+		for(int i = 0; i < 2; i++) {
+			humanoArribaIzq[i] = spriteHumano.getTile(ANCHO*4, ALTO*(2+i), ANCHO, ALTO);
+		}
+		
+		for(int i = 0; i < 2; i++) {
+			humanoArriba[i] = spriteHumano.getTile(ANCHO*3, ALTO*(2+i), ANCHO, ALTO);
+		}
+		
+		for(int i = 0; i < 2; i++) {
+			humanoArribaDer[i] = spriteHumano.getTile(ANCHO*2, ALTO*(2+i), ANCHO, ALTO);
+		}
+		
+		for(int i = 0; i < 2; i++) {
+			humanoDer[i] = spriteHumano.getTile(ANCHO*1, ALTO*(2+i), ANCHO, ALTO);
+		}
+		
+		for(int i = 0; i < 2; i++) {
+			humanoAbajoDer[i] = spriteHumano.getTile(ANCHO*0, ALTO*(2+i), ANCHO, ALTO);
+		}
+		
+		for(int i = 0; i < 2; i++) {
+			humanoAbajo[i] = spriteHumano.getTile(ANCHO*7, ALTO*(2+i), ANCHO, ALTO);
+		}
+		
+		for(int i = 0; i < 2; i++) {
+			humanoAbajoIzq[i] = spriteHumano.getTile(ANCHO*6, ALTO*(2+i), ANCHO, ALTO);
+		}
+		
+		humano.add(humanoIzq);
+		humano.add(humanoArribaIzq);
+		humano.add(humanoArriba);
+		humano.add(humanoArribaDer);
+		humano.add(humanoDer);
+		humano.add(humanoAbajoDer);
+		humano.add(humanoAbajo);
+		humano.add(humanoAbajoIzq);
+		
+		// Fin humano
 				
 		//comienza minotauro
 		
+		ANCHO = 128;
+		ALTO = 128;
+		SpriteSheet spriteminotauro = new SpriteSheet(CargadorImagen.cargarImagen("/minotauro.png"));
+
+		minotauroIzq = new BufferedImage[7];
+		minotauroArribaIzq = new BufferedImage[7];
+		minotauroArriba = new BufferedImage[7];
+		minotauroArribaDer = new BufferedImage[7];
+		minotauroDer = new BufferedImage[7];
+		minotauroAbajoDer = new BufferedImage[7];
+		minotauroAbajo = new BufferedImage[7];
+		minotauroAbajoIzq = new BufferedImage[7];
+		
+		for(int i = 4; i < 11; i++) {
+			minotauroIzq[i-4] = spriteminotauro.getTile(ANCHO*i, 0, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			minotauroArribaIzq[i-4] = spriteminotauro.getTile(ANCHO*i, ALTO, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			minotauroArriba[i-4] = spriteminotauro.getTile(ANCHO*i, ALTO*2, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			minotauroArribaDer[i-4] = spriteminotauro.getTile(ANCHO*i, ALTO*3, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			minotauroDer[i-4] = spriteminotauro.getTile(ANCHO*i, ALTO*4, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			minotauroAbajoDer[i-4] = spriteminotauro.getTile(ANCHO*i, ALTO*5, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			minotauroAbajo[i-4] = spriteminotauro.getTile(ANCHO*i, ALTO*6, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			minotauroAbajoIzq[i-4] = spriteminotauro.getTile(ANCHO*i, ALTO*7, ANCHO, ALTO);
+		}
+		
+		minotauro.add(minotauroIzq);
+		minotauro.add(minotauroArribaIzq);
+		minotauro.add(minotauroArriba);
+		minotauro.add(minotauroArribaDer);
+		minotauro.add(minotauroDer);
+		minotauro.add(minotauroAbajoDer);
+		minotauro.add(minotauroAbajo);
+		minotauro.add(minotauroAbajoIzq);
 		//fin minotauro
 		
 		// Inicio Entorno
