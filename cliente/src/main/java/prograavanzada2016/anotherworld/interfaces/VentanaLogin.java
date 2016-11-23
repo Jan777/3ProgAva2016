@@ -89,7 +89,7 @@ public class VentanaLogin extends JFrame implements ILogin {
 
 	public VentanaLogin(ClienteJugable clienteJugable) throws Exception {
 		sm = SonidoManager.getInstance();
-		sm.setMusic("C:\\Users\\lukki\\Desktop\\GitHub - Progra Avanzada\\Prueba\\ProJuego\\src\\juego\\Sounds\\clap.wav");
+		sm.setMusic("src\\main\\resources\\clap.wav");
 		this.clienteJugable = clienteJugable;
 		setResizable(false);
 		setLocationRelativeTo(null);

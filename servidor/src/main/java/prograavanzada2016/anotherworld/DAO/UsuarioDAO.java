@@ -29,14 +29,14 @@ public class UsuarioDAO extends DAO<Usuario>{
 			Properties propiedades = new Properties();
 			FileInputStream entrada = new FileInputStream(System.getProperty("user.dir") +"\\src\\main\\resources\\cfg.properties");
 			propiedades.load(entrada);
-			//conn = DriverManager.getConnection(System.getProperty("user.dir") +"\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite"); //solo cambiar esto :)
+			conn = DriverManager.getConnection("jdbc:sqlite:src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite"); //solo cambiar esto :)
 			//conn = DriverManager.getConnection(System.getProperty("user.dir") +"\\src\\main\\resources\\jrpg.sqlite");
 			//mati
 			//conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\matut\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
 			//agus
 			//conn = DriverManager.getConnection("jdbc:sqlite:C:\\GitAvanzada\\PrograAvanzada\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
 			//martin
-			conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
+			//conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
 			//lukki
 			//conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
 			//conn.setAutoCommit(false);

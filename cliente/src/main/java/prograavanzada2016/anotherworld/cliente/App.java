@@ -17,11 +17,11 @@ public class App {
 	public static void main(String[] args){
 		Properties propiedades = new Properties();
 		try{
-			fh = new FileHandler("C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\cliente\\src\\main\\java\\prograavanzada2016\\anotherworld\\cliente\\Cliente.log");
+			fh = new FileHandler("src\\main\\java\\prograavanzada2016\\anotherworld\\cliente\\Cliente.log");
 			LOGGER.addHandler(fh);
 	        SimpleFormatter formatter = new SimpleFormatter();  
 	        fh.setFormatter(formatter);
-			propiedades.load(new FileInputStream(System.getProperty("user.dir") +"\\src\\main\\resources\\cfg.properties"));
+			propiedades.load(new FileInputStream("src\\main\\resources\\cfg.properties"));
 			ClienteJugable cliente = new ClienteJugable(propiedades.getProperty("ip"), Integer.parseInt(propiedades.getProperty("puerto")));
 			
 		}

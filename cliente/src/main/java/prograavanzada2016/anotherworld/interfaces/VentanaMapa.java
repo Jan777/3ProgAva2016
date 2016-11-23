@@ -242,7 +242,7 @@ public class VentanaMapa extends JFrame {
 		//internalFrame.add(game.getCanvas());
 		setVisible(true);
 		sm = SonidoManager.getInstance();
-		sm.setMusic("C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\cliente\\src\\main\\resources\\ventanaMapa.wav");
+		sm.setMusic("src\\main\\resources\\ventanaMapa.wav");
 		sm.play();
 	}
 

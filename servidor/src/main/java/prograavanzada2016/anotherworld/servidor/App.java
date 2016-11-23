@@ -12,7 +12,7 @@ public class App {
 	
 	public static void main(String[] args){
 		try{
-			fh = new FileHandler("C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\servidor\\bin\\prograavanzada2016\\anotherworld\\servidor\\Servidor.log");
+			fh = new FileHandler("src\\main\\java\\prograavanzada2016\\anotherworld\\servidor\\Servidor.log");
 			LOGGER.addHandler(fh);
 			SimpleFormatter formatter = new SimpleFormatter();  
 	        fh.setFormatter(formatter);
