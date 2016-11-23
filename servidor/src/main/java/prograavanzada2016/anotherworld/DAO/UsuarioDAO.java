@@ -12,8 +12,11 @@ import java.sql.Statement;
 import java.util.List;
 import java.util.Properties;
 
+import javax.swing.JOptionPane;
+
 import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.modelos.Usuario;
+import prograavanzada2016.anotherworld.resources.Logger;
 import prograavanzada2016.anotherworld.resources.Propiedades;
 
 public class UsuarioDAO extends DAO<Usuario>{
@@ -23,10 +26,8 @@ public class UsuarioDAO extends DAO<Usuario>{
     private static final int NO_ENCONTRADO = -1;
     private static final int ENCONTRADO = 1;
      
-    public UsuarioDAO(Connection conn, Statement stat) throws SQLException, FileNotFoundException, IOException{
-    	try {
+    public UsuarioDAO(Connection conn, Statement stat) throws Exception{
 			Class.forName("org.sqlite.JDBC");
-			
 			Propiedades propiedades = Propiedades.getInstance();
 			conn = DriverManager.getConnection(propiedades.getProperty("rutaBdd")); //solo cambiar esto :)
 			//conn = DriverManager.getConnection(System.getProperty("user.dir") +"\\src\\main\\resources\\jrpg.sqlite");
@@ -42,16 +43,12 @@ public class UsuarioDAO extends DAO<Usuario>{
 			statement = conn.createStatement();
 			stat = statement;
 			this.conn=conn;
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
     }
     
 
 	@Override
-	public boolean insertar(Usuario usuario) throws DAOException {
-		try {
+	public boolean insertar(Usuario usuario) throws Exception {
+		try{	
 			int size = 0;
 			String count = "select * from usuario";
 			ResultSet rs = statement.executeQuery(count);

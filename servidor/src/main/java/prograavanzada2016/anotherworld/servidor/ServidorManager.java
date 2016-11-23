@@ -11,6 +11,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -28,6 +30,7 @@ import prograavanzada2016.anotherworld.mensajes.request.MoverMessage;
 import prograavanzada2016.anotherworld.mensajes.request.PersonajeConsultaMessage;
 import prograavanzada2016.anotherworld.mensajes.request.UsuarioNuevoMessage;
 import prograavanzada2016.anotherworld.modelos.Usuario;
+import prograavanzada2016.anotherworld.resources.Logger;
 import prograavanzada2016.anotherworld.servicios.ServiceLocator;
 
 public class ServidorManager implements Runnable{
@@ -69,8 +72,10 @@ public class ServidorManager implements Runnable{
 	@Override
 	public void run() {
 		
+		Logger logger = null;
 		try{
 			try{
+				logger = Logger.getInstance();
 				entrada = new Scanner(socket.getInputStream());
 				new PrintWriter(socket.getOutputStream());
 				
@@ -100,7 +105,10 @@ public class ServidorManager implements Runnable{
 				socket.close();
 			}
 		}catch(Exception e){
-			e.printStackTrace();
+			JOptionPane.showMessageDialog(null, "Ocurrió un error, para más información"+System.getProperty("line.separator") 
+			+" vea el LOG del sistema.", "ERROR", JOptionPane.ERROR_MESSAGE);
+			logger.log(e.getMessage());
+			//e.printStackTrace();
 		}
 		
 	}
