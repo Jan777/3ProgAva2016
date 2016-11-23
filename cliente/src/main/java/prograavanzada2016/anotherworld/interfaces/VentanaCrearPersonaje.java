@@ -134,7 +134,7 @@ public class VentanaCrearPersonaje extends JFrame {
 		contentPane.add(btnCrear);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon(VentanaCrearPersonaje.class.getResource("src/main/resources/BackgroundCrearPersonaje.jpeg")));
+		label.setIcon(new ImageIcon(propiedades.getProperty("createCharacterJPG")));
 		label.setBounds(0, 0, 784, 561);
 		contentPane.add(label);
 		

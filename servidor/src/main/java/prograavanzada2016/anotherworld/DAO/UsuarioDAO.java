@@ -52,7 +52,7 @@ public class UsuarioDAO extends DAO<Usuario>{
 			int size = 0;
 			String count = "select * from usuario";
 			ResultSet rs = statement.executeQuery(count);
-			
+			//conn.setAutoCommit(false);
 			while (rs.next()) {
 			    size++;
 			}
@@ -62,10 +62,9 @@ public class UsuarioDAO extends DAO<Usuario>{
 			PreparedStatement statement = conn.prepareStatement(
 			        "INSERT INTO 'main'.'usuario' VALUES ("+size+",'"+usuario.getNombre()+"','"+usuario.getApellido()+"','"+usuario.getNombreUsuario()+"','"+usuario.getPassword()+"')");
 					statement.executeUpdate();
-					conn.commit();
+					//conn.commit();
 					conn.close();
-					 return true;
-		    
+			return true;
 		}
 	        catch (SQLException ex) {
 	            System.out.println(ex);

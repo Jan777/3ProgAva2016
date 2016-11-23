@@ -31,7 +31,6 @@ public class UsuarioNuevoMessageService implements ServicioServer{
 			for(ClienteServicio cliente : Servidor.clientesSala1){
 				
 				if(cliente.getId() == unm.idCliente){
-					System.out.println("encontrado");
 					PrintWriter salida = new PrintWriter(cliente.getSocket().getOutputStream());
 					
 					RawMessage rawMessageLogin = new RawMessage();
@@ -47,7 +46,6 @@ public class UsuarioNuevoMessageService implements ServicioServer{
 			for(ClienteServicio cliente : Servidor.clientesSala1){
 				
 				if(cliente.getId() == unm.idCliente){
-					System.out.println("encontrado");
 					PrintWriter salida = new PrintWriter(cliente.getSocket().getOutputStream());
 					
 					RawMessage rawMessageLogin = new RawMessage();
