@@ -468,10 +468,18 @@ public class Entidad {
 			return moverArribaIzq.getFrameActual();
 		} else if (diagonalSupDer) {
 			return moverArribaDer.getFrameActual();
-		} else if (juego.getUser().getPersonaje().getRazaId() == 2){
+		} else if (soyUsuario && juego.getUser().getPersonaje().getRazaId() == 2){
 			return Recursos.humano.get(6)[0];
+		}else if(soyUsuario){
+			return Recursos.elfo.get(6)[0];
+		}else if(soyInteligenciaArtificial){
+			return Recursos.minotauro.get(6)[0];
+		}else if(!soyUsuario && this.getUsuario().getPersonaje().getRazaId()==2){
+			return Recursos.humano.get(6)[0];
+		}else if(!soyUsuario && this.getUsuario().getPersonaje().getRazaId()==1){
+			return Recursos.elfo.get(6)[0];
 		}
-		return Recursos.elfo.get(6)[0];//ojo aca
+		return null;
 	}
 
 	public float getX() {
@@ -548,7 +556,7 @@ public class Entidad {
 	
 	public void chechColition(float xActual,float yActual){
 		int tileColision[] = Mundo.mouseATile(xActual, yActual);
-		for(Entidad ent : this.juego.getEstadoJuego().getPersonajes()){
+		for(Entidad ent : this.juego.getEstadoJuego().getEnemigos()){
 			int tileColisionOtro[] = Mundo.mouseATile(ent.getX(), ent.getY());
 			if(this.getUsuario().getId()!=ent.getUsuario().getId()){
 				if(tileColision[0]==tileColisionOtro[0] || tileColision[0]==tileColisionOtro[0]+1 || tileColision[0]==tileColisionOtro[0]-1){
