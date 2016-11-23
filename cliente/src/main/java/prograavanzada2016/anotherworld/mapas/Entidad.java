@@ -302,7 +302,7 @@ public class Entidad {
 			xInicio = x;
 			yInicio = y;
 			//movimiento de la inteligencia
-			if(x==300 && y==300){
+			/*if(x==300 && y==300){
 				xFinal = 300;
 				yFinal = 400;
 			}else if(x==300 && y==400){
@@ -314,7 +314,9 @@ public class Entidad {
 			}else if(x==300 && y==400){
 				xFinal=300;
 				yFinal=300;
-			}
+			}*/
+			
+			this.calcularMovimientoDeMaquina(x,y);
 			
 						
 			difX = Math.abs(xFinal - xInicio);
@@ -570,86 +572,89 @@ public class Entidad {
 		}
 	}
 	
-	public int[] calcularMovimientoDeMaquina(float x, float y){
-		switch(this.getUsuario().getPersonaje().getId()){
-			case 1:
-				if(x==300 && y==300){
-					xFinal = 300;
-					yFinal = 400;
-				}else if(x==300 && y==400){
-					xFinal=400;
-					yFinal=400;
-				}else if(x==400 && y==400){
-					xFinal=300;
-					yFinal=400;
-				}else if(x==300 && y==400){
-					xFinal=300;
-					yFinal=300;
-				}
-				break;
-			case 2:
-				if(x==300 && y==300){
-					xFinal = 300;
-					yFinal = 400;
-				}else if(x==300 && y==400){
-					xFinal=400;
-					yFinal=400;
-				}else if(x==400 && y==400){
-					xFinal=300;
-					yFinal=400;
-				}else if(x==300 && y==400){
-					xFinal=300;
-					yFinal=300;
-				}
-				break;
-			case 3:
-				if(x==300 && y==300){
-					xFinal = 300;
-					yFinal = 400;
-				}else if(x==300 && y==400){
-					xFinal=400;
-					yFinal=400;
-				}else if(x==400 && y==400){
-					xFinal=300;
-					yFinal=400;
-				}else if(x==300 && y==400){
-					xFinal=300;
-					yFinal=300;
-				}
-				break;
-			case 4:
-				if(x==300 && y==300){
-					xFinal = 300;
-					yFinal = 400;
-				}else if(x==300 && y==400){
-					xFinal=400;
-					yFinal=400;
-				}else if(x==400 && y==400){
-					xFinal=300;
-					yFinal=400;
-				}else if(x==300 && y==400){
-					xFinal=300;
-					yFinal=300;
-				}
-				break;
-			case 5:
-				if(x==300 && y==300){
-					xFinal = 300;
-					yFinal = 400;
-				}else if(x==300 && y==400){
-					xFinal=400;
-					yFinal=400;
-				}else if(x==400 && y==400){
-					xFinal=300;
-					yFinal=400;
-				}else if(x==300 && y==400){
-					xFinal=300;
-					yFinal=300;
-				}
-				break;
-			default:
-				break;
+	public void calcularMovimientoDeMaquina(float x, float y){
+		if(this.getUsuario().getId()==1){
+			if(x==300 && y==300){
+				xFinal = 300;
+				yFinal = 400;
+			}else if(x==300 && y==400){
+				xFinal=400;
+				yFinal=400;
+			}else if(x==400 && y==400){
+				xFinal=300;
+				yFinal=400;
+			}else if(x==300 && y==400){
+				xFinal=300;
+				yFinal=300;
+			}
+		}else if(this.getUsuario().getId()==2){
+			if(x==300 && y==300){
+				xFinal = 300;
+				yFinal = 1000;
+			}else if(x==300 && y==1000){
+				xFinal=300;
+				yFinal=1100;
+			}else if(x==300 && y==1100){
+				xFinal=400;
+				yFinal=1100;
+			}else if(x==400 && y==1100){
+				xFinal=400;
+				yFinal=1000;
+			}else if(x==400 && y==1000){
+				xFinal=300;
+				yFinal=1000;
+			}
+		}else if(this.getUsuario().getId()==3){
+			System.out.println(x+"-"+y);
+			if(x==300 && y==300){
+				System.out.println("1");
+				xFinal = -500;
+				yFinal = 1000;
+			}else if(x==-500 && y==1000){
+				System.out.println("2");
+				xFinal=-500;
+				yFinal=900;
+			}else if(x==-500 && y==900){
+				System.out.println("3");
+				xFinal=-400;
+				yFinal=900;
+			}else if(x==-400 && y==900){
+				System.out.println("4");
+				xFinal=-400;
+				yFinal=1000;
+			}else if(x==-400 && y==1000){
+				System.out.println("5");
+				xFinal=-500;
+				yFinal=1000;
+			}
+		}else if(this.getUsuario().getId()==4){
+			if(x==300 && y==300){
+				xFinal = 300;
+				yFinal = 400;
+			}else if(x==300 && y==400){
+				xFinal=400;
+				yFinal=400;
+			}else if(x==400 && y==400){
+				xFinal=300;
+				yFinal=400;
+			}else if(x==300 && y==400){
+				xFinal=300;
+				yFinal=300;
+			}
+		}else if(this.getUsuario().getId()==5){
+			if(x==300 && y==300){
+				xFinal = 300;
+				yFinal = 400;
+			}else if(x==300 && y==400){
+				xFinal=400;
+				yFinal=400;
+			}else if(x==400 && y==400){
+				xFinal=300;
+				yFinal=400;
+			}else if(x==300 && y==400){
+				xFinal=300;
+				yFinal=300;
+			}
 		}
-		return null;
 	}
 }

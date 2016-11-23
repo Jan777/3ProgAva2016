@@ -37,7 +37,7 @@ public class RecibirPersonajesConectadosService implements ServicioServer{
 
 		List<Usuario> usuarios = new Gson().fromJson(pcm.Payload, listType);
 		for(Usuario usuarioOtro : usuarios){
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			this.clienteJugable.getOtrosClientes().add(usuarioOtro);
 			System.out.println("se agrego un nuevo personaje");
 			this.clienteJugable.getJuego().agregarNuevoPersonaje(usuarioOtro);

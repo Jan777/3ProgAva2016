@@ -31,7 +31,7 @@ public class EnemigoConsultaResponseService implements ServicioServer{
 
 		List<InteligenciaArtificial> enemigos = new Gson().fromJson(eerm.Payload, listType);
 		for(InteligenciaArtificial enemigo : enemigos){
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			this.clienteJugable.getEnemigos().add(enemigo);
 			System.out.println("se agrego un nuevo enemigo");
 			this.clienteJugable.getJuego().agregarNuevoEnemigo(enemigo);

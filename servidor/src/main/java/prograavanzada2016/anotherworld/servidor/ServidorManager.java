@@ -59,13 +59,11 @@ public class ServidorManager implements Runnable{
 	}
 	
 	public void checkConnection()throws Exception{
-		if(!this.socket.isConnected()){
-			for(int x=0; x<this.salaDeChat.size(); x++){
-				if(this.salaDeChat.get(x).equals(this.socket)){
-					this.salaDeChat.remove(x);
-				}
+		for(int x=0; x<Servidor.clientesSala1.size(); x++){
+			if(!Servidor.clientesSala1.get(x).getSocket().isConnected()){
+				this.salaDeChat.remove(x);
+				System.out.println("se removio uno");
 			}
-			
 		}
 	}
 	
