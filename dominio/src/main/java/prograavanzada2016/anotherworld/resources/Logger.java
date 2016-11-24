@@ -8,7 +8,7 @@ public class Logger {
 	private static Logger instance;
 	private PrintWriter file;
 	private Logger() throws IOException{		
-		 file = new PrintWriter(new File("src\\main\\resources\\logger.log"));
+		 file = new PrintWriter(new File(Propiedades.getInstance().getProperty("logger")));
 	}
 	
 	public static Logger getInstance() throws IOException{
