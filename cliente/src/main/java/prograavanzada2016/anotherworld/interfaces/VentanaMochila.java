@@ -7,6 +7,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import prograavanzada2016.anotherworld.resources.Propiedades;
+
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.ImageIcon;
@@ -26,6 +29,7 @@ import java.awt.Toolkit;
 public class VentanaMochila extends JFrame {
 
 	public VentanaMochila() throws Exception{
+		Propiedades propiedades = Propiedades.getInstance();
 		setTitle("Mochila");
 		setResizable(false);
 		Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
@@ -80,7 +84,7 @@ public class VentanaMochila extends JFrame {
 		getContentPane().add(btnCancelar);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(VentanaMochila.class.getResource("src/main/resources/BackgroundMochilaYAlianza.jpg")));
+		lblNewLabel.setIcon(new ImageIcon(propiedades.getProperty("backGroundGeneral")));
 		lblNewLabel.setBounds(0, 0, 444, 271);
 		getContentPane().add(lblNewLabel);
 	}

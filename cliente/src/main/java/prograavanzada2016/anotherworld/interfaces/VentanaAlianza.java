@@ -3,6 +3,9 @@ package prograavanzada2016.anotherworld.interfaces;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import prograavanzada2016.anotherworld.resources.Propiedades;
+
 import javax.swing.JLabel;
 
 import java.awt.Color;
@@ -21,6 +24,7 @@ public class VentanaAlianza extends JFrame {
 	private JPanel contentPane;
 
 	public VentanaAlianza() throws Exception{
+		Propiedades propiedades = Propiedades.getInstance();
 		Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
 		setIconImage(image);
 		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaAlianza.class.getResource("src/main/resources/IconoVentana.jpg")));
@@ -76,7 +80,7 @@ public class VentanaAlianza extends JFrame {
 		contentPane.add(btnCancelar);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(VentanaAlianza.class.getResource("src/main/resources/createCharacter.jpg")));
+		lblNewLabel.setIcon(new ImageIcon(propiedades.getProperty("backGroundGeneral")));
 		lblNewLabel.setBounds(0, 0, 434, 261);
 		contentPane.add(lblNewLabel);
 	}

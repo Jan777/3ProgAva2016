@@ -125,7 +125,8 @@ public class VentanaMapa extends JFrame {
 				try {
 					ventanaMochila = new VentanaMochila();
 				} catch (Exception e) {
-					System.out.print("No se puede inicializar ventana de Mochila");
+					e.printStackTrace();
+					//System.out.print("No se puede inicializar ventana de Mochila");
 				}
 				ventanaMochila.setVisible(true);
 				ventanaMochila.setResizable(false);
