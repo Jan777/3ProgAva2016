@@ -9,6 +9,8 @@ import java.awt.Image;
 import java.awt.MouseInfo;
 import java.awt.Point;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -20,11 +22,14 @@ import javax.swing.JTextField;
 
 import prograavanzada2016.anotherworld.entities.Enemigo;
 import prograavanzada2016.anotherworld.entities.Personaje;
+import prograavanzada2016.anotherworld.resources.Propiedades;
+import prograavanzada2016.anotherworld.utilities.SonidoManager;
 
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 
 public class VentanaCombatePvE extends javax.swing.JFrame{
@@ -46,8 +51,12 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
     private JLabel label_1;
     private JLabel label_2;
 
-    public VentanaCombatePvE(){/*Personaje personaje, Enemigo enemigo*/
-    	
+    public VentanaCombatePvE() throws UnsupportedAudioFileException, IOException, LineUnavailableException{/*Personaje personaje, Enemigo enemigo*/
+    	SonidoManager sm = SonidoManager.getInstance();
+    	Propiedades prop = Propiedades.getInstance();
+    	sm.stop();
+    	sm.setMusic(prop.getProperty("battleTheme"));
+    	sm.play();
     	setTitle("Combate");
     	Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
 		setIconImage(image);
@@ -109,7 +118,7 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
         lblEnergia.setBounds(350, 11, 109, 20);
         inputPanel.add(lblEnergia);
         
-        lblVida = new JLabel("Salud");
+        lblVida = new JLabel("Salud ");
         lblVida.setBounds(450, 11, 109, 20);
         inputPanel.add(lblVida);
         
@@ -161,7 +170,7 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
         label_2 = new JLabel("New label4"); // enemigo.getSalud()
         label_2.setBounds(432, 46, 155, 20);
         inputPanel.add(label_2);
-
+        this.setResizable(false);
         pack();   // calling pack() at the end, will ensure that every layout and size we just defined gets applied before the stuff becomes visible
     }
 
@@ -169,9 +178,9 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
         EventQueue.invokeLater(new Runnable(){
             @Override
             public void run(){
-            	VentanaCombatePvE frame = new VentanaCombatePvE();
-                frame.setVisible(true);
-                frame.setLocationRelativeTo(null);
+//            	VentanaCombatePvE frame = new VentanaCombatePvE();
+//                frame.setVisible(true);
+//                frame.setLocationRelativeTo(null);
             }
         });
     }

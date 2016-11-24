@@ -39,13 +39,17 @@ public class EstadoJuego extends Estado {
 
 	@Override
 	public void actualizar() {
-		mundo.actualizar();
-		personaje.actualizar();
-		for(Entidad otroPersonaje : personajes){
-			otroPersonaje.actualizar();
-		}
-		for(Entidad enemigo : enemigos){
-			enemigo.actualizar();
+		try{
+			mundo.actualizar();
+			personaje.actualizar();
+			for(Entidad otroPersonaje : personajes){
+				otroPersonaje.actualizar();
+			}
+			for(Entidad enemigo : enemigos){
+				enemigo.actualizar();
+			}
+		}catch(Exception e){
+			e.printStackTrace();
 		}
 	}
 

@@ -3,12 +3,17 @@ package prograavanzada2016.anotherworld.mapas;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.LinkedList;
+
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
 import com.google.gson.Gson;
 
 import prograavanzada2016.anotherworld.modelos.PersonajeModel;
 import prograavanzada2016.anotherworld.modelos.Usuario;
+import prograavanzada2016.anotherworld.interfaces.VentanaCombatePvE;
 import prograavanzada2016.anotherworld.juego.*;
 import prograavanzada2016.anotherworld.mensajes.RawMessage;
 import prograavanzada2016.anotherworld.mensajes.request.PersonajeConsultaMessage;
@@ -79,6 +84,7 @@ public class Entidad {
 	private boolean soyUsuario=false;
 	public boolean tengoUnCaminoAutomatico=false;
 	private boolean soyInteligenciaArtificial=false;
+	private boolean entroEnCombate=false;
 	
 	public Entidad(Game juego, Mundo mundo, int ancho, int alto, float spawnX, float spawnY, LinkedList<BufferedImage[]> animaciones, int velAnimacion) throws Exception {
 		this.juego = juego;
@@ -126,7 +132,7 @@ public class Entidad {
 	    this.soyInteligenciaArtificial=inteligenciaArtificial;
 	}
 
-	public void actualizar() {
+	public void actualizar() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
 		moverIzq.actualizar();
 		moverArribaIzq.actualizar();
 		moverArriba.actualizar();
@@ -356,7 +362,7 @@ public class Entidad {
 	
 	//private void getEntradaAutomaticaEnemigos() {}
 	
-	public void mover() {
+	public void mover() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
 
 		dx = 0;
 		dy = 0;
@@ -365,7 +371,14 @@ public class Entidad {
 		
 		if (enMovimiento && (x != xFinal || y != yFinal)) {
 
-			this.chechColition(x,y);
+			Entidad entidad=this.chechColition(x,y);
+			if(entidad!=null && !this.entroEnCombate){
+				this.entroEnCombate=true;
+				VentanaCombatePvE ventana = new VentanaCombatePvE();
+				ventana.setVisible(true);
+				x=xFinal;
+				y=yFinal;
+			}
 			
 			if (vertical) {
 				if (yFinal > y) {
@@ -558,18 +571,22 @@ public class Entidad {
 		this.usuario = usuario;
 	}	
 	
-	public void chechColition(float xActual,float yActual){
-		int tileColision[] = Mundo.mouseATile(xActual, yActual);
-		for(Entidad ent : this.juego.getEstadoJuego().getEnemigos()){
-			int tileColisionOtro[] = Mundo.mouseATile(ent.getX(), ent.getY());
-			if(!soyInteligenciaArtificial){
-				if(tileColision[0]==tileColisionOtro[0] || tileColision[0]==tileColisionOtro[0]+1 || tileColision[0]==tileColisionOtro[0]-1){
-					if(tileColision[1]==tileColisionOtro[1] || tileColision[1]==tileColisionOtro[1]+1 || tileColision[1]==tileColisionOtro[1]-1){
-						System.out.println("COALISIONARON");
+	public Entidad chechColition(float xActual,float yActual){
+		if(!this.entroEnCombate){
+			int tileColision[] = Mundo.mouseATile(xActual, yActual);
+			
+			for(Entidad ent : this.juego.getEstadoJuego().getEnemigos()){
+				int tileColisionOtro[] = Mundo.mouseATile(ent.getX(), ent.getY());
+				if(!soyInteligenciaArtificial){
+					if(tileColision[0]==tileColisionOtro[0] || tileColision[0]==tileColisionOtro[0]+1 || tileColision[0]==tileColisionOtro[0]-1){
+						if(tileColision[1]==tileColisionOtro[1] || tileColision[1]==tileColisionOtro[1]+1 || tileColision[1]==tileColisionOtro[1]-1){
+							return ent;
+						}
 					}
 				}
 			}
 		}
+		return null;
 	}
 	
 	public void calcularMovimientoDeMaquina(float x, float y){
