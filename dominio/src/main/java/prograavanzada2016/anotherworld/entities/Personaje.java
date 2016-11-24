@@ -1,10 +1,16 @@
 package prograavanzada2016.anotherworld.entities;
 
 import prograavanzada2016.anotherworld.castas.Casta;
+import prograavanzada2016.anotherworld.castas.Curandero;
+import prograavanzada2016.anotherworld.castas.Guerrero;
+import prograavanzada2016.anotherworld.castas.Mago;
 import prograavanzada2016.anotherworld.combates.Alianza;
 import prograavanzada2016.anotherworld.combates.Loot;
 import prograavanzada2016.anotherworld.habilidades.HabilidadPersonaje;
+import prograavanzada2016.anotherworld.modelos.PersonajeModel;
 import prograavanzada2016.anotherworld.objetos.*;
+import prograavanzada2016.anotherworld.razas.Humano;
+import prograavanzada2016.anotherworld.razas.Orco;
 import prograavanzada2016.anotherworld.razas.Raza;
 
 public class Personaje extends Ente{
@@ -46,6 +52,40 @@ public class Personaje extends Ente{
 		this.puntosAdicionalesALosStats = 0;
 		//cuando se crea un personaje se le debe modificar sus stats segun la raza
 		//this.casta.calcularStats(this, raza);
+	}
+	
+	public Personaje(String nombre, int razaId, int castaId) throws Exception{
+		super(nombre);
+		Raza raza;
+		Casta casta;
+		switch(razaId){
+		case 1:
+			raza = new Humano();
+			break;
+		case 2:
+			raza = new Orco();
+			break;
+		default:
+			raza = new Humano();
+			break;
+		}
+		
+		switch(castaId){
+		case 1:
+			casta = new Guerrero();
+			break;
+		case 2:
+			casta = new Mago();
+			break;
+		case 3:
+			casta = new Curandero();
+		default:
+			casta = new Curandero();
+			break;
+		}
+		this.raza=raza;
+		this.casta=casta;
+		this.casta.calcularStats(this);
 	}
 	
 	public Personaje(int id, String nombre, int fuerza, int salud, int destreza, int inteligencia, int mana, int energia, int nivel, int experiencia, int casta_id, int raza_id, int usuario_id){
@@ -256,5 +296,18 @@ public class Personaje extends Ente{
 		this.nombre = nombre;
 	}
 	
-	
+	public PersonajeModel obtenerModelo(){
+		PersonajeModel pm = new PersonajeModel();
+		pm.setNombre(this.getNombre());
+		pm.setCastaId(this.casta.getId());
+		pm.setRazaId(this.raza.getId());
+		pm.setFuerza(this.getFuerza());
+		pm.setInteligencia(this.getInteligencia());
+		pm.setDestreza(this.getDestreza());
+		pm.setEnergia(this.getEnergia());
+		pm.setMana(this.getMana());
+		pm.setNivel(this.getNivel());
+		pm.setSalud(this.getSalud());
+		return pm;
+	}
 }

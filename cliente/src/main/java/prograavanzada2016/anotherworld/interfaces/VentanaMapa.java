@@ -207,7 +207,7 @@ public class VentanaMapa extends JFrame {
 		gbc_btnCrearAlianza.gridy = 1;
 		jpBarraEstado.add(btnCrearAlianza, gbc_btnCrearAlianza);
 		
-		lblAlianza = new JLabel("Sin Alianza");
+		lblAlianza = new JLabel(personajeModel.getRaza()+" - "+personajeModel.getCasta());
 		GridBagConstraints gbc_lblAlianza = new GridBagConstraints();
 		gbc_lblAlianza.anchor = GridBagConstraints.WEST;
 		gbc_lblAlianza.insets = new Insets(0, 0, 0, 5);
@@ -223,7 +223,7 @@ public class VentanaMapa extends JFrame {
 		gbc_lblMana.gridy = 2;
 		jpBarraEstado.add(lblMana, gbc_lblMana);
 		
-		lblInteligencia = new JLabel("Inteligencia: "+personajeModel.getMana());
+		lblInteligencia = new JLabel("Inteligencia: "+personajeModel.getInteligencia());
 		GridBagConstraints gbc_lblInteligencia = new GridBagConstraints();
 		gbc_lblInteligencia.anchor = GridBagConstraints.WEST;
 		gbc_lblInteligencia.insets = new Insets(0, 0, 0, 5);

@@ -20,6 +20,9 @@ public class App {
 			+" vea el LOG del sistema.", "ERROR", JOptionPane.ERROR_MESSAGE);
 			logger.log(e.getMessage());
 		}
+		//VentanaCombatePvE frame = new VentanaCombatePvE();
+        //frame.setVisible(true);
+        //frame.setLocationRelativeTo(null);
 		
 	}
 }

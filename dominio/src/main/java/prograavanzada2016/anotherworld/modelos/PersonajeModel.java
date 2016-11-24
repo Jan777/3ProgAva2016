@@ -1,5 +1,7 @@
 package prograavanzada2016.anotherworld.modelos;
 
+import prograavanzada2016.anotherworld.entities.Personaje;
+
 public class PersonajeModel {
 	private int id;
 	private long usuarioId;
@@ -24,6 +26,10 @@ public class PersonajeModel {
 	private int movimientoYFinal;
 	
 	private boolean nuevoCamino;
+	
+	
+	private String raza;
+	private String casta;
 	public PersonajeModel(int id, int usuarioId, int castaId, int razaId, String nombre, int fuerza, int destreza,
 			int inteligencia, int mana, int energia, int nivel, int salud, int experiencia) {
 		this.id = id;
@@ -39,12 +45,27 @@ public class PersonajeModel {
 		this.nivel = nivel;
 		this.salud = salud;
 		this.experiencia = experiencia;
+		
+		this.casta= this.obtenerCastaString(castaId);
+		this.raza = this.obtenerRazaString(razaId);
 	}
-	public PersonajeModel(String nombre, String casta, String raza,long usuarioId) {
+
+	public PersonajeModel(String nombre, String casta, String raza,long usuarioId) throws Exception {
 		this.nombre=nombre;
 		this.castaId=this.obtenerCasta(casta);
 		this.razaId=this.obtenerRaza(raza);
 		this.usuarioId=usuarioId;
+		this.casta=casta;
+		this.raza=raza;
+		Personaje p = new Personaje(this.nombre,this.razaId,this.castaId);
+		PersonajeModel pBase = p.obtenerModelo();
+		this.setFuerza(pBase.getFuerza());
+		this.setInteligencia(pBase.getInteligencia());
+		this.setDestreza(pBase.getDestreza());
+		this.setEnergia(pBase.getEnergia());
+		this.setMana(pBase.getMana());
+		this.setNivel(pBase.getNivel());
+		this.setSalud(pBase.getSalud());
 	}
 	public PersonajeModel() {
 		// TODO Auto-generated constructor stub
@@ -128,20 +149,48 @@ public class PersonajeModel {
 	public void setUsuarioId(long usuarioId) {
 		this.usuarioId = usuarioId;
 	}
+	
+	public String getRaza() {
+		return this.obtenerRazaString(razaId);
+	}
+	public void setRaza(String raza) {
+		this.raza = raza;
+	}
+	public String getCasta() {
+		return this.obtenerCastaString(castaId);
+	}
+	public void setCasta(String casta) {
+		this.casta = casta;
+	}
 	public int obtenerCasta(String casta){
-		if(casta.equals("guerrero")){
+		if(casta.equals("Guerrero")){
 			return 1;
-		}else if(casta.equals("mago")){
+		}else if(casta.equals("Mago")){
 			return 2;
 		}
 		return 3;
 	}
 	
 	public int obtenerRaza(String raza){
-		if(raza.equals("humano")){
+		if(raza.equals("Humano")){
 			return 1;
 		}
 		return 2;
+	}
+	
+	private String obtenerRazaString(int razaId) {
+		if(razaId==1){
+			return "Humano";
+		}
+		return "Orco";
+	}
+	private String obtenerCastaString(int castaId) {
+		if(castaId==1){
+			return "Guerrero";
+		}else if(castaId==2){
+			return "Mago";
+		}
+		return "Curandero";
 	}
 	public int getMovimientoX() {
 		return movimientoX;

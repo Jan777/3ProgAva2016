@@ -76,7 +76,7 @@ public class VentanaAlianza extends JFrame {
 		contentPane.add(btnCancelar);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(VentanaAlianza.class.getResource("src/main/resources/BackgroundMochilaYAlianza.jpg")));
+		lblNewLabel.setIcon(new ImageIcon(VentanaAlianza.class.getResource("src/main/resources/createCharacter.jpg")));
 		lblNewLabel.setBounds(0, 0, 434, 261);
 		contentPane.add(lblNewLabel);
 	}

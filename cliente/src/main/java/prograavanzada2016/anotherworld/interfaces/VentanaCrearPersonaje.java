@@ -164,7 +164,6 @@ public class VentanaCrearPersonaje extends JFrame {
 				String castaString = comboCasta.getSelectedItem().toString();
 				String nombreString = textField.getText();
 				
-				System.out.println(razaString+castaString+nombreString);
 				
 				PersonajeModel pm = new PersonajeModel(nombreString,castaString,razaString,this.usuario.getId());
 				
