@@ -99,7 +99,7 @@ public class VentanaMapa extends JFrame {
 		gbl_jpBarraEstado.rowWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
 		jpBarraEstado.setLayout(gbl_jpBarraEstado);
 		
-		lblPersonaje = new JLabel("PJ: "+personajeModel.getNombre());
+		lblPersonaje = new JLabel("Nombre: "+personajeModel.getNombre());
 		GridBagConstraints gbc_lblPersonaje = new GridBagConstraints();
 		gbc_lblPersonaje.fill = GridBagConstraints.HORIZONTAL;
 		gbc_lblPersonaje.insets = new Insets(0, 0, 5, 5);
@@ -107,7 +107,7 @@ public class VentanaMapa extends JFrame {
 		gbc_lblPersonaje.gridy = 0;
 		jpBarraEstado.add(lblPersonaje, gbc_lblPersonaje);
 		
-		lblSalud = new JLabel("Salud: 100%");
+		lblSalud = new JLabel("Salud: "+ personajeModel.getSalud()+" ps");
 		GridBagConstraints gbc_lblSalud = new GridBagConstraints();
 		gbc_lblSalud.fill = GridBagConstraints.HORIZONTAL;
 		gbc_lblSalud.insets = new Insets(0, 0, 5, 5);
@@ -138,7 +138,7 @@ public class VentanaMapa extends JFrame {
 			}
 		});
 		
-		lblFuerza = new JLabel("Fuerza:");
+		lblFuerza = new JLabel("Fuerza: "+personajeModel.getFuerza());
 		GridBagConstraints gbc_lblFuerza = new GridBagConstraints();
 		gbc_lblFuerza.anchor = GridBagConstraints.WEST;
 		gbc_lblFuerza.insets = new Insets(0, 0, 5, 5);
@@ -152,7 +152,7 @@ public class VentanaMapa extends JFrame {
 		gbc_btnMochila.gridy = 0;
 		jpBarraEstado.add(btnMochila, gbc_btnMochila);
 		
-		lblNivel = new JLabel("Nivel 1");
+		lblNivel = new JLabel("Nivel: "+personajeModel.getNivel());
 		GridBagConstraints gbc_lblNivel = new GridBagConstraints();
 		gbc_lblNivel.fill = GridBagConstraints.HORIZONTAL;
 		gbc_lblNivel.insets = new Insets(0, 0, 5, 5);
@@ -160,7 +160,7 @@ public class VentanaMapa extends JFrame {
 		gbc_lblNivel.gridy = 1;
 		jpBarraEstado.add(lblNivel, gbc_lblNivel);
 		
-		lblEnergia = new JLabel("Energ\u00EDa: 100%");
+		lblEnergia = new JLabel("Energ\u00EDa: "+personajeModel.getEnergia()+" stm");
 		GridBagConstraints gbc_lblEnergia = new GridBagConstraints();
 		gbc_lblEnergia.anchor = GridBagConstraints.WEST;
 		gbc_lblEnergia.insets = new Insets(0, 0, 5, 5);
@@ -168,7 +168,7 @@ public class VentanaMapa extends JFrame {
 		gbc_lblEnergia.gridy = 1;
 		jpBarraEstado.add(lblEnergia, gbc_lblEnergia);
 		
-		lblDestreza = new JLabel("Destreza:");
+		lblDestreza = new JLabel("Destreza: "+personajeModel.getDestreza());
 		GridBagConstraints gbc_lblDestreza = new GridBagConstraints();
 		gbc_lblDestreza.anchor = GridBagConstraints.WEST;
 		gbc_lblDestreza.insets = new Insets(0, 0, 5, 5);
@@ -187,7 +187,7 @@ public class VentanaMapa extends JFrame {
 				try {
 					ventanaAlianza = new VentanaAlianza();
 				} catch (Exception e) {
-					System.out.print("No se puede inicializar ventana de Alianza");
+					e.printStackTrace();
 				}
 				ventanaAlianza.setVisible(true);
 				ventanaAlianza.setResizable(false);
@@ -207,7 +207,7 @@ public class VentanaMapa extends JFrame {
 		gbc_btnCrearAlianza.gridy = 1;
 		jpBarraEstado.add(btnCrearAlianza, gbc_btnCrearAlianza);
 		
-		lblAlianza = new JLabel("(Alianza)");
+		lblAlianza = new JLabel("Sin Alianza");
 		GridBagConstraints gbc_lblAlianza = new GridBagConstraints();
 		gbc_lblAlianza.anchor = GridBagConstraints.WEST;
 		gbc_lblAlianza.insets = new Insets(0, 0, 0, 5);
@@ -215,7 +215,7 @@ public class VentanaMapa extends JFrame {
 		gbc_lblAlianza.gridy = 2;
 		jpBarraEstado.add(lblAlianza, gbc_lblAlianza);
 		
-		lblMana = new JLabel("Man\u00E1: 100%");
+		lblMana = new JLabel("Man\u00E1: "+personajeModel.getMana());
 		GridBagConstraints gbc_lblMana = new GridBagConstraints();
 		gbc_lblMana.anchor = GridBagConstraints.WEST;
 		gbc_lblMana.insets = new Insets(0, 0, 0, 5);
@@ -223,7 +223,7 @@ public class VentanaMapa extends JFrame {
 		gbc_lblMana.gridy = 2;
 		jpBarraEstado.add(lblMana, gbc_lblMana);
 		
-		lblInteligencia = new JLabel("Inteligencia:");
+		lblInteligencia = new JLabel("Inteligencia: "+personajeModel.getMana());
 		GridBagConstraints gbc_lblInteligencia = new GridBagConstraints();
 		gbc_lblInteligencia.anchor = GridBagConstraints.WEST;
 		gbc_lblInteligencia.insets = new Insets(0, 0, 0, 5);

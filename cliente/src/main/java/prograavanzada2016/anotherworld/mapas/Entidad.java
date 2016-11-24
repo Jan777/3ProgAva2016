@@ -562,7 +562,7 @@ public class Entidad {
 		int tileColision[] = Mundo.mouseATile(xActual, yActual);
 		for(Entidad ent : this.juego.getEstadoJuego().getEnemigos()){
 			int tileColisionOtro[] = Mundo.mouseATile(ent.getX(), ent.getY());
-			if(!soyInteligenciaArtificial && this.getUsuario().getId()!=ent.getUsuario().getId()){
+			if(!soyInteligenciaArtificial){
 				if(tileColision[0]==tileColisionOtro[0] || tileColision[0]==tileColisionOtro[0]+1 || tileColision[0]==tileColisionOtro[0]-1){
 					if(tileColision[1]==tileColisionOtro[1] || tileColision[1]==tileColisionOtro[1]+1 || tileColision[1]==tileColisionOtro[1]-1){
 						System.out.println("COALISIONARON");

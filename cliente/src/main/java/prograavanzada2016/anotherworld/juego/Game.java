@@ -57,9 +57,9 @@ public class Game implements Runnable{
 		//screen = new GameScreen(nombre, width, height);
 		//screen.getCanvas().addMouseListener(mouseController);
 		
-		PersonajeModel jorge = new PersonajeModel();
-		jorge.setNombre(user.getPersonaje().getNombre());
-		screen = new VentanaMapa(jorge);
+		//PersonajeModel jorge = new PersonajeModel();
+		//jorge.setNombre(user.getPersonaje().getNombre());
+		screen = new VentanaMapa(clienteJugable.getUsuario().getPersonaje());
 		screen.game.getCanvas().addMouseListener(mouseController);
 		
 		Recursos.cargar();
