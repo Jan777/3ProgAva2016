@@ -89,7 +89,7 @@ public class VentanaLanzarHechizo extends JFrame {
 		getContentPane().add(btnCancelar);
 		
 		JLabel lblNewLabel = new JLabel("");
-		//lblNewLabel.setIcon(new ImageIcon(VentanaMochila.class.getResource("src/main/resources/BackgroundMochilaYAlianza.jpg")));
+		lblNewLabel.setIcon(new ImageIcon(VentanaMochila.class.getResource("src/main/resources/BackgroundMochilaYAlianza.jpg")));
 		lblNewLabel.setBounds(0, 0, 444, 271);
 		getContentPane().add(lblNewLabel);
 	}
