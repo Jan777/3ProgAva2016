@@ -22,6 +22,7 @@ import prograavanzada2016.anotherworld.mensajes.RawMessage;
 import prograavanzada2016.anotherworld.mensajes.request.PersonajeConsultaMessage;
 import prograavanzada2016.anotherworld.mensajes.request.UsuarioNuevoMessage;
 import prograavanzada2016.anotherworld.modelos.Usuario;
+import prograavanzada2016.anotherworld.resources.Propiedades;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -54,7 +55,7 @@ public class VentanaRegistroDeUsuario extends JFrame {
 	
 	public VentanaRegistroDeUsuario(ClienteJugable clienteJugable) throws Exception{
 		this.clienteJugable = clienteJugable;
-		Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
+		Image image = new ImageIcon(Propiedades.getInstance().getProperty("IconoVentana")).getImage();
 		setIconImage(image);
 		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaRegistroDeUsuario.class.getResource("src/main/resources/IconoVentana.jpg")));
 		setTitle("Registrar");
@@ -156,7 +157,7 @@ public class VentanaRegistroDeUsuario extends JFrame {
 		contentPane.add(passwordField);
 		
 		lblNewLabel = new JLabel("");
-		Image image = new ImageIcon("src/main/resources/VentanaPrincipal.jpg").getImage();
+		Image image = new ImageIcon(Propiedades.getInstance().getProperty("VentanaPrincipal")).getImage();
 		lblNewLabel.setIcon(new ImageIcon(image));
 		//lblNewLabel.setIcon(new ImageIcon(VentanaRegistroDeUsuario.class.getResource("src/main/resources/VentanaPrincipal.jpg")));
 		lblNewLabel.setBounds(0, 0, 434, 261);

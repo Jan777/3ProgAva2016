@@ -8,6 +8,7 @@ import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -17,6 +18,8 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.ListSelectionModel;
 import javax.swing.border.EmptyBorder;
+
+import prograavanzada2016.anotherworld.resources.Propiedades;
 
 public class VentanaLanzarHechizo extends JFrame {
 
@@ -41,11 +44,12 @@ public class VentanaLanzarHechizo extends JFrame {
 
 	/**
 	 * Create the frame.
+	 * @throws IOException 
 	 */
-	public VentanaLanzarHechizo() {
+	public VentanaLanzarHechizo() throws IOException {
 		setTitle("Lanzar Hechizo");
 		setResizable(false);
-		Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
+		Image image = new ImageIcon(Propiedades.getInstance().getProperty("IconoVentana")).getImage();
 		setIconImage(image);
 		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaMochila.class.getResource("src/main/resources/IconoVentana.jpg")));
 		getContentPane().setLayout(null);
@@ -89,7 +93,7 @@ public class VentanaLanzarHechizo extends JFrame {
 		getContentPane().add(btnCancelar);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(VentanaMochila.class.getResource("src/main/resources/BackgroundMochilaYAlianza.jpg")));
+		lblNewLabel.setIcon(new ImageIcon(VentanaMochila.class.getResource(Propiedades.getInstance().getProperty("BackgroundMochilaYAlianza"))));
 		lblNewLabel.setBounds(0, 0, 444, 271);
 		getContentPane().add(lblNewLabel);
 	}

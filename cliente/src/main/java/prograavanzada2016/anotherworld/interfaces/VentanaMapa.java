@@ -65,7 +65,7 @@ public class VentanaMapa extends JFrame {
 	public GameScreen game;
 
 	public VentanaMapa(PersonajeModel personajeModel) throws Exception{
-		Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
+		Image image = new ImageIcon(Propiedades.getInstance().getProperty("IconoVentana")).getImage();
 		Propiedades propiedades = Propiedades.getInstance();
 		setIconImage(image);
 		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaMapa.class.getResource("src/main/resources/IconoVentana.jpg")));

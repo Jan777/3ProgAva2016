@@ -62,7 +62,7 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
     	sm.setMusic(prop.getProperty("battleTheme"));
     	sm.play();
     	setTitle("Combate");
-    	Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
+    	Image image = new ImageIcon(Propiedades.getInstance().getProperty("IconoVentana")).getImage();
 		setIconImage(image);
 
         splitPane = new JSplitPane();
@@ -85,7 +85,7 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
         
         lblNewLabel_1 = new JLabel("");
         lblNewLabel_1.setBounds(0, 0, 782, 449);
-        lblNewLabel_1.setIcon(new ImageIcon("src/main/resources/BackgroundCombate.jpg"));
+        lblNewLabel_1.setIcon(new ImageIcon(Propiedades.getInstance().getProperty("BackgroundCombate")));
         //topPanel.add(lblNewLabel_1);
         topPanel.add(battleScreen);
         splitPane.setBottomComponent(bottomPanel);

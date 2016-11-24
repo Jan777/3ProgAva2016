@@ -25,7 +25,7 @@ public class VentanaAlianza extends JFrame {
 
 	public VentanaAlianza() throws Exception{
 		Propiedades propiedades = Propiedades.getInstance();
-		Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
+		Image image = new ImageIcon(Propiedades.getInstance().getProperty("IconoVentana")).getImage();
 		setIconImage(image);
 		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaAlianza.class.getResource("src/main/resources/IconoVentana.jpg")));
 		setTitle("Alianzas");

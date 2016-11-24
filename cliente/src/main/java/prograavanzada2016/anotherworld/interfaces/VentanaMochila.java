@@ -32,7 +32,7 @@ public class VentanaMochila extends JFrame {
 		Propiedades propiedades = Propiedades.getInstance();
 		setTitle("Mochila");
 		setResizable(false);
-		Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
+		Image image = new ImageIcon(Propiedades.getInstance().getProperty("IconoVentana")).getImage();
 		setIconImage(image);
 		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaMochila.class.getResource("src/main/resources/IconoVentana.jpg")));
 		getContentPane().setLayout(null);

@@ -96,7 +96,7 @@ public class VentanaLogin extends JFrame implements ILogin {
 		setResizable(false);
 		setLocationRelativeTo(null);
 		setTitle("AnotherWorld");
-		Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
+		Image image = new ImageIcon(Propiedades.getInstance().getProperty("IconoVentana")).getImage();
 		setIconImage(image);
 		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaLogin.class.getResource("/src/main/resources/IconoVentana.jpg")));
 		initComponents();
@@ -179,7 +179,7 @@ public class VentanaLogin extends JFrame implements ILogin {
 		contentPane.add(passwordField);
 
 		JLabel lblNewLabel = new JLabel("New label");
-		Image image = new ImageIcon("src/main/resources/VentanaPrincipal.jpg").getImage();
+		Image image = new ImageIcon(Propiedades.getInstance().getProperty("VentanaPrincipal")).getImage();
 		lblNewLabel.setIcon(new ImageIcon(image));
 		/*lblNewLabel.setIcon(new ImageIcon(
 				VentanaLogin.class.getResource("src/main/resources/VentanaPrincipal.jpg")));*/

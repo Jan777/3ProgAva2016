@@ -55,7 +55,7 @@ public class VentanaCrearPersonaje extends JFrame {
 	public void initComponents() throws Exception {
 		Propiedades propiedades = Propiedades.getInstance();
 		setSize(Integer.parseInt(propiedades.getProperty("w")),Integer.parseInt(propiedades.getProperty("h")));
-		Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
+		Image image = new ImageIcon(Propiedades.getInstance().getProperty("IconoVentana")).getImage();
 		setIconImage(image);
 		//setIconImage(Toolkit.getDefaultToolkit().getImage("src/main/resources/IconoVentana.jpg"));
 		setTitle("Crear Personaje");

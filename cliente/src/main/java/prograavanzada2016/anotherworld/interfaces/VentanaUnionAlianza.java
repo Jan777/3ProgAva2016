@@ -7,6 +7,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import prograavanzada2016.anotherworld.resources.Propiedades;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.Image;
@@ -41,7 +44,7 @@ public class VentanaUnionAlianza extends JFrame {
 	 * Create the frame.
 	 */
 	public VentanaUnionAlianza() throws Exception{
-		Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
+		Image image = new ImageIcon(Propiedades.getInstance().getProperty("IconoVentana")).getImage();
 		setIconImage(image);
 		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaUnionAlianza.class.getResource("src/main/resources/IconoVentana.jpg")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

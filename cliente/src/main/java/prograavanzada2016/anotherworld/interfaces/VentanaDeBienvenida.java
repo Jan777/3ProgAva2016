@@ -5,6 +5,7 @@ import prograavanzada2016.anotherworld.mensajes.RawMessage;
 import prograavanzada2016.anotherworld.mensajes.request.LoginMessage;
 import prograavanzada2016.anotherworld.mensajes.request.PersonajeConsultaMessage;
 import prograavanzada2016.anotherworld.modelos.Usuario;
+import prograavanzada2016.anotherworld.resources.Propiedades;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -58,7 +59,7 @@ public class VentanaDeBienvenida extends JFrame {
 
 	public VentanaDeBienvenida(ClienteJugable clienteJugable) throws Exception {
 		this.clienteJugable=clienteJugable;
-		Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
+		Image image = new ImageIcon(Propiedades.getInstance().getProperty("IconoVentana")).getImage();
 		setIconImage(image);
 		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaDeBienvenida.class.getResource("src/main/resources/IconoVentana.jpg")));
 		setTitle("Bienvenido!");
@@ -76,7 +77,7 @@ public class VentanaDeBienvenida extends JFrame {
 		lblBienvenido.setText("Bienvenido "+usuario.getNombre());
 		
 		JLabel label = new JLabel("");
-		Image image2 = new ImageIcon("src/main/resources/VentanaPrincipal.jpg").getImage();
+		Image image2 = new ImageIcon(Propiedades.getInstance().getProperty("VentanaPrincipal")).getImage();
 		label.setIcon(new ImageIcon(image2));
 		//label.setIcon(new ImageIcon(VentanaDeBienvenida.class.getResource("src/main/resources/VentanaPrincipal.jpg")));
 		label.setBounds(0, 0, 359, 236);

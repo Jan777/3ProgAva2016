@@ -19,11 +19,13 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import prograavanzada2016.anotherworld.entities.Personaje;
+import prograavanzada2016.anotherworld.resources.Propiedades;
 
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 
 public class VentanaCombatePvP extends javax.swing.JFrame{
@@ -41,10 +43,10 @@ public class VentanaCombatePvP extends javax.swing.JFrame{
     private JLabel lblVida;
     private JLabel lblNewLabel_1;
 
-    public VentanaCombatePvP(){ //public VentanaCombatePvP(Personaje p1, Personaje p2)
+    public VentanaCombatePvP() throws IOException{ //public VentanaCombatePvP(Personaje p1, Personaje p2)
     	
     	setTitle("Combate");
-    	Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
+    	Image image = new ImageIcon(Propiedades.getInstance().getProperty("IconoVentana")).getImage();
 		setIconImage(image);
 
         splitPane = new JSplitPane();
@@ -66,7 +68,7 @@ public class VentanaCombatePvP extends javax.swing.JFrame{
         topPanel.setLayout(null);
         
         lblNewLabel_1 = new JLabel("New label");
-        lblNewLabel_1.setIcon(new ImageIcon("src/main/resources/BackgroundCombate.jpg"));
+        lblNewLabel_1.setIcon(new ImageIcon(Propiedades.getInstance().getProperty("BackgroundCombate")));
         lblNewLabel_1.setBounds(0, 0, 782, 449);
         topPanel.add(lblNewLabel_1);
         splitPane.setBottomComponent(bottomPanel);
@@ -164,7 +166,12 @@ public class VentanaCombatePvP extends javax.swing.JFrame{
         EventQueue.invokeLater(new Runnable(){
             @Override
             public void run(){
-            	VentanaCombatePvP frame = new VentanaCombatePvP();
+            	VentanaCombatePvP frame = null;
+				try {
+					frame = new VentanaCombatePvP();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
                 frame.setVisible(true);
                 frame.setLocationRelativeTo(null);
             }
