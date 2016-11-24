@@ -47,5 +47,17 @@ public class BattleScreen extends Canvas{
 		//pasto
 		g.setColor(Color.GREEN);
 		g.fill3DRect(0, 300, 800, 450, false);
+		
+		
+		//player 1
+		g.setColor(Color.ORANGE);
+		g.fill3DRect(200, 350, 25, 25, false);
+		g.setColor(Color.BLACK);
+		g.drawString("Jugador 1",190,390);
+		//player 2
+		g.setColor(Color.YELLOW);
+		g.fill3DRect(600, 350, 25, 25, false);
+		g.setColor(Color.BLACK);
+		g.drawString("Minotauro",590,390);
 	}
 }

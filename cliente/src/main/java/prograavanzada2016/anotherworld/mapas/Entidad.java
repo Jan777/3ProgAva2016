@@ -376,8 +376,7 @@ public class Entidad {
 				this.entroEnCombate=true;
 				VentanaCombatePvE ventana = new VentanaCombatePvE(this,entidad);
 				ventana.setVisible(true);
-				x=xFinal;
-				y=yFinal;
+				entidad.entroEnCombate=true;
 			}
 			
 			if (vertical) {
@@ -421,7 +420,7 @@ public class Entidad {
 			
 			
 			
-			if (mundo.getTile((int) tile[0], (int) tile[1]).esSolido()) {
+			if (mundo.getTile((int) tile[0], (int) tile[1]).esSolido() || this.entroEnCombate) {
 				xFinal = x;
 				yFinal = y;
 				auxX = x;
@@ -457,14 +456,16 @@ public class Entidad {
 		
 		drawX = (int) (x - juego.getCamara().getxOffset());
 		drawY = (int) (y - juego.getCamara().getyOffset());
-		g.drawImage(getFrameAnimacionActual(), drawX, drawY, ancho, alto, null);
-		
+		if(soyInteligenciaArtificial && !entroEnCombate){
+			g.drawImage(getFrameAnimacionActual(), drawX, drawY, ancho, alto, null);
+			g.drawString("Minotauro Furioso - 5", drawX + 10, drawY - 36);
+		}else if(!entroEnCombate){
+			g.drawImage(getFrameAnimacionActual(), drawX, drawY, ancho, alto, null);
+		}
 		if(!soyUsuario && !soyInteligenciaArtificial){
 			g.setColor(Color.WHITE);
 			g.drawString("Salud: "+ juego.getUser().getPersonaje().getSalud(), drawX +10 , drawY - 24);
 			g.drawString(this.getUsuario().getPersonaje().getNombre() + " - "+ this.getUsuario().getPersonaje().getNivel(), drawX + 10, drawY - 36); //aca obtener el nombre del pj
-		}else if(soyInteligenciaArtificial){
-			g.drawString("Minotauro Furioso - 5", drawX + 10, drawY - 36);
 		}
 	}
 
