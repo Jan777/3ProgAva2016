@@ -86,6 +86,7 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
         
         JComboBox comboBox = new JComboBox();
         comboBox.setBounds(20, 29, 144, 20);
+        //comboBox.addItem(enemigo.getNombre());
         inputPanel.add(comboBox);
         
         JLabel lblNombrePj = new JLabel("Batalla");
