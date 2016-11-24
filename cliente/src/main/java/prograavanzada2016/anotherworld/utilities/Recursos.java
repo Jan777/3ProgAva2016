@@ -18,6 +18,9 @@ public class Recursos {
 	private static BufferedImage[] elfoAbajoDer;
 	private static BufferedImage[] elfoAbajo;
 	private static BufferedImage[] elfoAbajoIzq; 
+	
+	private static BufferedImage[] elfoMuerte;
+	private static BufferedImage[] elfoAtaca;
 	// Fin Personajes
 	
 	// Inicio Personaje	
@@ -30,6 +33,9 @@ public class Recursos {
 	private static BufferedImage[] minotauroAbajoDer;
 	private static BufferedImage[] minotauroAbajo;
 	private static BufferedImage[] minotauroAbajoIzq; 
+	
+	private static BufferedImage[] minotauroMuerte; 
+	private static BufferedImage[] minotauroAtaca;
 	// Fin Personajes
 	
 	// Inicio Personaje	
@@ -42,6 +48,9 @@ public class Recursos {
 	private static BufferedImage[] humanoAbajoDer;
 	private static BufferedImage[] humanoAbajo;
 	private static BufferedImage[] humanoAbajoIzq; 
+	
+	private static BufferedImage[] humanoMuerte; 
+	private static BufferedImage[] humanoAtaca;
 	// Fin Personajes
 	
 	// Entorno
@@ -77,6 +86,9 @@ public class Recursos {
 		elfoAbajo = new BufferedImage[4];
 		elfoAbajoIzq = new BufferedImage[4];
 		
+		elfoMuerte = new BufferedImage[2];
+		elfoAtaca = new BufferedImage[2];
+		
 		for(int i = 0; i < 4; i++) {
 			elfoIzq[i] = spriteelfo.getTile(ANCHO*i, 0, ANCHO, ALTO);
 		}
@@ -109,6 +121,18 @@ public class Recursos {
 			elfoAbajoIzq[i] = spriteelfo.getTile(ANCHO*i, ALTO*7, ANCHO, ALTO);
 		}
 		
+		for(int i = 0; i < 4; i++) {
+			elfoAbajoIzq[i] = spriteelfo.getTile(ANCHO*i, ALTO*7, ANCHO, ALTO);
+		}
+		
+		for(int i = 6; i < 7; i++) {
+			elfoMuerte[i-6] = spriteelfo.getTile(ANCHO*i, ALTO*4, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 5; i++) {
+			elfoAtaca[i-4] = spriteelfo.getTile(ANCHO*i, ALTO*4, ANCHO, ALTO);
+		}
+		
 		elfo.add(elfoIzq);
 		elfo.add(elfoArribaIzq);
 		elfo.add(elfoArriba);
@@ -117,6 +141,9 @@ public class Recursos {
 		elfo.add(elfoAbajoDer);
 		elfo.add(elfoAbajo);
 		elfo.add(elfoAbajoIzq);
+		
+		elfo.add(elfoMuerte);
+		elfo.add(elfoAtaca);
 		
 		// Fin elfo
 		
@@ -134,6 +161,9 @@ public class Recursos {
 		humanoAbajoDer = new BufferedImage[2];
 		humanoAbajo = new BufferedImage[2];
 		humanoAbajoIzq = new BufferedImage[2];
+		
+		humanoMuerte = new BufferedImage[2];
+		humanoAtaca = new BufferedImage[2];
 		
 		for(int i = 0; i < 2; i++) {
 			humanoIzq[i] = spriteHumano.getTile(ANCHO*5, ALTO*(2+i), ANCHO, ALTO);
@@ -167,6 +197,12 @@ public class Recursos {
 			humanoAbajoIzq[i] = spriteHumano.getTile(ANCHO*6, ALTO*(2+i), ANCHO, ALTO);
 		}
 		
+		humanoMuerte[0] = spriteHumano.getTile(ANCHO*7, ALTO*5, ANCHO, ALTO);
+		
+		for(int i = 4; i < 5; i++) {
+			humanoAtaca[i-4] = spriteHumano.getTile(ANCHO, ALTO*i, ANCHO, ALTO);
+		}
+		
 		humano.add(humanoIzq);
 		humano.add(humanoArribaIzq);
 		humano.add(humanoArriba);
@@ -175,6 +211,9 @@ public class Recursos {
 		humano.add(humanoAbajoDer);
 		humano.add(humanoAbajo);
 		humano.add(humanoAbajoIzq);
+		
+		humano.add(humanoMuerte);
+		humano.add(humanoAtaca);
 		
 		// Fin humano
 				
@@ -192,6 +231,9 @@ public class Recursos {
 		minotauroAbajoDer = new BufferedImage[7];
 		minotauroAbajo = new BufferedImage[7];
 		minotauroAbajoIzq = new BufferedImage[7];
+		
+		minotauroMuerte = new BufferedImage[7];
+		minotauroAtaca = new BufferedImage[3];
 		
 		for(int i = 4; i < 11; i++) {
 			minotauroIzq[i-4] = spriteminotauro.getTile(ANCHO*i, 0, ANCHO, ALTO);
@@ -225,6 +267,13 @@ public class Recursos {
 			minotauroAbajoIzq[i-4] = spriteminotauro.getTile(ANCHO*i, ALTO*7, ANCHO, ALTO);
 		}
 		
+		for(int i = 0; i < 7; i++) {
+			minotauroMuerte[i] = spriteminotauro.getTile(ANCHO*i, ALTO, ANCHO, ALTO);
+		}
+		for(int i = 0; i < 3; i++) {
+			minotauroAtaca[i] = spriteminotauro.getTile(ANCHO*i, ALTO, ANCHO, ALTO);
+		}
+		
 		minotauro.add(minotauroIzq);
 		minotauro.add(minotauroArribaIzq);
 		minotauro.add(minotauroArriba);
@@ -233,6 +282,9 @@ public class Recursos {
 		minotauro.add(minotauroAbajoDer);
 		minotauro.add(minotauroAbajo);
 		minotauro.add(minotauroAbajoIzq);
+		
+		minotauro.add(minotauroMuerte);
+		minotauro.add(minotauroAtaca);
 		//fin minotauro
 		
 		// Inicio Entorno
