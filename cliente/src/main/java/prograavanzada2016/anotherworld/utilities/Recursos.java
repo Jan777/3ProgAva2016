@@ -2,6 +2,9 @@ package prograavanzada2016.anotherworld.utilities;
 
 import java.awt.image.BufferedImage;
 import java.util.LinkedList;
+import java.util.Properties;
+
+import prograavanzada2016.anotherworld.resources.Propiedades;
 
 public class Recursos {
 
@@ -75,7 +78,7 @@ public class Recursos {
 		ALTO = 256;
 		
 		// Inicio elfo
-		SpriteSheet spriteelfo = new SpriteSheet(CargadorImagen.cargarImagen("/elfo.png"));
+		SpriteSheet spriteelfo = new SpriteSheet(CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Elfo")));
 		
 		elfoIzq = new BufferedImage[4];
 		elfoArribaIzq = new BufferedImage[4];
@@ -151,7 +154,7 @@ public class Recursos {
 		// Inicio humano
 		ANCHO=64;
 		ALTO=96;
-		SpriteSheet spriteHumano = new SpriteSheet(CargadorImagen.cargarImagen("/human.gif"));
+		SpriteSheet spriteHumano = new SpriteSheet(CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Humano")));
 		
 		humanoIzq = new BufferedImage[2];
 		humanoArribaIzq = new BufferedImage[2];
@@ -221,7 +224,7 @@ public class Recursos {
 		
 		ANCHO = 128;
 		ALTO = 128;
-		SpriteSheet spriteminotauro = new SpriteSheet(CargadorImagen.cargarImagen("/minotauro.png"));
+		SpriteSheet spriteminotauro = new SpriteSheet(CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Minotauro")));
 
 		minotauroIzq = new BufferedImage[7];
 		minotauroArribaIzq = new BufferedImage[7];
@@ -288,15 +291,15 @@ public class Recursos {
 		//fin minotauro
 		
 		// Inicio Entorno
-		piso =CargadorImagen.cargarImagen("/pisoPosta.png");
-		pasto = CargadorImagen.cargarImagen("/pasto1.png");
-		asfalto = CargadorImagen.cargarImagen("/asfalto.png");
-		tierra = CargadorImagen.cargarImagen("/tierra.png");
+		piso =CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Piso"));
+		pasto = CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Pasto"));
+		asfalto = CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Asfalto"));
+		tierra = CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Tierra"));
 		
-		lago1 = CargadorImagen.cargarImagen("/lago1.png");
-		lago2 = CargadorImagen.cargarImagen("/lago2.png");
-		lago3 = CargadorImagen.cargarImagen("/lago3.png");
-		lago4 = CargadorImagen.cargarImagen("/lago4.png");
+		lago1 = CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Lago1"));
+		lago2 = CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Lago2"));
+		lago3 = CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Lago3"));
+		lago4 = CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Lago4"));
 		
 		//background = CargadorImagen.cargarImagen("/background2.jpg");
 		// Fin Entorno
