@@ -23,6 +23,7 @@ import prograavanzada2016.anotherworld.comandos.ComandoLogin;
 import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.mensajes.MessageDeserializer;
 import prograavanzada2016.anotherworld.mensajes.RawMessage;
+import prograavanzada2016.anotherworld.mensajes.request.ConsultaColisionMessage;
 import prograavanzada2016.anotherworld.mensajes.request.ConsultarPersonajesConectadosMessage;
 import prograavanzada2016.anotherworld.mensajes.request.CrearPersonajeNuevoMessage;
 import prograavanzada2016.anotherworld.mensajes.request.EnemigoConsultaMessage;
@@ -122,6 +123,7 @@ public class ServidorManager implements Runnable{
         deserializer.registerMessageType("moverPersonaje", MoverMessage.class);
         deserializer.registerMessageType("buscarPersonajes", ConsultarPersonajesConectadosMessage.class);
         deserializer.registerMessageType("buscarEnemigos", EnemigoConsultaMessage.class);
+        deserializer.registerMessageType("consultaColision", ConsultaColisionMessage.class);
 	}
 
 }

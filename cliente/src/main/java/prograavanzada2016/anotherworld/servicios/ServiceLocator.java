@@ -22,6 +22,8 @@ public class ServiceLocator {
 			return new RecibirPersonajesConectadosService(clienteJugable);
 		}else if(tipo.equals("enemigoConsultaResponse")){
 			return new EnemigoConsultaResponseService(clienteJugable);
+		}else if(tipo.equals("consultaColisionResponse")){
+			return new ConsultaColisionResponseService(clienteJugable);
 		}
 		
 		return null;

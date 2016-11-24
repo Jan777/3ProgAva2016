@@ -1,7 +1,11 @@
 package prograavanzada2016.anotherworld.servicios;
 
+import com.google.gson.Gson;
+
 import prograavanzada2016.anotherworld.cliente.ClienteJugable;
 import prograavanzada2016.anotherworld.mensajes.MessageBase;
+import prograavanzada2016.anotherworld.mensajes.response.ConsultaColisionResponseMessage;
+import prograavanzada2016.anotherworld.modelos.Usuario;
 
 public class ConsultaColisionResponseService implements ServicioServer{
 	private ClienteJugable clienteJugable;
@@ -10,8 +14,10 @@ public class ConsultaColisionResponseService implements ServicioServer{
 	}
 	@Override
 	public void ejecutar(MessageBase message) throws Exception {
-		// TODO Auto-generated method stub
+		ConsultaColisionResponseMessage ccrm = (ConsultaColisionResponseMessage) message;
 		
+		Usuario enemigo = new Gson().fromJson(ccrm.Payload, Usuario.class);
+		this.clienteJugable.getJuego().quitarEnemigoEnBatalla(enemigo);
 	}
 
 }

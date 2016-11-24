@@ -225,5 +225,8 @@ public class Game implements Runnable{
 		this.estadoJuego.addOtroEnemigo(enemigo, usuarioArt);
 	}
 	
+	public void quitarEnemigoEnBatalla(Usuario usuario) throws Exception{
+		this.estadoJuego.quitarEnemigoEnBatalla(usuario);
+	}
 	
 }

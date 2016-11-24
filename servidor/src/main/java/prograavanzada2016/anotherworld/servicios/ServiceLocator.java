@@ -24,6 +24,8 @@ public class ServiceLocator {
 			return new BuscarPersonajesService();
 		}else if(tipo.equals("buscarEnemigos")){
 			return new EnemigoConsultaService();
+		}else if(tipo.equals("consultaColision")){
+			return new ConsultaColisionService();
 		}
 		return null;
 	}

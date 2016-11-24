@@ -30,4 +30,8 @@ public abstract class Estado {
 	public abstract void addOtroPersonaje(Entidad otroPersonaje,Usuario usuario);
 
 	public abstract void addOtroEnemigo(Entidad enemigo, Usuario usuario);
+
+	public abstract void quitarEnemigoEnBatalla(Entidad enemigo);
+
+	public abstract void quitarEnemigoEnBatalla(Usuario usuario);
 }

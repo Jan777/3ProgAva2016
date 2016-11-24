@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.LinkedList;
 
 import javax.sound.sampled.LineUnavailableException;
@@ -16,7 +17,9 @@ import prograavanzada2016.anotherworld.modelos.Usuario;
 import prograavanzada2016.anotherworld.interfaces.VentanaCombatePvE;
 import prograavanzada2016.anotherworld.juego.*;
 import prograavanzada2016.anotherworld.mensajes.RawMessage;
+import prograavanzada2016.anotherworld.mensajes.request.ConsultaColisionMessage;
 import prograavanzada2016.anotherworld.mensajes.request.PersonajeConsultaMessage;
+import prograavanzada2016.anotherworld.mensajes.response.PersonajeConsultaResponseMessage;
 import prograavanzada2016.anotherworld.utilities.*;
 
 public class Entidad {
@@ -84,7 +87,7 @@ public class Entidad {
 	private boolean soyUsuario=false;
 	public boolean tengoUnCaminoAutomatico=false;
 	private boolean soyInteligenciaArtificial=false;
-	private boolean entroEnCombate=false;
+	public boolean entroEnCombate=false;
 	
 	public Entidad(Game juego, Mundo mundo, int ancho, int alto, float spawnX, float spawnY, LinkedList<BufferedImage[]> animaciones, int velAnimacion) throws Exception {
 		this.juego = juego;
@@ -372,7 +375,18 @@ public class Entidad {
 		if (enMovimiento && (x != xFinal || y != yFinal)) {
 
 			Entidad entidad=this.chechColition(x,y);
-			if(entidad!=null && !this.entroEnCombate){
+			if(entidad!=null && !this.entroEnCombate && this.soyUsuario){
+				
+				PrintWriter salida = new PrintWriter(this.juego.getClienteJugable().getSocket().getOutputStream());
+				
+				RawMessage rawMessageLogin = new RawMessage();
+		    	rawMessageLogin.type = "consultaColision";
+		    	entidad.getUsuario().setClienteId((int) this.getUsuario().getId());
+		    	rawMessageLogin.message = new ConsultaColisionMessage(new Gson().toJson(entidad.getUsuario()));
+				
+				salida.println(new Gson().toJson(rawMessageLogin));
+				salida.flush();
+				
 				this.entroEnCombate=true;
 				VentanaCombatePvE ventana = new VentanaCombatePvE(this,entidad);
 				ventana.setVisible(true);
@@ -462,7 +476,7 @@ public class Entidad {
 		}else if(!entroEnCombate){
 			g.drawImage(getFrameAnimacionActual(), drawX, drawY, ancho, alto, null);
 		}
-		if(!soyUsuario && !soyInteligenciaArtificial){
+		if(!soyUsuario && !soyInteligenciaArtificial && !entroEnCombate){
 			g.setColor(Color.WHITE);
 			g.drawString("Salud: "+ juego.getUser().getPersonaje().getSalud(), drawX +10 , drawY - 24);
 			g.drawString(this.getUsuario().getPersonaje().getNombre() + " - "+ this.getUsuario().getPersonaje().getNivel(), drawX + 10, drawY - 36); //aca obtener el nombre del pj
@@ -578,7 +592,7 @@ public class Entidad {
 			
 			for(Entidad ent : this.juego.getEstadoJuego().getEnemigos()){
 				int tileColisionOtro[] = Mundo.mouseATile(ent.getX(), ent.getY());
-				if(!soyInteligenciaArtificial){
+				if(!soyInteligenciaArtificial && !ent.entroEnCombate){
 					if(tileColision[0]==tileColisionOtro[0] || tileColision[0]==tileColisionOtro[0]+1 || tileColision[0]==tileColisionOtro[0]-1){
 						if(tileColision[1]==tileColisionOtro[1] || tileColision[1]==tileColisionOtro[1]+1 || tileColision[1]==tileColisionOtro[1]-1){
 							return ent;

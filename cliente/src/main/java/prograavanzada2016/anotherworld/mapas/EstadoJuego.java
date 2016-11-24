@@ -101,4 +101,34 @@ public class EstadoJuego extends Estado {
 		enemigo.setUsuario(usuario);
 		this.enemigos.add(enemigo);
 	}
+
+	@Override
+	public void quitarEnemigoEnBatalla(Entidad enemigo) {
+		for(Entidad enemigoActivo : enemigos){
+			if(enemigoActivo.getUsuario().getId()==enemigo.getUsuario().getId()){
+				enemigoActivo.entroEnCombate=true;
+			}
+		}
+		
+		for(Entidad otroJugador: personajes){
+			if(otroJugador.getUsuario().getId()==enemigo.getUsuario().getClienteId()){
+				otroJugador.entroEnCombate=true;
+			}
+		}
+	}
+	
+	@Override
+	public void quitarEnemigoEnBatalla(Usuario enemigo) {
+		for(Entidad enemigoActivo : enemigos){
+			if(enemigoActivo.getUsuario().getId()==enemigo.getId()){
+				enemigoActivo.entroEnCombate=true;
+			}
+		}
+		
+		for(Entidad otroJugador: personajes){
+			if(otroJugador.getUsuario().getId()==enemigo.getClienteId()){
+				otroJugador.entroEnCombate=true;
+			}
+		}
+	}
 }

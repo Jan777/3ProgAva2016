@@ -20,10 +20,6 @@ public class CrearPersonajeNuevoResponseService implements ServicioServer{
 		
 		PersonajeModel personajeModel = new Gson().fromJson(cpnrm.Payload, PersonajeModel.class);
 		
-		System.out.println("nuevo personaje aliado: "+personajeModel.getNombre());
-		
-		//Game game = new Game("Another World", 800, 600);
-		//game.start();
 	}
 
 }

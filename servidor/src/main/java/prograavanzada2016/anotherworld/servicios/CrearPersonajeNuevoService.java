@@ -27,11 +27,10 @@ public class CrearPersonajeNuevoService implements ServicioServer{
 			for(ClienteServicio cliente : Servidor.clientesSala1){
 				//hay un personaje, le avisamos a su dueño y a todos los demas
 					if(cliente.getId() == cpnm.idCliente){
-						System.out.println("soy el que envio la peticion");
 						PrintWriter salida = new PrintWriter(cliente.getSocket().getOutputStream());
 						
 						RawMessage rawMessageLogin = new RawMessage();
-				    	rawMessageLogin.type = "crearPersonajeResponse";
+						rawMessageLogin.type = "crearPersonajeResponse"; 
 				    	rawMessageLogin.message = new PersonajeConsultaResponseMessage(new Gson().toJson(pm));
 						
 						salida.println(new Gson().toJson(rawMessageLogin));
