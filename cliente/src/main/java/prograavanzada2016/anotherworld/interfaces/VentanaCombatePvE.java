@@ -17,13 +17,17 @@ import javax.swing.JScrollPane;
 import javax.swing.JSplitPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+
+import prograavanzada2016.anotherworld.entities.Enemigo;
+import prograavanzada2016.anotherworld.entities.Personaje;
+
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class VentanaCombatePvM extends javax.swing.JFrame{
+public class VentanaCombatePvE extends javax.swing.JFrame{
 
     // these are the components we need.
     private final JSplitPane splitPane;  // split the window in top and bottom
@@ -36,8 +40,13 @@ public class VentanaCombatePvM extends javax.swing.JFrame{
     private JLabel lblAAtacar;
     private JLabel lblEnergia;
     private JLabel lblVida;
+    private JLabel lblNewLabel_1;
+    private JLabel lblNewLabel_2;
+    private JLabel label;
+    private JLabel label_1;
+    private JLabel label_2;
 
-    public VentanaCombatePvM(){
+    public VentanaCombatePvE(){/*Personaje personaje, Enemigo enemigo*/
     	
     	setTitle("Combate");
     	Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
@@ -59,6 +68,12 @@ public class VentanaCombatePvM extends javax.swing.JFrame{
         splitPane.setOrientation(JSplitPane.VERTICAL_SPLIT);
         splitPane.setDividerLocation(450);
         splitPane.setTopComponent(topPanel);
+        topPanel.setLayout(null);
+        
+        lblNewLabel_1 = new JLabel("");
+        lblNewLabel_1.setBounds(0, 0, 782, 449);
+        lblNewLabel_1.setIcon(new ImageIcon("src/main/resources/BackgroundCombate.jpg"));
+        topPanel.add(lblNewLabel_1);
         splitPane.setBottomComponent(bottomPanel);
 
 
@@ -77,12 +92,12 @@ public class VentanaCombatePvM extends javax.swing.JFrame{
         lblNombrePj.setBounds(224, 11, 109, 20);
         inputPanel.add(lblNombrePj);
         
-        lblNewLabel = new JLabel("Jugador 1");
+        lblNewLabel = new JLabel("Jugador 1:" ); //+ personaje.getNombre()
         lblNewLabel.setBounds(224, 29, 96, 20);
         inputPanel.add(lblNewLabel);
         
-        lblJugador = new JLabel("Mounstro");
-        lblJugador.setBounds(224, 45, 96, 20);
+        lblJugador = new JLabel("Mounstro:" ); //+ enemigo.getNombre()
+        lblJugador.setBounds(224, 46, 96, 20);
         inputPanel.add(lblJugador);
         
         lblAAtacar = new JLabel("A atacar:");
@@ -93,7 +108,7 @@ public class VentanaCombatePvM extends javax.swing.JFrame{
         lblEnergia.setBounds(350, 11, 109, 20);
         inputPanel.add(lblEnergia);
         
-        lblVida = new JLabel("Vida");
+        lblVida = new JLabel("Salud");
         lblVida.setBounds(450, 11, 109, 20);
         inputPanel.add(lblVida);
         
@@ -129,6 +144,22 @@ public class VentanaCombatePvM extends javax.swing.JFrame{
         });
         btnLanzarHechizo.setBounds(640, 44, 130, 23);
         inputPanel.add(btnLanzarHechizo);
+        
+        lblNewLabel_2 = new JLabel("New label1" ); //personaje.getEnergia()
+        lblNewLabel_2.setBounds(349, 25, 155, 29);
+        inputPanel.add(lblNewLabel_2);
+        
+        label = new JLabel("New label2" ); //enemigo.getEnergia()
+        label.setBounds(350, 46, 155, 20);
+        inputPanel.add(label);
+        
+        label_1 = new JLabel("New label3" ); //personaje.getSalud()
+        label_1.setBounds(431, 25, 155, 29);
+        inputPanel.add(label_1);
+        
+        label_2 = new JLabel("New label4"); // enemigo.getSalud()
+        label_2.setBounds(432, 46, 155, 20);
+        inputPanel.add(label_2);
 
         pack();   // calling pack() at the end, will ensure that every layout and size we just defined gets applied before the stuff becomes visible
     }
@@ -137,7 +168,7 @@ public class VentanaCombatePvM extends javax.swing.JFrame{
         EventQueue.invokeLater(new Runnable(){
             @Override
             public void run(){
-            	VentanaCombatePvM frame = new VentanaCombatePvM();
+            	VentanaCombatePvE frame = new VentanaCombatePvE();
                 frame.setVisible(true);
                 frame.setLocationRelativeTo(null);
             }
