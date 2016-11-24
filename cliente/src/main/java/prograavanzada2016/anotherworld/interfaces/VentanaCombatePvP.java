@@ -17,6 +17,9 @@ import javax.swing.JScrollPane;
 import javax.swing.JSplitPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+
+import prograavanzada2016.anotherworld.entities.Personaje;
+
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -36,8 +39,9 @@ public class VentanaCombatePvP extends javax.swing.JFrame{
     private JLabel lblAAtacar;
     private JLabel lblEnergia;
     private JLabel lblVida;
+    private JLabel lblNewLabel_1;
 
-    public VentanaCombatePvP(){
+    public VentanaCombatePvP(){ //public VentanaCombatePvP(Personaje p1, Personaje p2)
     	
     	setTitle("Combate");
     	Image image = new ImageIcon("src/main/resources/IconoVentana.jpg").getImage();
@@ -59,6 +63,12 @@ public class VentanaCombatePvP extends javax.swing.JFrame{
         splitPane.setOrientation(JSplitPane.VERTICAL_SPLIT);
         splitPane.setDividerLocation(450);
         splitPane.setTopComponent(topPanel);
+        topPanel.setLayout(null);
+        
+        lblNewLabel_1 = new JLabel("New label");
+        lblNewLabel_1.setIcon(new ImageIcon("src/main/resources/BackgroundCombate.jpg"));
+        lblNewLabel_1.setBounds(0, 0, 782, 449);
+        topPanel.add(lblNewLabel_1);
         splitPane.setBottomComponent(bottomPanel);
 
 
@@ -71,17 +81,18 @@ public class VentanaCombatePvP extends javax.swing.JFrame{
         
         JComboBox comboBox = new JComboBox();
         comboBox.setBounds(20, 29, 144, 20);
+       /* comboBox.addmitem(p1.getNombre()) p2.getNombre(); */
         inputPanel.add(comboBox);
         
         JLabel lblNombrePj = new JLabel("Nombre PJ");
         lblNombrePj.setBounds(224, 11, 109, 20);
         inputPanel.add(lblNombrePj);
         
-        lblNewLabel = new JLabel("Jugador 1");
+        lblNewLabel = new JLabel("Jugador 1:"); //+ p1.getNombre()
         lblNewLabel.setBounds(224, 29, 96, 20);
         inputPanel.add(lblNewLabel);
         
-        lblJugador = new JLabel("Jugador 2");
+        lblJugador = new JLabel("Jugador 2:"); //+ p2.getNombre()
         lblJugador.setBounds(224, 45, 96, 20);
         inputPanel.add(lblJugador);
         
@@ -93,7 +104,7 @@ public class VentanaCombatePvP extends javax.swing.JFrame{
         lblEnergia.setBounds(350, 11, 109, 20);
         inputPanel.add(lblEnergia);
         
-        lblVida = new JLabel("Vida");
+        lblVida = new JLabel("Salud");
         lblVida.setBounds(450, 11, 109, 20);
         inputPanel.add(lblVida);
         
@@ -129,6 +140,22 @@ public class VentanaCombatePvP extends javax.swing.JFrame{
         });
         btnLanzarHechizo.setBounds(640, 44, 130, 23);
         inputPanel.add(btnLanzarHechizo);
+        
+        JLabel lblNewLabel_2 = new JLabel("New label1" ); //p1.getEnergia()
+        lblNewLabel_2.setBounds(349, 25, 155, 29);
+        inputPanel.add(lblNewLabel_2);
+        
+        JLabel label = new JLabel("New label2" ); //p2.getEnergia()
+        label.setBounds(350, 46, 155, 20);
+        inputPanel.add(label);
+        
+        JLabel label_1 = new JLabel("New label3" ); //p1.getSalud()
+        label_1.setBounds(431, 25, 155, 29);
+        inputPanel.add(label_1);
+        
+        JLabel label_2 = new JLabel("New label4"); // p2.getSalud()
+        label_2.setBounds(432, 46, 155, 20);
+        inputPanel.add(label_2);
 
         pack();   // calling pack() at the end, will ensure that every layout and size we just defined gets applied before the stuff becomes visible
     }
