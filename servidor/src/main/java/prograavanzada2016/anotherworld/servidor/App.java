@@ -19,7 +19,7 @@ public class App {
 			
 		}
 		catch(Exception e){
-			JOptionPane.showMessageDialog(null, "Ocurrió un error, para más información"+System.getProperty("line.separator") 
+			JOptionPane.showMessageDialog(null, e.getMessage()+" Ocurrió un error, para más información"+System.getProperty("line.separator") 
 			+" vea el LOG del sistema.", "ERROR", JOptionPane.ERROR_MESSAGE);
 			logger.log(e.getMessage());
 		}

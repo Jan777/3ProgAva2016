@@ -22,6 +22,7 @@ import javax.swing.JTextField;
 
 import prograavanzada2016.anotherworld.entities.Enemigo;
 import prograavanzada2016.anotherworld.entities.Personaje;
+import prograavanzada2016.anotherworld.mapas.Entidad;
 import prograavanzada2016.anotherworld.resources.Propiedades;
 import prograavanzada2016.anotherworld.utilities.SonidoManager;
 
@@ -50,8 +51,11 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
     private JLabel label;
     private JLabel label_1;
     private JLabel label_2;
+    
+    private BattleScreen battleScreen;
 
-    public VentanaCombatePvE() throws UnsupportedAudioFileException, IOException, LineUnavailableException{/*Personaje personaje, Enemigo enemigo*/
+    public VentanaCombatePvE(Entidad personaje, Entidad enemigo) throws UnsupportedAudioFileException, IOException, LineUnavailableException{/*Personaje personaje, Enemigo enemigo*/
+    	battleScreen = new BattleScreen();
     	SonidoManager sm = SonidoManager.getInstance();
     	Propiedades prop = Propiedades.getInstance();
     	sm.stop();
@@ -82,7 +86,8 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
         lblNewLabel_1 = new JLabel("");
         lblNewLabel_1.setBounds(0, 0, 782, 449);
         lblNewLabel_1.setIcon(new ImageIcon("src/main/resources/BackgroundCombate.jpg"));
-        topPanel.add(lblNewLabel_1);
+        //topPanel.add(lblNewLabel_1);
+        topPanel.add(battleScreen);
         splitPane.setBottomComponent(bottomPanel);
 
 
@@ -178,9 +183,16 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
         EventQueue.invokeLater(new Runnable(){
             @Override
             public void run(){
-//            	VentanaCombatePvE frame = new VentanaCombatePvE();
-//                frame.setVisible(true);
-//                frame.setLocationRelativeTo(null);
+            	VentanaCombatePvE frame;
+				try {
+					frame = new VentanaCombatePvE(null,null);
+					 frame.setVisible(true);
+		                frame.setLocationRelativeTo(null);
+				} catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+               
             }
         });
     }

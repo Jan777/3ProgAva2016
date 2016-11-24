@@ -374,7 +374,7 @@ public class Entidad {
 			Entidad entidad=this.chechColition(x,y);
 			if(entidad!=null && !this.entroEnCombate){
 				this.entroEnCombate=true;
-				VentanaCombatePvE ventana = new VentanaCombatePvE();
+				VentanaCombatePvE ventana = new VentanaCombatePvE(this,entidad);
 				ventana.setVisible(true);
 				x=xFinal;
 				y=yFinal;
