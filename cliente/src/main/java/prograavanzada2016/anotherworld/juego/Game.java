@@ -198,6 +198,9 @@ public class Game implements Runnable{
 		} else if (otroUsuario.getPersonaje().getRazaId() == 2){
 			personaje = new Entidad(this, 64, 64, 0, 0, Recursos.humano, 150,false);
 		}
+		while(otroUsuario==null){
+			Thread.sleep(1000);
+		}
 		this.estadoJuego.addOtroPersonaje(personaje,otroUsuario);
 	}
 
@@ -222,6 +225,10 @@ public class Game implements Runnable{
 		Usuario usuarioArt = new Usuario();
 		usuarioArt.setId(enemigoArt.getId());
 		enemigo = new Entidad(this, 64, 64, 300, 300, Recursos.minotauro, 150,true);
+		while(enemigo==null){
+			Thread.sleep(1000);
+			System.out.println("esperemos2");
+		}
 		this.estadoJuego.addOtroEnemigo(enemigo, usuarioArt);
 	}
 	

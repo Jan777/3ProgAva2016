@@ -122,7 +122,9 @@ public class Entidad {
 		y = spawnY;
 
 		this.animaciones = animaciones;
-		 
+		while(animaciones.size()==0){
+			Thread.sleep(1000);
+		}
 	    moverIzq = new Animacion(velAnimacion, animaciones.get(0));
 	    moverArribaIzq = new Animacion(velAnimacion, animaciones.get(1));
 	    moverArriba = new Animacion(velAnimacion, animaciones.get(2));
