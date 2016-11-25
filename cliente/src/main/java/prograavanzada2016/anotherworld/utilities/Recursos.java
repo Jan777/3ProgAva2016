@@ -58,6 +58,7 @@ public class Recursos {
 	
 	// Entorno
 	public static BufferedImage piso;
+	public static BufferedImage piso2;
 	public static BufferedImage pasto;
 	public static BufferedImage asfalto;
 	public static BufferedImage tierra;
@@ -67,6 +68,8 @@ public class Recursos {
 	public static BufferedImage lago2;
 	public static BufferedImage lago3;
 	public static BufferedImage lago4;
+	
+	public static BufferedImage bush;
 		
 	// Fin Entorno
 	
@@ -273,6 +276,7 @@ public class Recursos {
 		for(int i = 0; i < 7; i++) {
 			minotauroMuerte[i] = spriteminotauro.getTile(ANCHO*i, ALTO, ANCHO, ALTO);
 		}
+		
 		for(int i = 0; i < 3; i++) {
 			minotauroAtaca[i] = spriteminotauro.getTile(ANCHO*i, ALTO, ANCHO, ALTO);
 		}
@@ -292,6 +296,8 @@ public class Recursos {
 		
 		// Inicio Entorno
 		piso =CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Piso"));
+		piso2 = CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Piso1"));
+		
 		pasto = CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Pasto"));
 		asfalto = CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Asfalto"));
 		tierra = CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Tierra"));
@@ -300,6 +306,8 @@ public class Recursos {
 		lago2 = CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Lago2"));
 		lago3 = CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Lago3"));
 		lago4 = CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Lago4"));
+		
+		bush = CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Bush"));
 		
 		//background = CargadorImagen.cargarImagen("/background2.jpg");
 		// Fin Entorno
