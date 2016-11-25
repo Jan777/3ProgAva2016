@@ -26,7 +26,7 @@ public class SonidoManager {
 	
 	
 	public void setMusic(String path) throws UnsupportedAudioFileException, IOException, LineUnavailableException{
-		AudioInputStream inputStream = AudioSystem.getAudioInputStream(new BufferedInputStream(getClass().getResourceAsStream((path))));
+		AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(path));
 		sonido.open(inputStream);
 	}
 	

@@ -96,7 +96,7 @@ public class VentanaLogin extends JFrame implements ILogin {
 		setResizable(false);
 		setLocationRelativeTo(null);
 		setTitle("AnotherWorld");
-		Image image = new ImageIcon(getClass().getResource(Propiedades.getInstance().getProperty("IconoVentana"))).getImage();
+		Image image = new ImageIcon(Propiedades.getInstance().getProperty("IconoVentana")).getImage();
 		setIconImage(image);
 		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaLogin.class.getResource("/src/main/resources/IconoVentana.jpg")));
 		initComponents();
