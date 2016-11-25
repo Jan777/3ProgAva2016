@@ -32,7 +32,7 @@ import prograavanzada2016.anotherworld.mensajes.request.MoverMessage;
 import prograavanzada2016.anotherworld.mensajes.request.PersonajeConsultaMessage;
 import prograavanzada2016.anotherworld.mensajes.request.UsuarioNuevoMessage;
 import prograavanzada2016.anotherworld.modelos.Usuario;
-import prograavanzada2016.anotherworld.resources.Logger;
+import prograavanzada2016.anotherworld.resources.LogAnother;
 import prograavanzada2016.anotherworld.servicios.ServiceLocator;
 
 public class ServidorManager implements Runnable{
@@ -72,10 +72,10 @@ public class ServidorManager implements Runnable{
 	@Override
 	public void run() {
 		
-		Logger logger = null;
+		LogAnother logger = null;
 		try{
 			try{
-				logger = Logger.getInstance();
+				logger = LogAnother.getInstance();
 				entrada = new Scanner(socket.getInputStream());
 				new PrintWriter(socket.getOutputStream());
 				
