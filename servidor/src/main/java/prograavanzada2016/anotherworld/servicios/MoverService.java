@@ -28,6 +28,9 @@ public class MoverService implements ServicioServer{
 					
 					salida.println(new Gson().toJson(rawMessageLogin));
 					salida.flush();
+				}else{
+					cliente.getUsuario().getPersonaje().setPosicionInicialX(usuario.getPersonaje().getMovimientoXFinal());
+					cliente.getUsuario().getPersonaje().setPosicionInicialY(usuario.getPersonaje().getMovimientoYFinal());
 				}
 		}
 	}

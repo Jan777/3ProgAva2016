@@ -17,6 +17,9 @@ public class PersonajeModel {
 	private int salud;
 	private int experiencia;
 	
+	private int posicionInicialX;
+	private int posicionInicialY;
+	
 	//movimientos
 	private int movimientoX;
 	private int movimientoY;
@@ -233,5 +236,21 @@ public class PersonajeModel {
 	}
 	public void setMovimientoYFinal(int movimientoYFinal) {
 		this.movimientoYFinal = movimientoYFinal;
-	}	
+	}
+
+	public int getPosicionInicialX() {
+		return posicionInicialX;
+	}
+
+	public void setPosicionInicialX(int posicionInicialX) {
+		this.posicionInicialX = posicionInicialX;
+	}
+
+	public int getPosicionInicialY() {
+		return posicionInicialY;
+	}
+
+	public void setPosicionInicialY(int posicionInicialY) {
+		this.posicionInicialY = posicionInicialY;
+	}
 }

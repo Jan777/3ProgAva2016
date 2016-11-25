@@ -193,12 +193,14 @@ public class Game implements Runnable{
 	
 	public void agregarNuevoPersonaje(Usuario otroUsuario) throws Exception{
 		Entidad personaje=null;
+		int posX = otroUsuario.getPersonaje().getPosicionInicialX();
+		int posY = otroUsuario.getPersonaje().getPosicionInicialY();
 		if(otroUsuario.getPersonaje().getRazaId() == 1){ //Aca construimos nuestro personaje segun el personaje del jugador
-			personaje = new Entidad(this, 64, 64, 0, 0, Recursos.humano, 150,false);
+			personaje = new Entidad(this, 64, 64, posX, posY, Recursos.humano, 150,false);
 		} else if (otroUsuario.getPersonaje().getRazaId() == 2){
-			personaje = new Entidad(this, 64, 64, 0, 0, Recursos.troll, 150,false);
+			personaje = new Entidad(this, 64, 64, posX, posY, Recursos.troll, 150,false);
 		}
-		while(otroUsuario.equals(null)){
+		while(otroUsuario.equals(null) || otroUsuario==null){
 			Thread.sleep(1000);
 		}
 		this.estadoJuego.addOtroPersonaje(personaje,otroUsuario);
@@ -225,9 +227,8 @@ public class Game implements Runnable{
 		Usuario usuarioArt = new Usuario();
 		usuarioArt.setId(enemigoArt.getId());
 		enemigo = new Entidad(this, 64, 64, 300, 300, Recursos.minotauro, 150,true);
-		while(enemigo==null){
+		while(enemigo.equals(null) || enemigo==null){
 			Thread.sleep(1000);
-			System.out.println("esperemos2");
 		}
 		this.estadoJuego.addOtroEnemigo(enemigo, usuarioArt);
 	}
