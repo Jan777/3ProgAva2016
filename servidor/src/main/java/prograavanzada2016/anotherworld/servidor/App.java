@@ -13,7 +13,7 @@ public class App {
 		Logger logger = null;
 		try{
 			Propiedades propiedades = Propiedades.getInstance();
-			logger = Logger.getInstance();
+			//logger = Logger.getInstance();
 			Servidor server = new Servidor();
 			server.iniciarServidor();
 			
@@ -21,7 +21,7 @@ public class App {
 		catch(Exception e){
 			JOptionPane.showMessageDialog(null, e.getMessage()+" Ocurrió un error, para más información"+System.getProperty("line.separator") 
 			+" vea el LOG del sistema.", "ERROR", JOptionPane.ERROR_MESSAGE);
-			logger.log(e.getMessage());
+			//logger.log(e.getMessage());
 		}
 		
 	}
