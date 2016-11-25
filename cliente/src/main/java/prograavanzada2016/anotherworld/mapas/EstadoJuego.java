@@ -30,9 +30,9 @@ public class EstadoJuego extends Estado {
 		mundo = new Mundo(juego, propiedades.getProperty("mundo"));
 		
 		if(juego.getUser().getPersonaje().getRazaId() == 1){ //Aca construimos nuestro personaje segun el personaje del jugador
-			personaje = new Entidad(juego, mundo, 64, 64, 0, 0, Recursos.elfo, 150);
-		} else if (juego.getUser().getPersonaje().getRazaId() == 2){
 			personaje = new Entidad(juego, mundo, 64, 64, 0, 0, Recursos.humano, 150);
+		} else if (juego.getUser().getPersonaje().getRazaId() == 2){
+			personaje = new Entidad(juego, mundo, 64, 64, 0, 0, Recursos.troll, 150);
 		}
 		this.personaje.setUsuario(juego.getUser());
 	}

@@ -41,7 +41,6 @@ public class ClienteJugable{
 		this.socket = new Socket(server, port);
 		clienteManager = new ClienteManager(this);
 		Thread instancia = new Thread(clienteManager,"Cliente");
-		logger.log("pasamos3");
 		gson = new Gson();
 		instancia.start();
 	}

@@ -503,15 +503,15 @@ public class Entidad {
 		} else if (diagonalSupDer) {
 			return moverArribaDer.getFrameActual();
 		} else if (soyUsuario && juego.getUser().getPersonaje().getRazaId() == 2){
-			return Recursos.humano.get(6)[0];
+			return Recursos.troll.get(6)[0];
 		}else if(soyUsuario){
-			return Recursos.elfo.get(6)[0];
+			return Recursos.humano.get(6)[0];
 		}else if(soyInteligenciaArtificial){
 			return Recursos.minotauro.get(6)[0];
 		}else if(!soyUsuario && this.getUsuario().getPersonaje().getRazaId()==2){
-			return Recursos.humano.get(6)[0];
+			return Recursos.troll.get(6)[0];
 		}else if(!soyUsuario && this.getUsuario().getPersonaje().getRazaId()==1){
-			return Recursos.elfo.get(6)[0];
+			return Recursos.humano.get(6)[0];
 		}
 		return null;
 	}

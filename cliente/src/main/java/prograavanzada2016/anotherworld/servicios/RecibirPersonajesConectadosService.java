@@ -30,16 +30,11 @@ public class RecibirPersonajesConectadosService implements ServicioServer{
 	public void ejecutar(MessageBase message) throws Exception {
 		RecibirPersonajesConectadosMessage pcm = (RecibirPersonajesConectadosMessage) message;
 		
-		//Usuario usuario = new Gson().fromJson(pcm.Payload, Usuario.class);
-		//pusimo esto asi por el momento para saber si hay o no hay usuario
-		
 		Type listType = new TypeToken<ArrayList<Usuario>>(){}.getType();
 
 		List<Usuario> usuarios = new Gson().fromJson(pcm.Payload, listType);
 		for(Usuario usuarioOtro : usuarios){
-			//Thread.sleep(10000);
 			this.clienteJugable.getOtrosClientes().add(usuarioOtro);
-			System.out.println("se agrego un nuevo personaje");
 			this.clienteJugable.getJuego().agregarNuevoPersonaje(usuarioOtro);
 		}
 		

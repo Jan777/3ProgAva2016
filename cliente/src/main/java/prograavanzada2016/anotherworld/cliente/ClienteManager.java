@@ -77,7 +77,7 @@ public class ClienteManager implements Runnable, SubjectLogin{
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, e.getMessage()+"Ocurrió un error, para más información"+System.getProperty("line.separator") 
 			+" vea el LOG del sistema.", "ERROR", JOptionPane.ERROR_MESSAGE);
-			logger.log(e);
+			logger.log(e.getMessage());
 		}
 		
 	}

@@ -194,11 +194,11 @@ public class Game implements Runnable{
 	public void agregarNuevoPersonaje(Usuario otroUsuario) throws Exception{
 		Entidad personaje=null;
 		if(otroUsuario.getPersonaje().getRazaId() == 1){ //Aca construimos nuestro personaje segun el personaje del jugador
-			personaje = new Entidad(this, 64, 64, 0, 0, Recursos.elfo, 150,false);
-		} else if (otroUsuario.getPersonaje().getRazaId() == 2){
 			personaje = new Entidad(this, 64, 64, 0, 0, Recursos.humano, 150,false);
+		} else if (otroUsuario.getPersonaje().getRazaId() == 2){
+			personaje = new Entidad(this, 64, 64, 0, 0, Recursos.troll, 150,false);
 		}
-		while(otroUsuario==null){
+		while(otroUsuario.equals(null)){
 			Thread.sleep(1000);
 		}
 		this.estadoJuego.addOtroPersonaje(personaje,otroUsuario);
