@@ -17,6 +17,7 @@ import prograavanzada2016.anotherworld.mensajes.RawMessage;
 import prograavanzada2016.anotherworld.modelos.InteligenciaArtificial;
 import prograavanzada2016.anotherworld.modelos.Usuario;
 import prograavanzada2016.anotherworld.observer.ILogin;
+import prograavanzada2016.anotherworld.resources.LogAnother;
 
 public class ClienteJugable{
 	private int idCliente;
@@ -33,13 +34,14 @@ public class ClienteJugable{
 	private ArrayList<InteligenciaArtificial> enemigos;
 	private Game juego;
 	
-	
+	LogAnother logger = LogAnother.getInstance();
 	public ClienteJugable(String server, int port) throws UnknownHostException, IOException {
 		this.otrosClientes=new ArrayList<>();
 		this.enemigos=new ArrayList<>();
 		this.socket = new Socket(server, port);
 		clienteManager = new ClienteManager(this);
 		Thread instancia = new Thread(clienteManager,"Cliente");
+		logger.log("pasamos3");
 		gson = new Gson();
 		instancia.start();
 	}

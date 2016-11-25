@@ -3,6 +3,7 @@ package prograavanzada2016.anotherworld.resources;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -31,5 +32,11 @@ public class LogAnother {
 	
 	public void log(String logString){
 		 LOGGER.log(Level.SEVERE, logString);
+	}
+	public void log(Exception e){
+		StringWriter sw = new StringWriter();
+		PrintWriter pw = new PrintWriter(sw);
+		e.printStackTrace(pw);
+		LOGGER.log(Level.SEVERE,sw.toString());
 	}
 }

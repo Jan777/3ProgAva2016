@@ -10,14 +10,17 @@ public class App {
 	public static void main(String[] args){
 		LogAnother logger = null;
 		try{
+			
 			logger = LogAnother.getInstance();
+			logger.log("pasamos1");
 			Propiedades propiedades = Propiedades.getInstance();
+			logger.log("pasamos2");
 			ClienteJugable cliente = new ClienteJugable(propiedades.getProperty("ip"), Integer.parseInt(propiedades.getProperty("puerto")));
 		}
 		catch(Exception e){
 			JOptionPane.showMessageDialog(null, e.getMessage()+"Ocurrió un error, para más información"+System.getProperty("line.separator") 
 			+" vea el LOG del sistema.", "ERROR", JOptionPane.ERROR_MESSAGE);
-			logger.log(e.getMessage());
+			logger.log(e);
 		}
 	}
 }

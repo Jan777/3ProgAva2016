@@ -4,7 +4,10 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.logging.Logger;
 import java.util.zip.CheckedInputStream;
+
+import javax.swing.JOptionPane;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -25,6 +28,7 @@ import prograavanzada2016.anotherworld.mensajes.response.RecibirPersonajesConect
 import prograavanzada2016.anotherworld.mensajes.response.RespuestaGenericaMessage;
 import prograavanzada2016.anotherworld.observer.ILogin;
 import prograavanzada2016.anotherworld.observer.SubjectLogin;
+import prograavanzada2016.anotherworld.resources.LogAnother;
 import prograavanzada2016.anotherworld.servicios.ServiceLocator;
 
 public class ClienteManager implements Runnable, SubjectLogin{
@@ -50,7 +54,9 @@ public class ClienteManager implements Runnable, SubjectLogin{
 
 	@Override
 	public void run() {
+		LogAnother logger = null;
 		try{
+			logger = LogAnother.getInstance();
 			try{
 				ventanaPrincipal = new VentanaLogin(this.clienteJugable);
 				System.out.println("ventana principal activada");
@@ -58,11 +64,18 @@ public class ClienteManager implements Runnable, SubjectLogin{
 				salida = new PrintWriter(socket.getOutputStream());
 				salida.flush();
 				chechStream();			
-			}finally{
+			}catch(Exception e){
+				JOptionPane.showMessageDialog(null, e.getMessage()+"Ocurrió un error, para más información"+System.getProperty("line.separator") 
+				+" vea el LOG del sistema.", "ERROR", JOptionPane.ERROR_MESSAGE);
+				logger.log(e.getStackTrace().toString());
+			}
+			finally{
 				this.socket.close();
 			}
 		}catch(Exception e){
-			e.printStackTrace();
+			JOptionPane.showMessageDialog(null, e.getMessage()+"Ocurrió un error, para más información"+System.getProperty("line.separator") 
+			+" vea el LOG del sistema.", "ERROR", JOptionPane.ERROR_MESSAGE);
+			logger.log(e);
 		}
 		
 	}

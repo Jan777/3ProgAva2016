@@ -1,0 +1,6 @@
+nov 25, 2016 10:08:46 AM prograavanzada2016.anotherworld.resources.LogAnother log
+GRAVE: pasamos1
+nov 25, 2016 10:08:46 AM prograavanzada2016.anotherworld.resources.LogAnother log
+GRAVE: pasamos2
+nov 25, 2016 10:08:46 AM prograavanzada2016.anotherworld.resources.LogAnother log
+GRAVE: pasamos3
