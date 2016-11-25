@@ -56,6 +56,36 @@ public class Recursos {
 	private static BufferedImage[] humanoAtaca;
 	// Fin Personajes
 	
+	// Inicio Personaje	
+	public static LinkedList<BufferedImage[]> oso = new LinkedList<>();
+	private static BufferedImage[] osoIzq;
+	private static BufferedImage[] osoArribaIzq;
+	private static BufferedImage[] osoArriba;
+	private static BufferedImage[] osoArribaDer;
+	private static BufferedImage[] osoDer;
+	private static BufferedImage[] osoAbajoDer;
+	private static BufferedImage[] osoAbajo;
+	private static BufferedImage[] osoAbajoIzq; 
+	
+	private static BufferedImage[] osoMuerte; 
+	private static BufferedImage[] osoAtaca;
+	// Fin Personajes
+	
+	// Inicio Personaje	
+	public static LinkedList<BufferedImage[]> troll = new LinkedList<>();
+	private static BufferedImage[] trollIzq;
+	private static BufferedImage[] trollArribaIzq;
+	private static BufferedImage[] trollArriba;
+	private static BufferedImage[] trollArribaDer;
+	private static BufferedImage[] trollDer;
+	private static BufferedImage[] trollAbajoDer;
+	private static BufferedImage[] trollAbajo;
+	private static BufferedImage[] trollAbajoIzq; 
+	
+	private static BufferedImage[] trollMuerte; 
+	private static BufferedImage[] trollAtaca;
+	// Fin Personajes
+	
 	// Entorno
 	public static BufferedImage piso;
 	public static BufferedImage piso2;
@@ -153,6 +183,81 @@ public class Recursos {
 		
 		// Fin elfo
 		
+		//Inicio Oso
+		ANCHO = 126;
+		ALTO = 126;
+		
+		SpriteSheet spriteoso = new SpriteSheet(CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Oso")));
+		
+		osoIzq = new BufferedImage[7];
+		osoArribaIzq = new BufferedImage[7];
+		osoArriba = new BufferedImage[7];
+		osoArribaDer = new BufferedImage[7];
+		osoDer = new BufferedImage[7];
+		osoAbajoDer = new BufferedImage[7];
+		osoAbajo = new BufferedImage[7];
+		osoAbajoIzq = new BufferedImage[7];
+		
+		osoMuerte = new BufferedImage[4];
+		osoAtaca = new BufferedImage[4];
+		
+		for(int i = 4; i < 11; i++) {
+			osoIzq[i-4] = spriteoso.getTile(ANCHO*i, 0, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			osoArribaIzq[i-4] = spriteoso.getTile(ANCHO*i, ALTO, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			osoArriba[i-4] = spriteoso.getTile(ANCHO*i, ALTO*2, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			osoArribaDer[i-4] = spriteoso.getTile(ANCHO*i, ALTO*3, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			osoDer[i-4] = spriteoso.getTile(ANCHO*i, ALTO*4, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			osoAbajoDer[i-4] = spriteoso.getTile(ANCHO*i, ALTO*5, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			osoAbajo[i-4] = spriteoso.getTile(ANCHO*i, ALTO*6, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			osoAbajoIzq[i-4] = spriteoso.getTile(ANCHO*i, ALTO*7, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			osoAbajoIzq[i-4] = spriteoso.getTile(ANCHO*i, ALTO*7, ANCHO, ALTO);
+		}
+		
+		for(int i = 12; i < 16; i++) {
+			osoMuerte[i-12] = spriteoso.getTile(ANCHO*i, ALTO*4, ANCHO, ALTO);
+		}
+		
+		for(int i = 19; i < 23; i++) {
+			osoAtaca[i-19] = spriteoso.getTile(ANCHO*i, ALTO*4, ANCHO, ALTO);
+		}
+		
+		oso.add(osoIzq);
+		oso.add(osoArribaIzq);
+		oso.add(osoArriba);
+		oso.add(osoArribaDer);
+		oso.add(osoDer);
+		oso.add(osoAbajoDer);
+		oso.add(osoAbajo);
+		oso.add(osoAbajoIzq);
+		
+		oso.add(osoMuerte);
+		oso.add(osoAtaca);
+
+		//Fin Oso
 		
 		// Inicio humano
 		ANCHO=64;
@@ -222,6 +327,81 @@ public class Recursos {
 		humano.add(humanoAtaca);
 		
 		// Fin humano
+		
+		//Inicio Troll
+		ANCHO = 252;
+		ALTO = 252;
+		
+		SpriteSheet spritetroll = new SpriteSheet(CargadorImagen.cargarImagen(Propiedades.getInstance().getProperty("Troll")));
+		
+		trollIzq = new BufferedImage[7];
+		trollArribaIzq = new BufferedImage[7];
+		trollArriba = new BufferedImage[7];
+		trollArribaDer = new BufferedImage[7];
+		trollDer = new BufferedImage[7];
+		trollAbajoDer = new BufferedImage[7];
+		trollAbajo = new BufferedImage[7];
+		trollAbajoIzq = new BufferedImage[7];
+		
+		trollMuerte = new BufferedImage[4];
+		trollAtaca = new BufferedImage[4];
+		
+		for(int i = 4; i < 11; i++) {
+			trollIzq[i-4] = spritetroll.getTile(ANCHO*i, 0, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			trollArribaIzq[i-4] = spritetroll.getTile(ANCHO*i, ALTO, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			trollArriba[i-4] = spritetroll.getTile(ANCHO*i, ALTO*2, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			trollArribaDer[i-4] = spritetroll.getTile(ANCHO*i, ALTO*3, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			trollDer[i-4] = spritetroll.getTile(ANCHO*i, ALTO*4, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			trollAbajoDer[i-4] = spritetroll.getTile(ANCHO*i, ALTO*5, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			trollAbajo[i-4] = spritetroll.getTile(ANCHO*i, ALTO*6, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			trollAbajoIzq[i-4] = spritetroll.getTile(ANCHO*i, ALTO*7, ANCHO, ALTO);
+		}
+		
+		for(int i = 4; i < 11; i++) {
+			trollAbajoIzq[i-4] = spritetroll.getTile(ANCHO*i, ALTO*7, ANCHO, ALTO);
+		}
+		
+		for(int i = 12; i < 16; i++) {
+			trollMuerte[i-12] = spritetroll.getTile(ANCHO*i, ALTO*4, ANCHO, ALTO);
+		}
+		
+		for(int i = 19; i < 23; i++) {
+			trollAtaca[i-19] = spritetroll.getTile(ANCHO*i, ALTO*4, ANCHO, ALTO);
+		}
+		
+		troll.add(trollIzq);
+		troll.add(trollArribaIzq);
+		troll.add(trollArriba);
+		troll.add(trollArribaDer);
+		troll.add(trollDer);
+		troll.add(trollAbajoDer);
+		troll.add(trollAbajo);
+		troll.add(trollAbajoIzq);
+		
+		troll.add(trollMuerte);
+		troll.add(trollAtaca);
+		//fin troll
 				
 		//comienza minotauro
 		
