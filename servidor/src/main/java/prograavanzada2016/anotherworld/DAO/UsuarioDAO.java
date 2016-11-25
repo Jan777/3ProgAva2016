@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 
 import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.modelos.Usuario;
-import prograavanzada2016.anotherworld.resources.Logger;
+import prograavanzada2016.anotherworld.resources.LogAnother;
 import prograavanzada2016.anotherworld.resources.Propiedades;
 
 public class UsuarioDAO extends DAO<Usuario>{
