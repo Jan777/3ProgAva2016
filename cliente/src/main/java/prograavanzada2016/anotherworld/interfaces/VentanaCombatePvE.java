@@ -14,6 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JSplitPane;
 import javax.swing.JTextField;
 
+import prograavanzada2016.anotherworld.castas.Curandero;
 import prograavanzada2016.anotherworld.combates.ArenaPvE;
 import prograavanzada2016.anotherworld.combates.GrupoEnemigos;
 import prograavanzada2016.anotherworld.combates.GrupoPersonajes;
@@ -21,6 +22,7 @@ import prograavanzada2016.anotherworld.enemigos.Dragon;
 import prograavanzada2016.anotherworld.entities.Enemigo;
 import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.mapas.Entidad;
+import prograavanzada2016.anotherworld.razas.Orco;
 import prograavanzada2016.anotherworld.resources.Propiedades;
 import prograavanzada2016.anotherworld.utilities.SonidoManager;
 
@@ -53,32 +55,32 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
     private boolean atacoUsuario;
     
     private Personaje personaje;
-    private Enemigo enemigo;
+    private Personaje enemigoPantalla;
     
     private BattleScreen battleScreen;
 
     public VentanaCombatePvE(Entidad personaje, Entidad enemigo) throws Exception{
     	Personaje pers = new Personaje(personaje.getUsuario().getPersonaje());
-    	Dragon minotauro = new Dragon("Minotauro", 1, 10, 100, 300, 5, 7, 3, false, 200);
+    	Personaje minotauro = new Personaje("Minotauro",new Orco(),new Curandero());
     	
     	this.initComponents(pers,minotauro);
     	
-    	ArrayList<Enemigo> gge = new ArrayList<>();
-    	ArrayList<Personaje> ggp = new ArrayList<>();
-    	
-    	
-    	gge.add(minotauro);
-    	ggp.add(pers);
-    	
-    	GrupoEnemigos ge = new GrupoEnemigos(gge);
-    	GrupoPersonajes gp = new GrupoPersonajes(ggp);
-    	
-    	ArenaPvE arena = new ArenaPvE(ge, gp);
+//    	ArrayList<Enemigo> gge = new ArrayList<>();
+//    	ArrayList<Personaje> ggp = new ArrayList<>();
+//    	
+//    	
+//    	gge.add(minotauro);
+//    	ggp.add(pers);
+//    	
+//    	GrupoEnemigos ge = new GrupoEnemigos(gge);
+//    	GrupoPersonajes gp = new GrupoPersonajes(ggp);
+//    	
+//    	ArenaPvE arena = new ArenaPvE(ge, gp);
     	this.personaje=pers;
-    	this.enemigo=minotauro;
+    	this.enemigoPantalla=minotauro;
     }
 
-   private void initComponents(Personaje pers, Enemigo enemigo) throws Exception {
+   private void initComponents(Personaje pers, Personaje minotauro) throws Exception {
 	   setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);/*Personaje personaje, Enemigo enemigo*/
    	battleScreen = new BattleScreen();
    	SonidoManager sm = SonidoManager.getInstance();
@@ -152,8 +154,12 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
        JButton btnAtacar = new JButton("Atacar");
        btnAtacar.addActionListener(new ActionListener() {
        	public void actionPerformed(ActionEvent arg0) {
-       		personaje.atacar(enemigo);
-       		enemigo.atacar(personaje);
+       		System.out.println(personaje.getSaludEnUso());
+       		System.out.println(enemigoPantalla.getSalud());
+       		System.out.println(enemigoPantalla.getSaludEnUso());
+       		personaje.atacar(enemigoPantalla);
+       		enemigoPantalla.atacar(personaje);
+       		System.out.println(personaje.getSaludEnUso());
        		System.out.println("se atacaron");
        	}
        });

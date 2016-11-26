@@ -17,6 +17,7 @@ public class Dragon extends Enemigo
 				  int inteligencia, boolean esPasivo, int expBaseQueOtorga) throws Exception
 	{
 		super(nombre, nivel, salud, energia, mana, fuerza, destreza, inteligencia, expBaseQueOtorga);
+		this.saludEnUso=salud;
 		this.estaVivo = true;
 		habilidades = new ArrayList<Habilidad>(Arrays.asList(new AlientoDeFuegoNegro(), new RafagaAlada()));
 	}
@@ -41,6 +42,7 @@ public class Dragon extends Enemigo
 	@Override
 	public int calcularPuntosDeAtaque()
 	{
+		System.out.println("entramos");
 		return (int)(this.ataque + (this.destreza * 0.4));
 	}
 
@@ -54,7 +56,7 @@ public class Dragon extends Enemigo
 	@Override
 	public void serAtacado(int daño)
 	{
-		this.restarSaludEnUso(daño);
+		//this.restarSaludEnUso(daño);
 	}
 
 	@Override

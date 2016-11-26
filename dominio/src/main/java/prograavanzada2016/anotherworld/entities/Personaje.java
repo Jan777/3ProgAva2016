@@ -97,7 +97,7 @@ public class Personaje extends Ente{
 	}
 
 	public Personaje(PersonajeModel personaje) {
-		this.setAtaque(personaje.getFuerza());
+		this.setAtaque(personaje.getFuerza()+20);
 		this.setSalud(personaje.getSalud());
 		this.setNombre(personaje.getNombre());
 	}

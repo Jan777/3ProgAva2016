@@ -178,8 +178,12 @@ public abstract class Ente {
 	}
 
 	public void restarSaludEnUso(int saludEnUso) {
+		System.out.println("te resto: "+saludEnUso);
+		System.out.println("tenes: "+this.saludEnUso);
 		this.saludEnUso -= saludEnUso;
+		System.out.println("estado: "+this.estaVivo);
 		if(this.saludEnUso<=0){
+			System.out.println("no pasa");
 			this.saludEnUso=0;
 			this.estaVivo=false;
 			this.despuesDeMorir();
@@ -272,6 +276,7 @@ public abstract class Ente {
 	}
 
 	public boolean isEstaVivo() {
+		System.out.println("entramos: "+estaVivo);
 		return estaVivo;
 	}
 
@@ -335,13 +340,14 @@ public abstract class Ente {
 	public void atacar(Ente ente){
 		if(ente.isEstaVivo()){
 			if(this.puedeAtacar()){
+				System.out.println("lo ataco con: "+this.calcularPuntosDeAtaque());
 				ente.serAtacado(this.calcularPuntosDeAtaque());
 				//ente.despuesDeAtacar();
 			}else{
-				//System.out.println("Intento atacar pero fallo");
+				System.out.println("Intento atacar pero fallo");
 			}
 		}else{
-			//System.out.println("Aguanta He-Man, ya estoy muerto");
+			System.out.println("Aguanta He-Man, ya estoy muerto");
 		}
 		this.despuesDeAtacar(ente);
 	}
