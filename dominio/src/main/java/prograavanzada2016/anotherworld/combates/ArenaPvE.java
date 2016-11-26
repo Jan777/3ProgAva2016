@@ -185,4 +185,16 @@ public class ArenaPvE {
 			personaje.sumarExperiencia(this.getCantidadDeExperiencia());
 		}
 	}
+
+	public int[] armarTurnosAuto() {
+		int turnos[] = new int[10];
+		for(int x=0; x<turnos.length;x++){
+			if(x%2==0){
+				turnos[x]=0;
+			}else{
+				turnos[x]=1;
+			}
+		}
+		return turnos;
+	}
 }

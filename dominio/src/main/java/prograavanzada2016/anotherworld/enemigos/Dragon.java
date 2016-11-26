@@ -7,6 +7,7 @@ import prograavanzada2016.anotherworld.entities.Enemigo;
 import prograavanzada2016.anotherworld.entities.Ente;
 import prograavanzada2016.anotherworld.habilidades.*;
 import prograavanzada2016.anotherworld.mapas.Mapa;
+import prograavanzada2016.anotherworld.modelos.PersonajeModel;
 import prograavanzada2016.anotherworld.objetos.*;
 
 public class Dragon extends Enemigo

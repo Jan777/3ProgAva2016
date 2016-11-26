@@ -96,6 +96,12 @@ public class Personaje extends Ente{
 		//this.usuario_id
 	}
 
+	public Personaje(PersonajeModel personaje) {
+		this.setAtaque(personaje.getFuerza());
+		this.setSalud(personaje.getSalud());
+		this.setNombre(personaje.getNombre());
+	}
+
 	@Override
 	public void serAtacado(int daño) {
 		int dañoNeto = daño-this.defensa;

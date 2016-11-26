@@ -160,7 +160,12 @@ public abstract class Ente {
 		this.salud = salud;
 		this.saludEnUso = salud;
 	}
-		
+	
+	public void setSalud(int salud){
+		this.salud=salud;
+		this.saludEnUso = salud;
+	}
+	
 	public int getSaludEnUso() {
 		return saludEnUso;
 	}

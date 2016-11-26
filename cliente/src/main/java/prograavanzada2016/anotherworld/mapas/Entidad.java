@@ -137,7 +137,7 @@ public class Entidad {
 	    this.soyInteligenciaArtificial=inteligenciaArtificial;
 	}
 
-	public void actualizar() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+	public void actualizar() throws Exception {
 		moverIzq.actualizar();
 		moverArribaIzq.actualizar();
 		moverArriba.actualizar();
@@ -367,7 +367,7 @@ public class Entidad {
 	
 	//private void getEntradaAutomaticaEnemigos() {}
 	
-	public void mover() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+	public void mover() throws Exception {
 
 		dx = 0;
 		dy = 0;

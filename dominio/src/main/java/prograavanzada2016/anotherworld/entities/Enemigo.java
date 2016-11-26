@@ -6,6 +6,7 @@ import java.util.Map.Entry;
 import prograavanzada2016.anotherworld.combates.ArenaPvE;
 import prograavanzada2016.anotherworld.combates.Loot;
 import prograavanzada2016.anotherworld.habilidades.Habilidad;
+import prograavanzada2016.anotherworld.modelos.PersonajeModel;
 import prograavanzada2016.anotherworld.objetos.*;
 
 public abstract class Enemigo extends Ente
