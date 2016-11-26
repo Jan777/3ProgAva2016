@@ -6922,3 +6922,1387 @@ nov 26, 2016 1:56:40 AM prograavanzada2016.anotherworld.resources.LogAnother log
 INFORMACIÓN: movimiento mouse camara offset en: -40.43271 79.0
 nov 26, 2016 1:56:40 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
 INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:05:41 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: ventana principal activada
+nov 26, 2016 2:05:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"login","message":{"Payload":"{\"clienteId\":0,\"id\":0,\"nombre\":\"\",\"apellido\":\"\",\"nombreUsuario\":\"Agus\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:05:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:05:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"loginResponse","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:05:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"personajeConsulta","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:05:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:05:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"personajeConsultaResponse","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":0,\"movimientoY\":0,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":0,\"movimientoYFinal\":0,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:05:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:05:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"recibirPersonajes","message":{"Payload":"[]","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:05:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:05:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"enemigoConsultaResponse","message":{"Payload":"[{\"id\":1,\"movimiento\":[200,200,250,250,350,250,350,200]},{\"id\":2,\"movimiento\":[200,200,250,250,350,250,350,200]}]","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:05:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: se agrego un nuevo enemigo
+nov 26, 2016 2:05:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: se agrego un nuevo enemigo
+nov 26, 2016 2:05:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":0,\"movimientoY\":0,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":-20,\"movimientoYFinal\":130,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:05:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 380 430
+nov 26, 2016 2:05:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 0.0 0.0 -20.0 130.0
+nov 26, 2016 2:05:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -368.0 -268.0
+nov 26, 2016 2:05:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:05:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":-13,\"movimientoY\":13,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":-33,\"movimientoYFinal\":143,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:05:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 380 430
+nov 26, 2016 2:05:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: -13.0 13.0 -33.0 143.0
+nov 26, 2016 2:05:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -381.0 -255.0
+nov 26, 2016 2:05:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:05:58 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:05:58 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"personajeNuevoConectado","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":0,\"movimientoY\":0,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":0,\"movimientoYFinal\":0,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":0,\"movimientoY\":0,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":100,\"movimientoYFinal\":158,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 0 0
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 0.0 0.0 100.0 158.0
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":6,\"movimientoY\":11,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":107,\"movimientoYFinal\":169,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 6 11
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 6.3291135 10.0 107.0 169.0
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":15,\"movimientoY\":24,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":115,\"movimientoYFinal\":182,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 15 24
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 14.560065 23.0 115.0 182.0
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":23,\"movimientoY\":37,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":123,\"movimientoYFinal\":195,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 23 37
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 22.772144 36.0 123.0 195.0
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:06:02 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":32,\"movimientoY\":51,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":132,\"movimientoYFinal\":209,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 32 51
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 32.227596 51.0 132.0 209.0
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":41,\"movimientoY\":65,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":141,\"movimientoYFinal\":223,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 41 65
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 41.068172 65.0 141.0 223.0
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":50,\"movimientoY\":80,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":151,\"movimientoYFinal\":238,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 50 80
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 49.9229 79.0 151.0 238.0
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":59,\"movimientoY\":94,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":159,\"movimientoYFinal\":252,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 59 94
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 59.45846 94.0 159.0 252.0
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:06:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":68,\"movimientoY\":108,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":168,\"movimientoYFinal\":266,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 68 108
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 67.6486 107.0 168.0 266.0
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":92,\"movimientoY\":146,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":201,\"movimientoYFinal\":278,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 92 146
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 91.63198 145.0 201.0 278.0
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":98,\"movimientoY\":153,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":210,\"movimientoYFinal\":278,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 98 153
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 97.388214 152.0 210.0 278.0
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":103,\"movimientoY\":159,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":215,\"movimientoYFinal\":284,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 103 159
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 102.75069 158.0 215.0 284.0
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:06:04 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:06:07 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":-33,\"movimientoY\":143,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":119,\"movimientoYFinal\":306,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:07 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 552 463
+nov 26, 2016 2:06:07 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: -33.0 143.0 119.0 306.0
+nov 26, 2016 2:06:07 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -401.0 -125.0
+nov 26, 2016 2:06:07 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:06:07 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":-21,\"movimientoY\":155,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":128,\"movimientoYFinal\":325,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:07 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 550 470
+nov 26, 2016 2:06:07 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: -21.809809 155.0 128.0 325.0
+nov 26, 2016 2:06:07 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -389.8098 -113.0
+nov 26, 2016 2:06:07 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:06:07 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":-11,\"movimientoY\":167,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":139,\"movimientoYFinal\":337,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:07 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 550 470
+nov 26, 2016 2:06:07 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: -11.234993 167.0 139.0 337.0
+nov 26, 2016 2:06:07 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -379.235 -101.0
+nov 26, 2016 2:06:07 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:06:07 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":9,\"movimientoY\":190,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":145,\"movimientoYFinal\":357,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:07 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 536 467
+nov 26, 2016 2:06:07 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 9.090918 190.0 145.0 357.0
+nov 26, 2016 2:06:07 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -358.9091 -78.0
+nov 26, 2016 2:06:07 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:06:08 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":18,\"movimientoY\":201,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":154,\"movimientoYFinal\":368,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:08 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 536 467
+nov 26, 2016 2:06:08 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 18.043013 201.0 154.0 368.0
+nov 26, 2016 2:06:08 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -349.957 -67.0
+nov 26, 2016 2:06:08 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:06:08 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":28,\"movimientoY\":214,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":165,\"movimientoYFinal\":381,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:08 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 536 467
+nov 26, 2016 2:06:08 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 28.62649 214.0 165.0 381.0
+nov 26, 2016 2:06:08 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -339.3735 -54.0
+nov 26, 2016 2:06:08 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:06:09 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:06:09 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":214,\"movimientoY\":284,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":300,\"movimientoYFinal\":356,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:09 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 214 284
+nov 26, 2016 2:06:09 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 215.0002 284.0 300.0 356.0
+nov 26, 2016 2:06:09 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:06:09 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:06:10 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:06:10 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":229,\"movimientoY\":296,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":314,\"movimientoYFinal\":368,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:10 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 229 296
+nov 26, 2016 2:06:10 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 230.34744 297.0 314.0 368.0
+nov 26, 2016 2:06:10 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:06:10 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:06:11 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:06:11 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"consultaColisionResponse","message":{"Payload":"{\"clienteId\":12,\"id\":1,\"nombre\":\"\",\"apellido\":\"\",\"nombreUsuario\":\"\",\"password\":\"\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:13 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:06:13 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":304,\"movimientoY\":360,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":404,\"movimientoYFinal\":367,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:13 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 304 360
+nov 26, 2016 2:06:13 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 304.57388 360.0 404.0 367.0
+nov 26, 2016 2:06:13 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:06:13 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:06:13 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:06:13 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":304,\"movimientoY\":360,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":404,\"movimientoYFinal\":367,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:13 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 304 360
+nov 26, 2016 2:06:13 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 304.57388 360.0 404.0 367.0
+nov 26, 2016 2:06:13 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:06:13 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:06:14 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:06:14 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":304,\"movimientoY\":360,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":404,\"movimientoYFinal\":367,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:14 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 304 360
+nov 26, 2016 2:06:14 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 304.57388 360.0 404.0 367.0
+nov 26, 2016 2:06:14 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:06:14 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:06:14 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:06:14 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":304,\"movimientoY\":360,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":404,\"movimientoYFinal\":367,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:14 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 304 360
+nov 26, 2016 2:06:14 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 304.57388 360.0 404.0 367.0
+nov 26, 2016 2:06:14 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:06:14 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:06:14 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:06:14 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":304,\"movimientoY\":360,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":402,\"movimientoYFinal\":368,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:14 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 304 360
+nov 26, 2016 2:06:14 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 304.57388 360.0 402.0 368.0
+nov 26, 2016 2:06:14 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:06:14 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:06:17 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":164,\"movimientoY\":381,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":160,\"movimientoYFinal\":466,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:17 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 395 385
+nov 26, 2016 2:06:17 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 164.99963 381.0 160.0 466.0
+nov 26, 2016 2:06:17 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -203.00037 113.0
+nov 26, 2016 2:06:17 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:06:17 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":159,\"movimientoY\":393,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":155,\"movimientoYFinal\":478,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:17 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 395 385
+nov 26, 2016 2:06:17 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 159.99963 393.0 155.0 478.0
+nov 26, 2016 2:06:17 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -208.00037 125.0
+nov 26, 2016 2:06:17 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:06:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":154,\"movimientoY\":478,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":361,\"movimientoYFinal\":341,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 606 163
+nov 26, 2016 2:06:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 154.99963 478.0 361.0 341.0
+nov 26, 2016 2:06:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -213.00037 210.0
+nov 26, 2016 2:06:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:06:20 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":230,\"movimientoY\":428,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":441,\"movimientoYFinal\":293,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:20 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 611 165
+nov 26, 2016 2:06:20 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 230.18198 428.0 441.0 293.0
+nov 26, 2016 2:06:20 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -137.81802 160.0
+nov 26, 2016 2:06:20 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:06:20 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":252,\"movimientoY\":414,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":463,\"movimientoYFinal\":279,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:20 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 611 165
+nov 26, 2016 2:06:20 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 252.04459 414.0 463.0 279.0
+nov 26, 2016 2:06:20 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -115.955414 146.0
+nov 26, 2016 2:06:20 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:06:23 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":462,\"movimientoY\":279,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":513,\"movimientoYFinal\":413,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:23 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 450 434
+nov 26, 2016 2:06:23 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 462.9986 279.0 513.0 413.0
+nov 26, 2016 2:06:23 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: 94.9986 11.0
+nov 26, 2016 2:06:23 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:06:23 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":481,\"movimientoY\":298,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":531,\"movimientoYFinal\":433,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:23 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 449 435
+nov 26, 2016 2:06:23 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 481.9986 298.0 531.0 433.0
+nov 26, 2016 2:06:23 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: 113.9986 30.0
+nov 26, 2016 2:06:23 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:06:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":530,\"movimientoY\":433,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":278,\"movimientoYFinal\":596,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:06:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 147 463
+nov 26, 2016 2:06:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 530.9986 433.0 278.0 596.0
+nov 26, 2016 2:06:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: 162.9986 165.0
+nov 26, 2016 2:06:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:08 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: ventana principal activada
+nov 26, 2016 2:13:11 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"login","message":{"Payload":"{\"clienteId\":0,\"id\":0,\"nombre\":\"\",\"apellido\":\"\",\"nombreUsuario\":\"Agus\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:12 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:13:12 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"loginResponse","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:15 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"personajeConsulta","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:15 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:13:15 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"personajeConsultaResponse","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":0,\"movimientoY\":0,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":0,\"movimientoYFinal\":0,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:15 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:13:15 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"recibirPersonajes","message":{"Payload":"[]","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:15 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:13:15 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"enemigoConsultaResponse","message":{"Payload":"[{\"id\":1,\"movimiento\":[200,200,250,250,350,250,350,200]},{\"id\":2,\"movimiento\":[200,200,250,250,350,250,350,200]}]","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:15 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: se agrego un nuevo enemigo
+nov 26, 2016 2:13:17 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: se agrego un nuevo enemigo
+nov 26, 2016 2:13:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":0,\"movimientoY\":0,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":66,\"movimientoYFinal\":190,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 466 490
+nov 26, 2016 2:13:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 0.0 0.0 66.0 190.0
+nov 26, 2016 2:13:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -368.0 -268.0
+nov 26, 2016 2:13:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":7,\"movimientoY\":23,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":73,\"movimientoYFinal\":213,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 465 490
+nov 26, 2016 2:13:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 7.989472 23.0 73.0 213.0
+nov 26, 2016 2:13:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -360.01053 -245.0
+nov 26, 2016 2:13:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":12,\"movimientoY\":36,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":77,\"movimientoYFinal\":226,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 465 490
+nov 26, 2016 2:13:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 12.437555 36.0 77.0 226.0
+nov 26, 2016 2:13:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -355.56244 -232.0
+nov 26, 2016 2:13:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":28,\"movimientoY\":84,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":173,\"movimientoYFinal\":267,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 544 483
+nov 26, 2016 2:13:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 28.74805 84.0 173.0 267.0
+nov 26, 2016 2:13:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -339.25195 -184.0
+nov 26, 2016 2:13:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":38,\"movimientoY\":96,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":182,\"movimientoYFinal\":279,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 544 483
+nov 26, 2016 2:13:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 38.207188 96.0 182.0 279.0
+nov 26, 2016 2:13:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -329.79282 -172.0
+nov 26, 2016 2:13:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:20 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":98,\"movimientoY\":173,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":368,\"movimientoYFinal\":312,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:20 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 669 439
+nov 26, 2016 2:13:20 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 98.710045 173.0 368.0 312.0
+nov 26, 2016 2:13:20 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -269.28995 -95.0
+nov 26, 2016 2:13:20 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":125,\"movimientoY\":187,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":400,\"movimientoYFinal\":326,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 674 439
+nov 26, 2016 2:13:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 125.8328 187.0 400.0 326.0
+nov 26, 2016 2:13:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -242.1672 -81.0
+nov 26, 2016 2:13:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":145,\"movimientoY\":197,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":423,\"movimientoYFinal\":335,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 677 438
+nov 26, 2016 2:13:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 145.55707 197.0 423.0 335.0
+nov 26, 2016 2:13:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -222.44293 -71.0
+nov 26, 2016 2:13:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":175,\"movimientoY\":212,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":447,\"movimientoYFinal\":360,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 671 448
+nov 26, 2016 2:13:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 175.71385 212.0 447.0 360.0
+nov 26, 2016 2:13:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -192.28615 -56.0
+nov 26, 2016 2:13:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":326,\"movimientoY\":294,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":340,\"movimientoYFinal\":494,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 414 500
+nov 26, 2016 2:13:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 326.0205 294.0 340.0 494.0
+nov 26, 2016 2:13:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -41.979492 26.0
+nov 26, 2016 2:13:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:23 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":340,\"movimientoY\":317,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":418,\"movimientoYFinal\":488,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:23 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 478 471
+nov 26, 2016 2:13:23 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 340.0205 317.0 418.0 488.0
+nov 26, 2016 2:13:23 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -27.979492 49.0
+nov 26, 2016 2:13:23 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:40 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: ventana principal activada
+nov 26, 2016 2:13:42 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"login","message":{"Payload":"{\"clienteId\":0,\"id\":0,\"nombre\":\"\",\"apellido\":\"\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:42 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:13:42 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"loginResponse","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"personajeConsulta","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:13:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"personajeConsultaResponse","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":0,\"movimientoY\":0,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":0,\"movimientoYFinal\":0,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:13:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"recibirPersonajes","message":{"Payload":"[]","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:13:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"enemigoConsultaResponse","message":{"Payload":"[{\"id\":1,\"movimiento\":[200,200,250,250,350,250,350,200]},{\"id\":2,\"movimiento\":[200,200,250,250,350,250,350,200]}]","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: se agrego un nuevo enemigo
+nov 26, 2016 2:13:46 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: se agrego un nuevo enemigo
+nov 26, 2016 2:13:46 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":0,\"movimientoY\":0,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":40,\"movimientoYFinal\":89,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:46 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 440 389
+nov 26, 2016 2:13:46 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 0.0 0.0 40.0 89.0
+nov 26, 2016 2:13:46 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -368.0 -268.0
+nov 26, 2016 2:13:46 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:46 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":12,\"movimientoY\":12,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":52,\"movimientoYFinal\":101,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:46 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 440 389
+nov 26, 2016 2:13:46 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 12.0 12.0 52.0 101.0
+nov 26, 2016 2:13:46 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -356.0 -256.0
+nov 26, 2016 2:13:46 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":24,\"movimientoY\":24,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":64,\"movimientoYFinal\":118,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 440 394
+nov 26, 2016 2:13:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 24.0 24.0 64.0 118.0
+nov 26, 2016 2:13:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -344.0 -244.0
+nov 26, 2016 2:13:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":37,\"movimientoY\":37,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":77,\"movimientoYFinal\":132,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 440 395
+nov 26, 2016 2:13:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 37.0 37.0 77.0 132.0
+nov 26, 2016 2:13:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -331.0 -231.0
+nov 26, 2016 2:13:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":49,\"movimientoY\":49,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":89,\"movimientoYFinal\":145,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 440 396
+nov 26, 2016 2:13:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 49.0 49.0 89.0 145.0
+nov 26, 2016 2:13:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -319.0 -219.0
+nov 26, 2016 2:13:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":75,\"movimientoY\":75,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":139,\"movimientoYFinal\":178,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 464 403
+nov 26, 2016 2:13:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 75.0 75.0 139.0 178.0
+nov 26, 2016 2:13:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -293.0 -193.0
+nov 26, 2016 2:13:47 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:48 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":104,\"movimientoY\":123,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":234,\"movimientoYFinal\":247,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:48 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 529 424
+nov 26, 2016 2:13:48 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 104.82532 123.0 234.0 247.0
+nov 26, 2016 2:13:48 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -263.17468 -145.0
+nov 26, 2016 2:13:48 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:48 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":117,\"movimientoY\":135,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":246,\"movimientoYFinal\":259,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:48 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 529 424
+nov 26, 2016 2:13:48 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 117.32611 135.0 246.0 259.0
+nov 26, 2016 2:13:48 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -250.67389 -133.0
+nov 26, 2016 2:13:48 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":170,\"movimientoY\":186,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":390,\"movimientoYFinal\":299,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 620 413
+nov 26, 2016 2:13:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 170.24826 186.0 390.0 299.0
+nov 26, 2016 2:13:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -197.75174 -82.0
+nov 26, 2016 2:13:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":197,\"movimientoY\":200,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":417,\"movimientoYFinal\":313,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 620 413
+nov 26, 2016 2:13:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 197.47409 200.0 417.0 313.0
+nov 26, 2016 2:13:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -170.52591 -68.0
+nov 26, 2016 2:13:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":251,\"movimientoY\":228,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":430,\"movimientoYFinal\":358,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 578 430
+nov 26, 2016 2:13:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 251.86978 228.0 430.0 358.0
+nov 26, 2016 2:13:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -116.13022 -40.0
+nov 26, 2016 2:13:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":279,\"movimientoY\":248,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":373,\"movimientoYFinal\":365,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 494 417
+nov 26, 2016 2:13:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 279.27457 248.0 373.0 365.0
+nov 26, 2016 2:13:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -88.72543 -20.0
+nov 26, 2016 2:13:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:51 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":301,\"movimientoY\":276,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":363,\"movimientoYFinal\":396,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:51 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 461 420
+nov 26, 2016 2:13:51 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 301.705 276.0 363.0 396.0
+nov 26, 2016 2:13:51 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -66.29501 8.0
+nov 26, 2016 2:13:51 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:51 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":315,\"movimientoY\":290,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":377,\"movimientoYFinal\":410,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:51 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 461 420
+nov 26, 2016 2:13:51 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 315.705 290.0 377.0 410.0
+nov 26, 2016 2:13:51 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -52.295013 22.0
+nov 26, 2016 2:13:51 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:13:52 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":357,\"movimientoY\":332,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":416,\"movimientoYFinal\":440,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:13:52 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 458 408
+nov 26, 2016 2:13:52 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 357.705 332.0 416.0 440.0
+nov 26, 2016 2:13:52 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -10.295013 64.0
+nov 26, 2016 2:13:52 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:14:01 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":380,\"movimientoY\":355,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":387,\"movimientoYFinal\":366,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:14:01 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 406 311
+nov 26, 2016 2:14:01 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 380.705 355.0 387.0 366.0
+nov 26, 2016 2:14:01 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: 12.704987 87.0
+nov 26, 2016 2:14:01 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:18:06 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: ventana principal activada
+nov 26, 2016 2:18:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"login","message":{"Payload":"{\"clienteId\":0,\"id\":0,\"nombre\":\"\",\"apellido\":\"\",\"nombreUsuario\":\"mati\",\"password\":\"1234\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:18:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:18:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"loginResponse","message":{"Payload":"{\"clienteId\":0,\"id\":13,\"nombre\":\"Matias\",\"apellido\":\"Cairo\",\"nombreUsuario\":\"mati\",\"password\":\"1234\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:18:24 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"personajeConsulta","message":{"Payload":"{\"clienteId\":0,\"id\":13,\"nombre\":\"Matias\",\"apellido\":\"Cairo\",\"nombreUsuario\":\"mati\",\"password\":\"1234\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:18:24 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:18:24 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"personajeConsultaResponse","message":{"Payload":"{\"clienteId\":0,\"id\":13,\"nombre\":\"Matias\",\"apellido\":\"Cairo\",\"nombreUsuario\":\"mati\",\"password\":\"1234\",\"personaje\":{\"id\":6,\"usuarioId\":13,\"castaId\":3,\"razaId\":2,\"nombre\":\"reynaldo\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":0,\"movimientoY\":0,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":0,\"movimientoYFinal\":0,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:18:24 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:18:24 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"recibirPersonajes","message":{"Payload":"[{\"clienteId\":0,\"id\":1,\"nombre\":\"Lucas\",\"apellido\":\"Nicoloso\",\"nombreUsuario\":\"Luki\",\"password\":\"123\",\"personaje\":{\"id\":1,\"usuarioId\":1,\"castaId\":1,\"razaId\":1,\"nombre\":\"Lucas\",\"fuerza\":5,\"destreza\":5,\"inteligencia\":5,\"mana\":5,\"energia\":5,\"nivel\":5,\"salud\":5,\"experiencia\":5,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":0,\"movimientoY\":0,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":0,\"movimientoYFinal\":0,\"nuevoCamino\":false}}]","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:18:28 AM prograavanzada2016.anotherworld.resources.LogAnother logError
+GRAVE: [Ljava.lang.StackTraceElement;@68bee292
+nov 26, 2016 2:18:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: ventana principal activada
+nov 26, 2016 2:18:48 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"login","message":{"Payload":"{\"clienteId\":0,\"id\":0,\"nombre\":\"\",\"apellido\":\"\",\"nombreUsuario\":\"mati\",\"password\":\"1234\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:18:48 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:18:48 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"loginResponse","message":{"Payload":"{\"clienteId\":0,\"id\":13,\"nombre\":\"Matias\",\"apellido\":\"Cairo\",\"nombreUsuario\":\"mati\",\"password\":\"1234\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:18:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:18:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"personajeNuevoConectado","message":{"Payload":"{\"clienteId\":0,\"id\":1,\"nombre\":\"Lucas\",\"apellido\":\"Nicoloso\",\"nombreUsuario\":\"Luki\",\"password\":\"123\",\"personaje\":{\"id\":1,\"usuarioId\":1,\"castaId\":1,\"razaId\":1,\"nombre\":\"Lucas\",\"fuerza\":5,\"destreza\":5,\"inteligencia\":5,\"mana\":5,\"energia\":5,\"nivel\":5,\"salud\":5,\"experiencia\":5,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":0,\"movimientoY\":0,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":0,\"movimientoYFinal\":0,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:18:51 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"personajeConsulta","message":{"Payload":"{\"clienteId\":0,\"id\":13,\"nombre\":\"Matias\",\"apellido\":\"Cairo\",\"nombreUsuario\":\"mati\",\"password\":\"1234\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:18:59 AM prograavanzada2016.anotherworld.resources.LogAnother logError
+GRAVE: [Ljava.lang.StackTraceElement;@275553d9
+nov 26, 2016 2:19:57 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: ventana principal activada
+nov 26, 2016 2:20:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"login","message":{"Payload":"{\"clienteId\":0,\"id\":0,\"nombre\":\"\",\"apellido\":\"\",\"nombreUsuario\":\"Agus\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:20:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"loginResponse","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:06 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"personajeConsulta","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:06 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:20:06 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"personajeConsultaResponse","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":0,\"movimientoY\":0,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":0,\"movimientoYFinal\":0,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:06 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:20:06 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"recibirPersonajes","message":{"Payload":"[]","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:06 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:20:06 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"enemigoConsultaResponse","message":{"Payload":"[{\"id\":1,\"movimiento\":[200,200,250,250,350,250,350,200]},{\"id\":2,\"movimiento\":[200,200,250,250,350,250,350,200]}]","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:06 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: se agrego un nuevo enemigo
+nov 26, 2016 2:20:08 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: se agrego un nuevo enemigo
+nov 26, 2016 2:20:09 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":0,\"movimientoY\":0,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":-24,\"movimientoYFinal\":114,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:09 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 376 414
+nov 26, 2016 2:20:09 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 0.0 0.0 -24.0 114.0
+nov 26, 2016 2:20:09 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -368.0 -268.0
+nov 26, 2016 2:20:09 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:10 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":-24,\"movimientoY\":46,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":-67,\"movimientoYFinal\":159,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:10 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 357 413
+nov 26, 2016 2:20:10 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: -24.0 46.0 -67.0 159.0
+nov 26, 2016 2:20:10 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -392.0 -222.0
+nov 26, 2016 2:20:10 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:13 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":-67,\"movimientoY\":159,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":73,\"movimientoYFinal\":153,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:13 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 540 294
+nov 26, 2016 2:20:13 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: -67.0 159.0 73.0 153.0
+nov 26, 2016 2:20:13 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -435.0 -109.0
+nov 26, 2016 2:20:13 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:15 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":56,\"movimientoY\":153,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":201,\"movimientoYFinal\":206,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:15 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 545 353
+nov 26, 2016 2:20:15 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 56.0 153.0 201.0 206.0
+nov 26, 2016 2:20:15 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -312.0 -115.0
+nov 26, 2016 2:20:15 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:16 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":103,\"movimientoY\":200,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":152,\"movimientoYFinal\":278,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:16 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 449 378
+nov 26, 2016 2:20:16 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 103.0 200.0 152.0 278.0
+nov 26, 2016 2:20:16 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -265.0 -68.0
+nov 26, 2016 2:20:16 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:17 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":152,\"movimientoY\":278,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":41,\"movimientoYFinal\":244,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:17 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 289 266
+nov 26, 2016 2:20:17 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 152.0 278.0 41.0 244.0
+nov 26, 2016 2:20:17 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -216.0 10.0
+nov 26, 2016 2:20:17 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":109,\"movimientoY\":244,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":-44,\"movimientoYFinal\":284,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 247 340
+nov 26, 2016 2:20:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 109.0 244.0 -44.0 284.0
+nov 26, 2016 2:20:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -259.0 -24.0
+nov 26, 2016 2:20:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":68,\"movimientoY\":284,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":-101,\"movimientoYFinal\":388,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 231 404
+nov 26, 2016 2:20:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 68.0 284.0 -101.0 388.0
+nov 26, 2016 2:20:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -300.0 16.0
+nov 26, 2016 2:20:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":25,\"movimientoY\":310,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":-177,\"movimientoYFinal\":291,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 197 281
+nov 26, 2016 2:20:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 25.75 310.0 -177.0 291.0
+nov 26, 2016 2:20:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -342.25 42.0
+nov 26, 2016 2:20:19 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:20 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:20:20 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"personajeNuevoConectado","message":{"Payload":"{\"clienteId\":0,\"id\":1,\"nombre\":\"Lucas\",\"apellido\":\"Nicoloso\",\"nombreUsuario\":\"Luki\",\"password\":\"123\",\"personaje\":{\"id\":1,\"usuarioId\":1,\"castaId\":1,\"razaId\":1,\"nombre\":\"Lucas\",\"fuerza\":5,\"destreza\":5,\"inteligencia\":5,\"mana\":5,\"energia\":5,\"nivel\":5,\"salud\":5,\"experiencia\":5,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":0,\"movimientoY\":0,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":0,\"movimientoYFinal\":0,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":-64,\"movimientoY\":291,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":-62,\"movimientoYFinal\":187,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 402 196
+nov 26, 2016 2:20:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: -64.25 291.0 -62.0 187.0
+nov 26, 2016 2:20:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -432.25 23.0
+nov 26, 2016 2:20:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":-62,\"movimientoY\":254,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":-12,\"movimientoYFinal\":115,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 450 161
+nov 26, 2016 2:20:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: -62.25 254.0 -12.0 115.0
+nov 26, 2016 2:20:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -430.25 -14.0
+nov 26, 2016 2:20:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":-29,\"movimientoY\":221,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":32,\"movimientoYFinal\":157,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 461 236
+nov 26, 2016 2:20:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: -29.25 221.0 32.0 157.0
+nov 26, 2016 2:20:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -397.25 -47.0
+nov 26, 2016 2:20:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":-6,\"movimientoY\":198,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":-9,\"movimientoYFinal\":106,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 397 208
+nov 26, 2016 2:20:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: -6.25 198.0 -9.0 106.0
+nov 26, 2016 2:20:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -374.25 -70.0
+nov 26, 2016 2:20:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:23 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":-9,\"movimientoY\":147,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":-32,\"movimientoYFinal\":191,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:23 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 377 344
+nov 26, 2016 2:20:23 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: -9.25 147.0 -32.0 191.0
+nov 26, 2016 2:20:23 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -377.25 -121.0
+nov 26, 2016 2:20:23 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:24 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":-32,\"movimientoY\":191,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":-23,\"movimientoYFinal\":299,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:24 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 409 408
+nov 26, 2016 2:20:24 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: -32.25 191.0 -23.0 299.0
+nov 26, 2016 2:20:24 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -400.25 -77.0
+nov 26, 2016 2:20:24 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:24 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":-23,\"movimientoY\":225,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":70,\"movimientoYFinal\":270,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:24 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 493 345
+nov 26, 2016 2:20:24 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: -23.25 225.0 70.0 270.0
+nov 26, 2016 2:20:24 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -391.25 -43.0
+nov 26, 2016 2:20:24 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":1,\"nombre\":\"Lucas\",\"apellido\":\"Nicoloso\",\"nombreUsuario\":\"Luki\",\"password\":\"123\",\"personaje\":{\"id\":1,\"usuarioId\":1,\"castaId\":1,\"razaId\":1,\"nombre\":\"Lucas\",\"fuerza\":5,\"destreza\":5,\"inteligencia\":5,\"mana\":5,\"energia\":5,\"nivel\":5,\"salud\":5,\"experiencia\":5,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":0,\"movimientoY\":0,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":74,\"movimientoYFinal\":171,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 0 0
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 0.0 0.0 74.0 171.0
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":6,\"movimientoY\":255,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":76,\"movimientoYFinal\":203,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 469 248
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 6.75 255.0 76.0 203.0
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -361.25 -13.0
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":1,\"nombre\":\"Lucas\",\"apellido\":\"Nicoloso\",\"nombreUsuario\":\"Luki\",\"password\":\"123\",\"personaje\":{\"id\":1,\"usuarioId\":1,\"castaId\":1,\"razaId\":1,\"nombre\":\"Lucas\",\"fuerza\":5,\"destreza\":5,\"inteligencia\":5,\"mana\":5,\"energia\":5,\"nivel\":5,\"salud\":5,\"experiencia\":5,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":10,\"movimientoY\":24,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":88,\"movimientoYFinal\":201,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 10 24
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 10.385964 24.0 88.0 201.0
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":1,\"nombre\":\"Lucas\",\"apellido\":\"Nicoloso\",\"nombreUsuario\":\"Luki\",\"password\":\"123\",\"personaje\":{\"id\":1,\"usuarioId\":1,\"castaId\":1,\"razaId\":1,\"nombre\":\"Lucas\",\"fuerza\":5,\"destreza\":5,\"inteligencia\":5,\"mana\":5,\"energia\":5,\"nivel\":5,\"salud\":5,\"experiencia\":5,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":16,\"movimientoY\":39,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":95,\"movimientoYFinal\":216,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 16 39
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 17.401924 40.0 95.0 216.0
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":35,\"movimientoY\":226,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":17,\"movimientoYFinal\":143,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 381 217
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 35.75 226.0 17.0 143.0
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -332.25 -42.0
+nov 26, 2016 2:20:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:26 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:20:26 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":1,\"nombre\":\"Lucas\",\"apellido\":\"Nicoloso\",\"nombreUsuario\":\"Luki\",\"password\":\"123\",\"personaje\":{\"id\":1,\"usuarioId\":1,\"castaId\":1,\"razaId\":1,\"nombre\":\"Lucas\",\"fuerza\":5,\"destreza\":5,\"inteligencia\":5,\"mana\":5,\"energia\":5,\"nivel\":5,\"salud\":5,\"experiencia\":5,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":28,\"movimientoY\":65,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":119,\"movimientoYFinal\":231,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:26 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 28 65
+nov 26, 2016 2:20:26 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 28.424397 65.0 119.0 231.0
+nov 26, 2016 2:20:26 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:20:26 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:20:26 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":16,\"movimientoY\":188,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":-5,\"movimientoYFinal\":218,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:26 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 378 330
+nov 26, 2016 2:20:26 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 16.75 188.0 -5.0 218.0
+nov 26, 2016 2:20:26 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -351.25 -80.0
+nov 26, 2016 2:20:26 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:27 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":-5,\"movimientoY\":218,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":118,\"movimientoYFinal\":248,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:27 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 523 330
+nov 26, 2016 2:20:27 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: -5.25 218.0 118.0 248.0
+nov 26, 2016 2:20:27 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -373.25 -50.0
+nov 26, 2016 2:20:27 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:27 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:20:27 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":1,\"nombre\":\"Lucas\",\"apellido\":\"Nicoloso\",\"nombreUsuario\":\"Luki\",\"password\":\"123\",\"personaje\":{\"id\":1,\"usuarioId\":1,\"castaId\":1,\"razaId\":1,\"nombre\":\"Lucas\",\"fuerza\":5,\"destreza\":5,\"inteligencia\":5,\"mana\":5,\"energia\":5,\"nivel\":5,\"salud\":5,\"experiencia\":5,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":85,\"movimientoY\":169,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":-27,\"movimientoYFinal\":252,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:27 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 85 169
+nov 26, 2016 2:20:27 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 85.71625 170.0 -27.0 252.0
+nov 26, 2016 2:20:27 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:20:27 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:20:28 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":32,\"movimientoY\":248,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":147,\"movimientoYFinal\":204,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:28 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 514 256
+nov 26, 2016 2:20:28 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 32.75 248.0 147.0 204.0
+nov 26, 2016 2:20:28 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -335.25 -20.0
+nov 26, 2016 2:20:28 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:28 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:20:28 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":1,\"nombre\":\"Lucas\",\"apellido\":\"Nicoloso\",\"nombreUsuario\":\"Luki\",\"password\":\"123\",\"personaje\":{\"id\":1,\"usuarioId\":1,\"castaId\":1,\"razaId\":1,\"nombre\":\"Lucas\",\"fuerza\":5,\"destreza\":5,\"inteligencia\":5,\"mana\":5,\"energia\":5,\"nivel\":5,\"salud\":5,\"experiencia\":5,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":40,\"movimientoY\":202,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":35,\"movimientoYFinal\":303,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:28 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 40 202
+nov 26, 2016 2:20:28 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 41.72943 202.0 35.0 303.0
+nov 26, 2016 2:20:28 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:20:28 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:20:28 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:20:28 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":1,\"nombre\":\"Lucas\",\"apellido\":\"Nicoloso\",\"nombreUsuario\":\"Luki\",\"password\":\"123\",\"personaje\":{\"id\":1,\"usuarioId\":1,\"castaId\":1,\"razaId\":1,\"nombre\":\"Lucas\",\"fuerza\":5,\"destreza\":5,\"inteligencia\":5,\"mana\":5,\"energia\":5,\"nivel\":5,\"salud\":5,\"experiencia\":5,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":34,\"movimientoY\":231,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":92,\"movimientoYFinal\":301,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:28 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 34 231
+nov 26, 2016 2:20:28 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 34.72943 231.0 92.0 301.0
+nov 26, 2016 2:20:28 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:20:28 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:20:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":103,\"movimientoY\":204,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":79,\"movimientoYFinal\":295,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 375 391
+nov 26, 2016 2:20:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 103.75 204.0 79.0 295.0
+nov 26, 2016 2:20:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -264.25 -64.0
+nov 26, 2016 2:20:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:20:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":1,\"nombre\":\"Lucas\",\"apellido\":\"Nicoloso\",\"nombreUsuario\":\"Luki\",\"password\":\"123\",\"personaje\":{\"id\":1,\"usuarioId\":1,\"castaId\":1,\"razaId\":1,\"nombre\":\"Lucas\",\"fuerza\":5,\"destreza\":5,\"inteligencia\":5,\"mana\":5,\"energia\":5,\"nivel\":5,\"salud\":5,\"experiencia\":5,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":58,\"movimientoY\":255,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":183,\"movimientoYFinal\":330,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 58 255
+nov 26, 2016 2:20:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 58.72943 255.0 183.0 330.0
+nov 26, 2016 2:20:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:20:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:20:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":78,\"movimientoY\":236,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":93,\"movimientoYFinal\":347,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 414 411
+nov 26, 2016 2:20:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 78.75 236.0 93.0 347.0
+nov 26, 2016 2:20:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -289.25 -32.0
+nov 26, 2016 2:20:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":92,\"movimientoY\":319,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":70,\"movimientoYFinal\":413,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 377 394
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 92.75 319.0 70.0 413.0
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -275.25 51.0
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":1,\"nombre\":\"Lucas\",\"apellido\":\"Nicoloso\",\"nombreUsuario\":\"Luki\",\"password\":\"123\",\"personaje\":{\"id\":1,\"usuarioId\":1,\"castaId\":1,\"razaId\":1,\"nombre\":\"Lucas\",\"fuerza\":5,\"destreza\":5,\"inteligencia\":5,\"mana\":5,\"energia\":5,\"nivel\":5,\"salud\":5,\"experiencia\":5,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":183,\"movimientoY\":330,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":339,\"movimientoYFinal\":432,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 183 330
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 182.99998 330.0 339.0 432.0
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"moverPersonajeResponse","message":{"Payload":"{\"clienteId\":0,\"id\":1,\"nombre\":\"Lucas\",\"apellido\":\"Nicoloso\",\"nombreUsuario\":\"Luki\",\"password\":\"123\",\"personaje\":{\"id\":1,\"usuarioId\":1,\"castaId\":1,\"razaId\":1,\"nombre\":\"Lucas\",\"fuerza\":5,\"destreza\":5,\"inteligencia\":5,\"mana\":5,\"energia\":5,\"nivel\":5,\"salud\":5,\"experiencia\":5,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":244,\"movimientoY\":370,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":435,\"movimientoYFinal\":398,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico posMouse: 244 370
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico en: 242.64732 369.0 435.0 398.0
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 0 0
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento automatico offset en: 32 32
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":69,\"movimientoY\":362,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":-10,\"movimientoYFinal\":429,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 320 367
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 69.75 362.0 -10.0 429.0
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -298.25 94.0
+nov 26, 2016 2:20:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:32 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: HUBO UN MENSAJE NUEVO
+nov 26, 2016 2:20:32 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El servidor dice: {"type":"consultaColisionResponse","message":{"Payload":"{\"clienteId\":1,\"id\":1,\"nombre\":\"\",\"apellido\":\"\",\"nombreUsuario\":\"\",\"password\":\"\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:33 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":-10,\"movimientoY\":429,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":-65,\"movimientoYFinal\":530,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:33 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 345 401
+nov 26, 2016 2:20:33 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: -10.000038 429.0 -65.0 530.0
+nov 26, 2016 2:20:33 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -378.00003 161.0
+nov 26, 2016 2:20:33 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:33 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":-53,\"movimientoY\":472,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":82,\"movimientoYFinal\":510,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:33 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 535 338
+nov 26, 2016 2:20:33 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: -53.00004 472.0 82.0 510.0
+nov 26, 2016 2:20:33 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -421.00003 204.0
+nov 26, 2016 2:20:33 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:34 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":-16,\"movimientoY\":509,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":189,\"movimientoYFinal\":479,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:34 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 605 270
+nov 26, 2016 2:20:34 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: -16.000038 509.0 189.0 479.0
+nov 26, 2016 2:20:34 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -384.00003 241.0
+nov 26, 2016 2:20:34 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:35 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":20,\"movimientoY\":479,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":220,\"movimientoYFinal\":516,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:35 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 599 337
+nov 26, 2016 2:20:35 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 20.999962 479.0 220.0 516.0
+nov 26, 2016 2:20:35 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -347.00003 211.0
+nov 26, 2016 2:20:35 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:37 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":132,\"movimientoY\":516,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":318,\"movimientoYFinal\":440,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:37 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 585 224
+nov 26, 2016 2:20:37 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 132.99997 516.0 318.0 440.0
+nov 26, 2016 2:20:37 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -235.00003 248.0
+nov 26, 2016 2:20:37 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:39 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":317,\"movimientoY\":440,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":294,\"movimientoYFinal\":370,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:39 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 376 230
+nov 26, 2016 2:20:39 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 317.99948 440.0 294.0 370.0
+nov 26, 2016 2:20:39 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -50.00052 172.0
+nov 26, 2016 2:20:39 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:40 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":293,\"movimientoY\":370,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":359,\"movimientoYFinal\":364,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:40 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 465 294
+nov 26, 2016 2:20:40 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 293.99948 370.0 359.0 364.0
+nov 26, 2016 2:20:40 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -74.00052 102.0
+nov 26, 2016 2:20:40 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:41 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":328,\"movimientoY\":364,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":367,\"movimientoYFinal\":400,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:41 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 438 336
+nov 26, 2016 2:20:41 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 328.99948 364.0 367.0 400.0
+nov 26, 2016 2:20:41 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -39.00052 96.0
+nov 26, 2016 2:20:41 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:42 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":366,\"movimientoY\":400,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":451,\"movimientoYFinal\":426,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:42 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 484 326
+nov 26, 2016 2:20:42 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 366.99948 400.0 451.0 426.0
+nov 26, 2016 2:20:42 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -1.0005188 132.0
+nov 26, 2016 2:20:42 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:43 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":407,\"movimientoY\":426,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":445,\"movimientoYFinal\":511,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:43 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 437 385
+nov 26, 2016 2:20:43 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 407.99948 426.0 445.0 511.0
+nov 26, 2016 2:20:43 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: 39.99948 158.0
+nov 26, 2016 2:20:43 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":439,\"movimientoY\":458,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":477,\"movimientoYFinal\":543,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 437 385
+nov 26, 2016 2:20:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 439.99948 458.0 477.0 543.0
+nov 26, 2016 2:20:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: 71.99948 190.0
+nov 26, 2016 2:20:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":470,\"movimientoY\":489,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":459,\"movimientoYFinal\":588,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 388 399
+nov 26, 2016 2:20:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 470.99948 489.0 459.0 588.0
+nov 26, 2016 2:20:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: 102.99948 221.0
+nov 26, 2016 2:20:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":458,\"movimientoY\":510,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":403,\"movimientoYFinal\":653,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 344 443
+nov 26, 2016 2:20:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 458.99948 510.0 403.0 653.0
+nov 26, 2016 2:20:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: 90.99948 242.0
+nov 26, 2016 2:20:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:45 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":424,\"movimientoY\":544,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":348,\"movimientoYFinal\":725,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:45 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 323 481
+nov 26, 2016 2:20:45 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 424.99948 544.0 348.0 725.0
+nov 26, 2016 2:20:45 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: 56.99948 276.0
+nov 26, 2016 2:20:45 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:46 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":402,\"movimientoY\":596,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":224,\"movimientoYFinal\":777,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:46 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 221 481
+nov 26, 2016 2:20:46 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 402.8779 596.0 224.0 777.0
+nov 26, 2016 2:20:46 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: 34.8779 328.0
+nov 26, 2016 2:20:46 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":238,\"movimientoY\":762,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":-17,\"movimientoYFinal\":792,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 144 330
+nov 26, 2016 2:20:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 238.82321 762.0 -17.0 792.0
+nov 26, 2016 2:20:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -129.17679 494.0
+nov 26, 2016 2:20:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":169,\"movimientoY\":792,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":82,\"movimientoYFinal\":926,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 312 434
+nov 26, 2016 2:20:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 169.82321 792.0 82.0 926.0
+nov 26, 2016 2:20:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -198.17679 524.0
+nov 26, 2016 2:20:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":147,\"movimientoY\":826,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":234,\"movimientoYFinal\":952,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 486 426
+nov 26, 2016 2:20:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 147.53976 826.0 234.0 952.0
+nov 26, 2016 2:20:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -220.46024 558.0
+nov 26, 2016 2:20:50 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:52 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":212,\"movimientoY\":920,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":437,\"movimientoYFinal\":952,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:52 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 625 332
+nov 26, 2016 2:20:52 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 212.04141 920.0 437.0 952.0
+nov 26, 2016 2:20:52 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -155.95859 652.0
+nov 26, 2016 2:20:52 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32
+nov 26, 2016 2:20:53 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El mensaje es:{"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":2,\"nombre\":\"Agustin\",\"apellido\":\"Espinola\",\"nombreUsuario\":\"Agus\",\"password\":\"123\",\"personaje\":{\"id\":5,\"usuarioId\":2,\"castaId\":3,\"razaId\":2,\"nombre\":\"He-Man\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":257,\"movimientoY\":952,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":405,\"movimientoYFinal\":1016,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 2:20:53 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse posMouse: 548 364
+nov 26, 2016 2:20:53 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse en: 257.0414 952.0 405.0 1016.0
+nov 26, 2016 2:20:53 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse camara offset en: -110.95859 684.0
+nov 26, 2016 2:20:53 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: movimiento mouse offset en: 32 32

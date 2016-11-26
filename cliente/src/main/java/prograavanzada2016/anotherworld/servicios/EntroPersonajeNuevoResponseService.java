@@ -22,6 +22,9 @@ public void ejecutar(MessageBase message) throws Exception {
 	PersonajeNuevoConectadoMessage resp = (PersonajeNuevoConectadoMessage) message;
 	Usuario usuario = new Gson().fromJson(resp.Payload, Usuario.class);
 	this.clienteJugable.getOtrosClientes().add(usuario);
+	while(usuario.equals(null) || usuario == null){
+		Thread.sleep(2000);
+	}
 	this.clienteJugable.getJuego().agregarNuevoPersonaje(usuario);
 	//new VentanaDeBienvenida(clienteJugable);		
 }}
