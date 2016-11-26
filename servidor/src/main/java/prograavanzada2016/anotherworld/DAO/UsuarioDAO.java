@@ -67,7 +67,7 @@ public class UsuarioDAO extends DAO<Usuario>{
 			return true;
 		}
 	        catch (SQLException ex) {
-	            System.out.println(ex);
+	            LogAnother.getInstance().logSentence(ex);
 	        }
 		return false;		
 	}
@@ -110,7 +110,7 @@ public class UsuarioDAO extends DAO<Usuario>{
             	usuario.setNombre(rs.getString("nombre"));
             	usuario.setApellido(rs.getString("apellido"));
             	
-            	System.out.println("los datos son:"+usuario.getNombre());
+            	LogAnother.getInstance().logSentence("los datos son:"+usuario.getNombre());
             	conn.close();
             	return ENCONTRADO;
             }else{

@@ -1,5 +1,6 @@
 package prograavanzada2016.anotherworld.cliente;
 
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -59,7 +60,7 @@ public class ClienteManager implements Runnable, SubjectLogin{
 			logger = LogAnother.getInstance();
 			try{
 				ventanaPrincipal = new VentanaLogin(this.clienteJugable);
-				System.out.println("ventana principal activada");
+				LogAnother.getInstance().logSentence("ventana principal activada");
 				entrada = new Scanner(socket.getInputStream());
 				salida = new PrintWriter(socket.getOutputStream());
 				salida.flush();
@@ -68,7 +69,7 @@ public class ClienteManager implements Runnable, SubjectLogin{
 				e.printStackTrace();
 				JOptionPane.showMessageDialog(null, e.getMessage()+"Ocurrió un error, para más información"+System.getProperty("line.separator") 
 				+" vea el LOG del sistema.", "ERROR", JOptionPane.ERROR_MESSAGE);
-				logger.log(e.getStackTrace().toString());
+				logger.logError(e.getStackTrace().toString());
 			}
 			finally{
 				this.socket.close();
@@ -77,7 +78,7 @@ public class ClienteManager implements Runnable, SubjectLogin{
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, e.getMessage()+"Ocurrió un error, para más información"+System.getProperty("line.separator") 
 			+" vea el LOG del sistema.", "ERROR", JOptionPane.ERROR_MESSAGE);
-			logger.log(e.getMessage());
+			logger.logError(e.getMessage());
 		}
 		
 	}
@@ -90,9 +91,9 @@ public class ClienteManager implements Runnable, SubjectLogin{
 	
 	public void receive() throws Exception{
 		if(entrada.hasNext()){
-			System.out.println("HUBO UN MENSAJE NUEVO");
+			LogAnother.getInstance().logSentence("HUBO UN MENSAJE NUEVO");
 			String mensajeDeEntrada = entrada.nextLine();
-			System.out.println("El servidor dice: "+mensajeDeEntrada);
+			LogAnother.getInstance().logSentence("El servidor dice: "+mensajeDeEntrada);
 			//this.notifyAllObservers(message);
 			MessageDeserializer deserializer = new MessageDeserializer("type");
 	        
@@ -118,8 +119,8 @@ public class ClienteManager implements Runnable, SubjectLogin{
         deserializer.registerMessageType("consultaColisionResponse", ConsultaColisionResponseMessage.class);
 	}
 
-	public void sendMensaje(String mensaje){
-		System.out.println("El mensaje es:"+ mensaje);
+	public void sendMensaje(String mensaje) throws IOException{
+		LogAnother.getInstance().logSentence("El mensaje es:"+ mensaje);
 		salida.println(mensaje);
 		salida.flush();
 	}

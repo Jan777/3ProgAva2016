@@ -36,7 +36,7 @@ public class CrearPersonajeNuevoService implements ServicioServer{
 						salida.println(new Gson().toJson(rawMessageLogin));
 						salida.flush();
 					}else{
-						/*System.out.println("soy los demas");
+						/*LogAnother.getInstance().logSentence("soy los demas");
 						PrintWriter salida = new PrintWriter(cliente.getSocket().getOutputStream());
 						
 						RawMessage rawMessageLogin = new RawMessage();

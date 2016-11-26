@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Properties;
 
 import prograavanzada2016.anotherworld.modelos.InteligenciaArtificial;
+import prograavanzada2016.anotherworld.resources.LogAnother;
 
 
 public class Servidor{
@@ -38,9 +39,9 @@ public class Servidor{
 	public void iniciarServidor() throws IOException, SQLException{
 		this.enLinea=true;
 		while(this.enLinea){
-			System.out.println("Esperando conexion...");
+			LogAnother.getInstance().logSentence("Esperando conexion...");
 			Socket socket = serverSocket.accept();
-			System.out.println("Cliente conectado...");
+			LogAnother.getInstance().logSentence("Cliente conectado...");
 			this.cantidadDeConexiones++;
 			ServidorManager servidorManager=null;
 			ClienteServicio cs = new ClienteServicio(socket,cantidadDeConexiones);

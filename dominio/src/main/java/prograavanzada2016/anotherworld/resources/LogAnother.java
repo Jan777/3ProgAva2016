@@ -30,8 +30,11 @@ public class LogAnother {
 		return instance;
 	}
 	
-	public void log(String logString){
+	public void logError(String logString){
 		 LOGGER.log(Level.SEVERE, logString);
+	}
+	public void logSentence(String logString){
+		 LOGGER.log(Level.INFO, logString);
 	}
 	public void log(Exception e){
 		StringWriter sw = new StringWriter();
