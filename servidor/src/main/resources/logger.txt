@@ -1,0 +1,8 @@
+nov 25, 2016 10:47:13 PM prograavanzada2016.anotherworld.resources.LogAnother log
+GRAVE: hola
+nov 25, 2016 10:47:48 PM prograavanzada2016.anotherworld.resources.LogAnother log
+GRAVE: hola
+nov 25, 2016 10:47:48 PM prograavanzada2016.anotherworld.resources.LogAnother log
+GRAVE: holaa
+nov 25, 2016 10:47:48 PM prograavanzada2016.anotherworld.resources.LogAnother log
+GRAVE: holaaa

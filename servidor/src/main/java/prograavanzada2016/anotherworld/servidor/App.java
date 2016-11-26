@@ -14,7 +14,6 @@ public class App {
 			logger = LogAnother.getInstance();
 			Servidor server = new Servidor();
 			server.iniciarServidor();
-			
 		}
 		catch(Exception e){
 			JOptionPane.showMessageDialog(null, " Ocurrió un error, para más información"+System.getProperty("line.separator") 

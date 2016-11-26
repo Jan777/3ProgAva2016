@@ -101,28 +101,24 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
         
         JComboBox comboBox = new JComboBox();
         comboBox.setBounds(20, 29, 144, 20);
-        //comboBox.addItem(enemigo.getNombre());
+        comboBox.addItem("Minotauro "+enemigo.getUsuario().getId());
         inputPanel.add(comboBox);
         
         JLabel lblNombrePj = new JLabel("Batalla");
         lblNombrePj.setBounds(224, 11, 109, 20);
         inputPanel.add(lblNombrePj);
         
-        lblNewLabel = new JLabel("Jugador 1:" ); //+ personaje.getNombre()
+        lblNewLabel = new JLabel(personaje.getUsuario().getPersonaje().getNombre() ); //+ personaje.getNombre()
         lblNewLabel.setBounds(224, 29, 96, 20);
         inputPanel.add(lblNewLabel);
         
-        lblJugador = new JLabel("Mounstro:" ); //+ enemigo.getNombre()
+        lblJugador = new JLabel("Minotauro "+enemigo.getUsuario().getId() ); //+ enemigo.getNombre()
         lblJugador.setBounds(224, 46, 96, 20);
         inputPanel.add(lblJugador);
         
         lblAAtacar = new JLabel("A atacar:");
         lblAAtacar.setBounds(20, 3, 109, 20);
         inputPanel.add(lblAAtacar);
-        
-        lblEnergia = new JLabel("Energia");
-        lblEnergia.setBounds(350, 11, 109, 20);
-        inputPanel.add(lblEnergia);
         
         lblVida = new JLabel("Salud ");
         lblVida.setBounds(450, 11, 109, 20);
@@ -161,19 +157,12 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
         btnLanzarHechizo.setBounds(640, 44, 130, 23);
         inputPanel.add(btnLanzarHechizo);
         
-        lblNewLabel_2 = new JLabel("New label1" ); //personaje.getEnergia()
-        lblNewLabel_2.setBounds(349, 25, 155, 29);
-        inputPanel.add(lblNewLabel_2);
         
-        label = new JLabel("New label2" ); //enemigo.getEnergia()
-        label.setBounds(350, 46, 155, 20);
-        inputPanel.add(label);
-        
-        label_1 = new JLabel("New label3" ); //personaje.getSalud()
+        label_1 = new JLabel(personaje.getUsuario().getPersonaje().getSalud()+"/"+personaje.getUsuario().getPersonaje().getSalud()); //personaje.getSalud()
         label_1.setBounds(431, 25, 155, 29);
         inputPanel.add(label_1);
         
-        label_2 = new JLabel("New label4"); // enemigo.getSalud()
+        label_2 = new JLabel("100/100"); // enemigo.getSalud()
         label_2.setBounds(432, 46, 155, 20);
         inputPanel.add(label_2);
         this.setResizable(false);

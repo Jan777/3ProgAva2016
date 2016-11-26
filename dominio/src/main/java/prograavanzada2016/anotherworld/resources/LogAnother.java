@@ -17,7 +17,7 @@ public class LogAnother {
 	
 	private LogAnother() throws IOException{
 		Propiedades prop = Propiedades.getInstance();
-		fh = new FileHandler(prop.getProperty("logger"));
+		fh = new FileHandler(prop.getProperty("logger"),true);
 		SimpleFormatter formatter = new SimpleFormatter();
 		fh.setFormatter(formatter);
 		LOGGER.addHandler(fh);

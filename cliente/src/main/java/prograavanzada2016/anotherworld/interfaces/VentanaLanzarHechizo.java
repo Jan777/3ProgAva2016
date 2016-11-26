@@ -28,19 +28,19 @@ public class VentanaLanzarHechizo extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaLanzarHechizo frame = new VentanaLanzarHechizo();
-					frame.setVisible(true);
-					frame.setSize(new Dimension(300,300));
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					VentanaLanzarHechizo frame = new VentanaLanzarHechizo();
+//					frame.setVisible(true);
+//					frame.setSize(new Dimension(300,300));
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the frame.
@@ -49,8 +49,8 @@ public class VentanaLanzarHechizo extends JFrame {
 	public VentanaLanzarHechizo() throws IOException {
 		setTitle("Lanzar Hechizo");
 		setResizable(false);
-		Image image = new ImageIcon(Propiedades.getInstance().getProperty("IconoVentana")).getImage();
-		setIconImage(image);
+		//Image image = new ImageIcon(Propiedades.getInstance().getProperty("IconoVentana")).getImage();
+		//setIconImage(image);
 		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaMochila.class.getResource("src/main/resources/IconoVentana.jpg")));
 		getContentPane().setLayout(null);
 		
@@ -93,9 +93,9 @@ public class VentanaLanzarHechizo extends JFrame {
 		getContentPane().add(btnCancelar);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(VentanaMochila.class.getResource(Propiedades.getInstance().getProperty("BackgroundMochilaYAlianza"))));
-		lblNewLabel.setBounds(0, 0, 444, 271);
-		getContentPane().add(lblNewLabel);
+		//lblNewLabel.setIcon(new ImageIcon(VentanaMochila.class.getResource(Propiedades.getInstance().getProperty("BackgroundMochilaYAlianza"))));
+		//lblNewLabel.setBounds(0, 0, 444, 271);
+		//getContentPane().add(lblNewLabel);
 	}
 
 }
