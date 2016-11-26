@@ -22,6 +22,7 @@ import prograavanzada2016.anotherworld.mensajes.RawMessage;
 import prograavanzada2016.anotherworld.mensajes.request.PersonajeConsultaMessage;
 import prograavanzada2016.anotherworld.mensajes.request.UsuarioNuevoMessage;
 import prograavanzada2016.anotherworld.modelos.Usuario;
+import prograavanzada2016.anotherworld.resources.LogAnother;
 import prograavanzada2016.anotherworld.resources.Propiedades;
 
 import javax.swing.JLabel;
@@ -31,6 +32,7 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -186,6 +188,7 @@ public class VentanaRegistroDeUsuario extends JFrame {
 	}
 	
 	public void registroButtonActionPerformed(ActionEvent evt){
+		LogAnother log=null;
 		if("".equals(nombreTextField.getText()) || "".equals(apellidoTextField.getText()) || "".equals(nombreUsuarioTextField.getText())){
 			JOptionPane.showMessageDialog(contentPane, "Debe ingresar todos los campos");
 		}
@@ -199,7 +202,12 @@ public class VentanaRegistroDeUsuario extends JFrame {
 			rawMessageLogin.type = "usuarioNuevo";
 			rawMessageLogin.message = new UsuarioNuevoMessage(new Gson().toJson(usuario));
 
-			clienteJugable.getClienteManager().sendMensaje(new Gson().toJson(rawMessageLogin));
+			try {
+				log=LogAnother.getInstance();
+				clienteJugable.getClienteManager().sendMensaje(new Gson().toJson(rawMessageLogin));
+			} catch (IOException e) {
+				log.logError(e.getMessage());
+			}
 			this.setVisible(false);
 		}
 		

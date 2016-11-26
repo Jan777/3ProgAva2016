@@ -16,6 +16,7 @@ import prograavanzada2016.anotherworld.mensajes.response.EnviarEnemigosResponseM
 import prograavanzada2016.anotherworld.mensajes.response.RecibirPersonajesConectadosMessage;
 import prograavanzada2016.anotherworld.modelos.InteligenciaArtificial;
 import prograavanzada2016.anotherworld.modelos.Usuario;
+import prograavanzada2016.anotherworld.resources.LogAnother;
 
 public class EnemigoConsultaResponseService implements ServicioServer{
 	private ClienteJugable clienteJugable;

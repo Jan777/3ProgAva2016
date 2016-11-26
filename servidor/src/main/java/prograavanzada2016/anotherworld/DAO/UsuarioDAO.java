@@ -29,17 +29,7 @@ public class UsuarioDAO extends DAO<Usuario>{
     public UsuarioDAO(Connection conn, Statement stat) throws Exception{
 			Class.forName("org.sqlite.JDBC");
 			Propiedades propiedades = Propiedades.getInstance();
-			conn = DriverManager.getConnection(propiedades.getProperty("rutaBdd")); //solo cambiar esto :)
-			//conn = DriverManager.getConnection(System.getProperty("user.dir") +"\\src\\main\\resources\\jrpg.sqlite");
-			//mati
-			//conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\matut\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
-			//agus
-			//conn = DriverManager.getConnection("jdbc:sqlite:C:\\GitAvanzada\\PrograAvanzada\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
-			//martin
-			//conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
-			//lukki
-			//conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\lukki\\Desktop\\JuegoProgra\\jrpg\\servidor\\src\\main\\java\\prograavanzada2016\\anotherworld\\DAO\\jrpg.sqlite");
-			//conn.setAutoCommit(false);
+			conn = DriverManager.getConnection(propiedades.getProperty("rutaBdd"));
 			statement = conn.createStatement();
 			stat = statement;
 			this.conn=conn;
@@ -67,7 +57,7 @@ public class UsuarioDAO extends DAO<Usuario>{
 			return true;
 		}
 	        catch (SQLException ex) {
-	            LogAnother.getInstance().logSentence(ex);
+	            LogAnother.getInstance().log(ex);
 	        }
 		return false;		
 	}
@@ -98,7 +88,7 @@ public class UsuarioDAO extends DAO<Usuario>{
 	}
 
 	@Override
-	public long buscar(Usuario usuario) throws DAOException {
+	public long buscar(Usuario usuario) throws DAOException, IOException {
 		try {
 			ResultSet rs;
 			Personaje personaje;

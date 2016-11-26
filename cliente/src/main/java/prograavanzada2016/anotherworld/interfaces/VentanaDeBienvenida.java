@@ -5,6 +5,7 @@ import prograavanzada2016.anotherworld.mensajes.RawMessage;
 import prograavanzada2016.anotherworld.mensajes.request.LoginMessage;
 import prograavanzada2016.anotherworld.mensajes.request.PersonajeConsultaMessage;
 import prograavanzada2016.anotherworld.modelos.Usuario;
+import prograavanzada2016.anotherworld.resources.LogAnother;
 import prograavanzada2016.anotherworld.resources.Propiedades;
 
 import java.awt.BorderLayout;
@@ -88,6 +89,7 @@ public class VentanaDeBienvenida extends JFrame {
 		al= new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				LogAnother log = null;
 				if(progressBar.getValue() < 100){
 					progressBar.setValue(progressBar.getValue()+10);
 				}else{
@@ -96,7 +98,12 @@ public class VentanaDeBienvenida extends JFrame {
 					rawMessageLogin.type = "personajeConsulta";
 					rawMessageLogin.message = new PersonajeConsultaMessage(new Gson().toJson(usuario));
 
-					clienteJugable.getClienteManager().sendMensaje(new Gson().toJson(rawMessageLogin));
+					try {
+						log=LogAnother.getInstance();
+						clienteJugable.getClienteManager().sendMensaje(new Gson().toJson(rawMessageLogin));
+					} catch (IOException e1) {
+						log.logError(e1.getMessage());
+					}
 					setVisible(false);
 				}
 								

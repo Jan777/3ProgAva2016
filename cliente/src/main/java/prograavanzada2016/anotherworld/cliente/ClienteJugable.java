@@ -85,11 +85,11 @@ public class ClienteJugable{
 		return clienteManager.reciveMessage(); //devuelve un MensajeEnviable en forma de json
 	}
 	
-	public void enviarComando(Comando comando){
+	public void enviarComando(Comando comando) throws IOException{
 		clienteManager.sendMensaje(comando.enviarComando());
 	}
 	
-	public void enviarComando(RawMessage rawMessage){
+	public void enviarComando(RawMessage rawMessage) throws IOException{
 		clienteManager.sendMensaje(gson.toJson(rawMessage));
 	}
 

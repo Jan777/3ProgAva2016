@@ -13,6 +13,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import prograavanzada2016.anotherworld.resources.LogAnother;
+
 
 public class Ventana extends JFrame {
 
