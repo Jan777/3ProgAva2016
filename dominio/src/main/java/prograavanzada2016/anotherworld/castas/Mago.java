@@ -17,7 +17,7 @@ public class Mago extends Casta{
 
 	@Override
 	public void saludar() {
-		System.out.println("El conocimiento es poder");
+		//System.out.println("El conocimiento es poder");
 		
 	}
 

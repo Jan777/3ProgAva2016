@@ -15,7 +15,7 @@ public class Guerrero extends Casta{
 
 	@Override
 	public void saludar() {
-		System.out.println("victoria o muerte");
+		//System.out.println("victoria o muerte");
 		
 	}
 

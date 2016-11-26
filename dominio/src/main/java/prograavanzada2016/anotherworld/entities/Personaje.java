@@ -160,7 +160,7 @@ public class Personaje extends Ente{
 			this.setAtaque(objetoArma.getBonusAtaque()+this.getAtaque());
 			this.setPuntosDeEnergiaPorAtaque(objetoArma.getPuntosDeEnergiaPorAtaque());
 		}else{
-			System.out.println("No se puede equipar el arma, reload reload");
+			//System.out.println("No se puede equipar el arma, reload reload");
 		}
 	}
 	
@@ -169,7 +169,7 @@ public class Personaje extends Ente{
 			this.objetoArmadura=objetoArmadura;
 			this.setDefensa(objetoArmadura.getBonusDefensa()+this.getDefensa());
 		}else{
-			System.out.println("Una fuerza extraña me impide usar esta armadura");
+			//System.out.println("Una fuerza extraña me impide usar esta armadura");
 		}
 	}
 	
@@ -178,7 +178,7 @@ public class Personaje extends Ente{
 		if(habilidad.getNivelRequerido()<=this.getNivel()){
 			habilidad.LanzarHechizo(this, enteObjetivo);
 		}else{
-			System.out.println("Siento que aun me falta energias para esta tecnica.");
+			//System.out.println("Siento que aun me falta energias para esta tecnica.");
 		}
 	}
 	
@@ -225,7 +225,7 @@ public class Personaje extends Ente{
 	}
 
 	public void mostrarStats(){
-		System.out.println("Nombre: "+super.getNombre());
+		/*System.out.println("Nombre: "+super.getNombre());
 		System.out.println("Nivel: "+super.getNivel());
 		System.out.println("Fuerza: "+this.getFuerza());
 		System.out.println("Destreza: "+this.getDestreza());
@@ -235,7 +235,7 @@ public class Personaje extends Ente{
 		System.out.println("Mana: "+this.getMana());
 		System.out.println("Mana en uso: "+this.getManaEnUso());
 		System.out.println("Energia: "+this.getEnergia());
-		System.out.println("Energia en uso:"+this.energiaEnUso);
+		System.out.println("Energia en uso:"+this.energiaEnUso);*/
 	}
 
 	@Override

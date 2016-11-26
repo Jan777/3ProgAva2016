@@ -338,10 +338,10 @@ public abstract class Ente {
 				ente.serAtacado(this.calcularPuntosDeAtaque());
 				//ente.despuesDeAtacar();
 			}else{
-				System.out.println("Intento atacar pero fallo");
+				//System.out.println("Intento atacar pero fallo");
 			}
 		}else{
-			System.out.println("Aguanta He-Man, ya estoy muerto");
+			//System.out.println("Aguanta He-Man, ya estoy muerto");
 		}
 		this.despuesDeAtacar(ente);
 	}

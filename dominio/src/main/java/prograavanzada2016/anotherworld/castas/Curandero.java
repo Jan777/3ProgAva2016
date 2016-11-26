@@ -15,7 +15,7 @@ public class Curandero extends Casta {
 	
 	@Override
 	public void saludar() {
-		System.out.println("La luz es el camino");
+		//System.out.println("La luz es el camino");
 	}
 
 	@Override

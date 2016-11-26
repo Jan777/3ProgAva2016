@@ -20,7 +20,7 @@ public class AlientoDeFuegoNegro extends Habilidad
 		}
 		else
 		{
-			System.out.println("Fallo el lanzamiento");
+			//System.out.println("Fallo el lanzamiento");
 		}	
 	}
 

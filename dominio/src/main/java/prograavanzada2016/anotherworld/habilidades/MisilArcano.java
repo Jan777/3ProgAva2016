@@ -17,7 +17,7 @@ public class MisilArcano extends HabilidadPersonaje{
 		if(enteLanzador.restarManaEnUso(this.costeMana)){
 			enteObjetivo.serAtacadoConMagia(enteLanzador.getInteligencia()*2);
 		}else{
-			System.out.println("Fallo el lanzamiento");
+			//System.out.println("Fallo el lanzamiento");
 		}	
 	}
 	

@@ -55,7 +55,7 @@ public class ArenaPvP {
 		int contadorDeAtaquesPersonajes=0;
 		int contadorDeAtaquesEnemigos=0;
 		for(int x=0; x<4 && this.grupoPersonajesA.viven() && this.grupoPersonajesB.viven();x++){
-			System.out.println("**************************");
+			//System.out.println("**************************");
 			if(x%2==0){
 				//turno aliados
 				boolean flag=true;
@@ -89,11 +89,11 @@ public class ArenaPvP {
 			}
 			
 			if(!this.grupoPersonajesA.viven()){
-				System.out.println("ganan izquierda");
+				//System.out.println("ganan izquierda");
 				this.armarHistorial(grupoPersonajesB,grupoPersonajesA);
 			}
 			if(!this.grupoPersonajesB.viven()) {
-				System.out.println("ganan derecha");
+				//System.out.println("ganan derecha");
 				this.armarHistorial(grupoPersonajesA,grupoPersonajesB);
 			}
 		}

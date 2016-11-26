@@ -16,6 +16,6 @@ public abstract class MessageBase {
 class DisconnectMessage extends MessageBase {
 	@Override
 	public void Resolve(){
-		System.out.println("Disconnected");
+		//System.out.println("Disconnected");
 	}
 }

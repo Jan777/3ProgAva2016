@@ -102,7 +102,7 @@ public class ArenaPvE {
 		int contadorDeAtaquesPersonajes=0;
 		int contadorDeAtaquesEnemigos=0;
 		for(int x=0; x<100000 && this.grupoEnemigos.viven() && this.grupoPersonajes.viven();x++){
-			System.out.println("**************************");
+			//System.out.println("**************************");
 			if(x%2==0){
 				//turno aliados
 				boolean flag=true;
@@ -136,11 +136,11 @@ public class ArenaPvE {
 			}
 			
 			if(!this.grupoEnemigos.viven()){
-				System.out.println("Murieron todos los Enemigos");
+				//System.out.println("Murieron todos los Enemigos");
 				this.otorgarExperiencia();
 			}
 			if(!this.grupoPersonajes.viven()) {
-				System.out.println("Murieron todos los Personajes");
+				//System.out.println("Murieron todos los Personajes");
 			}
 		}
 	}
