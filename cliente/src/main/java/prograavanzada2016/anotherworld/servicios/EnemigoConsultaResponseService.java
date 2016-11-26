@@ -33,7 +33,7 @@ public class EnemigoConsultaResponseService implements ServicioServer{
 		for(InteligenciaArtificial enemigo : enemigos){
 			//Thread.sleep(10000);
 			this.clienteJugable.getEnemigos().add(enemigo);
-			System.out.println("se agrego un nuevo enemigo");
+			LogAnother.getInstance().logSentence("se agrego un nuevo enemigo");
 			this.clienteJugable.getJuego().agregarNuevoEnemigo(enemigo);
 		}
 		

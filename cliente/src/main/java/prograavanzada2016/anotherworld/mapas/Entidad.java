@@ -14,6 +14,7 @@ import com.google.gson.Gson;
 
 import prograavanzada2016.anotherworld.modelos.PersonajeModel;
 import prograavanzada2016.anotherworld.modelos.Usuario;
+import prograavanzada2016.anotherworld.resources.LogAnother;
 import prograavanzada2016.anotherworld.interfaces.VentanaCombatePvE;
 import prograavanzada2016.anotherworld.juego.*;
 import prograavanzada2016.anotherworld.mensajes.RawMessage;
@@ -162,7 +163,7 @@ public class Entidad {
 
 	
 
-	public void getEntrada() {
+	public void getEntrada() throws IOException {
 
 		posMouse = juego.getHandlerMouse().getPosMouse();
 
@@ -193,10 +194,10 @@ public class Entidad {
 			
 			
 			
-			System.out.println("movimiento mouse posMouse: "+posMouse[0]+" "+posMouse[1]);
-			System.out.println("movimiento mouse en: "+xInicio+" "+yInicio+" "+xFinal+" "+yFinal);
-			System.out.println("movimiento mouse camara offset en: "+juego.getCamara().getxOffset()+" "+juego.getCamara().getyOffset());
-			System.out.println("movimiento mouse offset en: "+xOffset+" "+yOffset);
+			LogAnother.getInstance().logSentence("movimiento mouse posMouse: "+posMouse[0]+" "+posMouse[1]);
+			LogAnother.getInstance().logSentence("movimiento mouse en: "+xInicio+" "+yInicio+" "+xFinal+" "+yFinal);
+			LogAnother.getInstance().logSentence("movimiento mouse camara offset en: "+juego.getCamara().getxOffset()+" "+juego.getCamara().getyOffset());
+			LogAnother.getInstance().logSentence("movimiento mouse offset en: "+xOffset+" "+yOffset);
 			difX = Math.abs(xFinal - xInicio);
 			difY = Math.abs(yFinal - yInicio);
 			relacion = difX / difY;
@@ -232,7 +233,7 @@ public class Entidad {
 	}
 	
 	
-	public void getEntradaAutomatica() {
+	public void getEntradaAutomatica() throws IOException {
 
 		//posMouse = juego.getHandlerMouse().getPosMouse();
 		int posMouse[] = new int[2];
@@ -261,10 +262,10 @@ public class Entidad {
 			yFinal = this.getUsuario().getPersonaje().getMovimientoYFinal();
 			
 			
-			System.out.println("movimiento automatico posMouse: "+posMouse[0]+" "+posMouse[1]);
-			System.out.println("movimiento automatico en: "+xInicio+" "+yInicio+" "+xFinal+" "+yFinal);
-			System.out.println("movimiento automatico offset en: "+xOffsetAutomatico+" "+yOffsetAutomatico);
-			System.out.println("movimiento automatico offset en: "+xOffset+" "+yOffset);
+			LogAnother.getInstance().logSentence("movimiento automatico posMouse: "+posMouse[0]+" "+posMouse[1]);
+			LogAnother.getInstance().logSentence("movimiento automatico en: "+xInicio+" "+yInicio+" "+xFinal+" "+yFinal);
+			LogAnother.getInstance().logSentence("movimiento automatico offset en: "+xOffsetAutomatico+" "+yOffsetAutomatico);
+			LogAnother.getInstance().logSentence("movimiento automatico offset en: "+xOffset+" "+yOffset);
 			
 			
 						
@@ -606,7 +607,7 @@ public class Entidad {
 		return null;
 	}
 	
-	public void calcularMovimientoDeMaquina(float x, float y){
+	public void calcularMovimientoDeMaquina(float x, float y) throws IOException{
 		if(this.getUsuario().getId()==1){
 			if(x==300 && y==300){
 				xFinal = 300;
@@ -639,25 +640,25 @@ public class Entidad {
 				yFinal=1000;
 			}
 		}else if(this.getUsuario().getId()==3){
-			System.out.println(x+"-"+y);
+			LogAnother.getInstance().logSentence(x+"-"+y);
 			if(x==300 && y==300){
-				System.out.println("1");
+				LogAnother.getInstance().logSentence("1");
 				xFinal = -500;
 				yFinal = 1000;
 			}else if(x==-500 && y==1000){
-				System.out.println("2");
+				LogAnother.getInstance().logSentence("2");
 				xFinal=-500;
 				yFinal=900;
 			}else if(x==-500 && y==900){
-				System.out.println("3");
+				LogAnother.getInstance().logSentence("3");
 				xFinal=-400;
 				yFinal=900;
 			}else if(x==-400 && y==900){
-				System.out.println("4");
+				LogAnother.getInstance().logSentence("4");
 				xFinal=-400;
 				yFinal=1000;
 			}else if(x==-400 && y==1000){
-				System.out.println("5");
+				LogAnother.getInstance().logSentence("5");
 				xFinal=-500;
 				yFinal=1000;
 			}

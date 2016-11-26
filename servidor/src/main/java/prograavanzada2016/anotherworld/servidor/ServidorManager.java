@@ -63,7 +63,7 @@ public class ServidorManager implements Runnable{
 		for(int x=0; x<Servidor.clientesSala1.size(); x++){
 			if(!Servidor.clientesSala1.get(x).getSocket().isConnected()){
 				this.salaDeChat.remove(x);
-				System.out.println("se removio uno");
+				LogAnother.getInstance().logSentence("se removio uno");
 			}
 		}
 	}
@@ -80,14 +80,14 @@ public class ServidorManager implements Runnable{
 				new PrintWriter(socket.getOutputStream());
 				
 				while(true){
-					System.out.println("Manda algo");
+					LogAnother.getInstance().logSentence("Manda algo");
 					this.checkConnection();
 					if(!entrada.hasNext()){
 						return;
 					}
 					mensajeDeEntrada = entrada.nextLine();
 					
-					System.out.println("El cliente dice: "+mensajeDeEntrada);
+					LogAnother.getInstance().logSentence("El cliente dice: "+mensajeDeEntrada);
 					
 					MessageDeserializer deserializer = new MessageDeserializer("type");
 				        

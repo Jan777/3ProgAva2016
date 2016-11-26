@@ -55,7 +55,7 @@ public class Ventana extends JFrame {
 		//setContentPane(contentPane);
 		mapa = new MapaViejoParaElRecuerdo();
 		add(mapa);
-		System.out.println("ventana principal:"+this.getWidth()+" "+this.getHeight());
+		LogAnother.getInstance().logSentence("ventana principal:"+this.getWidth()+" "+this.getHeight());
 	}
 	
 }
