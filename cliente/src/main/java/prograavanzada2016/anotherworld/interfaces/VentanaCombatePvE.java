@@ -54,7 +54,8 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
     
     private BattleScreen battleScreen;
 
-    public VentanaCombatePvE(Entidad personaje, Entidad enemigo) throws UnsupportedAudioFileException, IOException, LineUnavailableException{/*Personaje personaje, Enemigo enemigo*/
+    public VentanaCombatePvE(Entidad personaje, Entidad enemigo) throws UnsupportedAudioFileException, IOException, LineUnavailableException{
+    	setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);/*Personaje personaje, Enemigo enemigo*/
     	battleScreen = new BattleScreen();
     	SonidoManager sm = SonidoManager.getInstance();
     	Propiedades prop = Propiedades.getInstance();
@@ -152,7 +153,7 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
 				ventanaHechizo.setVisible(true);
 				ventanaHechizo.setResizable(false);
 				ventanaHechizo.setSize(new Dimension(400,280));
-				ventanaHechizo.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+				ventanaHechizo.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 				ventanaHechizo.setLocationRelativeTo(null);
 				
         	}
