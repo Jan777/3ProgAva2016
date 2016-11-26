@@ -3996,3 +3996,123 @@ nov 26, 2016 1:55:32 AM prograavanzada2016.anotherworld.resources.LogAnother log
 INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":299,\"movimientoY\":395,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":460,\"movimientoYFinal\":435,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
 nov 26, 2016 1:55:32 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
 INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:20 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Esperando conexion...
+nov 26, 2016 1:56:24 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Cliente conectado...
+nov 26, 2016 1:56:24 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Esperando conexion...
+nov 26, 2016 1:56:24 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"login","message":{"Payload":"{\"clienteId\":0,\"id\":0,\"nombre\":\"\",\"apellido\":\"\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: antes de entrar
+nov 26, 2016 1:56:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: los datos son:vbnvbn
+nov 26, 2016 1:56:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: enrttamos
+nov 26, 2016 1:56:30 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: encontrado
+nov 26, 2016 1:56:30 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"personajeConsulta","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:31 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:32 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"buscarPersonajes","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":0,\"movimientoY\":0,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":0,\"movimientoYFinal\":0,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:32 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:32 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"buscarEnemigos","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":0,\"movimientoY\":0,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":0,\"movimientoYFinal\":0,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:32 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:34 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":0,\"movimientoY\":0,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":59,\"movimientoYFinal\":73,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:34 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:34 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":12,\"movimientoY\":12,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":58,\"movimientoYFinal\":96,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:35 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:35 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":23,\"movimientoY\":23,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":66,\"movimientoYFinal\":109,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:35 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:35 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":36,\"movimientoY\":36,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":76,\"movimientoYFinal\":122,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:35 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:35 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":47,\"movimientoY\":47,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":87,\"movimientoYFinal\":133,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:35 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:35 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":59,\"movimientoY\":59,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":99,\"movimientoYFinal\":145,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:35 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:36 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":72,\"movimientoY\":72,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":112,\"movimientoYFinal\":158,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:36 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:36 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":84,\"movimientoY\":84,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":124,\"movimientoYFinal\":170,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:36 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:36 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":97,\"movimientoY\":97,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":137,\"movimientoYFinal\":183,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:36 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:36 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":111,\"movimientoY\":111,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":151,\"movimientoYFinal\":197,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:36 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:36 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":127,\"movimientoY\":127,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":167,\"movimientoYFinal\":213,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:36 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:37 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":156,\"movimientoY\":156,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":196,\"movimientoYFinal\":242,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:37 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:37 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":172,\"movimientoY\":172,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":212,\"movimientoYFinal\":258,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:37 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:37 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":187,\"movimientoY\":187,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":227,\"movimientoYFinal\":273,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:37 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:37 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":188,\"movimientoY\":188,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":228,\"movimientoYFinal\":274,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:37 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:38 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":214,\"movimientoY\":214,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":233,\"movimientoYFinal\":318,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:38 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:38 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":226,\"movimientoY\":226,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":245,\"movimientoYFinal\":330,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:38 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:39 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":245,\"movimientoY\":275,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":348,\"movimientoYFinal\":382,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:39 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:39 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":280,\"movimientoY\":312,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":426,\"movimientoYFinal\":420,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:39 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:40 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":299,\"movimientoY\":326,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":444,\"movimientoYFinal\":434,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:40 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:40 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"moverPersonaje","message":{"Payload":"{\"clienteId\":0,\"id\":12,\"nombre\":\"vbnvbn\",\"apellido\":\"vbnvbn\",\"nombreUsuario\":\"vbnvbn\",\"password\":\"vbnvbn\",\"personaje\":{\"id\":8,\"usuarioId\":12,\"castaId\":1,\"razaId\":1,\"nombre\":\"vbnvbn\",\"fuerza\":15,\"destreza\":10,\"inteligencia\":5,\"mana\":100,\"energia\":150,\"nivel\":1,\"salud\":200,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":327,\"movimientoY\":347,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":480,\"movimientoYFinal\":438,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:40 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 1:56:40 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"consultaColision","message":{"Payload":"{\"clienteId\":12,\"id\":1,\"nombre\":\"\",\"apellido\":\"\",\"nombreUsuario\":\"\",\"password\":\"\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 1:56:40 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
