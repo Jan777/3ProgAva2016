@@ -12,7 +12,6 @@ public class Cliente {
 		DataOutputStream out = null;
 		boolean flag = true;
 		int nroSala;
-		try{
 			final int puerto = 444;
 			Socket socket = new Socket(server, puerto);
 			System.out.println("Te conectaste a: "+server);
@@ -43,8 +42,5 @@ public class Cliente {
 				}
 			}
 			chat.disconnected();
-		}catch(Exception e){
-			e.printStackTrace();
-		}
 	}
 }

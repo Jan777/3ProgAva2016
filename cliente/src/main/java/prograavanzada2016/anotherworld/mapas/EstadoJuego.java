@@ -38,8 +38,7 @@ public class EstadoJuego extends Estado {
 	}
 
 	@Override
-	public void actualizar() {
-		try{
+	public void actualizar() throws Exception {
 			mundo.actualizar();
 			personaje.actualizar();
 			for(Entidad otroPersonaje : personajes){
@@ -48,9 +47,6 @@ public class EstadoJuego extends Estado {
 			for(Entidad enemigo : enemigos){
 				enemigo.actualizar();
 			}
-		}catch(Exception e){
-			e.printStackTrace();
-		}
 	}
 
 	@Override

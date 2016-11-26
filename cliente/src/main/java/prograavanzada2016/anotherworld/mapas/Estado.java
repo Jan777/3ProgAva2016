@@ -15,7 +15,7 @@ public abstract class Estado {
 		this.juego = juego;
 	}
 	
-	public abstract void actualizar();
+	public abstract void actualizar() throws Exception;
 	
 	public abstract void graficar(Graphics g);
 	

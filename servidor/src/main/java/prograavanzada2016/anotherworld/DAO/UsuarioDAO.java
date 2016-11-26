@@ -122,8 +122,7 @@ public class UsuarioDAO extends DAO<Usuario>{
         	try {
 				conn.close();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				LogAnother.getInstance().logError(e.getMessage());
 			}
         	ex.printStackTrace();
             return NO_ENCONTRADO;

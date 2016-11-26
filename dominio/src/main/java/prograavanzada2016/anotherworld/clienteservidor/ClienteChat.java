@@ -1,5 +1,6 @@
 package prograavanzada2016.anotherworld.clienteservidor;
 
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Scanner;
@@ -18,20 +19,26 @@ public class ClienteChat implements Runnable{
 
 	@Override
 	public void run(){
-		try{
-			try{
-				input = new Scanner(socket.getInputStream());
-				out = new PrintWriter(socket.getOutputStream());
+				try {
+					input = new Scanner(socket.getInputStream());
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				try {
+					out = new PrintWriter(socket.getOutputStream());
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				out.flush();
-				chechStream();			
-			}finally{
-				this.socket.close();
-			}
-		}catch(Exception e){
-			e.printStackTrace();
+				try {
+					chechStream();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 		}
-		
-	}
 	
 	public void chechStream() throws Exception{
 		while(true){

@@ -174,12 +174,11 @@ public class VentanaCrearPersonaje extends JFrame {
 		//personaje.setCastaPersonaje((String)comboCasta.getSelectedItem());
 	}
 	
-	public void btnCrearActionPerformed(ActionEvent evt){
+	public void btnCrearActionPerformed(ActionEvent evt) throws Exception{
 		if("".equals(textField.getText()))
 			JOptionPane.showMessageDialog(contentPane, "El personaje debe contener un nombre");
 		else{
 			//juego de mati esto no va a ir mas aca... hay que crear un servicio que lanze la nueva ventana
-			try{
 				String razaString = comboRaza.getSelectedItem().toString();
 				String castaString = comboCasta.getSelectedItem().toString();
 				String nombreString = textField.getText();
@@ -202,14 +201,8 @@ public class VentanaCrearPersonaje extends JFrame {
 				
 				//usuario.setPersonajeJugador(personaje);
 				//ventanaMapaJuego = new VentanaMapa(personaje);
-				
-			} catch (Exception e){
-				e.printStackTrace();
-			}
+
 		}
-		//ventanaMapaJuego.setSize(new Dimension(800,600));
-		//ventanaMapaJuego.setLocationRelativeTo(null);
-		//ventanaMapaJuego.setVisible(true);
 		dispose();
 		
 	}
