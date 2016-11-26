@@ -100,6 +100,7 @@ public class Personaje extends Ente{
 		this.setAtaque(personaje.getFuerza()+20);
 		this.setSalud(personaje.getSalud());
 		this.setNombre(personaje.getNombre());
+		this.estaVivo=true;
 	}
 
 	@Override

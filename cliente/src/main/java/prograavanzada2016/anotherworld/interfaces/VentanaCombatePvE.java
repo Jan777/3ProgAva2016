@@ -29,6 +29,8 @@ import prograavanzada2016.anotherworld.utilities.SonidoManager;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
@@ -51,7 +53,7 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
     private JLabel label;
     private JLabel label_1;
     private JLabel label_2;
-    
+    SonidoManager sm;
     private boolean atacoUsuario;
     
     private Personaje personaje;
@@ -83,7 +85,7 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
    private void initComponents(Personaje pers, Personaje minotauro) throws Exception {
 	   setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);/*Personaje personaje, Enemigo enemigo*/
    	battleScreen = new BattleScreen();
-   	SonidoManager sm = SonidoManager.getInstance();
+   	sm = SonidoManager.getInstance();
    	Propiedades prop = Propiedades.getInstance();
    	sm.stop();
    	sm.setMusic(prop.getProperty("battleTheme"));
@@ -161,6 +163,7 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
        		enemigoPantalla.atacar(personaje);
        		System.out.println(personaje.getSaludEnUso());
        		System.out.println("se atacaron");
+       		actualizar(personaje, enemigoPantalla);
        	}
        });
        btnAtacar.setBackground(new Color(59, 89, 182));
@@ -220,12 +223,21 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
     			enemigo.atacar(personaje);
     			System.out.println("Ataco maquina");
     		}
-    		this.actualizar(personaje,enemigo);
+    		//this.actualizar(personaje,enemigo);
     	}
     }
     
-    private void actualizar(Personaje personaje, Enemigo enemigo){
+    private void actualizar(Personaje personaje, Personaje enemigo){
     	label_1.setText(personaje.getSaludEnUso()+"/"+personaje.getSalud());
+    	label_2.setText(enemigo.getSaludEnUso()+"/"+enemigo.getSalud());
+    	
+    	if(personaje.getSaludEnUso()==0){
+    		JOptionPane.showMessageDialog(this,"Has muerto");
+    	}else if(enemigo.getSaludEnUso()==0){
+    		JOptionPane.showMessageDialog(this,"Enemigo Derrotado");
+    		this.setVisible(false);
+    		sm.stop();
+    	}
     }
    
 public static void main(String args[]){
