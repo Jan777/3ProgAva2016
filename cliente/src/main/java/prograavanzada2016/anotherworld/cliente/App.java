@@ -15,7 +15,6 @@ public class App {
 			ClienteJugable cliente = new ClienteJugable(propiedades.getProperty("ip"), Integer.parseInt(propiedades.getProperty("puerto")));
 		}
 		catch(Exception e){
-			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, e.getMessage()+"Ocurrió un error, para más información"+System.getProperty("line.separator") 
 			+" vea el LOG del sistema.", "ERROR", JOptionPane.ERROR_MESSAGE);
 			logger.logError(e.getMessage());

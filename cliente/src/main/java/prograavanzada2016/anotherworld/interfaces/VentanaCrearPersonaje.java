@@ -20,6 +20,7 @@ import prograavanzada2016.anotherworld.mensajes.RawMessage;
 import prograavanzada2016.anotherworld.mensajes.request.PersonajeConsultaMessage;
 import prograavanzada2016.anotherworld.modelos.PersonajeModel;
 import prograavanzada2016.anotherworld.modelos.Usuario;
+import prograavanzada2016.anotherworld.resources.LogAnother;
 import prograavanzada2016.anotherworld.resources.Propiedades;
 
 import java.awt.*;
@@ -132,7 +133,16 @@ public class VentanaCrearPersonaje extends JFrame {
 	    btnCrear.setFont(new Font("Tahoma", Font.BOLD, 12));
 		btnCrear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
-				btnCrearActionPerformed(evt);
+				LogAnother log = null;
+				try {
+					log=LogAnother.getInstance();
+					btnCrearActionPerformed(evt);
+				} catch (Exception e) {
+					JOptionPane.showMessageDialog(null, e.getMessage()+"Ocurrió un error, no se puede crear el personaje, "
+							+ "para más información"+System.getProperty("line.separator") 
+					+" vea el LOG del sistema.", "ERROR", JOptionPane.ERROR_MESSAGE);
+					log.logError(e.getMessage());
+				}
 			}
 		});
 		btnCrear.setBounds(313, 206, 89, 23);
