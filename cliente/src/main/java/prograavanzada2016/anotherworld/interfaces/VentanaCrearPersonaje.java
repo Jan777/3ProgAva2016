@@ -43,6 +43,7 @@ public class VentanaCrearPersonaje extends JFrame {
 	private JButton btnCrear;
 	private ClienteJugable clienteJugable;
 	private Personaje personaje;
+	private JLabel labelMuestraPersonaje;
 	
 	public VentanaCrearPersonaje(ClienteJugable clienteJugable) throws Exception{
 		initComponents();   
@@ -90,7 +91,11 @@ public class VentanaCrearPersonaje extends JFrame {
 		comboRaza.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusLost(FocusEvent e) {
-				comboRazaFocusLost(e);
+				try {
+					comboRazaFocusLost(e);
+				} catch (IOException e1) {
+					e1.printStackTrace();
+				}
 			}
 		});
 		comboRaza.setBounds(313, 95, 86, 20);
@@ -133,6 +138,12 @@ public class VentanaCrearPersonaje extends JFrame {
 		btnCrear.setBounds(313, 206, 89, 23);
 		contentPane.add(btnCrear);
 		
+		Image image2 = new ImageIcon(Propiedades.getInstance().getProperty("HumanoCreate")).getImage();
+		labelMuestraPersonaje = new JLabel("");
+		labelMuestraPersonaje.setIcon(new ImageIcon(image2));
+		labelMuestraPersonaje.setBounds(545, 37, 210, 237);
+		contentPane.add(labelMuestraPersonaje);
+		
 		JLabel label = new JLabel("");
 		label.setIcon(new ImageIcon(propiedades.getProperty("createCharacterJPG")));
 		label.setBounds(0, 0, 784, 561);
@@ -144,7 +155,16 @@ public class VentanaCrearPersonaje extends JFrame {
 		//personaje.setNombrePersonaje(textField.getText());
 	}
 	
-	public void comboRazaFocusLost(FocusEvent e){
+	public void comboRazaFocusLost(FocusEvent e) throws IOException{
+		if(comboRaza.getSelectedItem().equals("Humano")){
+			Image image2 = new ImageIcon(Propiedades.getInstance().getProperty("HumanoCreate")).getImage();
+			labelMuestraPersonaje.setIcon(new ImageIcon(image2));
+		}
+		else{
+			Image image2 = new ImageIcon(Propiedades.getInstance().getProperty("TrollCreate")).getImage();
+			labelMuestraPersonaje.setIcon(new ImageIcon(image2));
+		}
+		
 		//Esto va a tener un switch
 		//personaje.setRazaPersonaje((String)comboRaza.getSelectedItem());
 	}
@@ -193,5 +213,4 @@ public class VentanaCrearPersonaje extends JFrame {
 		dispose();
 		
 	}
-
 }

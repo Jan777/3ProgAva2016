@@ -86,6 +86,7 @@ nov 25, 2016 11:44:33 PM prograavanzada2016.anotherworld.resources.LogAnother lo
 INFORMACIÓN: El cliente dice: {"type":"consultaColision","message":{"Payload":"{\"clienteId\":2,\"id\":1,\"nombre\":\"\",\"apellido\":\"\",\"nombreUsuario\":\"\",\"password\":\"\"}","esBroadcast":false,"idCliente":0}}
 nov 25, 2016 11:44:33 PM prograavanzada2016.anotherworld.resources.LogAnother logSentence
 INFORMACIÓN: Manda algo
+<<<<<<< Updated upstream
 nov 26, 2016 12:07:30 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
 INFORMACIÓN: Esperando conexion...
 nov 26, 2016 12:07:33 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
@@ -913,4 +914,233 @@ INFORMACIÓN: Manda algo
 nov 26, 2016 12:34:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
 INFORMACIÓN: El cliente dice: {"type":"consultaColision","message":{"Payload":"{\"clienteId\":2,\"id\":1,\"nombre\":\"\",\"apellido\":\"\",\"nombreUsuario\":\"\",\"password\":\"\"}","esBroadcast":false,"idCliente":0}}
 nov 26, 2016 12:34:25 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+=======
+nov 25, 2016 11:57:55 PM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Esperando conexion...
+nov 25, 2016 11:57:59 PM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Cliente conectado...
+nov 25, 2016 11:57:59 PM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Esperando conexion...
+nov 25, 2016 11:57:59 PM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 25, 2016 11:58:06 PM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"login","message":{"Payload":"{\"clienteId\":0,\"id\":0,\"nombre\":\"\",\"apellido\":\"\",\"nombreUsuario\":\"mati\",\"password\":\"1234\"}","esBroadcast":false,"idCliente":0}}
+nov 25, 2016 11:58:06 PM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: antes de entrar
+nov 25, 2016 11:58:06 PM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: los datos son:Matias
+nov 25, 2016 11:58:06 PM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: enrttamos
+nov 25, 2016 11:58:06 PM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: encontrado
+nov 25, 2016 11:58:06 PM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 25, 2016 11:58:27 PM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"personajeConsulta","message":{"Payload":"{\"clienteId\":0,\"id\":13,\"nombre\":\"Matias\",\"apellido\":\"Cairo\",\"nombreUsuario\":\"mati\",\"password\":\"1234\"}","esBroadcast":false,"idCliente":0}}
+nov 25, 2016 11:58:27 PM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 25, 2016 11:58:27 PM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"buscarPersonajes","message":{"Payload":"{\"clienteId\":0,\"id\":13,\"nombre\":\"Matias\",\"apellido\":\"Cairo\",\"nombreUsuario\":\"mati\",\"password\":\"1234\",\"personaje\":{\"id\":6,\"usuarioId\":13,\"castaId\":3,\"razaId\":2,\"nombre\":\"reynaldo\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":0,\"movimientoY\":0,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":0,\"movimientoYFinal\":0,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 25, 2016 11:58:27 PM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 25, 2016 11:58:27 PM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"buscarEnemigos","message":{"Payload":"{\"clienteId\":0,\"id\":13,\"nombre\":\"Matias\",\"apellido\":\"Cairo\",\"nombreUsuario\":\"mati\",\"password\":\"1234\",\"personaje\":{\"id\":6,\"usuarioId\":13,\"castaId\":3,\"razaId\":2,\"nombre\":\"reynaldo\",\"fuerza\":0,\"destreza\":0,\"inteligencia\":0,\"mana\":0,\"energia\":0,\"nivel\":0,\"salud\":0,\"experiencia\":0,\"posicionInicialX\":0,\"posicionInicialY\":0,\"movimientoX\":0,\"movimientoY\":0,\"movimientoOffsetX\":0,\"movimientoOffsetY\":0,\"movimientoXFinal\":0,\"movimientoYFinal\":0,\"nuevoCamino\":false}}","esBroadcast":false,"idCliente":0}}
+nov 25, 2016 11:58:27 PM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:14:49 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Esperando conexion...
+nov 26, 2016 12:14:52 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Cliente conectado...
+nov 26, 2016 12:14:52 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Esperando conexion...
+nov 26, 2016 12:14:52 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:15:06 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"usuarioNuevo","message":{"Payload":"{\"clienteId\":0,\"id\":0,\"nombre\":\"mat\",\"apellido\":\"cairito\",\"nombreUsuario\":\"mat\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 12:15:06 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:15:12 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"login","message":{"Payload":"{\"clienteId\":0,\"id\":0,\"nombre\":\"\",\"apellido\":\"\",\"nombreUsuario\":\"mat\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 12:15:12 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: antes de entrar
+nov 26, 2016 12:15:12 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: los datos son:mat
+nov 26, 2016 12:15:12 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: enrttamos
+nov 26, 2016 12:15:12 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: encontrado
+nov 26, 2016 12:15:12 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:15:16 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"personajeConsulta","message":{"Payload":"{\"clienteId\":0,\"id\":14,\"nombre\":\"mat\",\"apellido\":\"cairito\",\"nombreUsuario\":\"mat\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 12:15:16 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:23:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Esperando conexion...
+nov 26, 2016 12:23:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Cliente conectado...
+nov 26, 2016 12:23:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Esperando conexion...
+nov 26, 2016 12:23:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:23:26 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"login","message":{"Payload":"{\"clienteId\":0,\"id\":0,\"nombre\":\"\",\"apellido\":\"\",\"nombreUsuario\":\"mat\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 12:23:27 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: antes de entrar
+nov 26, 2016 12:23:27 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: los datos son:mat
+nov 26, 2016 12:23:27 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: enrttamos
+nov 26, 2016 12:23:27 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: encontrado
+nov 26, 2016 12:23:27 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:23:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"personajeConsulta","message":{"Payload":"{\"clienteId\":0,\"id\":14,\"nombre\":\"mat\",\"apellido\":\"cairito\",\"nombreUsuario\":\"mat\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 12:23:29 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:24:30 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Esperando conexion...
+nov 26, 2016 12:24:32 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Cliente conectado...
+nov 26, 2016 12:24:32 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Esperando conexion...
+nov 26, 2016 12:24:32 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:24:37 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"login","message":{"Payload":"{\"clienteId\":0,\"id\":0,\"nombre\":\"\",\"apellido\":\"\",\"nombreUsuario\":\"mat\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 12:24:37 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: antes de entrar
+nov 26, 2016 12:24:37 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: los datos son:mat
+nov 26, 2016 12:24:37 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: enrttamos
+nov 26, 2016 12:24:37 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: encontrado
+nov 26, 2016 12:24:37 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:24:39 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"personajeConsulta","message":{"Payload":"{\"clienteId\":0,\"id\":14,\"nombre\":\"mat\",\"apellido\":\"cairito\",\"nombreUsuario\":\"mat\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 12:24:39 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:26:16 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Esperando conexion...
+nov 26, 2016 12:26:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Cliente conectado...
+nov 26, 2016 12:26:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Esperando conexion...
+nov 26, 2016 12:26:18 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:26:21 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"login","message":{"Payload":"{\"clienteId\":0,\"id\":0,\"nombre\":\"\",\"apellido\":\"\",\"nombreUsuario\":\"mat\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 12:26:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: antes de entrar
+nov 26, 2016 12:26:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: los datos son:mat
+nov 26, 2016 12:26:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: enrttamos
+nov 26, 2016 12:26:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: encontrado
+nov 26, 2016 12:26:22 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:26:24 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"personajeConsulta","message":{"Payload":"{\"clienteId\":0,\"id\":14,\"nombre\":\"mat\",\"apellido\":\"cairito\",\"nombreUsuario\":\"mat\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 12:26:24 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:28:58 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Esperando conexion...
+nov 26, 2016 12:29:00 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Cliente conectado...
+nov 26, 2016 12:29:00 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Esperando conexion...
+nov 26, 2016 12:29:00 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:29:05 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"login","message":{"Payload":"{\"clienteId\":0,\"id\":0,\"nombre\":\"\",\"apellido\":\"\",\"nombreUsuario\":\"mat\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 12:29:05 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: antes de entrar
+nov 26, 2016 12:29:05 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: los datos son:mat
+nov 26, 2016 12:29:05 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: enrttamos
+nov 26, 2016 12:29:05 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: encontrado
+nov 26, 2016 12:29:05 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:29:08 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"personajeConsulta","message":{"Payload":"{\"clienteId\":0,\"id\":14,\"nombre\":\"mat\",\"apellido\":\"cairito\",\"nombreUsuario\":\"mat\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 12:29:08 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:34:41 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Esperando conexion...
+nov 26, 2016 12:34:42 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Cliente conectado...
+nov 26, 2016 12:34:42 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Esperando conexion...
+nov 26, 2016 12:34:42 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:34:48 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"login","message":{"Payload":"{\"clienteId\":0,\"id\":0,\"nombre\":\"\",\"apellido\":\"\",\"nombreUsuario\":\"mat\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 12:34:48 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: antes de entrar
+nov 26, 2016 12:34:48 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: los datos son:mat
+nov 26, 2016 12:34:48 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: enrttamos
+nov 26, 2016 12:34:48 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: encontrado
+nov 26, 2016 12:34:48 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:34:51 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"personajeConsulta","message":{"Payload":"{\"clienteId\":0,\"id\":14,\"nombre\":\"mat\",\"apellido\":\"cairito\",\"nombreUsuario\":\"mat\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 12:34:51 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:35:44 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Esperando conexion...
+nov 26, 2016 12:35:46 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Cliente conectado...
+nov 26, 2016 12:35:46 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Esperando conexion...
+nov 26, 2016 12:35:46 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:35:51 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"login","message":{"Payload":"{\"clienteId\":0,\"id\":0,\"nombre\":\"\",\"apellido\":\"\",\"nombreUsuario\":\"mat\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 12:35:51 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: antes de entrar
+nov 26, 2016 12:35:51 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: los datos son:mat
+nov 26, 2016 12:35:51 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: enrttamos
+nov 26, 2016 12:35:51 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: encontrado
+nov 26, 2016 12:35:51 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:35:53 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"personajeConsulta","message":{"Payload":"{\"clienteId\":0,\"id\":14,\"nombre\":\"mat\",\"apellido\":\"cairito\",\"nombreUsuario\":\"mat\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 12:35:53 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:38:03 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Esperando conexion...
+nov 26, 2016 12:38:06 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Cliente conectado...
+nov 26, 2016 12:38:06 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Esperando conexion...
+nov 26, 2016 12:38:06 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:38:11 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"login","message":{"Payload":"{\"clienteId\":0,\"id\":0,\"nombre\":\"\",\"apellido\":\"\",\"nombreUsuario\":\"mat\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 12:38:11 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: antes de entrar
+nov 26, 2016 12:38:11 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: los datos son:mat
+nov 26, 2016 12:38:11 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: enrttamos
+nov 26, 2016 12:38:11 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: encontrado
+nov 26, 2016 12:38:11 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: Manda algo
+nov 26, 2016 12:38:13 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+INFORMACIÓN: El cliente dice: {"type":"personajeConsulta","message":{"Payload":"{\"clienteId\":0,\"id\":14,\"nombre\":\"mat\",\"apellido\":\"cairito\",\"nombreUsuario\":\"mat\",\"password\":\"123\"}","esBroadcast":false,"idCliente":0}}
+nov 26, 2016 12:38:13 AM prograavanzada2016.anotherworld.resources.LogAnother logSentence
+>>>>>>> Stashed changes
 INFORMACIÓN: Manda algo
