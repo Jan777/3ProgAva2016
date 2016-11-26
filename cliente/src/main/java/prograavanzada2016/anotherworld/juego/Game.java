@@ -5,6 +5,8 @@ import java.awt.image.BufferStrategy;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import javax.swing.JOptionPane;
+
 import prograavanzada2016.anotherworld.cliente.ClienteJugable;
 import prograavanzada2016.anotherworld.entities.Personaje;
 import prograavanzada2016.anotherworld.interfaces.*;
@@ -13,6 +15,7 @@ import prograavanzada2016.anotherworld.mapas.*;
 import prograavanzada2016.anotherworld.modelos.InteligenciaArtificial;
 import prograavanzada2016.anotherworld.modelos.PersonajeModel;
 import prograavanzada2016.anotherworld.modelos.Usuario;
+import prograavanzada2016.anotherworld.resources.LogAnother;
 
 
 public class Game implements Runnable{
@@ -70,7 +73,7 @@ public class Game implements Runnable{
 		camara = new Camera(this, 0, 0);
 	}
 
-	private void actualizar() { // Actualiza los objetos y sus posiciones
+	private void actualizar() throws Exception { // Actualiza los objetos y sus posiciones
 		mouseController.actualizar();
 
 		if (Estado.getEstado() != null) {
@@ -103,7 +106,9 @@ public class Game implements Runnable{
 
 	@Override
 	public void run() { // Hilo principal del juego
+		LogAnother log=null;
 		try {
+			log=LogAnother.getInstance();
 			initGame();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -128,7 +133,12 @@ public class Game implements Runnable{
 			ultimoTiempo = ahora; // Para las proximas corridas del bucle
 
 			if (delta >= 1) {
-				actualizar();
+				try {
+					actualizar();
+				} catch (Exception e) {
+					JOptionPane.showMessageDialog(null, e.getMessage()+"Se rompio todo", "ERROR", JOptionPane.ERROR_MESSAGE);
+					log.logError(e.getMessage());
+				}
 				graficar();
 				actualizaciones++;
 				delta--;
