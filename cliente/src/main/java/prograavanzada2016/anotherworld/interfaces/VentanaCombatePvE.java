@@ -50,27 +50,32 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
     private JLabel label_1;
     private JLabel label_2;
     
+    private boolean atacoUsuario;
+    
+    private Personaje personaje;
+    private Enemigo enemigo;
+    
     private BattleScreen battleScreen;
 
     public VentanaCombatePvE(Entidad personaje, Entidad enemigo) throws Exception{
     	Personaje pers = new Personaje(personaje.getUsuario().getPersonaje());
-    	Dragon reinaldo = new Dragon("Minotauro", 1, 10, 100, 300, 5, 7, 3, false, 200);
+    	Dragon minotauro = new Dragon("Minotauro", 1, 10, 100, 300, 5, 7, 3, false, 200);
     	
-    	this.initComponents(pers,reinaldo);
+    	this.initComponents(pers,minotauro);
     	
     	ArrayList<Enemigo> gge = new ArrayList<>();
     	ArrayList<Personaje> ggp = new ArrayList<>();
     	
     	
-    	gge.add(reinaldo);
+    	gge.add(minotauro);
     	ggp.add(pers);
     	
     	GrupoEnemigos ge = new GrupoEnemigos(gge);
     	GrupoPersonajes gp = new GrupoPersonajes(ggp);
     	
     	ArenaPvE arena = new ArenaPvE(ge, gp);
-    	
-    	int turnos[]=arena.armarTurnosAuto();
+    	this.personaje=pers;
+    	this.enemigo=minotauro;
     }
 
    private void initComponents(Personaje pers, Enemigo enemigo) throws Exception {
@@ -82,6 +87,7 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
    	sm.setMusic(prop.getProperty("battleTheme"));
    	sm.play();
    	setTitle("Combate");
+   	setVisible(true);
    	Image image = new ImageIcon(Propiedades.getInstance().getProperty("IconoVentana")).getImage();
 		setIconImage(image);
 
@@ -144,6 +150,13 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
        inputPanel.add(lblVida);
        
        JButton btnAtacar = new JButton("Atacar");
+       btnAtacar.addActionListener(new ActionListener() {
+       	public void actionPerformed(ActionEvent arg0) {
+       		personaje.atacar(enemigo);
+       		enemigo.atacar(personaje);
+       		System.out.println("se atacaron");
+       	}
+       });
        btnAtacar.setBackground(new Color(59, 89, 182));
 	    btnAtacar.setForeground(Color.BLACK);
 	    btnAtacar.setFocusPainted(false);
@@ -188,8 +201,25 @@ public class VentanaCombatePvE extends javax.swing.JFrame{
        pack();   // calling pack() at the end, will ensure that every layout and size we just defined gets applied before the stuff becomes visible
 	}
 
-    public void iniciarCombate(int turnos[],Personaje personaje, Enemigo enemigo){
-    	
+    public void iniciarCombate(int turnos[],Personaje personaje, Enemigo enemigo) throws Exception{
+    	for(int x=0; x<turnos.length;x++){
+    		if(turnos[x]==0){
+    			while(!atacoUsuario){
+    				
+    			}
+    			personaje.atacar(enemigo);
+    			System.out.println("Ataco Personaje");
+    		}else{
+    			Thread.sleep(2000);
+    			enemigo.atacar(personaje);
+    			System.out.println("Ataco maquina");
+    		}
+    		this.actualizar(personaje,enemigo);
+    	}
+    }
+    
+    private void actualizar(Personaje personaje, Enemigo enemigo){
+    	label_1.setText(personaje.getSaludEnUso()+"/"+personaje.getSalud());
     }
    
 public static void main(String args[]){

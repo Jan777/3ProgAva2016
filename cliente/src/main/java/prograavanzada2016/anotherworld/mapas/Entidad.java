@@ -391,9 +391,8 @@ public class Entidad {
 				salida.flush();
 				
 				this.entroEnCombate=true;
-				VentanaCombatePvE ventana = new VentanaCombatePvE(this,entidad);
-				ventana.setVisible(true);
 				entidad.entroEnCombate=true;
+				VentanaCombatePvE ventana = new VentanaCombatePvE(this,entidad);				
 			}
 			
 			if (vertical) {
